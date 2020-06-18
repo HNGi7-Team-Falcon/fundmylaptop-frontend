@@ -7,7 +7,11 @@
 			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap"
 			rel="stylesheet"
 		/>
-		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<title>Edit Profile</title>
 	</head>
 	<style>
 		body {
@@ -46,6 +50,23 @@
 		#userinfo #name {
 			align-self: center;
 			padding: 0px 10px;
+		}
+
+		#userinfo #pencilicon {
+			position: absolute;
+			top: 0;
+			align-items: center;
+			height: 100%;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			transition: opacity 0.1s 0.1s linear;
+		}
+
+		#userinfo #pencilicon:hover {
+			opacity: 1;
 		}
 
 		#userinfo #name h3 {
@@ -128,7 +149,12 @@
 	<body>
 		<main class="__up_container">
 			<section id="userinfo">
-				<img src="./assets/images/profilepix_placholder.png" alt="" />
+				<div style="position: relative;">
+					<img src="./assets/images/profilepix_placholder.png" alt="" />
+					<div id="pencilicon">
+						<i class="fa fa-pencil" style="font-size: 25px;"></i>
+					</div>
+				</div>
 				<div id="name">
 					<h3>John Doe</h3>
 					<p>Frontend Developer</p>
