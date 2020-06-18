@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <title>Fund My Laptop</title>
+    <style>
+        /* Style Sheet */
+        video{
+            width: 620px;
+            height: 400px;
+            border-radius: 10px;
+        }
+        p, select{
+            font-family: 'DM Sans';
+            font-style: normal;
+            color: #04172A;
+            margin: 0px;
+        }
+        option p{
+            font-family: 'DM Sans';
+            font-style: normal;
+            color: #04172A;
+            margin: 0px;
+            width: 10%;
+        }
+        label{
+            font-family: 'DM Sans';
+            font-style: normal;
+            color: #04172A;
+        }
+        .body{
+            display: flex;
+            flex-direction: row;
+            padding: 40px 70px;
+            background: rgba(229, 229, 229, 0.103);
+        }
+        .left-side{
+            width: 55%;
+        }
+        .right-side{
+            width: 30%;
+            background: #FFFFFF;
+            border: 1px solid rgba(4, 23, 42, 0.25);
+            box-sizing: border-box;
+            border-radius: 10px;
+            margin-top: 145px;
+            margin-left: 40px;
+            padding: 25px;
+            height: 20%;
+        }
+        .name{
+            font-weight: bold;
+            font-size: 54px;
+            line-height: 70px;
+        }
+        .div-purpose{
+            display: flex;
+            flex-direction: row;
+            margin: 16px 0px 40px;
+        }
+        .description .purpose p{
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 31px;
+        }
+        .description .date p{
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 31px;
+        }
+        .date{
+            margin-left: auto;
+        }
+        .worth{
+            display: flex;
+            flex-direction: row;
+            margin: 20px 0px
+        }
+        .price{
+            background: #FFFFFF;
+            border: 1px solid rgba(4, 23, 42, 0.25);
+            box-sizing: border-box;
+            border-radius: 10px;
+            width: 50%;
+            padding: 15px;
+        }
+        .bidders{
+            background: #FFFFFF;
+            border: 1px solid rgba(4, 23, 42, 0.25);
+            box-sizing: border-box;
+            border-radius: 10px;
+            margin-left: auto;
+            width: 35%;
+            padding: 15px;
+        }
+        .needs{
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 26px;
+        }
+        .amount{
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 47px;
+        }
+        .vouchers{
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 31px;
+            color: #000000;
+        }
+        .div-vouchers{
+            background: #FFFFFF;
+            border: 1px solid rgba(4, 23, 42, 0.5);
+            box-sizing: border-box;
+            border-radius: 10px;
+            padding: 20px 55px 20px 20px;
+            display: flex;
+            margin-top: 20px;
+        }
+        .div-vouchers-img img{
+            margin: 0px 1px;
+        }
+        .div-arrow-right{
+            margin-left: auto;
+            align-self: center;
+        }
+        .div-description{
+            display: flex;
+            flex-direction: column;
+            width: auto;
+        }
+        .description{
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 26px;
+            margin: 50px 0px 15px;
+        }
+        .lorem-description{
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 36px;
+            color: #000000;
+            text-align: justify;
+        }
+        .div-voucher-name{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 50px 0px 10px;
+        }
+        .div-jane-doe{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .voucher-name{
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 47px;
+        }
+        .check-circle{
+            margin-left: 20px;
+            width: 25px;
+            height: 25px;
+        }
+        .place-bid{
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 47px;
+            margin-bottom: 12px;
+        }
+        .div-btn-contact{
+            margin-left: auto;
+        }
+        .btn-contact{
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 42px;
+            color: #FB3F5C;
+            padding: 10px 50px;
+            border: 2px solid #FB3F5C;
+            box-sizing: border-box;
+            border-radius: 10px;
+            background: transparent;
+        }
+        .btn-contact:hover{
+            cursor: pointer;
+            background: #FB3F5C;
+            color: white;
+            border: 2px solid whitesmoke;
+        }
+        label .interest-rate{
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 21px;
+        }
+        select{
+            padding: 10px;
+            width: 100%;
+            border: 2px solid #04172A;
+            box-sizing: border-box;
+            border-radius: 5px;
+            margin: 15px 0px;
+        }
+        .btn-place-bid{
+            background: #FB3F5C;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 42px;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+            width: 100%;
+            border: none;
+            margin-top: 15px;
+        }
+        .btn-place-bid:hover{
+            cursor: pointer;
+            background: transparent;
+            color: #FB3F5C;
+            border: 2px solid #FB3F5C;
+        }
+        .btn-arrow{
+            width: 15px;
+            height: 15px;
+            display: flex;
+            align-self: center;
+            margin-left: auto;
+        }
+        @media (max-width: 575px) {
+            video{
+                width: auto !important;
+                height: 160px !important;
+            }
+            .left-side{
+                width: 100% !important;
+            }
+            .body{
+                padding: 12px !important;
+                flex-direction: column !important;
+            }
+            .name{
+                font-size: 25px !important;
+            }
+            .purpose p, .date p{
+                font-size: 13px !important;
+            }
+            .div-purpose{
+                flex-direction: column !important;
+                margin: 0px 0px 10px !important;
+            }
+            .date{
+                margin: 0px !important;
+            }
+            .price, .bidders{
+                width: 100% !important;
+                margin: 5px 5px;
+            }
+            .amount{
+                font-size: 13px !important;
+                margin-bottom: -20px !important;
+            }
+            .needs{
+                font-size: 15px !important;
+                line-height: 5px !important;
+                
+            }
+            .div-vouchers{
+                padding: 15px !important;
+            }
+            .div-vouchers-img img{
+                width: 40px;
+                height: 40px;
+            }
+            .div-arrow-right{
+                margin-left: auto !important;
+            }
+            .arrow-right{
+                width: 10px !important;
+                height: 10px !important;
+            }
+            .vouchers, .description{
+                font-size: 18px !important;
+            }
+            .lorem-description{
+                font-size: 12px !important;
+            }
+            .div-voucher-name{
+                margin-top: 10px !important;
+            }
+            .voucher-name{
+                font-size: 12px !important;
+            }
+            .check-circle{
+                width: 12px !important;
+                height: 12px !important;
+                margin: 0px !important;
+            }
+            .btn-contact{
+                padding: 5px 30px !important;
+                font-size: 13px !important;
+                line-height: 20px !important;
+            }
+            .right-side{
+                margin: 0px !important;
+                width: auto !important;
+            }
+            .place-bid{
+                font-size: 23px !important;
+                font-weight: bolder !important;
+            }
+            .btn-place-bid{
+                font-size: 15px !important;
+                line-height: 28px !important;
+            }
+        }
+        @media (min-width: 375px) {
+            video{
+                width: auto !important;
+                height: 190px !important;
+            }
+        }
+        @media (min-width: 425px) {
+            video{
+                width: auto !important;
+                height: 220px !important;
+            }
+        }
+        @media (min-width: 768px ){
+            video{
+                width: auto !important;
+                height: 410px !important;
+            }
+            .body{
+                flex-direction: column !important;
+                padding: 12px !important;
+            }
+            .left-side{
+                width: auto !important;
+            }
+            .right-side{
+                width: auto !important;
+                margin: 30px 0px !important;
+            }
+            .name{
+                font-size: 27px !important;
+            }
+            .amount{
+                font-size: 20px !important;
+            }
+            .lorem-description{
+                font-size: 15px !important;
+            }
+            .voucher-name{
+                font-size: 27px !important;
+            }
+            .check-circle{
+                width: 20px !important;
+                height: 20px !important;
+            }
+            .btn-contact{
+                line-height: 20px !important;
+            }
+        }
+        @media (min-width: 1024px ) {
+            video{
+                width: auto !important;
+                height: 300px !important;
+            }
+            .body{
+                flex-direction: row !important;
+            }
+            .left-side{
+                width: 55% !important;
+            }
+            .right-side{
+                width: 40% !important;
+                margin-top: 145px !important;
+                margin-left: 40px !important;
+            }
+        }
+        @media (min-width: 1440px ) {
+            video{
+                width: auto !important;
+                height: 420px !important;
+            }
+            .body{
+                padding: 40px 70px !important;
+            }
+            .name{
+                font-weight: bold !important;
+                font-size: 54px !important;
+                line-height: 70px !important;
+            }
+            .div-purpose{
+                margin: 16px 0px 40px !important;
+            }
+            .description .purpose p{
+                font-size: 24px !important;
+                line-height: 31px !important;
+            }
+            .description .date p{
+                font-weight: 500 !important;
+                font-size: 24px !important;
+                line-height: 31px !important;
+            }
+            .worth{
+                margin: 20px 0px !important;
+            }
+            .price{
+                border: 1px solid rgba(4, 23, 42, 0.25) !important;
+                width: 50% !important;
+                padding: 15px !important;
+            }
+            .bidders{
+                border: 1px solid rgba(4, 23, 42, 0.25) !important;
+                margin-left: auto !important;
+                width: 35% !important;
+                padding: 15px !important;
+            }
+            .needs{
+                font-size: 20px !important;
+                line-height: 26px !important;
+            }
+            .amount{
+                font-size: 36px !important;
+                line-height: 47px !important;
+                margin: 0 !important;
+            }
+            .btn-contact{
+                font-size: 20px !important;
+                line-height: 42px !important;
+                padding: 10px 50px !important;
+            }
+            .voucher-name{
+                font-weight: bold !important;
+                font-size: 36px !important;
+                line-height: 47px !important;
+            }
+            .check-circle{
+                width: 25px !important;
+                height: 25px !important;
+            }
+            .description{
+                font-weight: bolder !important;
+                font-size: 20px !important;
+                line-height: 26px !important;
+                margin: 50px 0px 15px !important;
+            }
+            .lorem-description{
+                font-size: 20px !important;
+                line-height: 36px !important;
+            }
+            .voucher-name{
+                font-weight: bolder !important;
+                font-size: 36px !important;
+                line-height: 47px !important;
+            }
+        }
+        /* Style Sheet */
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="left-side">
+            <p class="name">John Doe</p>
+            <div class="div-purpose">
+                <div class="purpose">
+                    <p>Purpose: laptop Purchase</p>
+                </div>
+                <div class="date">
+                    <p>Created: June 23, 2020</p>
+                </div>
+            </div>
+            <video controls>
+                <source src="https://res.cloudinary.com/splendid/video/upload/v1592515019/Introducing_the_new_SurveyMonkey_ckraav.mp4" type="video/mp4">
+            </video>
+            <div class="worth">
+                <div class="price">
+                    <p class="needs">Needs</p>
+                    <p class="amount">&#8358 360,000</p>
+                </div>
+                <div class="bidders">
+                    <p class="needs">Has</p>
+                    <p class="amount">5 Bidders</p>
+                </div>
+            </div>
+            <p class="vouchers">Vouchers</p>
+            <div class="div-vouchers">
+                <div class="div-vouchers-img">
+                    <img src="https://res.cloudinary.com/splendid/image/upload/v1592513741/voucher_xequkl.png" alt="">
+                    <img src="https://res.cloudinary.com/splendid/image/upload/v1592513741/voucher_xequkl.png" alt="">
+                    <img src="https://res.cloudinary.com/splendid/image/upload/v1592513741/voucher_xequkl.png" alt="">
+                    <img src="https://res.cloudinary.com/splendid/image/upload/v1592513741/voucher_xequkl.png" alt="">
+                </div>
+                <div class="div-arrow-right">
+                    <img src="https://res.cloudinary.com/splendid/image/upload/v1592513731/arrow-right_ne9oyg.png" alt="" class="arrow-right">
+                </div>
+            </div>
+            <div class="div-description">
+                <p class="description">DESCRIPTION</p>
+                <p class="lorem-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia totam voluptates aut 
+                    laudantium facere doloribus provident est asperiores, explicabo enim nihil non incidunt 
+                    distinctio voluptas quam fuga? Quis, rem rerum!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia totam voluptates aut 
+                    laudantium facere doloribus provident est asperiores, explicabo enim nihil non incidunt 
+                    distinctio voluptas quam fuga? Quis, rem rerum!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia totam voluptates aut 
+                    laudantium facere doloribus provident est asperiores, explicabo enim nihil non incidunt 
+                    distinctio voluptas quam fuga? Quis, rem rerum!
+                </p>
+                <div class="div-voucher-name">
+                    <div class="div-jane-doe">
+                        <p class="voucher-name">Jane Doe</p>
+                        <img src="https://res.cloudinary.com/splendid/image/upload/v1592513734/check-circle_p0xgio.png" alt="" class="check-circle">
+                    </div>
+                    <div class="div-btn-contact">
+                        <button class="btn-contact">Contact</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-side">
+            <p class="place-bid">Place Bid</p>
+            <form>
+                <div class="input-div">
+                    <label class="interest-rate">Interest Rate*</label><br>
+                    <select id="otions" class="input-select">
+                        <option value="default"><p>Select an Interest Rate</p></option>
+                        <option value="25%">~25%</option>
+                        <option value="50%">~50%</option>
+                        <option value="75%">~75%</option>
+                        <option value="100%">~100%</option>
+                    </select>
+                </div>
+                <div class="input-div">
+                    <label class="interest-rate">Loan Duration*</label><br>
+                    <select id="otions" class="input-select">
+                        <option value="default"><p>Select a Loan Duration</p></option>
+                        <option value="25%">~3 Months</option>
+                        <option value="50%">~6 Months</option>
+                        <option value="75%">~1 Year</option>
+                        <option value="100%">~2 Years and Above</option>
+                    </select>
+                </div>
+                <div class="input-div">
+                    <label class="interest-rate">Loan Type*</label><br>
+                    <select id="otions" class="input-select">
+                        <option value="default"><p>Select a Loan Type</p></option>
+                        <option value="25%">~Partial</option>
+                        <option value="50%">~Complete</option>
+                        <option value="75%">~Dash</option>
+                    </select>
+                </div>
+            </form>
+            <div class="div-btn-bid">
+                <button class="btn-place-bid">Place a Bid <span class="btn-arrow"><img src="https://res.cloudinary.com/splendid/image/upload/v1592513732/btn-arrow_mrhere.png" alt="" ></span></button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
