@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer</title>
+
+   <!--Internal styling-->
+<style>
+    *,
+    *::before,
+    *::after{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    footer{
+        background-color:  rgba(4, 23, 42, 0.03);
+        font-size: 0.75em;
+        font-family: sans-serif;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    ul{
+        list-style: none
+    }
+
+    h1{
+        margin: .7em 0;
+        font-size: 1.8rem;
+    }
+
+    .footer-top{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 10em;
+        font-size: 1rem;
+        line-height: 2em;
+        color: #04172A;
+    }
+
+    .footer-top li a{
+        color: #04172A;
+    }
+
+    .footer-top-color{
+        color: #FB3F5C;
+    }
+
+    .footer-icons > a > img{
+    margin-right: 1em;
+    }
+
+    hr{
+        border: 2px solid rgba(4, 23, 42, 0.05);
+        margin: 1em 12em;
+    }
+
+    .footer-bottom{
+        display: flex;
+        flex-flow: row;
+        margin: 1.5em 10em;
+        color: #000000;
+        font-size: .9rem;
+        margin-bottom: 2em;
+    }
+
+    .footer-bottom > .footer-bottom-right {
+        margin-left: 2em;
+        margin-bottom: 1.5em;
+    }
+
+    .footer-bottom > .footer-bottom-left{
+    margin-right: auto;
+    }
+
+
+    @media (max-width: 760px) {
+        .footer-top{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-size: .6rem;
+            margin: auto 0;
+        } 
+
+        h1{
+            font-size: .8rem;
+            margin-bottom: .1em;
+        }
+
+        hr{
+            margin: 2em 0;
+        }
+
+        .footer-bottom, .footer-bottom-left, .footer-bottom-right{
+            margin: 0 .5em;
+            font-size: .6rem;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .footer-top{
+            font-size: .8rem;
+        }
+    h1{
+        font-size: 1rem;
+    }
+
+    hr{
+        margin: 2em 0;
+    }
+
+
+    .footer-bottom,  .footer-bottom-left, .footer-bottom-right{
+        margin: 0 2.3em;
+        font-size: .6rem;
+    }
+
+    } 
+</style>
+</head>
+
+<body>
+    <!-- footer----------->
+    <footer>
+        <!-- top section----- -->
+        <div class="footer-top">
+            <div class="footer-top-1">
+            <ul>
+                <li><h1>FundMy<span class="footer-top-color">Laptop</span></h1></li>
+                <li><p>info@fundmylaptop.com</p></li>
+                <li><p>12345 67890</p></li>
+                <div class="footer-icons">
+                    <a href="#"> <img src= "https://res.cloudinary.com/dytnzt4jf/image/upload/v1592431707/Facebook_epztwm.png" alt="facebook icon"></a>
+                   <a href="#"> <img src="https://res.cloudinary.com/dytnzt4jf/image/upload/v1592430002/Instagram_rts1mp.png" alt="instagram icon"></a>
+                   <a href="#"> <img src= "https://res.cloudinary.com/dytnzt4jf/image/upload/v1592431827/twitter_y2z4io.png" alt="twitter icon"></a>
+                </div>
+
+            </ul>
+        </div>
+
+        
+        <div class="footer-top-2">
+            <ul>
+                <li><h1>Take a loan</h1></li>
+                <li><a href="#">Take a loan</a></li>
+                <li><a href="#">Loan fee & interest rate</a></li>
+                <li><a href="#">Loan EMI Calculator</a></li>
+                <li><a href="#">How to apply for a loan</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-top-3">
+            <ul>
+                <li><h1>Invest</h1></li>
+                <li><a href="#">Invest your money</a></li>
+                <li><a href="#">Invest fee & return rate</a></li>
+                <li><a href="#">How to invest</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-top-4">
+            <ul>
+                <li><h1>About us</h1></li>
+                <li><a href="#">Why choose FundMyLaptop</a></li>
+                <li><a href="#">How P2P lending works</a></li>
+                <li><a href="#">About FundMyLaptop</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+    </div>
+            
+    <hr>
+
+        <!-- bottom section----- -->
+        <div class="footer-bottom">
+        <p class="footer-bottom-left">2020 © Copyright All rights reserved</p>
+           <p class="footer-bottom-right">FAQ</p>
+           <P class="footer-bottom-right">Privacy Policy</P>
+            <p class="footer-bottom-right">Terms & Conditions</p>
+        </ul>
+    </div>
+   </footer>
+</body>
+</html>
+
+
