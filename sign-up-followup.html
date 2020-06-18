@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=Sign, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
+    <title>Sign Up | FundMyLaptop</title>
+    <style>
+        body{
+            font-family:  'DM Sans';
+            background-color: #FFFFFF;
+            background-image: 
+            url('https://res.cloudinary.com/devmajor/image/upload/v1592426943/Polygon_9_bmonih.png'), 
+            url('https://res.cloudinary.com/devmajor/image/upload/v1592426943/Ellipse_58_injhxt.png'),
+            url('https://res.cloudinary.com/devmajor/image/upload/v1592426944/Ellipse_57_zgfz25.png'),
+            url('https://res.cloudinary.com/devmajor/image/upload/v1592426943/Ellipse_56_czvp1x.png'),
+            url('https://res.cloudinary.com/devmajor/image/upload/v1592426943/Polygon_8_htsakm.png'); 
+        
+            background-size: 15%, 2%, 12%, 20%, 25%;
+            background-position: left 0% top 0%, left 88% top 35%, right -1.5% top 0%, left -5% bottom -10%, right 6% bottom 0%;
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+            overflow: auto;
+            background-attachment: fixed;
+        }
+        /* .signup-main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        } */
+        .signup-loginBox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .signup-login-container{
+            background-color: #FFFFFF;
+            -webkit-box-shadow: 1px 1px 8px 0px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+            -moz-box-shadow:    1px 1px 8px 0px #ccc;  /* Firefox 3.5 - 3.6 */
+            box-shadow:         1px 1px 8px 0px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+            max-width: 100%;
+            height: fit-content;
+            margin-top: 3em;
+            min-width:20em;
+            display: flex;
+            flex-direction: column;
+            align-content:center ;
+            padding-top: 1em;
+            padding-right: 2.5em;
+            padding-left: 2.5em;
+        }
+        .logo{
+            font-weight: 400;
+        }
+        .signup-almostDone{
+            margin-top: -.5em;
+            font-weight:500;
+            color: #04172A;
+        }
+        .fundMy{
+            color: #04172A;
+        }
+        .laptop{
+            color: #FB3F5C;
+        }
+        .signup-dropdown-field select{
+            margin-top: -1em;
+            margin-bottom: .5em;
+            width: 100%;
+            padding: 1em 3em 1em 1em;
+            color:#aaa;
+            border-radius: .4em;
+            
+        }
+        .signup-dropdown-field select option{
+            color: #04172A;
+        }
+        .signup-dropdown-field p{
+            color: #04172A;
+            font-size: .9em;
+        }
+        .signup-heading-text{
+            margin-bottom: 2em;
+        }
+        .signup-continue-btn{
+            cursor: pointer;
+            margin-top: 2em;
+            margin-bottom: 5em;
+            border-radius: 3px;
+            border: 0;
+            color:#FFFFFF;
+            background-color: #FB3F5C;  
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1em;
+            line-height: 40px;
+            text-align: center;
+            width: 100%;
+            height: 3em;
+            color: white;
+            box-shadow: 4px 4px 15px rgba(251, 63, 92, 0.25);
+            border-radius: 5px;
+        }
+        
+        
+/* rule for mobile screen with small screens */
+ @media all and (min-width: 0px) { 
+ 	
+	.signup-loginBox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+     .signup-login-container{     
+        min-width:.5em;
+        flex-direction: column;
+        align-content:center ;
+        padding-top: 1em;
+        padding-right: 2.5em;
+        padding-left: 2.5em;
+    }
+}   
+ 
+
+ /* ----rule for tablet screen */
+ @media all and (min-width: 778px) { 
+ 	
+    .signup-loginBox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+     .signup-login-container{     
+        min-width:20em;
+        flex-direction: column;
+        align-content:center ;
+        padding-top: 1em;
+        padding-right: 2.5em;
+        padding-left: 2.5em;
+    }
+	
+ } 
+
+
+    </style>
+</head>
+<body>
+    <main class="signup-main">
+        <div class="signup-loginBox">           
+            <div class="signup-login-container">
+                <div class="signup-heading-text">
+                    <h3 class="signup-logo"><span class="fundMy">FundMy</span><span class="laptop">Laptop</span></h3>
+                    <h2 class="signup-almostDone">Almost Done!</h2>
+                </div>
+                <div class="signup-dropdown-field">
+                    <p>Country</p>
+                    <select name="country" id="country">
+                        <option value="0">Select your country</option>
+                        <option value="Nigeria">Nigeria</option>
+                    </select>
+                </div>
+                <div class="signup-dropdown-field">
+                    <p>Account type</p>
+                    <select name="account" id="country">
+                        <option value="0">Select your account type</option>
+                        <option value="Nigeria">Nigeria</option>
+                    </select>
+                </div>
+                <button class="signup-continue-btn">Continue ></button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
