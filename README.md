@@ -102,6 +102,14 @@ See also: #456, #789
 And if your commit is just a simple thing, then make the message very short, but not just a title
 
 
-originally Composed by @tominsinlalude
+Making a hosted version
+
+
+Sign up to ZEIT Now and go through the onboarding flow, ensuring your GitHub account is connected by using their ZEIT Now for GitHub integration.
+Connect your project to ZEIT Now from the "Create a new project" page, using the "New Project From GitHub" button and selecting the project you want to deploy.
+Once connected, every time you git push, ZEIT Now will create a new deployment and the deployment URL will be shown on your ZEIT Dashboard. You will also receive an email for each deployment with the URL.
+
+
+originally Composed by @tominsinlalude edited by @seunbayo
 ### Happy hacking!!!!
 

@@ -14,94 +14,6 @@ body {
     text-align: center;
   }
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-.main-nav {
-    list-style-type: none;
-    display: none;
-    
-}
-
-.nav-links
-{
-    text-decoration: none;
-    color: #2A3A64;
-
-    
-}
-
-.main-nav li {
-    text-align: center;
-   
-}
-
-.logo {
-    display: inline-block;
-    font-size: 22px;
-    margin-top: 10px;
-    color: #2A3A64;
-    margin-left: 60%;
-
-}
-
-.navbar-toggle {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 24px;
-}
-
-@media screen and (min-width: 768px) {
-    
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 0;
-        height: 70px;
-        align-items: center;
-    
-    }
-
-    .main-nav {
-        display: flex;
-        margin-left: -50px;
-        flex-direction: row;
-        /* justify-content: flex-end; */
-
-    }
-
-    .main-nav li {
-        margin: 0;
-        padding: 5px 10px 0px 30px;
-    }
-
-    .nav-links {
-        margin-left: 10px;
-    }
-
-    .logo {
-        padding-left: 10px;
-        margin-top: 0;
-        margin-left: 10px;
-
-    }
-
-    .navbar-toggle {
-        display: none;
-    }
-
-    
-    .nav-links:hover {
-        color: #FB3F5C;
-    }
-}
-
 .header-area {
     background: linear-gradient(270deg, #FB3F5C 0%, #FC657D 80.86%);
     padding-left: 140px;
@@ -115,32 +27,7 @@ body {
     margin-left: 0px;
     margin-left: 0px;
 }
-@media screen and (min-width: 375px ), (max-width: 800px){
-    .logo {
-        padding-left:-px;
-        margin-top: 15px;
-        margin-left: 0px;
-        font-size: 20px;
 
-    }
-   .main-nav {
-        display: flex;
-        margin-left: 0px;
-        flex-direction: row;
-        font-size: 12px;
-        justify-content: flex-end;
-
-}
-  /*
-.nav-button{
-    position: relative;
-    width: 80%;
-    padding-top: 5px;
-    margin: 0px;
-    float: right;
-}
-
-} */
-
-
+.text:hover {
+    color: #2A3A64;;
 }
