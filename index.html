@@ -2,645 +2,291 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Landing Page Without HERO & Blog</title>
+    <title>Under Construction Page</title>
+
+    <link
+      rel="stylesheet prefetch"
+      href="https://fonts.googleapis.com/css?family=Raleway:100"
+    />
     <link
       rel="stylesheet prefetch"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
     />
 
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-      /* Fonts */
-      @import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
-      /* CSS Variables -- Palette and Styles */
-      :root {
-        --primary-white: #ffffff;
-        --primary-pink: #fb3f5c;
-        --p-textgrey-color: #68747f;
-        --h-textblack-color: #1d2e3f;
-      }
-      /* General Styles */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+  </head>
+  <style>
+    /*General Style Reset*/
+    html,
+    body {
+      overflow: hidden;
+      font-size: 10px;
+      font-family: "Raleway", sans-serif;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    /*Helper Class Style*/
+
+    .font-w-100 {
+      font-weight: 100;
+    }
+
+    .font-w-200 {
+      font-weight: 200;
+    }
+
+    .font-size-xl {
+      font-size: 8rem;
+    }
+
+    .color-white {
+      color: white;
+    }
+
+    .color-primary {
+      color: #193541;
+    }
+
+    .padding-1x {
+      padding: 1rem;
+    }
+
+    .padding-h-1x {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .padding-v-1x {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .padding-h-2x {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .padding-v-2x {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .padding-2x {
+      padding: 2rem;
+    }
+
+    .bg-color-white {
+      background-color: white;
+    }
+
+    .text-right {
+      text-align: right;
+    }
+
+    /*Construction Section Style*/
+
+    .const-msg-container {
+      background-image: url("https://res.cloudinary.com/dwpwl6img/image/upload/v1592412361/coming_soon_bg.jpg");
+      background-size: cover;
+      background-position: center;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
+    .const-msg {
+      padding: 3rem;
+      text-align: right;
+    }
+
+    .const-msg .const-text {
+      margin-top: 1rem;
+    }
+
+    .under-text {
+      display: inline-block;
+    }
+
+    .text-uppercase {
+      text-transform: uppercase;
+    }
+
+    /*Socials Links Style*/
+    .const-msg .socials {
+      margin-top: 1rem;
+    }
+
+    .socials .links {
+      padding: 0;
+      margin-top: 1.5rem;
+    }
+
+    .links li {
+      list-style: none;
+      margin: 0 0.5rem;
+      padding: 0.75rem;
+      font-size: 1.75rem;
+      /*background-color: white;*/
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      border: 1px solid white;
+      transition: all 0.35s;
+      cursor: pointer;
+    }
+
+    .links li:hover {
+      background-color: white;
+    }
+
+    .links li a {
+      color: white;
+    }
+
+    .links li:hover a {
+      color: #193541;
+    }
+
+    .const-msg .gears {
+      padding: 2rem 3.5rem;
+    }
+
+    .const-msg .text {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.51);
+    }
+
+    .svg-icon {
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    .svg-icon-large {
+      width: 10em;
+      height: 10em;
+      animation-duration: 6000ms;
+      animation-name: spinLeft;
+    }
+
+    .svg-icon-small {
+      width: 6em;
+      height: 6em;
+      position: absolute;
+      margin-left: -15px;
+      margin-top: -25px;
+      animation-duration: 4000ms;
+      animation-name: spinRight;
+    }
+
+    .svg-icon path,
+    .svg-icon polygon,
+    .svg-icon rect {
+      fill: white;
+    }
+
+    .svg-icon-small path {
+      stroke: white;
+      stroke-width: 0.3;
+    }
+
+    @keyframes spinLeft {
+      from {
+        transform: rotate(0deg);
       }
 
-      body {
-        margin: 0;
-        padding: 0;
-        color: var(--p-textgrey-color);
-        background-color: var(--primary-white);
-        font-family: "DM Sans", sans-serif;
+      to {
+        transform: rotate(360deg);
       }
-      h1,
-      p {
-        font-style: normal;
-      }
-      h1 {
-        font-weight: bold;
-        color: var(--h-textblack-color);
-      }
-      p {
-        font-family: DM Sans;
-        font-weight: normal;
-        font-size: 18.0755px;
-        line-height: 29px;
+    }
+
+    @keyframes spinRight {
+      from {
+        transform: rotate(0deg);
       }
 
-      hr {
-        width: 124px;
-        margin-left: auto;
-        margin-right: auto;
-        border: 5px solid var(--primary-pink);
+      to {
+        transform: rotate(-360deg);
       }
-      /* Class specific styles */
+    }
 
-      .main {
-        padding-top: 100px;
-      }
-      .helpdiv {
-        padding-left: 137px;
-        padding-right: 137px;
-      }
-      .helpdiv h1 {
-        text-align: center;
-        margin-bottom: 13px;
-      }
-      .helpdiv hr {
-        margin-bottom: 101px;
-      }
-      .helpdiv .helpflex {
-        display: flex;
-        justify-content: space-between;
-      }
-      .helpdiv .helpflex .helploan {
-        flex-basis: 47%;
-        width: 47%;
-      }
-      .helpdiv .helpflex .helploan .helploan-box .pattern1 {
-        position: absolute;
-        width: 100%;
-        height: auto;
-        bottom: -8%;
-        right: 12%;
-      }
-      @media screen and (min-width: 1075px) and (max-width: 1256px) {
-        .helpdiv .helpflex .helploan .helploan-box .pattern1 {
-          bottom: -13%;
-          right: 12%;
-        }
-      }
-      @media screen and (min-width: 1257px) {
-        .helpdiv .helpflex .helploan .helploan-box .pattern1 {
-          bottom: -21%;
-          right: 12%;
-        }
-      }
-      .helpdiv .helpflex .helploan .helploan-box {
-        box-shadow: 1px 2.5px 4px rgba(222, 208, 208, 0.3),
-          inset 1px 2.5px 4px rgba(222, 208, 208, 0.3);
-        padding: 45px;
-        position: relative;
-      }
-      .helpdiv .helpflex .helploan .helploan-box h2,
-      .helpdiv .helpflex .helpinvest .helpinvest-box h2 {
-        font-weight: 500;
-        font-size: 40px;
-        color: #1d2e3f;
-      }
-      .helpdiv .helpflex .helploan .helploan-box p,
-      .helpdiv .helpflex .helpinvest .helpinvest-box p {
-        margin-bottom: 23px;
-      }
-      .helpdiv .helpflex .helpinvest .helpinvest-box .pattern2 {
-        position: absolute;
+    /*Media Queries*/
 
-        width: 100%;
-        height: auto;
-        top: -8%;
-        right: -12%;
-      }
-
-      @media screen and (min-width: 1075px) and (max-width: 1256px) {
-        .helpdiv .helpflex .helpinvest .helpinvest-box .pattern2 {
-          top: -11%;
-          right: -12%;
-        }
-      }
-      @media screen and (min-width: 1257px) {
-        .helpdiv .helpflex .helpinvest .helpinvest-box .pattern2 {
-          top: -20%;
-          right: -12%;
-        }
-      }
-      .helpdiv .helpflex .helpinvest {
-        flex-basis: 47%;
-        width: 47%;
-      }
-      .helpdiv .helpflex .helpinvest .helpinvest-box {
-        box-shadow: 1px 2.5px 4px rgba(222, 208, 208, 0.3),
-          inset 1px 2.5px 4px rgba(222, 208, 208, 0.3);
-        padding: 45px;
-        padding-top: 108px;
-        position: relative;
-      }
-      @media screen and (max-width: 1075px) {
-        .helpdiv .helpflex .helpinvest .helpinvest-box {
-          padding-top: 55px;
-        }
-      }
-      .faqdiv {
-        padding: 198px 221px 198px 221px;
-      }
-      .faqdiv .faq h1 {
-        text-align: center;
-      }
-      .faqdiv .faq hr {
-        margin-bottom: 56px;
-        margin-top: 21px;
-      }
-      .testimoniesdiv {
-        padding-left: 141px;
-        padding-right: 141px;
-      }
-      .testimoniesdiv .testimonials {
-        background-image: url(https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592469191/hng%20fundmylaptop/Rectangle_363_vtruep.png);
-        padding-top: 58px;
-        padding-bottom: 300px;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      .testimoniesdiv .testimonials h1 {
-        text-align: center;
-      }
-      .testimoniesdiv .testimonials hr {
-        margin-bottom: 33px;
-        margin-top: 19px;
-      }
-      .testimoniesdiv .testimonials .subtitle {
-        font-family: Muli;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18.0758px;
-        text-align: center;
-        color: #292e3d;
-      }
-      .testimoniesdiv .testimonials .testimonials-slider {
-        margin-top: 50px;
-        display: flex;
-        justify-content: space-between;
-      }
-      @media screen and (max-width: 1250px) {
-        .testimoniesdiv .testimonials .testimonials-slider .box.first {
-          display: none;
-        }
-      }
-      @media screen and (max-width: 1250px) {
-        .testimoniesdiv .testimonials .testimonials-slider .box.second {
-          flex-basis: 50%;
-          max-width: 50%;
-        }
-        .testimoniesdiv .testimonials .testimonials-slider .box.third {
-          flex-basis: 50%;
-          max-width: 50%;
-        }
-      }
-
-      .testimoniesdiv .testimonials .testimonials-slider .box {
-        display: flex;
-        flex-basis: 32%;
-        max-width: 32%;
-        padding: 17px;
-        margin: 10px;
-        background: #ffffff;
-        box-shadow: 0px 3.53427px 3.53427px rgba(187, 178, 178, 0.25);
-        border-radius: 6.18978px;
-      }
-      .testimoniesdiv .testimonials .testimonials-slider .profile {
-        display: flex;
-        flex-direction: column;
-        margin-right: 15px;
-        width: 20%;
-      }
-      .testimoniesdiv .testimonials .testimonials-slider .profile div {
-        align-self: center;
-      }
-      .testimoniesdiv .testimonials .testimonials-slider .profile img {
-        width: 100%;
-        height: auto;
-      }
-      .testimoniesdiv .testimonials .testimonials-slider .profile .name {
-        font-family: Muli;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 13.0539px;
-        line-height: 27px;
-      }
-      .testimoniesdiv .testimonials .testimonials-slider .profile .date {
-        font-family: Muli;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 10px;
-      }
-      .testimoniesdiv .testimonials .testimonials-slider .testimony {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-      }
-      .testimoniesdiv .testimonials .testimonials-slider .testimony p:before {
-        content: "\201B";
-      }
-      .testimoniesdiv .testimonials .testimonials-slider .testimony p:after {
-        content: "\2019";
-      }
-      .testimoniesdiv .testimonials .testimonials-slider .testimony p {
-        margin-bottom: 10px;
-      }
-      .testimoniesdiv .testimonials .testimonials-slider .testimony .checked {
-        color: #f3f56c;
-      }
-      .slider-arrows {
-        text-align: right;
-        margin-top: 30px;
-      }
-      .slider-arrows span {
-        padding: 20px;
-        background-color: rgba(29, 46, 63, 0.6);
-        color: #ffffff;
-      }
-      .slider-arrows span:hover {
-        background-color: #1d2e3f;
-      }
-      .impactdiv {
-        padding-left: 141px;
-        padding-right: 141px;
-      }
-      .impactdiv .impact {
-        background-image: url(https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592477112/hng%20fundmylaptop/undraw_connected_world_wuay_1_yxaa6i.png);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding: 200px;
-      }
-      .impactdiv .impact h1 {
-        font-family: DM Sans;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 48px;
-        text-align: center;
-        color: rgba(29, 46, 63, 0.8);
-      }
-
-      .impactdiv .impact .counter {
-        font-family: DM Sans;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 75px;
-        line-height: 98px;
-        text-align: center;
-
-        color: #fb3f5c;
-      }
-      .impactdiv .impact div {
-        display: flex;
+    @media (max-width: 700px) {
+      .const-msg-container {
         justify-content: center;
       }
-      .impactdiv .impact div .each {
-        display: flex;
-        flex-direction: column;
-        margin: 50px;
+
+      .const-msg {
         text-align: center;
       }
 
-      /* UI Elements */
+      .const-msg .text div {
+        font-size: 6rem;
+      }
+    }
 
-      /*Medium Pink Button*/
-      a.medium-buttons {
-        display: inline-block;
-        background-color: var(--primary-pink);
-        padding: 0.9em 1.5em;
-        margin: 0 0.3em 0.3em 0;
-        border-radius: 0.12em;
-        box-sizing: border-box;
-        text-decoration: none;
-        color: var(--primary-white);
-        text-align: center;
-        transition: all 0.2s;
-        border-radius: 10px;
+    @media (max-width: 500px) {
+      .const-msg .text div {
+        font-size: 5rem;
       }
-      a.medium-buttons:hover {
-        color: #000000;
-        background-color: #ffffff;
-      }
-      @media all and (max-width: 30em) {
-         a.medium-buttons {
-          display: block;
-          margin: 0.4em auto;
-        }
-      }
+    }
+  </style>
 
-      /* FAQ Accordion */
-      /* Style the element that is used to open and close the accordion class */
-      p.accordion {
-        cursor: pointer;
-        padding: 18px;
-        width: 100%;
-        text-align: left;
-        border: none;
-        outline: none;
-        transition: 0.4s;
-        margin-bottom: 10px;
-        border: 1px solid #444855;
-        box-sizing: border-box;
-        border-radius: 10px;
-      }
-
-      /* Add a background color to the accordion if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-      p.accordion.active,
-      p.accordion:hover {
-        background-color: var(--primary-pink);
-        color: var(--primary-white);
-      }
-
-      /* Unicode character for "greater" sign (>) */
-      p.accordion:after {
-        content: "\003E";
-        font-size: 50px;
-        color: #444855;
-        float: right;
-        margin-left: 5px;
-      }
-
-      /* Unicode character for "minus" sign (-) */
-      p.accordion.active:after {
-        content: "\2212";
-      }
-
-      div.panel {
-        padding: 0 18px;
-        background-color: white;
-        max-height: 0;
-        overflow: hidden;
-        transition: 0.4s ease-in-out;
-        opacity: 0;
-        margin-bottom: 10px;
-      }
-
-      div.panel.show {
-        opacity: 1;
-        max-height: 500px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
-      }
-    </style>
-  </head>
   <body>
-    <div class="main">
-      <div class="helpdiv">
-        <h1>How Can We Help You</h1>
-        <hr />
-        <div class="helpflex">
-          <div class="helploan">
-            <div class="helploan-box">
-              <img
-                src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592444349/hng%20fundmylaptop/helploan-icon_xlfel3.svg"
-                alt="helploan-icon"
-              />
-              <h2>
-                Need a <span style="color: var(--primary-pink);">loan</span>?
-              </h2>
-              <p>
-                Becoming a dev defintely means you have to have a laptop. As a
-                dev your laptop is your most essential work tool. HNG Imterships
-                Project #FundMyLaptop exists solely to make this happen.
-              </p>
-              <a href="#" class="medium-buttons">Get a loan</a>
-
-              <img
-                src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592443086/hng%20fundmylaptop/loanpattern_km9ohy.png"
-                alt=""
-                class="pattern1"
-              />
+    <div class="main-wrapper">
+      <div class="const-msg-container">
+        <div class="const-msg">
+          <div class="gears">
+            <svg class="svg-icon svg-icon-large" viewBox="0 0 20 20">
+              <path
+                d="M17.498,11.697c-0.453-0.453-0.704-1.055-0.704-1.697c0-0.642,0.251-1.244,0.704-1.697c0.069-0.071,0.15-0.141,0.257-0.22c0.127-0.097,0.181-0.262,0.137-0.417c-0.164-0.558-0.388-1.093-0.662-1.597c-0.075-0.141-0.231-0.22-0.391-0.199c-0.13,0.02-0.238,0.027-0.336,0.027c-1.325,0-2.401-1.076-2.401-2.4c0-0.099,0.008-0.207,0.027-0.336c0.021-0.158-0.059-0.316-0.199-0.391c-0.503-0.274-1.039-0.498-1.597-0.662c-0.154-0.044-0.32,0.01-0.416,0.137c-0.079,0.106-0.148,0.188-0.22,0.257C11.244,2.956,10.643,3.207,10,3.207c-0.642,0-1.244-0.25-1.697-0.704c-0.071-0.069-0.141-0.15-0.22-0.257C7.987,2.119,7.821,2.065,7.667,2.109C7.109,2.275,6.571,2.497,6.07,2.771C5.929,2.846,5.85,3.004,5.871,3.162c0.02,0.129,0.027,0.237,0.027,0.336c0,1.325-1.076,2.4-2.401,2.4c-0.098,0-0.206-0.007-0.335-0.027C3.001,5.851,2.845,5.929,2.77,6.07C2.496,6.572,2.274,7.109,2.108,7.667c-0.044,0.154,0.01,0.32,0.137,0.417c0.106,0.079,0.187,0.148,0.256,0.22c0.938,0.936,0.938,2.458,0,3.394c-0.069,0.072-0.15,0.141-0.256,0.221c-0.127,0.096-0.181,0.262-0.137,0.416c0.166,0.557,0.388,1.096,0.662,1.596c0.075,0.143,0.231,0.221,0.392,0.199c0.129-0.02,0.237-0.027,0.335-0.027c1.325,0,2.401,1.076,2.401,2.402c0,0.098-0.007,0.205-0.027,0.334C5.85,16.996,5.929,17.154,6.07,17.23c0.501,0.273,1.04,0.496,1.597,0.66c0.154,0.047,0.32-0.008,0.417-0.137c0.079-0.105,0.148-0.186,0.22-0.256c0.454-0.453,1.055-0.703,1.697-0.703c0.643,0,1.244,0.25,1.697,0.703c0.071,0.07,0.141,0.15,0.22,0.256c0.073,0.098,0.188,0.152,0.307,0.152c0.036,0,0.073-0.004,0.109-0.016c0.558-0.164,1.096-0.387,1.597-0.66c0.141-0.076,0.22-0.234,0.199-0.393c-0.02-0.129-0.027-0.236-0.027-0.334c0-1.326,1.076-2.402,2.401-2.402c0.098,0,0.206,0.008,0.336,0.027c0.159,0.021,0.315-0.057,0.391-0.199c0.274-0.5,0.496-1.039,0.662-1.596c0.044-0.154-0.01-0.32-0.137-0.416C17.648,11.838,17.567,11.77,17.498,11.697 M16.671,13.334c-0.059-0.002-0.114-0.002-0.168-0.002c-1.749,0-3.173,1.422-3.173,3.172c0,0.053,0.002,0.109,0.004,0.166c-0.312,0.158-0.64,0.295-0.976,0.406c-0.039-0.045-0.077-0.086-0.115-0.123c-0.601-0.6-1.396-0.93-2.243-0.93s-1.643,0.33-2.243,0.93c-0.039,0.037-0.077,0.078-0.116,0.123c-0.336-0.111-0.664-0.248-0.976-0.406c0.002-0.057,0.004-0.113,0.004-0.166c0-1.75-1.423-3.172-3.172-3.172c-0.054,0-0.11,0-0.168,0.002c-0.158-0.312-0.293-0.639-0.405-0.975c0.044-0.039,0.085-0.078,0.124-0.115c1.236-1.236,1.236-3.25,0-4.486C3.009,7.719,2.969,7.68,2.924,7.642c0.112-0.336,0.247-0.664,0.405-0.976C3.387,6.668,3.443,6.67,3.497,6.67c1.75,0,3.172-1.423,3.172-3.172c0-0.054-0.002-0.11-0.004-0.168c0.312-0.158,0.64-0.293,0.976-0.405C7.68,2.969,7.719,3.01,7.757,3.048c0.6,0.6,1.396,0.93,2.243,0.93s1.643-0.33,2.243-0.93c0.038-0.039,0.076-0.079,0.115-0.123c0.336,0.112,0.663,0.247,0.976,0.405c-0.002,0.058-0.004,0.114-0.004,0.168c0,1.749,1.424,3.172,3.173,3.172c0.054,0,0.109-0.002,0.168-0.004c0.158,0.312,0.293,0.64,0.405,0.976c-0.045,0.038-0.086,0.077-0.124,0.116c-0.6,0.6-0.93,1.396-0.93,2.242c0,0.847,0.33,1.645,0.93,2.244c0.038,0.037,0.079,0.076,0.124,0.115C16.964,12.695,16.829,13.021,16.671,13.334 M10,5.417c-2.528,0-4.584,2.056-4.584,4.583c0,2.529,2.056,4.584,4.584,4.584s4.584-2.055,4.584-4.584C14.584,7.472,12.528,5.417,10,5.417 M10,13.812c-2.102,0-3.812-1.709-3.812-3.812c0-2.102,1.71-3.812,3.812-3.812c2.102,0,3.812,1.71,3.812,3.812C13.812,12.104,12.102,13.812,10,13.812"
+              ></path>
+            </svg>
+            <svg class="svg-icon svg-icon-small" viewBox="0 0 20 20">
+              <path
+                d="M17.498,11.697c-0.453-0.453-0.704-1.055-0.704-1.697c0-0.642,0.251-1.244,0.704-1.697c0.069-0.071,0.15-0.141,0.257-0.22c0.127-0.097,0.181-0.262,0.137-0.417c-0.164-0.558-0.388-1.093-0.662-1.597c-0.075-0.141-0.231-0.22-0.391-0.199c-0.13,0.02-0.238,0.027-0.336,0.027c-1.325,0-2.401-1.076-2.401-2.4c0-0.099,0.008-0.207,0.027-0.336c0.021-0.158-0.059-0.316-0.199-0.391c-0.503-0.274-1.039-0.498-1.597-0.662c-0.154-0.044-0.32,0.01-0.416,0.137c-0.079,0.106-0.148,0.188-0.22,0.257C11.244,2.956,10.643,3.207,10,3.207c-0.642,0-1.244-0.25-1.697-0.704c-0.071-0.069-0.141-0.15-0.22-0.257C7.987,2.119,7.821,2.065,7.667,2.109C7.109,2.275,6.571,2.497,6.07,2.771C5.929,2.846,5.85,3.004,5.871,3.162c0.02,0.129,0.027,0.237,0.027,0.336c0,1.325-1.076,2.4-2.401,2.4c-0.098,0-0.206-0.007-0.335-0.027C3.001,5.851,2.845,5.929,2.77,6.07C2.496,6.572,2.274,7.109,2.108,7.667c-0.044,0.154,0.01,0.32,0.137,0.417c0.106,0.079,0.187,0.148,0.256,0.22c0.938,0.936,0.938,2.458,0,3.394c-0.069,0.072-0.15,0.141-0.256,0.221c-0.127,0.096-0.181,0.262-0.137,0.416c0.166,0.557,0.388,1.096,0.662,1.596c0.075,0.143,0.231,0.221,0.392,0.199c0.129-0.02,0.237-0.027,0.335-0.027c1.325,0,2.401,1.076,2.401,2.402c0,0.098-0.007,0.205-0.027,0.334C5.85,16.996,5.929,17.154,6.07,17.23c0.501,0.273,1.04,0.496,1.597,0.66c0.154,0.047,0.32-0.008,0.417-0.137c0.079-0.105,0.148-0.186,0.22-0.256c0.454-0.453,1.055-0.703,1.697-0.703c0.643,0,1.244,0.25,1.697,0.703c0.071,0.07,0.141,0.15,0.22,0.256c0.073,0.098,0.188,0.152,0.307,0.152c0.036,0,0.073-0.004,0.109-0.016c0.558-0.164,1.096-0.387,1.597-0.66c0.141-0.076,0.22-0.234,0.199-0.393c-0.02-0.129-0.027-0.236-0.027-0.334c0-1.326,1.076-2.402,2.401-2.402c0.098,0,0.206,0.008,0.336,0.027c0.159,0.021,0.315-0.057,0.391-0.199c0.274-0.5,0.496-1.039,0.662-1.596c0.044-0.154-0.01-0.32-0.137-0.416C17.648,11.838,17.567,11.77,17.498,11.697 M16.671,13.334c-0.059-0.002-0.114-0.002-0.168-0.002c-1.749,0-3.173,1.422-3.173,3.172c0,0.053,0.002,0.109,0.004,0.166c-0.312,0.158-0.64,0.295-0.976,0.406c-0.039-0.045-0.077-0.086-0.115-0.123c-0.601-0.6-1.396-0.93-2.243-0.93s-1.643,0.33-2.243,0.93c-0.039,0.037-0.077,0.078-0.116,0.123c-0.336-0.111-0.664-0.248-0.976-0.406c0.002-0.057,0.004-0.113,0.004-0.166c0-1.75-1.423-3.172-3.172-3.172c-0.054,0-0.11,0-0.168,0.002c-0.158-0.312-0.293-0.639-0.405-0.975c0.044-0.039,0.085-0.078,0.124-0.115c1.236-1.236,1.236-3.25,0-4.486C3.009,7.719,2.969,7.68,2.924,7.642c0.112-0.336,0.247-0.664,0.405-0.976C3.387,6.668,3.443,6.67,3.497,6.67c1.75,0,3.172-1.423,3.172-3.172c0-0.054-0.002-0.11-0.004-0.168c0.312-0.158,0.64-0.293,0.976-0.405C7.68,2.969,7.719,3.01,7.757,3.048c0.6,0.6,1.396,0.93,2.243,0.93s1.643-0.33,2.243-0.93c0.038-0.039,0.076-0.079,0.115-0.123c0.336,0.112,0.663,0.247,0.976,0.405c-0.002,0.058-0.004,0.114-0.004,0.168c0,1.749,1.424,3.172,3.173,3.172c0.054,0,0.109-0.002,0.168-0.004c0.158,0.312,0.293,0.64,0.405,0.976c-0.045,0.038-0.086,0.077-0.124,0.116c-0.6,0.6-0.93,1.396-0.93,2.242c0,0.847,0.33,1.645,0.93,2.244c0.038,0.037,0.079,0.076,0.124,0.115C16.964,12.695,16.829,13.021,16.671,13.334 M10,5.417c-2.528,0-4.584,2.056-4.584,4.583c0,2.529,2.056,4.584,4.584,4.584s4.584-2.055,4.584-4.584C14.584,7.472,12.528,5.417,10,5.417 M10,13.812c-2.102,0-3.812-1.709-3.812-3.812c0-2.102,1.71-3.812,3.812-3.812c2.102,0,3.812,1.71,3.812,3.812C13.812,12.104,12.102,13.812,10,13.812"
+              ></path>
+            </svg>
+          </div>
+          <div class="text">
+            <div
+              class="under-text text-right font-size-xl color-primary bg-color-white padding-h-2x padding-v-1x text-uppercase"
+            >
+              Under
+            </div>
+            <div
+              class="const-text text-uppercase font-size-xl font-w-10 color-white"
+            >
+              Construction
             </div>
           </div>
-          <div class="helpinvest">
-            <div class="helpinvest-box">
-              <h2>
-                Want to <span style="color: var(--primary-pink);">invest</span>?
-              </h2>
-              <p>
-                Becoming a dev defintely means you have to have a laptop. As a
-                dev your laptop is your most essential work tool. HNG Imterships
-                Project #FundMyLaptop exists solely to make this happen.
-              </p>
-              <a href="#" class="medium-buttons">Get loan</a>
-              <img
-                src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592443086/hng%20fundmylaptop/investpattern_pbx4s6.png"
-                alt=""
-                class="pattern2"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="faqdiv">
-        <div class="faq">
-          <h1>Frequently Asked Questions</h1>
-          <hr />
-          <p class="accordion">How do I get a laptop</p>
-          <div class="panel">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book it has.
-          </div>
-
-          <p class="accordion">How do I get a loan</p>
-          <div class="panel">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book it has.
-          </div>
-
-          <p class="accordion">How do I invest in this platform</p>
-          <div class="panel">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book it has.
-          </div>
-
-          <p class="accordion">
-            How do I get a laptop
-          </p>
-          <div class="panel">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book it has.
-          </div>
-
-          <p class="accordion">
-            How do I get a loan
-          </p>
-          <div class="panel">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book it has.
-          </div>
-
-          <p class="accordion">
-            How do I invest in this platform
-          </p>
-          <div class="panel">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book it has.
-          </div>
-        </div>
-      </div>
-      <div class="testimoniesdiv">
-        <div class="testimonials">
-          <h1>Fundmylaptop loves Testimonies</h1>
-          <hr />
-          <p class="subtitle">
-            Fundmylaptop loves feedbacks. Here is what our clients say about us
-            and also their experiences using this platform
-          </p>
-          <div class="testimonials-slider">
-            <div class="box first">
-              <div class="profile">
-                <img
-                  src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592469191/hng%20fundmylaptop/portrait-attracive-young-businesswoman-wearing-260nw-1036909795_1_ufdf4y.png"
-                  alt=""
-                />
-                <div>
-                  <p class="name">Anita M.</p>
-                  <small><p class="date">October 7, 2019</p></small>
-                </div>
-              </div>
-              <div class="testimony">
-                <p>
-                  Perfect.Very confortable and pleasant enviroment. we sat in
-                  the pool area where it was very cool. i enjoyed my stay and i
-                  will love to visit again.
-                </p>
-                <span class="ratings">
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                </span>
-              </div>
-            </div>
-
-            <div class="box second">
-              <div class="profile">
-                <img
-                  src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592469191/hng%20fundmylaptop/portrait-attracive-young-businesswoman-wearing-260nw-1036909795_1_ufdf4y.png"
-                  alt=""
-                />
-                <div>
-                  <p class="name">Anita M.</p>
-                  <small><p class="date">October 7, 2019</p></small>
-                </div>
-              </div>
-              <div class="testimony">
-                <p>
-                  Perfect.Very confortable and pleasant enviroment. we sat in
-                  the pool area where it was very cool. i enjoyed my stay and i
-                  will love to visit again.
-                </p>
-                <span class="ratings">
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                </span>
-              </div>
-            </div>
-
-            <div class="box third">
-              <div class="profile">
-                <img
-                  src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592469191/hng%20fundmylaptop/portrait-attracive-young-businesswoman-wearing-260nw-1036909795_1_ufdf4y.png"
-                  alt=""
-                />
-                <div>
-                  <p class="name">Anita M.</p>
-                  <small><p class="date">October 7, 2019</p></small>
-                </div>
-              </div>
-              <div class="testimony">
-                <p>
-                  Perfect.Very confortable and pleasant enviroment. we sat in
-                  the pool area where it was very cool. i enjoyed my stay and i
-                  will love to visit again.
-                </p>
-                <span class="ratings">
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="slider-arrows">
-            <span>&#10094;</span>
-            <span>&#10095;</span>
-          </div>
-        </div>
-      </div>
-      <div class="impactdiv">
-        <div class="impact">
-          <h1>
-            Successfully provided 1500+ laptops to interns in over 20countries.
-          </h1>
-          <div>
-            <div class="each">
-              <h1 class="counter">1500+</h1>
-              <h3>laptops</h3>
-            </div>
-            <div class="each">
-              <h1 class="counter">30+</h1>
-              <h3>countries</h3>
-            </div>
+          <div class="socials">
+            <ul class="links">
+              <li>
+                <a href="#!"
+                  ><i class="fa fa-github-alt" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#!"
+                  ><i class="fa fa-twitter" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-    <script>
-      // FAQ Accordion JS
-      document.addEventListener("DOMContentLoaded", function (event) {
-        var acc = document.getElementsByClassName("accordion");
-        var panel = document.getElementsByClassName("panel");
-        for (var i = 0; i < acc.length; i++) {
-          acc[i].onclick = function () {
-            var setClasses = !this.classList.contains("active");
-            setClass(acc, "active", "remove");
-            setClass(panel, "show", "remove");
-
-            if (setClasses) {
-              this.classList.toggle("active");
-              this.nextElementSibling.classList.toggle("show");
-            }
-          };
-        }
-
-        function setClass(els, className, fnName) {
-          for (var i = 0; i < els.length; i++) {
-            els[i].classList[fnName](className);
-          }
-        }
-      });
-    </script>
   </body>
 </html>
