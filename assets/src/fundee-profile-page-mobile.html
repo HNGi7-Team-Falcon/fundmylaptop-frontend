@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Fundee Profile Page Mobile</title>
+</head>
+
+<body>
+    <!-- internal styling -->
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .nav {
+            display: flex;
+        }
+
+        .line-1 {
+            width: 20px;
+            margin-bottom: 6px;
+            border: 1px solid #2A3A64;
+        }
+
+        .line-2 {
+            width: 15px;
+            border: 1px solid #2A3A64;
+            position: relative;
+            left: 4px;
+            margin-bottom: 6px;
+        }
+
+        .line-3 {
+            width: 10px;
+            border: 1px solid #2A3A64;
+            position: relative;
+            left: 8px;
+
+        }
+
+        .nav-items {
+            margin-top: 18px;
+            position: relative;
+            margin-left: 23px;
+        }
+
+        .logo {
+            margin: 0 auto;
+            position: absolute;
+            left: 125px;
+
+        }
+
+        .logo p {
+            font-size: 24px;
+            position: relative;
+            bottom: 10px;
+            font-weight: bold;
+            color: #2A3A64;
+        }
+
+        .logo p span {
+            color: #FB3F5C;
+        }
+
+        .user {
+            display: flex;
+            margin-top: 40px;
+        }
+
+        div.image,
+        .img-fluid {
+            width: 100px;
+        }
+
+        img.img-fluid {
+            border-radius: 50%;
+            margin-left: 20px;
+        }
+
+        .details {
+            margin-left: 40px;
+        }
+
+        .username {
+            font-weight: bold;
+            font-size: 24px;
+            margin-top: 15px;
+            color: #04172A;
+            margin-bottom: 0;
+        }
+
+        .title {
+            font-weight: 500;
+            color: rgba(4, 23, 42, 0.75);
+            margin-top: 0;
+        }
+
+        .successful {
+            margin-left: 25px;
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        p.dashboard {
+            text-align: center;
+            margin-top: 23px;
+        }
+
+        p.dashboard a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: #FB3F5C;
+            box-shadow: 5px 5px 25px rgba(255, 29, 114, 0.2);
+        }
+
+        .container {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        .about {
+            font-weight: 500;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 0;
+        }
+
+        .description {
+            font-size: 16px;
+            line-height: 25px;
+        }
+
+        .contact {
+            font-size: 20px;
+            font-weight: 500;
+            color: #04172A;
+        }
+
+        .info {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .link {
+            color: #FB3F5C;
+        }
+
+        .link a {
+            text-decoration: none;
+            color: #FB3F5C;
+        }
+
+        .phone,
+        .e-mail {
+            margin-left: 36px;
+        }
+
+        .address {
+            margin-left: 25px;
+        }
+
+        .site {
+            margin-left: 55px;
+        }
+
+        .birthday {
+            margin-left: 20px;
+        }
+
+        .gender {
+            margin-left: 27px;
+        }
+
+        .edit a {
+            text-decoration: none;
+            color: #FB3F5C;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        p.edit {
+            text-align: right;
+        }
+
+        p.edit span {
+            color: #000000;
+        }
+    </style>
+
+    <!-- html section -->
+    <section>
+        <div class="nav">
+            <div class="nav-items">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class='line-3'></div>
+            </div>
+            <div class="logo">
+                <p>FundMy<span>Laptop</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- user section -->
+
+    <section>
+        <div class="user">
+            <div class="image">
+                <img src="https://res.cloudinary.com/derajohnson/image/upload/v1592573611/shallow-focus-photo-of-woman-wearing-silver-colored-hoop-2101839_skf8rz.jpg"
+                    class='img-fluid' alt="">
+            </div>
+
+            <div class="details">
+                <p class="username">Janet Doe</p>
+                <p class="title">Front End Developer</p>
+            </div>
+        </div>
+        <p class="successful">5 successful repayments</p>
+        <p class="dashboard"> <a href="#">Go to Dashboard</a></p>
+    </section>
+
+    <!-- about section -->
+    <section class="container">
+        <p class="about">ABOUT</p>
+        <p class="description">I am a proactive, diligent, honest, hardworker with passion for web development. I have
+            over 5 year
+            cummulative experience working in a fintech company in Lagos State, Nigeria. I like to play football and
+            sing.</p>
+    </section>
+
+    <!-- contact info -->
+    <section class="container">
+        <p class="contact">CONTACT INFORMATION</p>
+
+        <div class="info">
+            <div>
+                Phone:
+            </div>
+            <div class="link phone">
+                +234 (0) 80 2913 4912
+            </div>
+        </div>
+        <div class="info">
+            <div>
+                Address:
+            </div>
+            <div class="address">
+                16, Ajobo Close, Elewura, Challenge, Ibadan, Oyo State.
+            </div>
+        </div>
+        <div class="info">
+            <div>
+                E-mail:
+            </div>
+            <div class="link e-mail">
+                <a href="#">janetdoe.hng@gmail.com</a>
+            </div>
+        </div>
+        <div class="info">
+            <div>
+                Site:
+            </div>
+            <div class="link site">
+                <a href="#">janetdoe.com </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- basic information -->
+    <section class="container">
+        <p class="contact"> BASIC INFORMATION</p>
+        <div class="info">
+            <div>
+                Birthday:
+            </div>
+            <div class="birthday">
+                June 18, 2000
+            </div>
+        </div>
+        <div class="info">
+            <div>
+                Gender:
+            </div>
+            <div class="gender">
+                Female
+            </div>
+        </div>
+
+        <!-- edit profile -->
+        <p class="edit"><a href="#">Edit Profile <span><i class="fa fa-edit"></i></span></a></p>
+    </section>
+</body>
+
+</html>
