@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Title</title>
 
     <!-- CSS only -->
@@ -20,176 +20,363 @@
             font-family: "DM Sans";
         }
 
-        /*nav */
-        .fvoavbf-nav-container{
-            height: 125px;
-            width: auto;
-            padding: 0 124px;
-            display: flex;
-            justify-content: center;
+
+        @media screen and (min-device-width:961px) {
+            /*nav */
+            .fvoavbf-nav-container {
+                height: 125px;
+                width: auto;
+                padding: 0 124px;
+                display: flex;
+                justify-content: center;
+            }
+
+            #fvoavbf-logo {
+                width: 229px;
+                height: 32px;
+            }
+
+            .fvoavbf-dropdown button {
+                background: #FFFFFF;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+                border: none;
+                margin-left: 45px;
+                padding: 1px;
+            }
+
+            .dropdown-toggle::after {
+                display: inline-block;
+                margin-left: .255em;
+                vertical-align: .255em;
+                border-top: .3em solid;
+                border-right: .3em solid transparent;
+                border-bottom: 0;
+                content: normal;
+                border-left: .3em solid transparent;
+            }
+
+            .fvoavbf-text {
+                color: #FB3F5C !important;
+            }
+
+            .fvoavbf-dropdown-invest button {
+                margin-left: 45px;
+            }
+
+            .fvoavbf-dropdown-loan button {
+                margin-left: 25px;
+            }
+
+            .bg-light {
+                background-color: transparent !important;
+            }
+
+            .fvoavbf-active-nav {
+                margin-left: 202px;
+            }
+
+            .navbar-light .navbar-nav .active > .nav-link {
+                color: #FB3F5C;
+            }
+
+            .fvoavbf-link {
+                color: #222222 !important;
+            }
+
+            .navbar-light .navbar-nav .nav-link {
+                color: transparent;
+            }
+
+            /*    nav*/
+            /*    content*/
+            .fvoavbf-content-container {
+                /*position: relative;*/
+                display: flex;
+                padding: 72px 176px 0 176px;
+                height: auto;
+                /*width: 100px;*/
+                /*border: 1px saddlebrown solid;*/
+            }
+
+            .fvoavbf-content-left {
+                position: relative;
+                float: left;
+                /*border: 1px red solid;*/
+                /*padding: 10px;*/
+                width: 50%;
+                padding: 72px 50px 0 0;
+            }
+
+            .fvoavbf-content-right {
+                position: relative;
+                padding: 42px 30px 0 20px;
+                width: 50%;
+                float: right;
+                /*border: 1px solid black;*/
+            }
+
+            .fvoavbf-content-name {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 39px;
+            }
+
+            .fvoavbf-content-intro {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 26px;
+            }
+
+            .fvoavbf-content-thead {
+                font-family: DM Sans;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 26px;
+                /* identical to box height */
+                text-transform: uppercase;
+                color: #04172A;
+            }
+
+            .fvoavbf-content-table td {
+                font-family: DM Sans;
+                font-style: normal;
+                /*font-weight: normal;*/
+                font-size: 18px;
+                line-height: 23px;
+                padding: 0 0 8px 0;
+            }
+
+            .fvoavbf-content-table td:first-child {
+                width: 115px;
+                vertical-align: top;
+            }
+
+            table {
+                margin-bottom: 20px;
+            }
+
+            .fvoavbf-content-bottom {
+                margin-bottom: 50px;
+                text-align: justify;
+            }
+
+            .fvoavbf-content-color {
+                color: #FB3F5C;
+            }
+
+            .fvoavbf-content-img-container {
+                background-image: url(https://res.cloudinary.com/raynasun0109/image/upload/v1592577023/fundmylaptop/gregory-hayes-2guarBycJJQ-unsplash_1_copy_x6gqe8.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 482px;
+                height: 353px;
+                margin-bottom: 20px;
+                /*margin-top: 12px;*/
+            }
+
+            .fvoavbf-content-price {
+                position: relative;
+                display: block;
+                color: black;
+                background-color: #FB3F5C;
+                margin-left: 50%;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 21px;
+                width: 100px;
+                height: 30px;
+                padding: 5px 10px;
+                text-align: center;
+            }
+            /*    content*/
         }
 
-        #fvoavbf-logo{
-            width: 229px;
-            height: 32px;
+
+
+        @media screen and (max-device-width:960px){
+            /*nav */
+            .fvoavbf-nav-container {
+                height: auto;
+                width: auto;
+                padding: 0 124px;
+                display: flex;
+                justify-content: center;
+                margin-top: 5%;
+            }
+
+            #fvoavbf-logo{
+                height: 100%;
+                width: 100%;
+            }
+
+            .fvoavbf-dropdown button {
+                background: #FFFFFF;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+                border: none;
+                margin-left: 45px;
+                padding: 1px;
+            }
+
+            .dropdown-toggle::after {
+                display: inline-block;
+                margin-left: .255em;
+                vertical-align: .255em;
+                border-top: .3em solid;
+                border-right: .3em solid transparent;
+                border-bottom: 0;
+                content: normal;
+                border-left: .3em solid transparent;
+            }
+
+            .fvoavbf-text {
+                color: #FB3F5C !important;
+            }
+
+            .fvoavbf-dropdown-invest button {
+                margin-left: 45px;
+            }
+
+            .fvoavbf-dropdown-loan button {
+                margin-left: 25px;
+            }
+
+            .bg-light {
+                background-color: transparent !important;
+            }
+
+            .fvoavbf-active-nav {
+                margin-left: 202px;
+            }
+
+            .navbar-light .navbar-nav .active > .nav-link {
+                color: #FB3F5C;
+            }
+
+            .fvoavbf-link {
+                color: #222222 !important;
+            }
+
+            .navbar-light .navbar-nav .nav-link {
+                color: transparent;
+            }
+
+            .navbar-toggler {
+                font-size: 1.25rem;
+                line-height: 1;
+                background-color: transparent;
+                border: 1px solid transparent;
+                border-radius: .25rem;
+                position: absolute;
+                left: 20px;
+                padding: 0;
+            }
+
+
+            /*    nav*/
+            /*    content*/
+            .fvoavbf-content-container {
+                /*position: relative;*/
+                display: block;
+                padding: 0 17px 0 17px;
+                height: auto;
+            }
+
+            .fvoavbf-content-left {
+                position: relative;
+                float: left;
+                width: 100%;
+                padding: 72px 2px 0 2px;
+            }
+
+            .fvoavbf-content-right {
+                position: relative;
+                /*padding: 42px 30px 0 20px;*/
+                width: 100%;
+                float: right;
+            }
+
+            .fvoavbf-content-name {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 39px;
+            }
+
+            .fvoavbf-content-intro {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 26px;
+            }
+
+            .fvoavbf-content-thead {
+                font-family: DM Sans;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 26px;
+                /* identical to box height */
+                text-transform: uppercase;
+                color: #04172A;
+            }
+
+            .fvoavbf-content-table td {
+                font-family: DM Sans;
+                font-style: normal;
+                /*font-weight: normal;*/
+                font-size: 18px;
+                line-height: 23px;
+                padding: 0 0 8px 0;
+            }
+
+            .fvoavbf-content-table td:first-child {
+                width: 115px;
+                vertical-align: top;
+            }
+
+            table {
+                margin-bottom: 20px;
+            }
+
+            .fvoavbf-content-bottom {
+                margin-bottom: 50px;
+                text-align: justify;
+            }
+
+            .fvoavbf-content-color {
+                color: #FB3F5C;
+            }
+
+            .fvoavbf-content-img-container {
+                background-image: url(https://res.cloudinary.com/raynasun0109/image/upload/v1592577023/fundmylaptop/gregory-hayes-2guarBycJJQ-unsplash_1_copy_x6gqe8.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                /*width: 100%;*/
+                height: 250px;
+                margin-bottom: 20px;
+                /*margin-top: 12px;*/
+            }
+
+            .fvoavbf-content-price {
+                position: relative;
+                display: block;
+                color: black;
+                background-color: #FB3F5C;
+                /*margin-left: 50%;*/
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 21px;
+                width: 100px;
+                height: 30px;
+                padding: 5px 10px;
+                text-align: center;
+            }
+            /*    content*/
+
         }
-
-        .fvoavbf-dropdown button{
-            background: #FFFFFF;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
-            border: none;
-            margin-left: 45px;
-            padding: 1px;
-        }
-
-        .dropdown-toggle::after {
-            display: inline-block;
-            margin-left: .255em;
-            vertical-align: .255em;
-            border-top: .3em solid;
-            border-right: .3em solid transparent;
-            border-bottom: 0;
-            content: normal;
-            border-left: .3em solid transparent;
-        }
-        .fvoavbf-text{
-            color:#FB3F5C !important;
-        }
-
-        .fvoavbf-dropdown-invest button{
-            margin-left: 45px;
-        }
-
-        .fvoavbf-dropdown-loan button{
-            margin-left: 25px;
-        }
-
-        .bg-light{
-            background-color: transparent !important;
-        }
-
-        .fvoavbf-active-nav{
-            margin-left: 202px;
-        }
-
-        .navbar-light .navbar-nav .active>.nav-link{
-            color:#FB3F5C;
-        }
-
-        .fvoavbf-link{
-            color: #222222 !important;
-        }
-        .navbar-light .navbar-nav .nav-link {
-            color: transparent;
-        }
-
-    /*    nav*/
-
-    /*    content*/
-    .fvoavbf-content-container{
-        /*position: relative;*/
-        display: flex;
-        padding: 72px 176px 0 176px;
-        height: auto;
-        /*width: 100px;*/
-        /*border: 1px saddlebrown solid;*/
-    }
-
-    .fvoavbf-content-left{
-        position: relative;
-        float: left;
-        /*border: 1px red solid;*/
-        /*padding: 10px;*/
-        width: 50%;
-        padding: 72px 50px 0 0;
-    }
-
-    .fvoavbf-content-right{
-        position: relative;
-        padding: 42px 30px 0 20px;
-        width: 50%;
-        float: right;
-        /*border: 1px solid black;*/
-    }
-
-    .fvoavbf-content-name{
-        font-style: normal;
-        font-weight: 500;
-        font-size: 30px;
-        line-height: 39px;
-    }
-
-    .fvoavbf-content-intro{
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 26px;
-    }
-
-    .fvoavbf-content-thead{
-        font-family: DM Sans;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 26px;
-        /* identical to box height */
-        text-transform: uppercase;
-        color: #04172A;
-    }
-
-    .fvoavbf-content-table td{
-        font-family: DM Sans;
-        font-style: normal;
-        /*font-weight: normal;*/
-        font-size: 18px;
-        line-height: 23px;
-        padding:0 0 8px 0;
-    }
-
-    .fvoavbf-content-table td:first-child{
-        width: 115px;
-        vertical-align: top;
-    }
-
-    table{
-        margin-bottom: 20px;
-    }
-
-    .fvoavbf-content-bottom{
-        margin-bottom: 50px;
-        text-align: justify;
-    }
-
-    .fvoavbf-content-color{
-        color: #FB3F5C;
-    }
-
-    .fvoavbf-content-img-container{
-        background-image: url(https://res.cloudinary.com/raynasun0109/image/upload/v1592577023/fundmylaptop/gregory-hayes-2guarBycJJQ-unsplash_1_copy_x6gqe8.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 482px;
-        height: 353px;
-        margin-bottom: 20px;
-        /*margin-top: 12px;*/
-    }
-
-    .fvoavbf-content-price{
-        position: relative;
-        display: block;
-        color: black;
-        background-color: #FB3F5C;
-        margin-left: 50%;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 21px;
-        width: 100px;
-        height: 30px;
-        padding: 5px 10px;
-        text-align: center;
-    }
-    /*    content*/
-
     </style>
 </head>
 <body>
