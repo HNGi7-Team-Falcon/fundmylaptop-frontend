@@ -17,15 +17,20 @@
 body    {
     font-family: 'DM Sans', sans-serif;
 }
+.container  {
+    height: 50rem;
+    width: 100%;
+     background-image: url(https://res.cloudinary.com/whayasay/image/upload/v1592567050/Rectangle_2_xoqito.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 53rem;
+}
 header  {
     margin-top: 0;
     height: 6rem;
     padding-top: 0.5rem;
     width: 100%;
-    background-image: url(https://res.cloudinary.com/whayasay/image/upload/v1592567050/Rectangle_2_xoqito.png);
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: 53rem;
+   
     
 }
 
@@ -69,22 +74,24 @@ nav ul li a   {
     margin-left: 10rem;
 }
 #btn1    {
-    padding: 8px 17px;
+    padding: 6px 25px;
     border: 1px solid #FB3F5C;
     color: white;
     border-radius: 5px;
     background: none;
-    margin-right: 2rem;
+    margin-right: 1rem;
     margin-left: 4rem;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 #btn2    {
     font-size: 1.5rem;
-    padding: 8px 17px;
+    padding: 6px 20px;
     background: #FB3F5C;
     border-radius: 5px;
     border: 1px solid #FB3F5C;
     margin-right: 4rem;
+    cursor: pointer;
     
 
 
@@ -105,13 +112,18 @@ nav ul li a   {
     display: none;
 }
 @media (max-width: 870px)   {
-    header  {
-        background-image: url(https://res.cloudinary.com/whayasay/image/upload/v1592567050/Rectangle_2_xoqito.png);
+    .container  {
+     background-image: url(https://res.cloudinary.com/whayasay/image/upload/v1592567050/Rectangle_2_xoqito.png);
     background-repeat: no-repeat;
     background-position: right top;
     margin-right: 200px;
     background-size: 8rem;
+   
     }
+    
+    /* header  {
+      
+    } */
 #toggle-nav {
         display: block;
     }
@@ -119,27 +131,39 @@ nav ul  {
         position: fixed;
         width: 100%;
         height: 50vh;
-        background-image: url(https://res.cloudinary.com/whayasay/image/upload/v1592567050/Rectangle_2_xoqito.png);
+       background: rgba(1, 1, 32, 0.959);
         top: 4.5rem;
         left: -100%;
         text-align: center;
         transition: .5s;
         z-index: 10;
+       
     }
     
 nav ul li   {
     display: block;
     margin: 30px 0;
-    line-height: 20px;
+    line-height: 15px;
+}
+nav ul li a   {
+    font-size: 1rem;
 }
 img {
-    margin-left: 1rem;
-    height: 3rem;
+    margin-left: 1.3rem;
+    height: 2rem;
     width: 10rem;
     margin-top: 1.5rem;
 }
 #btn1   {
-    margin-left: 5px;
+    margin-left: 2.3rem;
+    font-size: 1rem;
+    padding: 6px 10px;
+
+}
+#btn2   {
+    font-size: 1rem;
+    padding: 6px 12px;
+    margin-right: -0.4rem;
 }
 
 #ham-menu:checked ~ ul{
@@ -152,11 +176,32 @@ img {
     display: block;
 }
 }
+
+@media (max-width: 1200px)  {
+    
+img {
+   
+    margin-left: 0.5rem;
+     position: absolute;
+     margin-top: 1rem;
+   
+}
+nav ul li a   {
+   
+    padding: 7px 9px;
+    position: relative;
+}
+ nav .Button-div{
+    align-content: flex-end;
+    margin-left: 6rem;
+}
+}
     </style>
 </head>
 
 <body>
-    <header>
+    <section class="container">
+        <header>
         <nav>
             <input type="checkbox" id="ham-menu">
             <label for="ham-menu">
@@ -178,5 +223,7 @@ img {
         </nav>
 
     </header>
+    </section>
+    
 </body>
 </html>
