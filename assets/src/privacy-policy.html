@@ -44,7 +44,7 @@
             text-decoration: none;
         }
     
-        .nav-btn{
+        /* .nav-btn{
                     border: 1px solid #FB3F5C;
                     box-sizing: border-box;
                     border-radius: 6px;
@@ -52,10 +52,10 @@
                     height: 45px;
                     font-style: normal;
                     font-weight: 500;
-                    font-size: 16px;
+                    font-size: 14px;
                     line-height: 21px;
                     color: #FB3F5C;
-                }
+                } */
                 .nav-link {
                     font-style: normal;
                     font-weight: 500;
@@ -77,6 +77,43 @@
                      margin-top: 200px;
                      max-height: 70%;
                      overflow-y: scroll;
+                }
+                .btn btn-danger{
+                  margin-top: 10px;
+                }
+                .navbar{
+                  height: fit-content;
+                }
+                @media screen and (max-width: 768px) {
+                  .navbar-brand{
+                margin-left: 20px;
+                }
+                }
+                @media screen and (max-width: 1024px){
+                  .navbar-brand{
+                margin-left: 90px;
+                }
+                }
+                @media screen and (max-width: 375px){
+                  .navbar-brand{
+                margin-left: 40px;
+                }
+                .text{
+                  font-size: 10px;
+                }
+                }
+                @media screen and (max-width: 736px){
+                  .navbar-brand{
+                margin-left: 45px;
+                }
+                }
+                @media screen and (max-width: 414px){
+                  .navbar-brand{
+                margin-left: 40px;
+                }
+                .text{
+                  font-size: 11px;
+                }
                 }
             </style>
 </head>
@@ -102,8 +139,8 @@
                     <li class="nav-item">
                       <a class="nav-link" style="color: #2A3A64;font-size: 14px;" href="#">Contact us</a>
                     </li>
-                    <button class="btn btn-outline-danger my-2 my-sm-0 mr-4"style="color: #FB3F5C !important; border: 1px solid #FB3F5C" type="button">Invest</button>
-                    <button class="btn btn-danger my-2 my-sm-0"style="background-color: #FB3F5C !important; border: #FC657D;" type="button">Get a loan</button>
+                    <button class="btn btn-outline-danger my-2 my-sm-0 mr-4"style="color: #FB3F5C !important; border: 1px solid #FB3F5C;font-size: 0.8em; margin: 0px 5px 5px 0px !important;" type="button">Invest</button>
+                    <button class="btn btn-danger my-2 my-sm-0"style="background-color: #FB3F5C !important; border: #FC657D;font-size: 0.8em;" type="button">Get a loan</button>
                   </ul>
             </div>
           </nav>
