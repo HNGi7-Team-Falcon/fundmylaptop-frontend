@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" type="text/css" href="payment-page.css">
     
-    <link href="http://fonts.googleapis.com/css?family=Poppins:100,300,400,300italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=DM Sans:100,300,400,300italic" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -23,7 +23,7 @@ body{
     margin: 0;
     padding:0;
     font-family: 'Arial';
-    background: #ddd;
+    background: #DDD; 
 }
 .page{
     display: flex;
@@ -51,13 +51,22 @@ body{
     padding-right: 0px;
 }
 .spaces{
-    flex:1;
+    flex:0.95;
     
+}
+.line{
+    width: 11000px;
+    height: 2px;
+    background: white;
+    margin-top: 10px;
+    margin-left: 0px;
+    padding-left: 0px;
 }
 
 label{
     color:black;
     font-size: 90%;
+    font-weight: bold;
 }
 input[type=name]{
     width: 350px;
@@ -77,7 +86,7 @@ input[type=submit]{
     width: 360px;
     height: 30px;
     color:white;
-    background: #ff0033;
+    background: #fB3F5C;
     border:red;
     margin-top: 20px;
     transition: 0.2s;
@@ -96,6 +105,7 @@ input[type=submit]:hover{
 .text li{
     padding-bottom: 10px;
     list-style: none;
+    color:rgba(0,0,0,0.5);
 }
 h3{
     padding-bottom: 10px;
@@ -145,7 +155,7 @@ img{
 }
 .toolbar_logo {
     margin-left: 2rem;
-    color: black;
+    color: #2A3A64;
     font-weight: bold;
     font-size: 150%;
 }
@@ -166,7 +176,7 @@ img{
     flex: 1;
 }
 .toolbar_navigation-items a {
-    color:black;
+    color:#2A3A64;
     text-decoration: none;
     font-size: 1.0rem;
 }
@@ -191,7 +201,7 @@ img{
     color: #ff0033;}
 
 .signup_button{
-    background:#ff0033;
+    background:#fB3F5C;
     border-radius: 4px;
     padding: 10px 30px 10px 30px;
 }
@@ -206,13 +216,13 @@ img{
     transition: all 2s;
 }
 .invest{
-    border:2px solid #ff0033;
-    color: #ff0033;
+    border:2px solid #fB3F5C;
+    color: #fB3F5C;
     margin-right: 10px;
     padding: 8px 30px;
 }
 .invest a{
-    color: #ff0033;
+    color:#fB3F5C;
     font-weight: bold;
 }
 .invest a:hover{
@@ -241,7 +251,7 @@ img{
 }
 
 .passive-nav{
-    border-bottom: 2px solid #ff0033;
+    border-bottom: 2px solid #fB3F5C;
     padding-bottom: 5px;
 }
 .second-nav{
@@ -281,6 +291,7 @@ img{
         transform: translateX(100%);
         transition: transform 0.8s ease-out;
     } 
+
     #side.sideactive {
         transform: translateX(0)
     }
@@ -314,7 +325,7 @@ img{
 
     #side a:hover,
     #side a:active {
-        color:   #ff0033;
+        color:  #fB3F5C;
     }
 
     #side .signup_button a:hover,
@@ -348,7 +359,7 @@ img{
         
     }
     .invest li{
-        color: #ff0033;
+        color: #fB3F5C;
     }
     .invest a:hover{
         color: black;
@@ -546,7 +557,7 @@ img{
     }
 
     footer{
-        background-color:#000033;
+        background-color:#2A3A64;
         font-size: 0.75em;
         font-family: sans-serif;
     }
@@ -561,7 +572,7 @@ img{
 
     h1{
         margin: .7em 0;
-        font-size: 1.8rem;
+        font-size: 100%;
     }
 
     .footer-top{
@@ -620,7 +631,12 @@ img{
             text-align: center;
             font-size: .6rem;
             margin: auto 0;
+        }
+        .toolbar_logo{
+            margin-left: 0px;
         } 
+
+        
         input[type=name],
         input[type=submit]{
     width: 300px;}
@@ -637,6 +653,9 @@ img{
         .footer-bottom, .footer-bottom-left, .footer-bottom-right{
             margin: 0 .5em;
             font-size: .6rem;}
+            .line{
+                display: none;
+            }
       
 .page{
     display: flex;
@@ -650,7 +669,7 @@ h3{
 font-size: 100%;    
 }
 .spaces{
-    flex:0.9;
+    flex:0.7;
 }
 .card{
     padding-left: 2rem;
@@ -677,6 +696,14 @@ font-size: 100%;
     }
 
     } 
+     @media (max-width: 400px) {
+        .spaces{
+            flex:1;
+        }
+
+
+    }
+      
 
     </style>
 </head>
@@ -763,7 +790,7 @@ font-size: 100%;
             <li><label>Expiry Date <br><input type="text" name="date" placeholder="MM/YY" class="exp" required="required"></li><br> <div class="spaces"></div>          <li><label>CVV<br><input type="text" name="number" placeholder="CVV" class="exp" required="required"><br></label></li>
                 
             </ul>
-            <input type="Submit" name="submit" value="Pay">
+            <input type="Submit" name="submit" value="Pay #60,000:00">
 
         </div>
         
@@ -775,16 +802,15 @@ font-size: 100%;
     <footer>
         <!-- top section----- -->
         <div class="footer-top">
+            <div class="line"></div>
             <div class="footer-top-1">
+
             <ul>
-                <li><h1>FundMy<span class="footer-top-color">Laptop</span></h1></li>
-                <li><p>Our Address</p></li>
-                <li><p>Plot 1415 Adetokunbo Ademola Street PMb 12724, Victoria island.Lagos Nigeria</p></li>
-                <div class="footer-icons">
-                    <a href="#"> <img src= "https://res.cloudinary.com/dytnzt4jf/image/upload/v1592431707/Facebook_epztwm.png" alt="facebook icon"></a>
-                   <a href="#"> <img src="https://res.cloudinary.com/dytnzt4jf/image/upload/v1592430002/Instagram_rts1mp.png" alt="instagram icon"></a>
-                   <a href="#"> <img src= "https://res.cloudinary.com/dytnzt4jf/image/upload/v1592431827/twitter_y2z4io.png" alt="twitter icon"></a>
-                </div>
+               
+                <li><h1>Our<span class="footer-top-color"> Address</span></h1></li>
+                
+                <li><p>Plot 1415 Adetokunbo Ademola Street,<br> PMb 12724, Victoria island.Lagos Nigeria</p></li>
+               
 
             </ul>
         </div>
@@ -793,7 +819,7 @@ font-size: 100%;
         <div class="footer-top-2">
             <ul>
                 <li><h1>Our Contact</h1></li>
-                <li><a href="#">hello.fundmylaptop@Official.com</a></li>
+                <li><a href="#">hello.fundmylaptop@OfficialMalians.com</a></li>
                 <li><a href="#">+234 81 555-0120</a></li>
                 <li><a href="#">+234 81 555-0129</a></li>
                 <li><a href="#">+234 81 555-0121</a></li>
@@ -802,10 +828,10 @@ font-size: 100%;
 
         <div class="footer-top-3">
             <ul>
-                <li><h1>Invest</h1></li>
-                <li><a href="#">Invest your money</a></li>
-                <li><a href="#">Invest fee & return rate</a></li>
-                <li><a href="#">How to invest</a></li>
+                <li><h1>Legal</h1></li>
+                <li><a href="#">Terms and Conditins</a></li>
+                
+                <li><a href="#">Privacy Policy</a></li>
             </ul>
         </div>
 
@@ -816,10 +842,8 @@ font-size: 100%;
 
         <!-- bottom section----- -->
         <div class="footer-bottom">
-        <p class="footer-bottom-left">2020 © Copyright All rights reserved</p>
-           <a href="#" class="footer-bottom-right">FAQ</a>
-           <a href="#" class="footer-bottom-right">Privacy Policy</a>
-            <a href="#" class="footer-bottom-right">Terms & Conditions</a>
+        <p class="footer-bottom-left">2020 © Fundmylaptop chief Malians All rights reserved</p>
+           
         </ul>
     </div>
    </footer>
