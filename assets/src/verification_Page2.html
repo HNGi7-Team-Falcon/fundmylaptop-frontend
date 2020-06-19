@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<style>
+    /*General Style Reset*/
+    html,
+    body {
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    progress {
+        width: 500px;
+        height: 15px;
+        border: 1px solid #FB3F5C;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    progress[value] {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    progress[value]::-webkit-progress-bar {
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    progress[value]::-webkit-progress-value {
+        background-color: #FB3F5C;
+        ;
+        border-radius: 10px;
+    }
+
+    .ver_body {
+        position: relative;
+        margin: 50px auto;
+    }
+
+    .ver_body h2 {
+        position: relative;
+        margin: 50px auto;
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    .status {
+        padding-bottom: 100px;
+    }
+
+    .upload_section {
+        margin: auto;
+    }
+
+    .upload_section h3 {
+        margin: auto;
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+        color: #000000;
+        padding-bottom: 10px;
+        padding-right: 230px;
+    }
+
+    .upload_video {
+        margin: auto;
+        width: 335px;
+        height: 167px;
+        border: 2px solid rgba(0, 0, 0, 0.21);
+        box-sizing: border-box;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .upload_video svg {
+        margin: auto;
+        padding-top: 40px;
+        cursor: pointer;
+    }
+
+    .upload_video p {
+        margin: auto;
+        font-family: DM Sans;
+        font-style: normal;
+        font-size: 12px;
+        font-weight: normal;
+        color: #C0C0C0;
+    }
+
+    .upload_video:hover {
+        background-color: #eee;
+    }
+
+    .b-button {
+        margin: auto;
+        padding-top: 50px;
+    }
+
+    .b-button button {
+        width: 108px;
+        height: 35px;
+        background: #FB3F5C;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+    }
+
+    .b-button button:hover {
+        background: red;
+        transform: scale(1.07);
+        transition: all 1s;
+    }
+
+    @media screen and (max-width: 780px) {
+        progress {
+            width: 350px;
+            height: 15px;
+        }
+
+        .upload_video {
+            margin: auto;
+            width: 300px;
+            height: 127px;
+            border: 2px solid rgba(0, 0, 0, 0.21);
+            box-sizing: border-box;
+            border-radius: 5px;
+            text-align: center;
+        }
+    }
+</style>
+
+<body>
+    <div class="ver_body">
+        <div class="status">
+            <h2>Verification Form</h2>
+            <progress value='15' max="100"></progress>
+        </div>
+        <div class="upload_section">
+            <h3>Upload your ID</h3>
+            <div class="upload_video">
+                <label for="image">
+                    <input type="file" name="image" id="image" style="display:none;" />
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172"
+                        style=" fill:#000000;">
+                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <path d="M0,172v-172h172v172z" fill="none"></path>
+                            <g fill="#fb3f5c">
+                                <path d="M82.56,30.96v51.6h-51.6v6.88h51.6v51.6h6.88v-51.6h51.6v-6.88h-51.6v-51.6z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                    <p>Click to upload your ID</p>
+                </label>
+            </div>
+            <div class="b-button">
+                <a href="verification_Page3.html"><button>Next</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
