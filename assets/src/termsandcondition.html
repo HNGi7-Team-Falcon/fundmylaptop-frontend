@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- internal syling -->
+  <style>
+      *,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 0.875em;
+    font-family: sans-serif;
+    background-color: #F0F0F0;
+}
+
+.top-banner{
+    background-image: linear-gradient(250deg, #FB3F5C 0%, #FC657D 80.86%);;
+    padding: 5em;
+}
+
+.top-banner > p{
+    font-size: .6rem;
+    color: #ffffff;
+    margin-top: -2.5em;
+}
+
+.top-banner a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: -.5em;
+    font-size: 1.5rem;
+}
+
+.middle-banner{
+    position: fixed;
+    top: 6em;
+    bottom: 6em;
+    left: 15em;
+    right: 15em;
+   padding: 4em;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.middle-banner > p{
+    font-size: .8rem;
+    line-height: 1.4em;
+}
+
+.button{
+display: flex;
+justify-content: flex-end;
+margin: 2em;
+}
+
+.button-1{
+   border:  1px solid #FB3F5C;
+   padding: .5em 2.5em;
+    background-color: #ffffff;
+    border-radius: 3PX;
+    margin-right: 2em;
+}
+
+.button-2{
+    border: none;
+    padding: .5em 2.5em;
+     background-image:  linear-gradient(270deg, #FB3F5C 0%, #FC657D 80.86%);
+     color: #ffffff;
+     border-radius: 3PX;
+ }
+
+ @media(max-width: 1024px){
+    .middle-banner, .button{
+        font-size: .7rem;
+    }
+    .middle-banner{
+        position: static;
+    }
+    .top-banner{
+        padding: 2em;
+    }
+    .button{
+        margin-top: 4em;
+    }
+    }
+  </style>
+
+</head>
+<body>
+    <!-- terms and condition -->
+    <div class="top-banner">
+          <p class="container left">
+            <a href="#">
+                <span>Sign Up</span>
+            </a> > 
+            <a href="#">
+                <span>Personal Details</span>
+            </a>  >
+            <a href="#">
+                <span>Privacy Policy</span>
+            </a> > 
+            <a href="#">
+                <span>Terms & Agreements</span>
+            </a> 
+       </p>
+    </div>
+
+    <div class="middle-banner">
+        <h1>Terms & Conditions</h1>
+             <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna nec tempus imperdiet tortor quam accumsan, elementum enim.  Nibh nulla neque consectetur arcu enim in nunc amet id.
+                Arcu morbi sed egestas elementum. Amet habitant tristique quam cras varius integer scelerisque. Maecenas praesent tellus risus pharetra.
+                Mattis lorem commodo tellus pulvinar ut. Ullamcorper scelerisque faucibus augue nisl. Lacus, convallis turpis dignissim aliquet et ultrices eget magnis. 
+                Placerat in diam vitae sed magna. Egestas vulputate id mauris at. Lacus amet consequat sed neque justo. Praesent ut arcu, pellentesque amet. 
+                Placerat in amet ullamcorper sed. Quam eros, suspendisse adipiscing tempor faucibus quam velit. <br>
+                    <br>
+                Aliquam in varius tortor elit nec. Gravida adipiscing eu est orci sit ut neque. Adipiscing scelerisque posuere mauris, adipiscing. Rhoncus ut sed semper posuere at fermentum scelerisque imperdiet eros.
+                Id aliquet mauris tellus aliquam donec aliquam lacus. Odio aenean suspendisse hac sed. Vestibulum amet nisl gravida at dignissim aliquet facilisis. Quis id eu enim, faucibus consectetur vitae enim.<br>
+                    <br>
+                Sed morbi amet malesuada erat congue orci semper pellentesque venenatis. Dolor elit integer convallis nec, iaculis. Justo porttitor vulputate maecenas sit. Interdum posuere purus nunc, sagittis. 
+                Nulla consectetur velit turpis arcu facilisis ac ac. Pharetra arcu a, neque adipiscing aliquam id arcu dictumst in. Ut ut urna malesuada egestas adipiscing vivamu.
+            </p>
+    <div class="button">
+        <button type="submit" class="button-1">Cancel</button>
+        <button type="submit" class="button-2">I Agree</button>
+    </div>
+  </div>
+</body>
+</html>
