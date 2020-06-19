@@ -62,7 +62,7 @@ label{
 input[type=name]{
     width: 350px;
     height: 30px;
-    border: 2px solid #000;
+    border: 2px solid grey;
 }
 .spacer{
     margin-bottom: 10px;
@@ -70,7 +70,7 @@ input[type=name]{
 .exp{
     width: 100px;
     height: 30px;
-    border: 2px solid #000;
+    border: 2px solid grey;
 
 }
 input[type=submit]{
@@ -110,6 +110,433 @@ img{
     height:25px;
 }
 
+#body.backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.3);
+    z-index:500;
+}
+
+.toolbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: relative;
+    background: #FFFFFF;
+    height: 118px;
+    
+    z-index: 800;
+}
+
+.toolbar_navigation{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+    margin-right: 1rem;
+}
+.toolbar_navigation-items{
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+.toolbar_logo {
+    margin-left: 2rem;
+    color: black;
+    font-weight: bold;
+    font-size: 150%;
+}
+.red{
+    color: red;
+}
+.toolbar_logo img:hover{
+    transform: scale(1.1);
+    transition: all 2s;
+}
+
+.toolbar_navigation-items.current {
+    text-decoration-line: underline;
+    text-decoration-style: 2px solid #71CE47;
+    text-decoration-color: #71CE47;
+}
+.spacer{
+    flex: 1;
+}
+.toolbar_navigation-items a {
+    color:black;
+    text-decoration: none;
+    font-size: 1.0rem;
+}
+.toolbar_navigation-items ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    padding-right: 10px
+}
+.toolbar_navigation-items li {
+    padding: 0 2rem;
+}
+
+.activenav {
+    position: relative;
+}
+
+
+.toolbar_navigation-items a:hover,
+.toolbar_navigation-items a:active{
+    color: #ff0033;}
+
+.signup_button{
+    background:#ff0033;
+    border-radius: 4px;
+    padding: 10px 30px 10px 30px;
+}
+.signup_button a{
+    color: white ;
+}
+.signup_button a:hover{
+    color: white ;
+}
+.signup_button:hover {
+    transform: scale(1.1);
+    transition: all 2s;
+}
+.invest{
+    border:2px solid #ff0033;
+    color: #ff0033;
+    margin-right: 10px;
+    padding: 8px 30px;
+}
+.invest a{
+    color: #ff0033;
+    font-weight: bold;
+}
+.invest a:hover{
+    color: black;
+}
+.second-navigation{
+    background: white;
+}
+
+.second_navigation ul{
+ list-style: none;
+    margin: 0;
+    padding-right: 0;
+    display: flex;
+    padding-right: 10px;
+    margin-left: 40rem;
+}
+.second_navigation li{
+    padding:0 2rem;
+    color: red;
+    font-weight: bold;
+
+}
+.second_navigation a{
+    color: black;
+}
+
+.passive-nav{
+    border-bottom: 2px solid #ff0033;
+    padding-bottom: 5px;
+}
+.second-nav{
+    background: white;
+ box-shadow: 0px 4px 11px rgba(150, 150, 150, 0.25);
+ margin-top: 0px;
+ padding-top: 0px;
+ }
+ .spacee{
+   flex: 5;
+ }
+
+
+/* MEDIA QUERIES */
+
+
+@media screen and (min-width: 850px) {
+    #hidden {
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #side {
+        height: 100%;
+        background: white;
+        box-shadow: 0px 4px 11px rgba(150, 150, 150, 0.25);
+        position: fixed;
+        top:0;
+        right:0;
+        width: 70%;
+        max-width: 300px;
+        z-index: 200;
+        transform: translateX(100%);
+        transition: transform 0.8s ease-out;
+    } 
+    #side.sideactive {
+        transform: translateX(0)
+    }
+
+    #side ul {
+        list-style: none;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;  
+        align-items: center;
+        font-size: 1.0rem;
+        font-weight: 400;
+        padding-top: 100px;
+    } 
+    
+    #side li{
+        margin: 0.8rem 0;
+        
+    }
+    
+    #side a{
+        color: black;
+        text-decoration: none;
+    }
+
+    #side .signup_button a{
+        color: white;
+        text-decoration: none;
+    }
+
+    #side a:hover,
+    #side a:active {
+        color:   #ff0033;
+    }
+
+    #side .signup_button a:hover,
+    #side .signup_button a:active {
+        color:   white
+    }
+
+    .toolbar_navigation-items {
+        display: none;
+    }
+
+    .hamburger{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 20px;
+        width: 24px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding:0;
+        box-sizing: border-box;
+        z-index:400;
+    }
+    .hamburger{
+        outline: none;
+    }
+    .invest {
+        margin-bottom: 10px;
+        
+        
+    }
+    .invest li{
+        color: #ff0033;
+    }
+    .invest a:hover{
+        color: black;
+    }
+    .ham_line{
+        width: 24px;
+        height: 4px;
+        background: black;
+    }
+    .second-nav{
+        display: none;
+    }
+    
+}
+
+
+/* HAMBURGER ANIMATION */
+
+#hamturn div:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+#hamturn div:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+#hamturn div:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+#hamturn.hamactive div:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+#hamturn.hamactive div:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+#hamturn.hamactive div:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+
 *,
     *::before,
     *::after{
@@ -144,7 +571,7 @@ img{
         margin: 0 10em;
         font-size: 1rem;
         line-height: 2em;
-        color:#ff0033;
+        color:#fff;
     }
 
     .footer-top li a{
@@ -173,11 +600,14 @@ img{
         margin-bottom: 2em;
     }
 
-    .footer-bottom > .footer-bottom-right {
+    .footer-bottom > .footer-bottom-right{
         margin-left: 2em;
         margin-bottom: 1.5em;
+        color: white;
     }
-
+.footer-bottom > .footer-bottom-right:hover{
+    color:red;
+}
     .footer-bottom > .footer-bottom-left{
     margin-right: auto;
     }
@@ -251,11 +681,71 @@ font-size: 100%;
     </style>
 </head>
 <body id="body">
+    <header class="toolbar">
+        <nav class="toolbar_navigation">
+            <div></div>
+            <div class="toolbar_logo">FundMy<ins class="red">Laptop</ins></div>
+            <div class="spacer"></div>
+            <div class="toolbar_navigation-items">
+                <ul>
+                    <li class="activenav"><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About us</a></li>
+                    <li><a href="Faq.html">Faq</a></li>
+                    <li><a href="Facilities.html">Contact us</a></li>
+                    
+                </ul>
+                <div class="invest">
+                    <a href="">Invest</a>
+                </div>
+                <div class="signup_button">
+                    <a href="">Get a Loan</a>
+                </div>
+            </div>
+            <button class="hamburger" id="hamturn" onclick="toggle(); backdrop(); hamturn()">
+                <div class="ham_line"></div>
+                <div class="ham_line"></div>
+                <div class="ham_line"></div>
+            </button>
+
+
+        </nav>
+
+        <div class="second-nav">
+             <nav class="second_navigation">
+            <div class="spacee"></div>
+            
+                <ul>
+                    <li ><a href="#">Main Page</a></li>
+                    <li><a href="payment-page.html" class="passive-nav">Payment Details</a></li>
+                    <li><a href="#">Confirmation</a></li>
+                    
+                    
+                </ul>
+        </nav>
+    </div>
+    </header>
+    <div id="hidden">
+        <nav id="side">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Contact.html">Faq</a></li>
+                <li><a href="Facilities.html">Contact Us</a></li>
+                
+                <div class="invest">
+                    <a href="">Invest</a></div>
+                    <div class="signup_button">
+                    <a href="">Get a Loan</a>
+                </div>
+            </ul>
+        </nav>
+    </div>
+
     <div class="page">
         <div class="text">
         <ul><h3>Payment for:</h3>
             <li>
-                <img src="joe.png"><ins>Jane Doe</ins><br>laptop purchase
+                <img src="https://res.cloudinary.com/devmajor/image/upload/v1592555207/ellipse_197_k991n6.png"><ins>Jane Doe</ins><br>laptop purchase
             </li>
             <li>as a<ins> Loan</ins></li>
             <li>for <ins>6 months</ins></li>
@@ -327,9 +817,9 @@ font-size: 100%;
         <!-- bottom section----- -->
         <div class="footer-bottom">
         <p class="footer-bottom-left">2020 © Copyright All rights reserved</p>
-           <p class="footer-bottom-right">FAQ</p>
-           <P class="footer-bottom-right">Privacy Policy</P>
-            <p class="footer-bottom-right">Terms & Conditions</p>
+           <a href="#" class="footer-bottom-right">FAQ</a>
+           <a href="#" class="footer-bottom-right">Privacy Policy</a>
+            <a href="#" class="footer-bottom-right">Terms & Conditions</a>
         </ul>
     </div>
    </footer>
@@ -338,4 +828,20 @@ font-size: 100%;
     
 
 </body>
+<script type="text/javascript">
+    function toggle() {
+    var active = document.getElementById('side')
+    active.classList.toggle('sideactive')
+}
+
+function backdrop() {
+    var backdrop = document.getElementById('body')
+    backdrop.classList.toggle('backdrop')
+}
+
+function hamturn() {
+    var hamturn = document.getElementById('hamturn')
+    hamturn.classList.toggle('hamactive')
+}
+</script>
 </html>
