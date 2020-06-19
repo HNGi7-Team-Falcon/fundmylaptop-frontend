@@ -15,13 +15,9 @@
             width: 100%;
             height: 100vh;
         }
-        
-        .modal-dialog {
-            margin-top: 200px;
-          }
-        
           .modal-header {
             text-align: center;
+            color: black;
           }
         
         .header-area {
@@ -33,29 +29,14 @@
         
         .text {
             color: #fff;
-            margin-top: 70px;
-            margin-left: 0px;
-            margin-left: 0px;
-            font-weight: 20px;
+            margin-left: 0.5px;
+            font-weight: lighter;
         }
         
         .text:hover {
             color: #2A3A64;
             text-decoration: none;
         }
-    
-        /* .nav-btn{
-                    border: 1px solid #FB3F5C;
-                    box-sizing: border-box;
-                    border-radius: 6px;
-                    width: 140px;
-                    height: 45px;
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 14px;
-                    line-height: 21px;
-                    color: #FB3F5C;
-                } */
                 .nav-link {
                     font-style: normal;
                     font-weight: 500;
@@ -84,38 +65,10 @@
                 .navbar{
                   height: fit-content;
                 }
-                @media screen and (max-width: 768px) {
-                  .navbar-brand{
-                margin-left: 20px;
+                .container{
+                  color: white;
                 }
-                }
-                @media screen and (max-width: 1024px){
-                  .navbar-brand{
-                margin-left: 90px;
-                }
-                }
-                @media screen and (max-width: 375px){
-                  .navbar-brand{
-                margin-left: 40px;
-                }
-                .text{
-                  font-size: 10px;
-                }
-                }
-                @media screen and (max-width: 736px){
-                  .navbar-brand{
-                margin-left: 45px;
-                }
-                }
-                @media screen and (max-width: 414px){
-                  .navbar-brand{
-                margin-left: 40px;
-                }
-                .text{
-                  font-size: 11px;
-                }
-                }
-            </style>
+   </style>
 </head>
 <body class="bg-light">
     <header class="container">
@@ -124,7 +77,6 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-          
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
@@ -139,27 +91,31 @@
                     <li class="nav-item">
                       <a class="nav-link" style="color: #2A3A64;font-size: 14px;" href="#">Contact us</a>
                     </li>
-                    <button class="btn btn-outline-danger my-2 my-sm-0 mr-4"style="color: #FB3F5C !important; border: 1px solid #FB3F5C;font-size: 0.8em; margin: 0px 5px 5px 0px !important;" type="button">Invest</button>
+                    <button class="btn btn-outline-danger my-2 my-sm-0 mr-4"style="color: #FB3F5C !important; border: 1px solid #FB3F5C;font-size: 0.8em; margin: 0px 5px 3px 5px !important; padding-bottom: px" type="button">Invest</button>
                     <button class="btn btn-danger my-2 my-sm-0"style="background-color: #FB3F5C !important; border: #FC657D;font-size: 0.8em;" type="button">Get a loan</button>
                   </ul>
             </div>
           </nav>
     </header>
     <section class="header-area padding-100-50" id="features">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                      <p class="text" ><a href="#" class="text" style="font-weight: lighter;">Sign Up ></a><a href="#" class="text"style="font-weight: lighter;"> Personal Details ></a>  
-                        <a href="#" class="text"style="font-weight: lighter;" data-toggle="modal" data-target="#myModal">Privacy Policy </a>
-                      </p>  
-                </div>
-            </div>
+            <div class="card-body">
+                <p class="container left" style="margin-left: -24px; margin-top: 50px;">
+                    <a class="text" href="#">
+                        <span>Sign Up</span>
+                    </a> > 
+                    <a  class="text"href="#">
+                        <span>Personal Details</span>
+                    </a>  >
+                    <a class="text" href="#" data-toggle="modal" data-target="#myModal">
+                        <span>Privacy Policy</span>
+                    </a> 
+                </p>
         </div>
     </section>
     <div class="container">
         <!-- The Modal -->
         <div class="modal" id="myModal">
-          <div class="modal-dialog modal-lg modal-dialog-scrollable" >
+          <div class="modal-dialog modal-lg modal-dialog-scrollable " >
             <div class="modal-content">
               <!-- Modal Header -->
               <div class="modal-header">
@@ -167,7 +123,7 @@
                 <button type="button" class="close" data-dismiss="modal">×</button>
               </div>
               <!-- Modal body -->
-              <div class="modal-body" style="font-size: small; margin-right: 50px; margin-left: 50px;">
+              <div class="modal-body" style="font-size: small; margin-right: 50px; margin-left: 50px; color: black;">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pa</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
