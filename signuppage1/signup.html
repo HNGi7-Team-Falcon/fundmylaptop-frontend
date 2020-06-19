@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Sign up page</title>
+        <!-- <link rel="stylesheet" type="text/css" href="stylesheet.css"> -->
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
+    <style type="text/css">
+      /* stylesheet for signup page */
+body{
+    font-family:'DM sans';
+    /*background-color: #ffffff;*/
+    background-image: url('https://res.cloudinary.com/mosesjayz/image/upload/v1592476618/Polygon_9_gnxoa3.png'),
+    url('https://res.cloudinary.com/mosesjayz/image/upload/v1592476633/Ellipse_58_qel3un.png'),
+    url('https://res.cloudinary.com/mosesjayz/image/upload/v1592476648/Ellipse_57_o7bhrv.png'),
+    url('https://res.cloudinary.com/mosesjayz/image/upload/v1592476601/Ellipse_56_g2gwlk.png'),
+    url('https://res.cloudinary.com/mosesjayz/image/upload/v1592476533/Polygon_8_pqmr8u.png');
+    background-size: 15%,2%,12%,20%,25%;
+    background-position: left 0% top 0%, left 88% top 35%, right -1.5% top 0%,left -5% bottom -10%, right 6% bottom 0%;
+    background-repeat: no-repeat,no-repeat,no-repeat,no-repeat;
+    overflow:auto;
+    background-attachment: fixed;
+}
+.info input{
+    margin-top: -10px;
+}
+#form-container{
+background-color:#ffffff;
+margin: auto;
+width:fit-content;
+height:630px;
+display: flex;
+flex-direction: column;
+align-items: center;
+border-radius:10px;
+box-shadow: 0px 0px 30px rgba(0,0,0,0.05);
+
+}
+#form{
+    /*margin: auto;*/
+    width:fit-content;
+    position: absolute;
+  /*  top:6%;
+    left:35.5%;*/
+}
+.welcome{
+    font-size: 32px;
+    font-family: sans-serif;
+    
+}
+.welcome-text{
+font-size:32px;
+font-weight: 500;
+color:#fB3F5C;
+line-height:3px;
+margin-bottom: 10px;
+}
+input[type=text]{
+width: 100%;
+height:48px;
+border:1px solid #04172A;
+box-sizing:border-box;
+border-radius:5px;
+font-size: 16px;
+color: #04172A;
+padding-left: 20px;
+}
+input[type=password]{
+    width: 100%;
+height:48px;
+border:1px solid #04172A;
+box-sizing:border-box;
+border-radius:5px;
+font-size:16px;
+color: #04172A;
+padding-left: 20px;
+
+}
+input[type=submit]{
+    width:100%;
+    height:48px;
+    background-color:#FB3f5c;
+    box-shadow: 4px 4px 15px rgba(251,63,92,0.25);
+    border-radius: 5px;
+    font-size:24px;
+    color:#ffffff;
+    font-weight: 500;
+    border:1px solid #fB3F5C;
+}
+.account{
+    text-align: center;
+    font-size: 16px;
+    color:#04172A;
+}
+.account a{
+    color: #fB3F5C;
+    text-decoration: none;
+}
+.sign{
+    font-style: italic;
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid rgba(4,23,42,0.3); 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+   font-size:12px;
+   text-align: center;
+}
+.sign span{
+    background:#fff; 
+    padding:0 10px; 
+    color: rgba(4,23,42,0.3);
+}
+
+.btn{
+    padding: 12px 24px 24px 24px;
+    display:inline-block;
+    opacity: 0.8;
+    border-radius:5px;
+  }
+.facebook{
+    width:120px;
+    height:42px;
+    background: transparent;
+    border:1px solid #4B5A96;
+    box-sizing: border-box;
+    line-height: 10px;
+}
+.facebook img{
+    margin-left:25px;
+}
+.google{
+    width: 120px;
+    height: 40px;
+    background:transparent;
+    border:1px solid #DC4E41;
+    box-sizing: border-box;
+   margin-left: 10px;
+}
+.google img{
+    margin-left:25px;
+}
+.link{
+    width: 120px;
+    height: 40px;
+    background:transparent;
+    border:1px solid #006699;
+    box-sizing: border-box;
+    margin-left:10px;
+}
+.link img{
+    margin-left:25px;
+}
+.btn:hover{
+  opacity: 1;  
+}
+.btn-wrapper{
+    display: flex;
+}
+
+/* rule for mobile screen with small screens */
+ @media all and (min-width: 0px) { 
+    
+    #form-container{
+  /*  background-color:#ffffff;
+    margin: auto;
+    width:fit-content;
+    height:630px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius:10px;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.05);*/
+    width: 100%;
+    background-color: orange;
+    }
+}   
+ 
+
+ /* ----rule for tablet screen */
+ @media all and (min-width: 778px) { 
+    
+    #form-container{
+    /*background-color:#ffffff;
+      margin: auto;
+      width:fit-content;
+      height:630px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius:10px;
+      box-shadow: 0px 0px 30px rgba(0,0,0,0.05);
+  */
+    background-color: red;
+    max-width:30em;
+    }
+    
+ } 
+
+    </style>
+    </head>
+    <body>
+         <div id ="form-container">
+              <div id ="form">
+                   <div class="welcome">
+              <p class="welcome-text">Welcome</p>
+              <p>Sign Up on FundMyLaptop</p>
+              </div>
+              <div class="info">
+               <p>Email</p>
+               <input type="text" placeholder="Username@domain.com">
+               <p>Password</p>
+          <input type="password" placeholder="Enter Your Password"><br><br><br>
+          <input type="submit" value="Create account  >"><br>
+          <P class="account">Already have an account? <a href="#">Sign in</a></P><br>
+          <p class="sign"><span>or sign up using</span></p>
+          <div class="btn-wrapper">
+               <a herf="#" class="btn facebook"><img src="https://res.cloudinary.com/mosesjayz/image/upload/v1592488770/Vector_1_difse0.png" width="10"></a>
+               <a herf="#" class="btn google"><img src="HNGi7/g+.png" width="30"></a>
+               <a herf="#" class="btn link"><img src="https://res.cloudinary.com/mosesjayz/image/upload/v1592488739/Vector_3_cpcitg.png"></a> 
+          </div>
+              </div>
+              </div>
+         </div>
+    </body>
