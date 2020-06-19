@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<style>
+    /*General Style Reset*/
+    html,
+    body {
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    progress {
+        width: 500px;
+        height: 15px;
+        border: 1px solid #FB3F5C;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    progress[value] {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    progress[value]::-webkit-progress-bar {
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    progress[value]::-webkit-progress-value {
+        background-color: #FB3F5C;
+        border-radius: 10px;
+    }
+
+    .ver_body {
+        position: relative;
+        margin: 50px auto;
+    }
+
+    .ver_body h2 {
+        position: relative;
+        margin: 50px auto;
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    .status {
+        padding-bottom: 100px;
+    }
+
+    .upload_section h3 {
+        margin: auto;
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+        color: #000000;
+        padding-bottom: 10px;
+        padding-right: 400px;
+    }
+
+    .upload_twitter {
+        margin: auto;
+    }
+
+    .upload_twitter input {
+        margin: auto;
+        border-radius: 5px;
+        border: none;
+        background-color: #eee;
+        height: 30px
+    }
+
+    .b-button {
+        margin: auto;
+        padding-top: 50px;
+    }
+
+    .b-button button {
+        width: 108px;
+        height: 35px;
+        background: #FB3F5C;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+    }
+
+    .b-button button:hover {
+        background: red;
+        transform: scale(1.07);
+        transition: all 1s;
+    }
+
+    input {
+        width: 500px;
+    }
+
+    @media screen and (max-width: 780px) {
+        progress {
+            width: 350px;
+            height: 15px;
+        }
+
+        input {
+            width: 300px;
+        }
+    }
+</style>
+
+<body>
+    <div class="ver_body">
+        <div class="status">
+            <h2>Verification Form</h2>
+            <progress value='30' max="100"></progress>
+        </div>
+        <div class="upload_section">
+            <div class="upload_twitter">
+                <label for="fname"><h3>Facebook Name</h3></label>
+                <input type="text" id="fname" name="fname">
+                </label>
+            </div>
+            <div class="b-button">
+                <a href="verification_Page6.html"><button>Next</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
