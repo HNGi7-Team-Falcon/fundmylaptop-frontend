@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Nav</title>
+   
+    <link rel="stylesheet" href=" https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <script src="https://kit.fontawesome.com/74091f2b8e.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <style>
+        *   {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body    {
+    font-family: 'DM Sans', sans-serif;
+}
+header  {
+    margin-top: 1.5rem;
+    height: 5rem;
+    width: 100%;
+    background-image: url(https://res.cloudinary.com/whayasay/image/upload/v1592567050/Rectangle_2_xoqito.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin-right: 200px;
+}
+
+img {
+    float: left;
+    height: 3rem;
+    width: 10rem;
+    margin-left: 10rem;
+     position: absolute;
+     margin-top: 1rem;
+   
+}
+nav ul  {
+    float: right;
+    margin-right: 15px;
+    margin-top: 1rem;
+   
+}
+
+nav ul li   {
+    display: inline-block;
+    padding: 0 5px;
+    line-height: 30px;
+   
+}
+nav ul li a   {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 7px 13px;
+    position: relative;
+}
+
+.active {
+    color: #FB3F5C;
+}
+ nav .Button-div{
+    align-content: flex-end;
+    margin-left: 10rem;
+}
+#btn1    {
+    padding: 5px 13px;
+    border: 1px solid #FB3F5C;
+    color: white;
+    border-radius: 5px;
+    background: none;
+    margin-right: 1rem;
+    margin-left: 28rem;
+}
+#btn2    {
+    padding: 5px 13px;
+    background: #FB3F5C;
+    border-radius: 5px;
+    border: 1px solid #FB3F5C;
+    
+
+
+}
+#toggle-nav, #toggle-nav2 {
+    display: none;
+    cursor: pointer;
+    color: white;
+    float: right;
+    font-size: 2rem;
+    margin-right: 15px;
+    line-height: 40px;
+    margin-top: 20px;
+    
+    
+}
+#ham-menu   {
+    display: none;
+}
+@media (max-width: 870px)   {
+    header  {
+        background-image: url(https://res.cloudinary.com/whayasay/image/upload/v1592567050/Rectangle_2_xoqito.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin-right: 200px;
+    background-size: 8rem;
+    }
+#toggle-nav {
+        display: block;
+    }
+nav ul  {
+        position: fixed;
+        width: 100%;
+        height: 50vh;
+        background-image: url(https://res.cloudinary.com/whayasay/image/upload/v1592567050/Rectangle_2_xoqito.png);
+        top: 4.5rem;
+        left: -100%;
+        text-align: center;
+        transition: .5s;
+        z-index: 10;
+    }
+    
+nav ul li   {
+    display: block;
+    margin: 30px 0;
+    line-height: 20px;
+}
+img {
+    margin-left: 1rem;
+    height: 2.5rem;
+    width: 7rem;
+    margin-top: 1.5rem;
+}
+#btn1   {
+    margin-left: 5px;
+}
+
+#ham-menu:checked ~ ul{
+    left: 0;
+}
+#ham-menu:checked ~ label #toggle-nav {
+    display: none;
+}
+#ham-menu:checked ~ label #toggle-nav2 {
+    display: block;
+}
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="ham-menu">
+            <label for="ham-menu">
+               <i class="fas fa-bars" id="toggle-nav"></i>
+                <i class="fas fa-times" id="toggle-nav2"></i>"
+            </label>
+            <img src="https://res.cloudinary.com/whayasay/image/upload/v1592567066/FundMyLaptop_twalde.png" alt="logo">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contact</a></li>
+                
+                <li><Button id="btn1">Login</Button></li>
+                <li><Button id="btn2">Sign in</Button></li>
+            </ul>
+            
+            
+        </nav>
+
+    </header>
+</body>
+</html>
