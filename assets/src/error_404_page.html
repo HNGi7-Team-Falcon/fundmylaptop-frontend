@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Error 404 page</title>
+    <style>
+    .wrapper{
+      display:grid;
+      grid-template-columns: 40% 60%;
+      grid-auto-rows:minmax(100px, auto);
+      align-items:stretch
+    }
+    .wrapper> div{
+      background:#ffffff;
+      padding: 1em;
+    }
+    .img{
+            display: grid;
+            height: 100%;
+        }
+  .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    .message{
+      padding: 20px;
+        font-size: 40px;
+        font-family:Gill Sans, sans-serif;
+        color: #000000;
+        text-align:left;
+        line-height: 42px;
+    }
+    #lower{
+  width: 638px;
+  height: 84px;
+  left: 401px;
+  top: 487px;
+  font-family: Gill Sans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+
+  text-align:left;
+  color: #000000
+    }
+    .btn{
+      background:#D3D3D3;
+      text-align:centre;
+      text-decoration:none;
+      display: inline-block;
+      font-size: 16px;
+      padding:10px;
+  border-radius:8px;
+      color: #fff;
+      cursor: pointer;
+    }
+    .btn a{
+      text-decoration: none;
+    }
+
+    .bsn{
+      background:#D3D3D3;
+      border: none;
+     text-align: center;
+      text-decoration: none;
+      display: inline-block;
+     font-size: 16px;
+      padding:10px;
+  border-radius:8px;
+      color: #fff;
+      cursor: pointer;
+    }
+    .bsn a{
+      text-decoration:none;
+    }
+    .btn:hover{
+      background:#FB3F5C
+    }
+    .bsn:hover{
+      background:#FB3F5C
+    }
+
+    .wrapper> div:nth-child(odd)
+    background: #ffffff
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+    <div class="message">
+      <br>
+        <br>
+        <img src="topleft.png" width= 246.71px height=80.55px; alt="border">
+          <br>
+      <h1> Uh oh. </h1>
+      <h2 id="lower"> The page you are looking for <br>
+         does not exist</h2>
+      <div class="nav">
+        <div class=" btn"> <a href="?"> <strong>Go Home</strong> </a></div>
+        <div class=" bsn"> <a href="?"> <strong>Back</strong></a></div>
+      </div>
+    </div>
+    <div class="img">
+      <img class=".center-fit"  src="lostman.png" width="600px" height="600px"
+        alt="lost man">
+    </div>
+    </div>
+  </body>
+</html>
