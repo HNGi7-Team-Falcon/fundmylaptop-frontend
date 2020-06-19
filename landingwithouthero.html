@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Landing Page Without HERO & Blog</title>
+    <link
+      rel="stylesheet prefetch"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Fonts */
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+      /* CSS Variables -- Palette and Styles */
+      :root {
+        --primary-white: #ffffff;
+        --primary-pink: #fb3f5c;
+        --p-textgrey-color: #68747f;
+        --h-textblack-color: #1d2e3f;
+      }
+      /* General Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        color: var(--p-textgrey-color);
+        background-color: var(--primary-white);
+        font-family: "DM Sans", sans-serif;
+      }
+      h1,
+      p {
+        font-style: normal;
+      }
+      h1 {
+        font-weight: bold;
+        color: var(--h-textblack-color);
+      }
+      p {
+        font-family: DM Sans;
+        font-weight: normal;
+        font-size: 18.0755px;
+        line-height: 29px;
+      }
+
+      hr {
+        width: 124px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 5px solid var(--primary-pink);
+      }
+      /* Class specific styles */
+
+      .main {
+        padding-top: 100px;
+      }
+      .helpdiv {
+        padding-left: 137px;
+        padding-right: 137px;
+      }
+      .helpdiv h1 {
+        text-align: center;
+        margin-bottom: 13px;
+      }
+      .helpdiv hr {
+        margin-bottom: 101px;
+      }
+      .helpdiv .helpflex {
+        display: flex;
+        justify-content: space-between;
+      }
+      .helpdiv .helpflex .helploan {
+        flex-basis: 47%;
+        width: 47%;
+      }
+      .helpdiv .helpflex .helploan .helploan-box .pattern1 {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        bottom: -8%;
+        right: 12%;
+      }
+      @media screen and (min-width: 1075px) and (max-width: 1256px) {
+        .helpdiv .helpflex .helploan .helploan-box .pattern1 {
+          bottom: -13%;
+          right: 12%;
+        }
+      }
+      @media screen and (min-width: 1257px) {
+        .helpdiv .helpflex .helploan .helploan-box .pattern1 {
+          bottom: -21%;
+          right: 12%;
+        }
+      }
+      .helpdiv .helpflex .helploan .helploan-box {
+        box-shadow: 1px 2.5px 4px rgba(222, 208, 208, 0.3),
+          inset 1px 2.5px 4px rgba(222, 208, 208, 0.3);
+        padding: 45px;
+        position: relative;
+      }
+      .helpdiv .helpflex .helploan .helploan-box h2,
+      .helpdiv .helpflex .helpinvest .helpinvest-box h2 {
+        font-weight: 500;
+        font-size: 40px;
+        color: #1d2e3f;
+      }
+      .helpdiv .helpflex .helploan .helploan-box p,
+      .helpdiv .helpflex .helpinvest .helpinvest-box p {
+        margin-bottom: 23px;
+      }
+      .helpdiv .helpflex .helpinvest .helpinvest-box .pattern2 {
+        position: absolute;
+
+        width: 100%;
+        height: auto;
+        top: -8%;
+        right: -12%;
+      }
+
+      @media screen and (min-width: 1075px) and (max-width: 1256px) {
+        .helpdiv .helpflex .helpinvest .helpinvest-box .pattern2 {
+          top: -11%;
+          right: -12%;
+        }
+      }
+      @media screen and (min-width: 1257px) {
+        .helpdiv .helpflex .helpinvest .helpinvest-box .pattern2 {
+          top: -20%;
+          right: -12%;
+        }
+      }
+      .helpdiv .helpflex .helpinvest {
+        flex-basis: 47%;
+        width: 47%;
+      }
+      .helpdiv .helpflex .helpinvest .helpinvest-box {
+        box-shadow: 1px 2.5px 4px rgba(222, 208, 208, 0.3),
+          inset 1px 2.5px 4px rgba(222, 208, 208, 0.3);
+        padding: 45px;
+        padding-top: 108px;
+        position: relative;
+      }
+      @media screen and (max-width: 1075px) {
+        .helpdiv .helpflex .helpinvest .helpinvest-box {
+          padding-top: 55px;
+        }
+      }
+      .faqdiv {
+        padding: 198px 221px 198px 221px;
+      }
+      .faqdiv .faq h1 {
+        text-align: center;
+      }
+      .faqdiv .faq hr {
+        margin-bottom: 56px;
+        margin-top: 21px;
+      }
+      .testimoniesdiv {
+        padding-left: 141px;
+        padding-right: 141px;
+      }
+      .testimoniesdiv .testimonials {
+        background-image: url(https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592469191/hng%20fundmylaptop/Rectangle_363_vtruep.png);
+        padding-top: 58px;
+        padding-bottom: 300px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .testimoniesdiv .testimonials h1 {
+        text-align: center;
+      }
+      .testimoniesdiv .testimonials hr {
+        margin-bottom: 33px;
+        margin-top: 19px;
+      }
+      .testimoniesdiv .testimonials .subtitle {
+        font-family: Muli;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18.0758px;
+        text-align: center;
+        color: #292e3d;
+      }
+      .testimoniesdiv .testimonials .testimonials-slider {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+      }
+      @media screen and (max-width: 1250px) {
+        .testimoniesdiv .testimonials .testimonials-slider .box.first {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 1250px) {
+        .testimoniesdiv .testimonials .testimonials-slider .box.second {
+          flex-basis: 50%;
+          max-width: 50%;
+        }
+        .testimoniesdiv .testimonials .testimonials-slider .box.third {
+          flex-basis: 50%;
+          max-width: 50%;
+        }
+      }
+
+      .testimoniesdiv .testimonials .testimonials-slider .box {
+        display: flex;
+        flex-basis: 32%;
+        max-width: 32%;
+        padding: 17px;
+        margin: 10px;
+        background: #ffffff;
+        box-shadow: 0px 3.53427px 3.53427px rgba(187, 178, 178, 0.25);
+        border-radius: 6.18978px;
+      }
+      .testimoniesdiv .testimonials .testimonials-slider .profile {
+        display: flex;
+        flex-direction: column;
+        margin-right: 15px;
+        width: 20%;
+      }
+      .testimoniesdiv .testimonials .testimonials-slider .profile div {
+        align-self: center;
+      }
+      .testimoniesdiv .testimonials .testimonials-slider .profile img {
+        width: 100%;
+        height: auto;
+      }
+      .testimoniesdiv .testimonials .testimonials-slider .profile .name {
+        font-family: Muli;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13.0539px;
+        line-height: 27px;
+      }
+      .testimoniesdiv .testimonials .testimonials-slider .profile .date {
+        font-family: Muli;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+      }
+      .testimoniesdiv .testimonials .testimonials-slider .testimony {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+      }
+      .testimoniesdiv .testimonials .testimonials-slider .testimony p:before {
+        content: "\201B";
+      }
+      .testimoniesdiv .testimonials .testimonials-slider .testimony p:after {
+        content: "\2019";
+      }
+      .testimoniesdiv .testimonials .testimonials-slider .testimony p {
+        margin-bottom: 10px;
+      }
+      .testimoniesdiv .testimonials .testimonials-slider .testimony .checked {
+        color: #f3f56c;
+      }
+      .slider-arrows {
+        text-align: right;
+        margin-top: 30px;
+      }
+      .slider-arrows span {
+        padding: 20px;
+        background-color: rgba(29, 46, 63, 0.6);
+        color: #ffffff;
+      }
+      .slider-arrows span:hover {
+        background-color: #1d2e3f;
+      }
+      .impactdiv {
+        padding-left: 141px;
+        padding-right: 141px;
+      }
+      .impactdiv .impact {
+        background-image: url(https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592477112/hng%20fundmylaptop/undraw_connected_world_wuay_1_yxaa6i.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 200px;
+      }
+      .impactdiv .impact h1 {
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        text-align: center;
+        color: rgba(29, 46, 63, 0.8);
+      }
+
+      .impactdiv .impact .counter {
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 75px;
+        line-height: 98px;
+        text-align: center;
+
+        color: #fb3f5c;
+      }
+      .impactdiv .impact div {
+        display: flex;
+        justify-content: center;
+      }
+      .impactdiv .impact div .each {
+        display: flex;
+        flex-direction: column;
+        margin: 50px;
+        text-align: center;
+      }
+
+      /* UI Elements */
+
+      /*Medium Pink Button*/
+      a.medium-buttons {
+        display: inline-block;
+        background-color: var(--primary-pink);
+        padding: 0.9em 1.5em;
+        margin: 0 0.3em 0.3em 0;
+        border-radius: 0.12em;
+        box-sizing: border-box;
+        text-decoration: none;
+        color: var(--primary-white);
+        text-align: center;
+        transition: all 0.2s;
+        border-radius: 10px;
+      }
+      a.medium-buttons:hover {
+        color: #000000;
+        background-color: #ffffff;
+      }
+      @media all and (max-width: 30em) {
+         a.medium-buttons {
+          display: block;
+          margin: 0.4em auto;
+        }
+      }
+
+      /* FAQ Accordion */
+      /* Style the element that is used to open and close the accordion class */
+      p.accordion {
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        margin-bottom: 10px;
+        border: 1px solid #444855;
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+
+      /* Add a background color to the accordion if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+      p.accordion.active,
+      p.accordion:hover {
+        background-color: var(--primary-pink);
+        color: var(--primary-white);
+      }
+
+      /* Unicode character for "greater" sign (>) */
+      p.accordion:after {
+        content: "\003E";
+        font-size: 50px;
+        color: #444855;
+        float: right;
+        margin-left: 5px;
+      }
+
+      /* Unicode character for "minus" sign (-) */
+      p.accordion.active:after {
+        content: "\2212";
+      }
+
+      div.panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.4s ease-in-out;
+        opacity: 0;
+        margin-bottom: 10px;
+      }
+
+      div.panel.show {
+        opacity: 1;
+        max-height: 500px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="helpdiv">
+        <h1>How Can We Help You</h1>
+        <hr />
+        <div class="helpflex">
+          <div class="helploan">
+            <div class="helploan-box">
+              <img
+                src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592444349/hng%20fundmylaptop/helploan-icon_xlfel3.svg"
+                alt="helploan-icon"
+              />
+              <h2>
+                Need a <span style="color: var(--primary-pink);">loan</span>?
+              </h2>
+              <p>
+                Becoming a dev defintely means you have to have a laptop. As a
+                dev your laptop is your most essential work tool. HNG Imterships
+                Project #FundMyLaptop exists solely to make this happen.
+              </p>
+              <a href="#" class="medium-buttons">Get a loan</a>
+
+              <img
+                src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592443086/hng%20fundmylaptop/loanpattern_km9ohy.png"
+                alt=""
+                class="pattern1"
+              />
+            </div>
+          </div>
+          <div class="helpinvest">
+            <div class="helpinvest-box">
+              <h2>
+                Want to <span style="color: var(--primary-pink);">invest</span>?
+              </h2>
+              <p>
+                Becoming a dev defintely means you have to have a laptop. As a
+                dev your laptop is your most essential work tool. HNG Imterships
+                Project #FundMyLaptop exists solely to make this happen.
+              </p>
+              <a href="#" class="medium-buttons">Get loan</a>
+              <img
+                src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592443086/hng%20fundmylaptop/investpattern_pbx4s6.png"
+                alt=""
+                class="pattern2"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="faqdiv">
+        <div class="faq">
+          <h1>Frequently Asked Questions</h1>
+          <hr />
+          <p class="accordion">How do I get a laptop</p>
+          <div class="panel">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book it has.
+          </div>
+
+          <p class="accordion">How do I get a loan</p>
+          <div class="panel">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book it has.
+          </div>
+
+          <p class="accordion">How do I invest in this platform</p>
+          <div class="panel">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book it has.
+          </div>
+
+          <p class="accordion">
+            How do I get a laptop
+          </p>
+          <div class="panel">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book it has.
+          </div>
+
+          <p class="accordion">
+            How do I get a loan
+          </p>
+          <div class="panel">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book it has.
+          </div>
+
+          <p class="accordion">
+            How do I invest in this platform
+          </p>
+          <div class="panel">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book it has.
+          </div>
+        </div>
+      </div>
+      <div class="testimoniesdiv">
+        <div class="testimonials">
+          <h1>Fundmylaptop loves Testimonies</h1>
+          <hr />
+          <p class="subtitle">
+            Fundmylaptop loves feedbacks. Here is what our clients say about us
+            and also their experiences using this platform
+          </p>
+          <div class="testimonials-slider">
+            <div class="box first">
+              <div class="profile">
+                <img
+                  src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592469191/hng%20fundmylaptop/portrait-attracive-young-businesswoman-wearing-260nw-1036909795_1_ufdf4y.png"
+                  alt=""
+                />
+                <div>
+                  <p class="name">Anita M.</p>
+                  <small><p class="date">October 7, 2019</p></small>
+                </div>
+              </div>
+              <div class="testimony">
+                <p>
+                  Perfect.Very confortable and pleasant enviroment. we sat in
+                  the pool area where it was very cool. i enjoyed my stay and i
+                  will love to visit again.
+                </p>
+                <span class="ratings">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </span>
+              </div>
+            </div>
+
+            <div class="box second">
+              <div class="profile">
+                <img
+                  src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592469191/hng%20fundmylaptop/portrait-attracive-young-businesswoman-wearing-260nw-1036909795_1_ufdf4y.png"
+                  alt=""
+                />
+                <div>
+                  <p class="name">Anita M.</p>
+                  <small><p class="date">October 7, 2019</p></small>
+                </div>
+              </div>
+              <div class="testimony">
+                <p>
+                  Perfect.Very confortable and pleasant enviroment. we sat in
+                  the pool area where it was very cool. i enjoyed my stay and i
+                  will love to visit again.
+                </p>
+                <span class="ratings">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </span>
+              </div>
+            </div>
+
+            <div class="box third">
+              <div class="profile">
+                <img
+                  src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592469191/hng%20fundmylaptop/portrait-attracive-young-businesswoman-wearing-260nw-1036909795_1_ufdf4y.png"
+                  alt=""
+                />
+                <div>
+                  <p class="name">Anita M.</p>
+                  <small><p class="date">October 7, 2019</p></small>
+                </div>
+              </div>
+              <div class="testimony">
+                <p>
+                  Perfect.Very confortable and pleasant enviroment. we sat in
+                  the pool area where it was very cool. i enjoyed my stay and i
+                  will love to visit again.
+                </p>
+                <span class="ratings">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="slider-arrows">
+            <span>&#10094;</span>
+            <span>&#10095;</span>
+          </div>
+        </div>
+      </div>
+      <div class="impactdiv">
+        <div class="impact">
+          <h1>
+            Successfully provided 1500+ laptops to interns in over 20countries.
+          </h1>
+          <div>
+            <div class="each">
+              <h1 class="counter">1500+</h1>
+              <h3>laptops</h3>
+            </div>
+            <div class="each">
+              <h1 class="counter">30+</h1>
+              <h3>countries</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // FAQ Accordion JS
+      document.addEventListener("DOMContentLoaded", function (event) {
+        var acc = document.getElementsByClassName("accordion");
+        var panel = document.getElementsByClassName("panel");
+        for (var i = 0; i < acc.length; i++) {
+          acc[i].onclick = function () {
+            var setClasses = !this.classList.contains("active");
+            setClass(acc, "active", "remove");
+            setClass(panel, "show", "remove");
+
+            if (setClasses) {
+              this.classList.toggle("active");
+              this.nextElementSibling.classList.toggle("show");
+            }
+          };
+        }
+
+        function setClass(els, className, fnName) {
+          for (var i = 0; i < els.length; i++) {
+            els[i].classList[fnName](className);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
