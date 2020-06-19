@@ -7,7 +7,7 @@ module.exports = {
           node: 'current'
         }
       }
-    ],
-    ['es2015']
+    ]
+    // ['es2015']
   ]
 }

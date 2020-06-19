@@ -1,7 +1,7 @@
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyPlugin = require('copy-webpack-plugin')
+// const CopyPlugin = require('copy-webpack-plugin')
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin
@@ -17,9 +17,10 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       appMountId: 'app',
-      filename: 'index.html'
+      filename: 'index.html',
+      title: 'Fund My Laptop'
     }),
-    new CopyPlugin([{ from: 'public/index.html' }]),
+    // new CopyPlugin([{ from: 'public/index.html' }]),
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
     new LodashModuleReplacementPlugin(),
     new BundleAnalyzerPlugin({
@@ -72,6 +73,11 @@ const config = {
         }
       }
     }
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000
   }
 }
 
