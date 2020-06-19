@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<style>
+    /*General Style Reset*/
+    html,
+    body {
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    progress {
+        width: 500px;
+        height: 15px;
+        border: 1px solid #FB3F5C;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    progress[value] {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    progress[value]::-webkit-progress-bar {
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    progress[value]::-webkit-progress-value {
+        background-color:  #FB3F5C;;
+        border-radius: 10px;
+    }
+
+    .ver_body {
+        position: relative;
+        margin: 50px auto;
+    }
+
+    .status {
+        padding-bottom: 100px;
+    }
+
+    .tweets {
+        margin: auto;
+    }
+
+    .tweets form h3 {
+        margin: auto;
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+        color: #000000;
+        padding-bottom: 10px;
+    }
+    .tweets form label {
+        padding-right: 150px;
+    }
+    .tweets form .label3 {
+        padding-right: 135px;
+    }
+
+    .upload_twitter input{
+        margin: auto;
+        border-radius: 5px;
+        border: none;
+        background-color: #eee;
+        height:30px;
+    }
+
+    .b-button {
+        margin: auto;
+        padding-top: 50px;
+    }
+
+    .b-button button {
+        width: 108px;
+        height: 35px;
+        background: #FB3F5C;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+    }
+
+    .b-button button:hover {
+        background: red;
+        transform: scale(1.07);
+        transition: all 1s;
+    }
+    @media screen and (max-width: 780px){
+        progress {
+            width: 350px;
+            height: 15px;
+        }
+    }
+</style>
+<body>
+    <div class="ver_body">
+        <div class="status">
+            <h2>Verification Form</h2>
+            <progress value='40' max="100"></progress>
+        </div>
+        <div class="upload_section">
+            <div class="tweets">
+                <form action="/action_page.php" required>
+                    <h3>How old is your Twitter account?</h3>
+                    <input type="radio" id="" name="tweets" value="yes">
+                    <label for="yes">0  -  4 yrs</label> <br/><br/>
+                    <input type="radio" id="" name="tweets" value="no">
+                    <label for="no">5  -  9 yrs</label><br><br/>
+                    <input type="radio" id="" name="tweets" value="no">
+                    <label class="label3" for="no">10  -  14 yrs</label>
+                </form>
+            </div>
+            <div class="b-button">
+                <a href="verification_Page8.html"><button>Next</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
