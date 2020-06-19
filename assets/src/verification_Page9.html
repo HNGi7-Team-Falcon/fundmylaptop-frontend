@@ -3,11 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 </head>
 <style>
     /*General Style Reset*/
+
     html,
     body {
         overflow: hidden;
@@ -38,6 +40,12 @@
     }
 
     progress[value]::-webkit-progress-value {
+        background-color: #FB3F5C;
+        border-radius: 10px;
+    }
+    /* Cross browser compatability */
+
+    progress::-moz-progress-bar {
         background-color: #FB3F5C;
         border-radius: 10px;
     }
@@ -82,6 +90,18 @@
         background-color: #eee;
         height: 30px
     }
+    /* Mobile view */
+
+    @media screen and (max-width: 400px) {
+        .status {
+            padding-bottom: 50px;
+        }
+        .upload_section h3 {
+            font-size: 20px;
+            width: 100%;
+            padding-bottom: 20px;
+        }
+    }
 
     .b-button {
         margin: auto;
@@ -118,7 +138,6 @@
             width: 350px;
             height: 15px;
         }
-
         input {
             width: 300px;
         }
@@ -149,4 +168,5 @@
         document.getElementById("quantity").Submit()
     }
 </script>
+
 </html>
