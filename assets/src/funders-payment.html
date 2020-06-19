@@ -255,7 +255,7 @@ font-size: 100%;
         <div class="text">
         <ul><h3>Payment for:</h3>
             <li>
-                <img src="joe.png"><ins>Jane Doe</ins><br>laptop purchase
+                <img src="https://res.cloudinary.com/devmajor/image/upload/v1592555207/ellipse_197_k991n6.png"><ins>Jane Doe</ins><br>laptop purchase
             </li>
             <li>as a<ins> Loan</ins></li>
             <li>for <ins>6 months</ins></li>
