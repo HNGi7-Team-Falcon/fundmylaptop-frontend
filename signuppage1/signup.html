@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Sign up page</title>
-        <!-- <link rel="stylesheet" type="text/css" href="stylesheet.css"> -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
     <style type="text/css">
       /* stylesheet for signup page */
@@ -75,6 +75,13 @@ font-size:16px;
 color: #04172A;
 padding-left: 20px;
 
+}
+ .fa{
+position: absolute;
+  top:5%;
+  right: 20px;
+  color: rgba(4, 23, 42, 0.3);
+  transform: matrix(1, 0, 0, -1, 0, 0);
 }
 input[type=submit]{
     width:100%;
@@ -208,7 +215,7 @@ input[type=submit]{
                <p>Email</p>
                <input type="text" placeholder="Username@domain.com">
                <p>Password</p>
-          <input type="password" placeholder="Enter Your Password"><br><br><br>
+          <input type="password" placeholder="Enter Your Password"><i class="fa fa-eye"><br><br><br>
           <input type="submit" value="Create account  >"><br>
           <P class="account">Already have an account? <a href="#">Sign in</a></P><br>
           <p class="sign"><span>or sign up using</span></p>
