@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FundMyLaptop</title>
+        <style>
+                        @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=DM+Sans&display=swap');
+            body {
+                padding: 0;
+                margin: 0;
+                border: 0;
+                font-family: DM Sans;
+            }
+            #top_hero {
+                background-image: url(https://res.cloudinary.com/dt9pwfpi5/image/upload/v1592504757/firsthero_-_Copy_gt1cdi.png);
+                background-repeat: no-repeat;
+                background-attachment: fix;
+                background-position: right;
+                margin-bottom: 30px;
+            }
+            ul {
+                list-style-type: none;
+            }
+            #header {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+            }
+            .logo {
+                font-size: 25px;
+                margin-right: 13%;
+                margin-top: 21px;
+                padding-left: 50px;
+            }
+            span.lap {
+                color: #FB3F5C;
+            }
+            .navs {
+                display: flex;
+                font-size: 21px;
+                margin-right: 0;
+                color: white;
+                align-items: center;
+            }
+            .navs>li {
+                margin-right: 40px;
+                justify-content: space-between;
+            }
+            .navs > li:hover{
+                padding-bottom: 5px;
+                border-bottom: 3px solid #FB3F5C;
+            }
+            span.home{
+                color: #FB3F5C;
+            }
+            .login {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+                padding-left: 0;
+            }
+            .login>li {
+                margin-right: 30px;
+                justify-content: space-between;
+            }
+            span.log{
+                padding-top: 11px;
+                padding-bottom: 11px;
+                padding-right: 40px;
+                padding-left: 40px;
+                border: 2px solid #FB3F5C;
+                border-radius: 10px;
+                color: white;
+            }
+            span.log:hover{
+                background-color: #FB3F5C;
+                color: white;
+            }
+            span.sign {
+                background-color: #FB3F5C;
+                color: white;
+                padding-top: 11px;
+                padding-bottom: 11px;
+                padding-right: 40px;
+                padding-left: 40px;
+                border-radius: 10px;
+            }
+            span.sign:hover{
+                background-color: rgb(253, 10, 47);
+                border: 0.5px solid #FB3F5C;
+            }
+            #text_container {
+                display: flex;
+                flex-wrap: wrap;
+                width: 50%;
+                padding-left: 50px;
+                margin-top: 250px;
+            }
+            #boldtext {
+                font-size: 48px;
+                font-weight: bold;
+                color: #1D2E3F;
+            }
+            #boldtext > p {
+                margin-bottom: 0px;
+            }
+            span.platform {
+                color: #FB3F5C;
+            }
+            #plaintext {
+                font-size: 20px;
+                line-height: 32px;
+                color: rgba(41, 46, 61, 0.8);
+            }
+            ul.btn{
+                display: flex;
+                padding-left: 0px;
+                margin-top: 32px;
+            }
+            ul.btn > li {
+                margin-right: 40px;
+                font-size: 24px;
+                font-weight: 500;
+            }
+            span.invest{
+                padding-top: 11px;
+                padding-bottom: 11px;
+                padding-right: 45px;
+                padding-left: 45px;
+                border: 1px solid #FB3F5C;
+                border-radius: 10px;
+                color: #1D2E3F;
+            }
+            span.invest:hover{
+                background-color: #FB3F5C;
+                color: white;
+            }
+            span.loan {
+                background-color: #FB3F5C;
+                color: white;
+                padding-top: 11px;
+                padding-bottom: 11px;
+                padding-right: 40px;
+                padding-left: 40px;
+                border-radius: 10px;
+            }
+            span.loan:hover {
+                background-color: rgb(253, 10, 47);
+                border: 0.5px solid #FB3F5C;
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+            #bottom_hero {
+                display: flex;
+                justify-content: flex-end;
+                padding-top: 100px;
+                padding-bottom: 30px;
+                background-image: url(https://res.cloudinary.com/dt9pwfpi5/image/upload/v1592502430/secondhero_rdncfg.png);
+                background-repeat: no-repeat;
+                background-size: cover
+            }
+            .bottomhero_text {
+                padding-right: 60px;
+                width: 40%;
+            }
+            .bottomhero_text > h2 > p{
+                font-weight: bold;
+                font-size: 36px;
+                color: #1D2E3F;
+                margin-bottom: 10px;
+            }
+            .colored_div {
+                width: 150px;
+                height: 8px;
+                background-color: #FB3F5C;
+            }
+            .empty_div {
+                display: flex;
+                justify-content: center;
+            }
+            p.words {
+                font-size: 18px;
+                line-height: 29px;
+                color: #68747F;
+            }
+
+            .learn_btn {
+                display: flex;
+                justify-content: center;
+                width: 40%;
+                background-color: #FB3F5C;
+                color: white;
+                font-size: 24px;
+                font-weight: 500;
+                padding: 15px;
+                border-radius: 10px;
+            }
+            /* Responsive design */
+            @media (max-width: 1024px) {
+                #header {
+                    padding-top: 0;
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    background-color: #1D2E3F;
+                    margin-bottom: 50px;
+                }
+                .navs {
+                    padding-left: 100px;
+                    position: fixed;
+                    bottom: 0;
+                    width: 100%;
+                    background-color: #1D2E3F;
+                    margin: 0;
+                    padding: 25px 0px 25px 0px;
+                    justify-content: space-evenly;
+                    font-size: 30px;
+                }
+                .logo {
+                    color: white;
+                    font-size: 40px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 50px;
+                    margin: 30px 150px 30px 0px
+                }
+                .login {
+                    font-size: 30px;
+                    align-items: center;
+                }
+                #top_hero {
+                    background-image: none;
+                }
+                #text_container {
+                    padding-right: 50px;
+                    margin-top: 0;
+                    margin-left: 50px;
+                    width: 80%;
+                    text-align: center;
+                }
+                #boldtext {
+                    display: flex;
+                    justify-content: center;
+                }
+                #boldtext > p {
+                    margin-top: 190px;
+                    margin-bottom: 30px;
+                    text-align: center;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #FB3F5C;
+                }
+                #plaintext > p {
+                    font-size: 30px;
+                    line-height: 70px;
+                    margin-bottom: 90px;
+                    text-align: center;
+                    margin-top: 10px;
+                }
+                #buttons {
+                    display: flex;
+                    width: 100%;
+                    justify-content: flex-end;
+                }
+                .btn {
+                    justify-content: space-evenly;
+                    width: 100%;
+                }
+                .invest, .loan {
+                    font-size: 40px;
+                }
+                .bottomhero_text {
+                    width: 100%;
+                    justify-content: center;
+                    padding: 20px 120px 120px 120px
+                }
+                h2 > p {
+                    text-align: center;
+                    font-size: 50px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #FB3F5C;
+                }
+                .empty_div{
+                    display: none;
+                }
+                p.words {
+                    text-align: center;
+                    font-size: 35px;
+                    line-height: 65px;
+                }
+                p.learn_btn {
+                    margin: 0;
+                    font-size: 50px;
+                    width: 100%;
+                }
+                .learnmore_btn {
+                    justify-content: center;
+                    padding: 50px;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <!--Hero section container-->
+        <div id="hero_section">
+            <!--Topmost hero section-->
+            <div id="top_hero">
+                <!--Header navigation bar-->
+                <header id="header">
+                    <ul class="logo"><li><a href="#">FundMy<span class="lap">Laptop</span></a></li></ul>
+                    <ul class="navs">
+                        <li><span class="home"><a href="#">Home</a></span></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <ul class="login">
+                        <li><span class="log"><a href="#">Login</a></span></li>
+                        <li><span class="sign"><a href="#">Sign Up</a></span></li>
+                    </ul>
+                </header>
+                <!--Contains text and buttons-->
+                <div id="text_container">
+                    <div id="boldtext">
+                        <p>A <span class="platform">Platform</span> For Fundees And Funders</p>
+                    </div>
+                    <div id="plaintext">
+                        <p>Becoming a dev definitely means you have to have a laptop. As a dev your laptop is 
+                            your most essential work tool.
+                        HNG internships Project #FundMyLaptop exists solely to make this happen.</p>
+                    </div>
+                    <div id="buttons">
+                        <ul class="btn">
+                            <li><span class="invest"><a href="#">Invest</a></span></li>
+                            <li><span class="loan"><a href="#">Get a loan</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--Bottom hero section-->
+            <div id="bottom_hero">
+                <!--All text container-->
+                <div class="bottomhero_text">
+                    <h2><p>Welcome To FundMyLaptop</p></h2>
+                    <div class="empty_div">
+                        <div class="colored_div"></div>
+                    </div>
+                    <p class="words">
+                        Fundmylaptop is a platform that conncets those in need of a laptop or to repair
+                        a laptop with no funding at the mo ment with investors willing to help by investing
+                        in them and getting back there money with interest fundaraising.
+                        Fundmylaptop is a platform that conncets those in need of a laptop or to repair
+                        a laptop with no funding at the mo ment with investors willing to help by investing
+                        in them and getting back there money with interest fundaraising.
+                    </p>
+                    <div class="learnmore_btn">
+                        <p class="learn_btn"><a href="#">Learn More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
