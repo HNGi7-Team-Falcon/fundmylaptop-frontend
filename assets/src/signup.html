@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=Sign, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
+    <title>Sign in | FundMyLaptop</title>
+    <style>
+         body{
+            font-family:  'DM Sans';
+            background-color: #FFFFFF;
+            background-image: 
+            url('https://res.cloudinary.com/devmajor/image/upload/v1592426943/Polygon_9_bmonih.png'), 
+            url('https://res.cloudinary.com/devmajor/image/upload/v1592426943/Ellipse_58_injhxt.png'),
+            url('https://res.cloudinary.com/devmajor/image/upload/v1592426944/Ellipse_57_zgfz25.png'),
+            url('https://res.cloudinary.com/devmajor/image/upload/v1592426943/Ellipse_56_czvp1x.png'),
+            url('https://res.cloudinary.com/devmajor/image/upload/v1592426943/Polygon_8_htsakm.png'); 
+        
+            background-size: 15%, 2%, 12%, 20%, 25%;
+            background-position: left 0% top 0%, left 88% top 35%, right -1.5% top 0%, left -5% bottom -10%, right 6% bottom 0%;
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+            overflow: auto;
+            background-attachment: fixed;
+        }
+        .signup-loginBox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .signup-login-container {
+            background-color: #FFFFFF;
+            -webkit-box-shadow: 1px 1px 8px 0px #ccc;
+            /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+            -moz-box-shadow: 1px 1px 8px 0px #ccc;
+            /* Firefox 3.5 - 3.6 */
+            box-shadow: 1px 1px 8px 0px #ccc;
+            /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+            max-width: 100%;
+            height: fit-content;
+            /* margin-top: 1em; */
+            min-width: 20em;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            padding-top: 1em;
+            padding-right: 2.5em;
+            padding-left: 2.5em;
+        }
+
+        .logo {
+            font-weight: 400;
+        }
+
+        .signup-almostDone {
+            margin-top: -.5em;
+            font-weight: 500;
+            color: #04172A;
+        }
+
+        .fundMy {
+            color: #04172A;
+        }
+
+        .laptop {
+            color: #FB3F5C;
+        }
+        
+        .signup-dropdown-field input {
+            margin-top: -1em;
+            margin-bottom: .5em;
+            padding: 1em 3em 1em 1em;
+            color: #aaa;
+            border-radius: .4em;
+            background-color: #FFFFFF;
+            border: 1px solid grey;
+        }
+        #password-field input:nth-child(2) {
+            background-image: url('https://res.cloudinary.com/devmajor/image/upload/v1592671476/image_23_alygjs.png');
+        /* background-color: red; */
+          /* height: 40px; */
+          background-position: top 0% right 10%;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: right;
+        outline: 0;
+        }
+        .signup-dropdown-field select {
+            margin-top: -1em;
+            margin-bottom: .5em;
+            width: 100%;
+            padding: 1em 3em 1em 1em;
+            color: #aaa;
+            border-radius: .4em;
+            background-color: #FFFFFF;
+        }
+
+        .signup-dropdown-field select option {
+            color: #04172A;
+        }
+
+        .signup-dropdown-field p {
+            color: #04172A;
+            font-size: .9em;
+        }
+
+        .signup-heading-text {
+            margin-bottom: 2em;
+        }
+        .signup-btn-container {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 2em;
+        }
+
+        .signup-continue-btn {
+            cursor: pointer;
+            margin-top: 2em;
+            /* margin-bottom: 2.5em; */
+            border-radius: 3px;
+            border: 0;
+            color: #FFFFFF;
+            background-color: #FB3F5C;
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1em;
+            line-height: 40px;
+            text-align: center;
+            width: 100%;
+            height: 3em;
+            color: white;
+            box-shadow: 4px 4px 15px rgba(251, 63, 92, 0.25);
+            border-radius: 5px;
+        }
+        .signup-btn-container button {
+            background-color: transparent;
+            border: 1px solid transparent;
+            width: 30%;
+            padding: .3em;
+        }
+        .signup-btn-container .signup-social1{
+            border: 1px solid #485A96;
+box-sizing: border-box;
+border-radius: 5px;
+        }
+        .signup-btn-container .signup-social2{
+            border: 1px solid #DC4E41;
+box-sizing: border-box;
+border-radius: 5px;
+        }
+        .signup-btn-container .signup-social3{
+            border: 1px solid #006699;
+box-sizing: border-box;
+border-radius: 5px;
+        }
+        .divider{
+              width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid #ccc; 
+   color: grey;
+   background-color: transparent;
+   line-height: 0.1em;
+   margin: 10px 0 30px;
+   
+        }
+        .divider .breaker{
+            background:white; 
+    padding:0 10px; 
+    font-style: italic;
+        }
+        
+        .have-account{
+            text-align: center;
+            color: #04172A;
+        }
+
+        /* rule for mobile screen with small screens */
+        @media all and (min-width: 0px) {
+
+            .signup-loginBox {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .signup-login-container {
+                min-width: .5em;
+                flex-direction: column;
+                align-content: center;
+                padding-top: 1em;
+                padding-right: 2.5em;
+                padding-left: 2.5em;
+            }
+            .have-account{
+                font-size: .8em;
+            }
+            .breaker{
+                font-size: .6em;
+            }
+        }
+
+
+        /* ----rule for tablet screen */
+        @media all and (min-width: 778px) {
+
+            .signup-loginBox {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 100%;
+            }
+
+            .signup-login-container {
+                min-width: 20em;
+                flex-direction: column;
+                align-content: center;
+                padding-top: 1em;
+                padding-right: 2.5em;
+                padding-left: 2.5em;
+            }
+            .signup-dropdown-field input {
+                min-width: 20em;
+                margin-top: -1em;
+                margin-bottom: .5em;
+                padding: 1em 3em 1em 1em;
+                color: #aaa;
+                border-radius: .4em;
+                background-color: #FFFFFF;
+                border: 1px solid grey;
+            }
+            .have-account{
+                font-size: 1em;
+            }
+            .breaker{
+                font-size: .8em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="signup-main">
+        <div class="signup-loginBox">
+
+            <div class="signup-login-container">
+                <div class="signup-heading-text">
+                    <!-- <h3 class="signup-logo"><span class="fundMy">FundMy</span><span class="laptop">Laptop</span></h3> -->
+                    <h3 class="signup-logo"><span class="fundMy"></span><span class="laptop">Welcome</span></h3>
+                    <h2 class="signup-almostDone">Sign up on FundMyLaptop</h2>
+                </div>
+                <div class="signup-dropdown-field">
+                    <p>Email</p>
+                    <input type="text" name="email" placeholder="Username@domain.com">
+
+                </div>
+                <div class="signup-dropdown-field" id="password-field">
+                    <p>Password</p>
+                    <input type="password" name="password" placeholder="Enter your password">
+                </div>
+                
+                <button class="signup-continue-btn">Create account ></button>
+
+                <p class="have-account">Already have an account? <span class="laptop">Sign in</span></p> 
+                <p class="divider"><small class="breaker">or sign in using</small></p>
+                
+                <div class="signup-btn-container">
+                    <button class="signup-social1"><img src="https://res.cloudinary.com/devmajor/image/upload/v1592674330/Vector_ezosg9.png" height="20" alt="FB logo"></button>
+                    <button class="signup-social2"> <img src="https://res.cloudinary.com/devmajor/image/upload/v1592674341/g_hqh2eh.png" height="20" alt=""> </button>
+                    <button class="signup-social3"> <img src="https://res.cloudinary.com/devmajor/image/upload/v1592674328/Vector_1_uel35m.png" height="20" alt=""> </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
