@@ -109,6 +109,11 @@ Sign up to ZEIT Now and go through the onboarding flow, ensuring your GitHub acc
 Connect your project to ZEIT Now from the "Create a new project" page, using the "New Project From GitHub" button and selecting the project you want to deploy.
 Once connected, every time you git push, ZEIT Now will create a new deployment and the deployment URL will be shown on your ZEIT Dashboard. You will also receive an email for each deployment with the URL.
 
+# local development
+To start development install dependencies with `yarn install` and use `yarn start:dev` to start a local server with hot reload enabled. For production build run `yarn start`
+
+HTML files are served from public/pages folder and build are lcated at dist directory.
+
 
 originally Composed by @tominsinlalude edited by @seunbayo
 ### Happy hacking!!!!

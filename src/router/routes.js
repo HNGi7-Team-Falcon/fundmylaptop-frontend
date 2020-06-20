@@ -5,16 +5,16 @@ const routes = {
   '': () => {
     loadHTML(path.resolve(__dirname, '../pages') + '/home.html')
   },
-  '/login': () => {
+  login: () => {
     loadHTML(path.resolve(__dirname, '../pages') + '/login.html')
   },
-  '/signup': () => {
+  signup: () => {
     loadHTML(path.resolve(__dirname, '../pages') + '/signup.html')
   },
-  '/about/': () => {
+  about: () => {
     loadHTML(path.resolve(__dirname, '../pages') + '/about.html')
   },
-  '/contact/': () => {
+  contact: () => {
     loadHTML(path.resolve(__dirname, '../pages') + '/contact.html')
   }
 }
