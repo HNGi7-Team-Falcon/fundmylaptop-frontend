@@ -37,7 +37,7 @@ const config = {
       filePatterns: ['polyfill.**.js']
     }),
     new CopyPlugin({
-      patterns: [{ from: 'public', to: 'dist' }]
+      patterns: [{ from: 'public', to: '' }]
     }),
     new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en/),
     new LodashModuleReplacementPlugin(),
@@ -50,6 +50,10 @@ const config = {
   ],
   module: {
     rules: [
+      {
+        test: /\.html$/i,
+        use: 'html-loader'
+      },
       {
         test: /\.js$/,
         use: 'babel-loader',

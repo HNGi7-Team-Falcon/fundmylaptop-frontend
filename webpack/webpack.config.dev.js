@@ -10,7 +10,7 @@ module.exports = merge(common, {
     chunkFilename: 'js/[name].chunk.js'
   },
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
+    // contentBase: path.join(__dirname, 'public'),
     compress: true,
     port: 9000,
     inline: true,

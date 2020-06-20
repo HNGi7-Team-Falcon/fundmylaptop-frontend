@@ -1,5 +1,5 @@
 /* eslint-disable no-prototype-builtins */
-import Store from '../FundlapiState/store.js'
+import Store from './Store.js'
 
 export default class Component {
   constructor (props = {}) {
