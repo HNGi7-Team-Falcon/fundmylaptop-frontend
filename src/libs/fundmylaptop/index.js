@@ -1,6 +1,6 @@
 /* eslint-disable no-prototype-builtins */
 import Component from './component'
-import Store from '../FundlapiState/index.js'
+import Store from '~/store/index.js'
 
 export default class FundMyLaptop extends Component {
   constructor (params) {
@@ -44,5 +44,17 @@ export default class FundMyLaptop extends Component {
 
   nodeById (id) {
     return document.getElementById(`#${id}`)
+  }
+
+  // asyncrhonously fetch the html template partial from the template directory,
+  // then set its contents to the html of the parent element
+  async loadHTML (url, id) {
+    /* eslint-disable no-undef */
+    const req = new XMLHttpRequest()
+    req.open('GET', url)
+    req.send()
+    req.onload = () => {
+      this.nodeById(id).innerHTML = req.responseText
+    }
   }
 }
