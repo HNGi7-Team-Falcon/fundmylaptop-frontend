@@ -4,11 +4,328 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="individual.css">
+    <!-- <link rel="stylesheet" href="individual.css"> -->
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="bootstrap.css" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
     <title>individual funding page</title>
+
+<style>
+    /* No boostrap, just css */
+        /* 80 minu the tops */
+
+ body{
+         font-family: 'DM Sans', sans-serif;
+         }
+
+.name{
+        position: absolute;
+        width: 80%;
+        height: 70px;
+        left: 140px;
+        top: 80px;
+        /* 180 */
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 54px;
+        line-height: 70px;
+
+        color: #04172A;
+    }
+
+
+.purpose{
+         position: absolute;
+        width: 50%px;
+        height: 31px;
+        left: 140px;
+        top: 186px;
+        /* 266 */
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 31px;
+
+        color: #04172A;
+
+     }
+
+.date{
+        position: absolute;
+        width: 60%;
+        height: 31px;
+        left: 551px;
+        top: 186px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 31px;
+        color: #04172A;
+    }
+
+/* can put as background */
+.video{
+        position: absolute;
+        width: 670px;
+        height: 416px;
+        left: 140px;
+        top: 257px;
+        background: url("https://i.ibb.co/mBjwP4r/photo.png");
+        background-repeat: no-repeat; 
+    }
+
+.video .vd-logo1{
+        position: absolute;
+        margin: 170px; 
+        margin-left: 310px;
+    }
+
+.video .vd-logo2{
+        position: absolute;
+        margin: 130px; 
+        margin-left: 270px;
+    }
+
+
+.right-side{
+        position: absolute;
+        width: 400px;
+        height: 513px;
+        left: 850px;
+        top: 257px;
+        right: 550px;
+        bottom: 340px;
+        /* border: 2px dashed red; */
+        background: #FFFFFF;
+        border: 1px solid rgba(4, 23, 42, 0.25);
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+
+.bid {
+        position: absolute;
+        width: 186px;
+        height: 47px;
+        left: 20px;
+        top: 3px;
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 47px;
+        color: #04172A;
+    }
+
+.form{
+        position: absolute;
+        width: 392px;
+        height: 48px;
+        left: 850px;
+        top: 350px;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+
+/* form */
+
+input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+  
+  button {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 42px;
+    }
+  
+  button {
+        background-color: #45a049;
+        background: #FB3F5C;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+  
+  div {
+        border-radius: 5px;
+        /* background-color: #f2f2f2; */
+        padding: 20px;
+    }
+
+  .form .form1{
+         margin: -20px;
+      
+    }
+
+.loan{
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+/* downside */
+
+.need{
+        position: absolute;
+        width: 376px;
+        height: 120px;
+        left: 140px;
+        top: 705px;
+
+        background: #FFFFFF;
+        border: 1px solid rgba(4, 23, 42, 0.25);
+        box-sizing: border-box;
+        border-radius: 10px;
+}
+
+.has{
+        position: absolute;
+        width: 278px;
+        height: 120px;
+        left: 532px;
+        top: 705px;
+        background: #FFFFFF;
+        border: 1px solid rgba(4, 23, 42, 0.25);
+        box-sizing: border-box;
+        border-radius: 10px;
+     }
+
+.asset{
+        margin-top: 5px;
+    }
+
+
+.voucher-title{
+        position: absolute;
+        width: 108px;
+        height: 31px;
+        left: 140px;
+        top: 849px;
+
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 31px;
+
+        color: #000000;
+    }
+
+.voucher-line{
+        position: absolute;
+        width: 670px;
+        height: 128px;
+        left: 140px;
+        top: 913px;
+        overflow: hidden;
+        background: #FFFFFF;
+        border: 1px solid rgba(4, 23, 42, 0.5);
+        box-sizing: border-box;
+        border-radius: 10px;
+   }
+
+.voucher{
+        position: relative;
+        width: 80px;
+        height: 80px;
+        left: 5px;
+        top: 27px;
+        margin-right: 7px;
+        margin-top:  -25px;
+        /* overflow: hidden; */
+
+        /* background: url(48m.jpg); */
+   }
+
+#next{
+        margin-left: 230px;
+    }
+.description-title{
+    position: absolute;
+    width: 128px;
+    height: 26px;
+    left: 141px;
+    top: 1080px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    /* identical to box height */
+    color: #04172A;
+}
+
+.description-info{
+    position: absolute;
+    width: 670px;
+    height: 288px;
+    left: 140px;
+    top: 1115px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 36px;
+    /* or 180% */
+    color: #000000;
+}
+
+.sign-name{    
+    position: absolute;
+    width: 163px;
+    height: 47px;
+    left: 140px;
+    top: 1450px;
+
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 47px;
+    /* identical to box height */
+
+
+    color: #04172A;
+}
+
+
+.sign-button{
+    position: absolute;
+    width: 178px;
+    height: 72px;
+    left: 632px;
+    top: 1450px;
+    border: 2px solid #FB3F5C;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+#cycle{
+    position: absolute;
+    left: 330px;
+    right: 8.33%;
+    top: 1492px; 
+    bottom: 41.62%;
+}
+    </style>
+
 </head>
+
 <body>
     <div>
         <h1 class="name">John Doe</h1>
@@ -93,6 +410,6 @@
 
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="individual.js"></script>
+    <!-- <script src="individual.js"></script> -->
 </body>
 </html>
