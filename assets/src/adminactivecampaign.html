@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/admin.css">
+  <title>Admin Request Page</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+    :root {
+      --nav-bg: #2a3a64;
+      --logo-bg: #fb3f5c;
+      --red: hsl(0, 87%, 67%);
+      --gray: #e1e1e1;
+      --btn-color: #a6a6a6;
+      --grayish-violet: hsl(257, 7%, 63%);
+      --very-dark-blue: hsl(255, 11%, 22%);
+      --very-dark-violet: hsl(260, 8%, 14%);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      font-family: 'DM Sans', sans-serif;
+      width: 270px;
+      background-color: var(--nav-bg);
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo {
+      background: var(--logo-bg);
+      padding: 0 1rem;
+      position: relative;
+    }
+
+    .logo h2 {
+      padding: 20px 15px;
+      margin-right: 5px;
+      color: var(--nav-bg);
+    }
+
+    .logo h2 span {
+      color: var(--gray);
+    }
+
+    .logo img {
+      position: absolute;
+      right: 15px;
+      top: 30px;
+      transform: translate(-50% -50%);
+    }
+
+    .nav-1 {
+      margin-top: 2rem;
+    }
+
+    .nav-1 ul {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      list-style: none;
+      vertical-align: middle;
+    }
+
+    .nav-1 ul li {
+      padding: 0.7rem 2rem;
+
+      margin-bottom: 0.5rem;
+      align-items: center;
+      display: flex;
+      pointer-events: auto;
+    }
+
+    .nav-1 ul li a {
+      color: var(--gray);
+      text-decoration: none;
+    }
+
+    .nav-1 ul li img {
+      padding-right: 0.8rem;
+    }
+
+    .request {
+      color: var(--gray);
+    }
+
+    .request span {
+      display: inline-block;
+      margin: 2rem;
+      font-size: 1.2rem;
+    }
+
+    .request nav ul {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      vertical-align: middle;
+      list-style: none;
+    }
+
+    .request nav ul li {
+      padding: 0.7rem 2rem;
+      margin-bottom: 0.5rem;
+      align-items: center;
+      display: flex;
+      pointer-events: auto;
+    }
+
+    .request nav ul li:nth-child(3) {
+      background-color: rgba(40, 39, 97, 0.7);
+    }
+
+    .request nav ul li a {
+      color: var(--gray);
+      text-decoration: none;
+    }
+
+    .request nav ul li img {
+      padding-right: 0.8rem;
+    }
+
+    main {
+      width: calc(100%-270px);
+      font-family: 'DM Sans', sans-serif;
+      margin-left: 270px;
+    }
+
+    main .info {
+      margin-top: 1rem;
+      border-bottom: 1px solid var(--btn-color);
+      background: #fff;
+    }
+
+    main .info .info-items {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 2rem;
+      align-items: center;
+      color: var(--nav-bg);
+    }
+
+    main .info .info-items p {
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 31px;
+    }
+
+    main .info .info-items img {
+      height: 100%;
+      margin: 0 0.5rem;
+    }
+
+    .request h3 {
+      padding: 2rem;
+      color: var(--nav-bg);
+    }
+
+    main .campaign {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--btn-color);
+      align-items: center;
+      padding-bottom: 0.5rem;
+    }
+
+    main .campaign .stat {
+      padding-left: 4.5rem;
+      display: flex;
+      align-items: center;
+    }
+
+    main .campaign .stat img {
+      margin-right: 1rem;
+    }
+
+    main .campaign .stat h4 {
+      color: var(--nav-bg);
+      display: inline-block;
+    }
+
+    main .campaign .export {
+      position: relative;
+      padding-right: 2.5rem;
+      display: flex;
+    }
+
+    main .campaign .export button {
+      padding: 0.8rem 2.4rem;
+      color: var(--btn-color);
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+    }
+
+    main .campaign .export img {
+      width: 24px;
+      height: 24px;
+    }
+
+    main .campaign .export img:nth-child(1) {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      transform: translate(-50%, -50%);
+    }
+
+    main .campaign .export .img-2 {
+      position: absolute;
+      right: 32px;
+      top: 20px;
+      transform: translate(-50%, -50%);
+    }
+
+    main .query {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 5rem;
+    }
+
+    main .query-form {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    main .query form {
+      position: relative;
+      padding-left: 4.5rem;
+    }
+
+    main .query form input {
+      width: 290px;
+      height: 40px;
+      padding: 0 2.5rem;
+      border: 2px solid var(--gray);
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+
+    main .query form img {
+      position: absolute;
+      left: 90px;
+      top: 23px;
+      transform: translate(-50%, -50%);
+    }
+
+    .dropdown,
+    .type {
+      display: flex;
+      align-items: center;
+      margin-left: 1rem;
+      color: var(--gray);
+    }
+
+    .query span {
+      font-size: 1rem;
+      padding: 0 0.5rem;
+    }
+
+    .all {
+      color: var(--nav-bg);
+    }
+
+    .type {
+      position: relative;
+      margin: 0 8rem;
+    }
+
+    .type ul {
+      border-radius: 4px;
+      background-color: var(--background-el);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+      display: none;
+      padding: 20px;
+      text-align: center;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      list-style-type: none;
+      width: 100%;
+      z-index: 99;
+    }
+
+    .type.open ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .type ul li {
+      margin: 10px 0;
+      color: var(--nav-bg);
+    }
+
+    .table {
+      padding: 0 2rem;
+      margin: 3rem 0;
+    }
+
+    table {
+      font-size: 0.8em;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    tr {
+      border-bottom: 2px solid rgba(4, 23, 42, 0.1);
+    }
+
+    thead {
+      font-weight: 500;
+      width: 80%;
+      color: var(--nav-bg);
+      border-bottom: 0px;
+      font-size: 1.05rem;
+      text-align: left;
+    }
+
+    thead td:first-of-type {
+      text-align: right;
+    }
+
+    td {
+      padding: 8px 10px;
+    }
+
+    tbody td {
+      padding: 15px 5px;
+      text-align: justify;
+      color: var(--grayish-violet);
+      font-size: 1.03rem;
+    }
+
+    tbody tr td:first-of-type {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      display: flex;
+    }
+
+    tbody tr td:last-of-type {
+      color: #4cbb88;
+    }
+
+    tbody tr td img {
+      margin-right: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h2>FundMy<span class="laptop">Laptop</span></h2> <img src="/assets/images/___leftarr.svg" alt="">
+    </div>
+    <nav class="nav-1">
+      <ul>
+        <li> <img src="/assets/images/blog 1dash.svg" alt=""><a href="#">Dashboard</a></li>
+        <li><img src="/assets/images/manager 1manager.svg" alt=""><a href="#">Manage Users</a></li>
+
+      </ul>
+    </nav>
+
+    <div class="request">
+      <span>Requests</span>
+      <nav>
+        <ul>
+
+          <li><img src="/assets/images/Groupeye.png" alt=""><a href="#">View Request</a></li>
+          <li><img src="/assets/images/Grouprequest.png" alt=""><a href="#">Review Request</a></li>
+          <li><img src="/assets/images/Groupcheck.png" alt=""><a href="#">Accepted Request</a></li>
+          <li><img src="/assets/images/Groupcancel.png" alt=""><a href="#">Suspended Request</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="info">
+      <div class="info-items">
+        <img src="/assets/images/Ellipse 3.svg" alt="">
+        <img src="/assets/images/radio 1.png" alt="">
+        <p>Hi, Alabi Samuel Seun</p>
+        <div>
+          <img src="/assets/images/Ellipse 2.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="request">
+      <h3>Request</h3>
+    </div>
+
+    <div class="campaign">
+      <div class="stat">
+        <img src="/assets/images/statistics 1stat.png" alt="">
+        <h4> Active Campaigns (Not funded)</h4>
+      </div>
+
+      <div class="export">
+        <img src="/assets/images/download 1.png" alt="">
+        <button>Export</button>
+        <img class="img-2" src="/assets/images/chevron-down 3.png" alt="">
+      </div>
+    </div>
+
+    <div class="query">
+      <div class="query-form">
+        <form>
+          <img src="/assets/images/search 1.png" alt="">
+          <input class="input" type="text" placeholder="Search">
+        </form>
+        <div class="dropdown">
+          <span>Status</span>
+          <span class="all">All</span>
+        </div>
+      </div>
+
+
+      <div class="type" id="filter">
+        <img src="/assets/images/chevron-down 3.png" alt="">Type
+        <span class="all">All</span>
+        <ul>
+          <li>All</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="table">
+      <div>
+        <table>
+          <thead>
+            <td>#*</td>
+            <td>Requester Name</td>
+            <td>Request Type</td>
+            <td>Amount</td>
+            <td>Request Status</td>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="/assets/images/Polygon 5.png" alt=""> <span>1</span></td>
+              <td>John D0e</td>
+              <td>Repair</td>
+              <td>#2000</td>
+              <td>Accepted</td>
+            </tr>
+
+            <tr>
+              <td><img src="/assets/images/Polygon 5.png" alt=""> <span>2</span></td>
+              <td>John D0e</td>
+              <td>Purchase</td>
+              <td>#40000</td>
+              <td>Accepted</td>
+            </tr>
+
+            <tr>
+              <td><img src="/assets/images/Polygon 5.png" alt=""> <span>3</span></td>
+              <td>John D0e</td>
+              <td>Purchase</td>
+              <td>#12000</td>
+              <td>Accepted</td>
+            </tr>
+
+            <tr>
+              <td><img src="/assets/images/Polygon 5.png" alt=""> <span>4</span></td>
+              <td>John D0e</td>
+              <td>Repair</td>
+              <td>#2000</td>
+              <td>Accepted</td>
+            </tr>
+
+            <tr>
+              <td><img src="/assets/images/Polygon 5.png" alt=""> <span>5</span></td>
+              <td>John D0e</td>
+              <td>Purchase</td>
+              <td>#2000</td>
+              <td>Accepted</td>
+            </tr>
+
+            <tr>
+              <td><img src="/assets/images/Polygon 5.png" alt=""> <span>6</span></td>
+              <td>John D0e</td>
+              <td>Repair</td>
+              <td>#git2000</td>
+              <td>Accepted</td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    const filterBtn = document.getElementById('filter');
+
+    // show and hide the filters (li tags)
+    filterBtn.addEventListener('click', () => {
+      filterBtn.classList.toggle('open');
+    });
+  </script>
+</body>
+
+</html>
