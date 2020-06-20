@@ -1,0 +1,64 @@
+*{
+  font-family: 'DM Sans';
+    font-style: normal;
+}
+
+/*css */
+h1{
+  font-size: 48px;
+  width: 80%;
+}
+p{
+  font-size: 20px;
+  text-align: justify;
+}
+.newabout3{
+  margin-top: 2rem;
+}
+.margin-container{
+  margin-top: 7rem;
+}
+@media only screen and (max-width : 600px){
+  h1{
+    font-size: 48px;
+    width: 100%;
+    text-align: center;
+  }
+  .margin-container{
+    margin-top: 4rem;
+  }
+  .newabout3{
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width : 768px){
+  h1{
+    font-size: 48px;
+    width: 100%;
+  }
+  .margin-container{
+    margin-top: 4rem;
+  }
+  .newabout3{
+    margin-top: 0;
+  }
+  img{
+    margin-top: 10rem;
+  }
+}
+@media only screen and (min-width : 1024px){
+  h1{
+    font-size: 48px;
+    width: 100%;
+  }
+  .margin-container{
+    margin-top: 4rem;
+  }
+  .newabout3{
+    margin-top: 0;
+  }
+  img{
+    margin-top: 0;
+  }
+}
