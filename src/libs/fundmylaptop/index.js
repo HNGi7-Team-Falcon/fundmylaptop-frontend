@@ -23,6 +23,7 @@ export default class FundMyLaptop extends Component {
     if (params.hasOwnProperty('router')) {
       this.$router = params.router // set the router
     }
+    window.FundMyLaptop = this
   }
 
   async render () {
@@ -43,20 +44,14 @@ export default class FundMyLaptop extends Component {
       content: 'Samuel Onyijne'
     }) // for test only
     if (!this.element) return
-    // this.element.innerHTML = '<p>okay good</p>'
-    this.$router.resolve()
-  }
-
-  async run () {
-    // set the default route
-    this.$router.on(() => {
-      loadHTML('../../pages/index.html')
-    })
-
     // set the 404 route
     this.$router.notFound(async query => {
       await this.loadHTML(path.resolve(__dirname, '../../pages') + '/404.html')
     })
+    this.$router.resolve()
+  }
+
+  async run () {
     document.addEventListener('DOMContentLoaded', async e => {
       await this.init(e.target)
     })
@@ -85,7 +80,7 @@ export async function loadHTML (url) {
   fetch(url)
     .then(response => response.text())
     .then(data => {
-      // document.querySelector('div').innerHTML = data
+      window.FundMyLaptop.element.innerHTML = data
     })
 }
 

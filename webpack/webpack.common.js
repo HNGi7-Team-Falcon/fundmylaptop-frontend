@@ -12,10 +12,10 @@ const WebpackNoModulePlugin = require('webpack-nomodule-plugin').WebpackNoModule
 
 const config = {
   entry: {
-    main: path.resolve(__dirname, '../src/entries') + '/index.js',
-    about: path.resolve(__dirname, '../src/entries') + '/about.js',
-    login: path.resolve(__dirname, '../src/entries') + '/login.js',
-    signup: path.resolve(__dirname, '../src/entries') + '/signup.js'
+    main: path.resolve(__dirname, '../src/entries') + '/index.js'
+    // about: path.resolve(__dirname, '../src/entries') + '/about.js',
+    // login: path.resolve(__dirname, '../src/entries') + '/login.js',
+    // signup: path.resolve(__dirname, '../src/entries') + '/signup.js'
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -56,6 +56,11 @@ const config = {
       {
         test: /\.html$/i,
         use: 'html-loader'
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: 'file-loader',
+        exclude: /node_modules/
       },
       {
         test: /\.js$/,
