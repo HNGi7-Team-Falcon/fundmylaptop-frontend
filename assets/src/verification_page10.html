@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    font-family: 'DM Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    color: #04172A;
+  }
+  input:focus, textarea:focus, select:focus{
+outline: none;
+}
+  main {
+    margin-top: 144px;
+    text-align: center;
+
+  }
+
+  .lf {
+    font-weight: lighter;
+  }
+
+  .status {
+    text-align: center;
+    margin-bottom: 103px;
+  }
+
+  .status h2 {
+    font-weight: lighter;
+    margin-bottom: 30px;
+  }
+
+  .salarytype h4 {
+    margin-right: 8em;
+    position: relative;
+
+  }
+
+  .salarytype {
+    max-width: 100%
+  }
+
+  @media only screen and (max-width: 600px) {
+    .salarytype {
+      max-width: 100%
+    }
+
+    progress {
+      width: 330px !important;
+      height: 10px !important;
+    }
+  }
+
+  @media only screen and (max-width: 330px) {
+    .salarytype {
+      padding: 0;
+      max-width: 100%
+    }
+
+    progress {
+      width: 250px !important;
+      height: 10px !important;
+    }
+  }
+
+  progress {
+    width: 500px;
+    height: 10px;
+    border: 1px solid #FB3F5C;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+
+  progress[value] {
+    -webkit-appearance: none;
+  }
+
+  progress[value]::-webkit-progress-bar {
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  progress[value]::-webkit-progress-value {
+    background-color: #FB3F5C;
+    ;
+    border-radius: 10px;
+  }
+
+  .pr-30 {
+    padding-right: 30px;
+  }
+  .pr-38{
+    padding-right: 38px;
+  }
+  .pl-30 {
+    padding-left: 30px;
+  }
+  .pl-20{
+    padding-left: 20px;
+  }
+  .pl-40 {
+    padding-left: 40px;
+  }
+
+  .ml-17 {
+    margin-left: 1.9em;
+  }
+
+  .ml-10 {
+    margin-left: 1em;
+  }
+
+  .nextbtn {
+    padding: 5px;
+    background: #FB3F5C;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 8px 40px;
+    margin-top: 10%;
+  }
+</style>
+
+<body>
+  <main>
+    <div class="status">
+      <h2>Verification Form</h2>
+      <progress value="55" max="100"></progress>
+    </div>
+    <div class="salarytype">
+      <form action="verification_page11.html">
+        <h4 class="lf">Salary Earned</h4>
+        <input type="radio" id="" name="salary" value="yes">
+        <label for="yes" class="lf"><span class="pr-38">&#8358;50,000</span>&#8212;<span class="pl-30">&#8358;200,000</span></label> <br /><br />
+        <input type="radio" id="" class="ml-10" name="salary" value="no">
+        <label for="no" class="lf"><span class="pr-30">&#8358;200,000</span>&#8212;<span class="pl-40">&#8358;500,000</span> </label><br><br />
+        <input type="radio" class="ml-17" id="" name="salary" value="no">
+        <label for="no" class="lf"><span class="pr-30">&#8358;500,000</span>&#8212;<span class="pl-30">&#8358;1,000,000</span></label>
+      </form>
+      <button type="submit" onclick="window.location.href = 'verification_page11.html' " class="nextbtn ml-17" form="" value="Submit">Next</button>
+    </div>
+  </main>
+</body>
+
+</html>
