@@ -1,151 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <title>About US</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'DM Sans', sans-serif;
-            padding: 0;
-            margin: 0;
-            background-color: #fff;
-            color: #04172A;
-        }
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 
-        .container {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-            max-width: 900px;
-            margin:  100px auto;
-        }
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        font-family: "DM Sans", sans-serif;
+        padding: 20px;
+        background-color: #fff;
+        color: #04172a;
+      }
+      h1,
+      p {
+        font-family: "DM Sans", sans-serif;
+      }
 
-        .container-text {            
-            height: auto;
-            max-width: 45%;            
-        }
-        p {
-            text-align: justify;
+      .container {
+        display: flex;
+        justify-content: space-around;
+        max-width: 900px;
+        margin: 100px auto;
+      }
+
+      .container-text {
+        max-width: 45%;
+      }
+      p {
+        text-align: justify;
+      }
+      .container-image {
+        max-width: 45%;
+      }
+      .mobile {
+        display: none;
+      }
+      .container-header {
+        font-weight: 500;
+        font-size: 40px;
+        color: #04172a;
+        margin: 0;
+        padding: 0;
+      }
+      .container-img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .footer {
+        position: absolute;
+        width: 1444px;
+        height: 381px;
+        left: 0px;
+        top: 1791px;
+        background: #c4c4c4;
+      }
+      .text--secondary {
+        color: #fb3f5c;
+      }
+      nav {
+        background: rgba(4, 23, 42, 0.03);
+        padding: 15px 30px;
+        font-weight: 500;
+        font-size: 1em;
+      }
+      #middle-row {
+        display: flex;
+        align-items: flex-start;
+        max-width: 850px;
+        margin: 50px auto;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+      @media (min-width: 813px) and (max-width: 948px) {
+        .container-text {
+          max-width: 50%;
         }
         .container-image {
-            max-width: 45%;
-            
+          max-width: 45%;
         }
-        .container-header {   
-            font-weight: 500;
-            font-size: 40px;
-            letter-spacing: -0.3px;
-            color: #04172A;
-            margin: 0;
-            padding: 0
-        }   
-        .container-img{
-            width: 450px;
-        }     
-        .footer {
-            position: absolute;
-            width: 1444px;
-            height: 381px;
-            left: 0px;
-            top: 1791px;
-            background: #C4C4C4;
+      }
+      @media (max-width: 812px) {
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
-        .text--secondary {
-            color: #FB3F5C;
-        }
-        nav {
-            background: rgba(4, 23, 42, 0.03);
-            padding: 15px 30px;
-            font-weight: 500;
-            font-size: 1em;
-        }
-        #middle-row{
-            display: flex;
-            align-items: flex-start;
-            max-width: 850px;
-            margin:  50px auto;
-            flex-direction: row-reverse;
-            justify-content: space-between;
-        }
-        @media (max-width: 750px) {
-            .container{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
 
-            .container-text {
-                max-width: 70%;
-                height: auto;
-            }
-            .container-image {
-                max-width: 70%;
-                height: auto;
-                padding-top: 20px;
-                flex-shrink: inherit;
-            }
-            .container-img {
-                width: 100%;
-            }
-            #middle-row {
-                flex-direction: column;
-                align-items: center;                
-            }
-            #contain-img {
-                max-width: 100%;
-                height: auto;
-            }
+        .container-text {
+          max-width: 90%;
+          height: auto;
         }
-                
+        .container-text p {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+        }
+        .mobile {
+          display: block;
+          max-width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 20px;
+          padding-bottom: 30px;
+        }
+        .container-image {
+          display: none;
+        }
+        .container-header {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 23px;
+        }
+        .container-img {
+          width: 100%;
+          height: auto;
+          border-radius: 6px;
+        }
+        #middle-row {
+          flex-direction: column;
+          align-items: center;
+        }
+        #contain-img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
     </style>
-</head>
+    <title>About US</title>
+  </head>
 
+  <body>
+    <nav>FundMy<span class="text--secondary">Laptop</span></nav>
 
-<body>
-    
-        <nav>
-            FundMy<span class="text--secondary">Laptop</span>
-        </nav>
+    <section class="container">
+      <div class="container-text">
+        <h1 class="container-header">
+          We connect <span class="text--secondary">investors</span> and interns
+        </h1>
+        <div class="mobile">
+          <img
+            class="container-img"
+            src="https://res.cloudinary.com/wiamer/image/upload/v1592501823/Rectangle_594_ydlfvy.png"
+          />
+        </div>
+        <p>
+          FundMylaptop is a platform where people who are willing to invest in
+          tech talent get connected to individuals who are in need of funds for
+          a laptop purchase or repair. This platform is not just connecting
+          individuals, it is also breaking barriers and constraints of the tech
+          industry.
+        </p>
+      </div>
+      <div class="container-image">
+        <img
+          class="container-img"
+          src="https://res.cloudinary.com/wiamer/image/upload/v1592501823/Rectangle_594_ydlfvy.png"
+        />
+      </div>
+    </section>
 
-        <section class="container">
-            <div class="container-text">
-                <h1 class="container-header">We connect <span class="text--secondary">investors</span> and interns</h1>
-                <p>FundMylaptop is a platform where people who are willing to invest in tech talent get connected to individuals who are in need of funds for a laptop purchase or repair. This platform is not just connecting individuals, it is also breaking barriers and constraints of the tech industry.</p>
-            </div>      
-            <div class="container-image">
-                <img class="container-img" src="https://res.cloudinary.com/wiamer/image/upload/v1592501823/Rectangle_594_ydlfvy.png">
-            </div>
-        </section>
+    <section class="container" id="middle-row">
+      <div class="container-text">
+        <h1 class="container-header">
+          Helping <span class="text--secondary">You</span> achieve that goal
+        </h1>
+        <div class="mobile">
+          <img
+            class="container-img"
+            src="https://res.cloudinary.com/wiamer/image/upload/v1592501823/Rectangle_593_dqe3fd.png"
+          />
+        </div>
+        <p>
+          We don’t just connect investors to interns. We are trying to build a
+          community where absolutley no one is left behind in the tech
+          community. Whether you are unable to pursue that tech dream of yours,
+          bcause of lack of funds, MyFundLaptop is the best platform for you to
+          get adequate funding.
+        </p>
+      </div>
+      <div class="container-image">
+        <img
+          class="container-img"
+          id="contain-img"
+          src="https://res.cloudinary.com/wiamer/image/upload/v1592501823/Rectangle_593_dqe3fd.png"
+        />
+      </div>
+    </section>
 
+    <section class="container">
+      <div class="container-text">
+        <h1 class="container-header">
+          Setting <span class="text--secondary">Standard</span> Pace
+        </h1>
+        <div class="mobile">
+          <img
+            class="container-img"
+            src="https://res.cloudinary.com/wiamer/image/upload/v1592501823/Rectangle_597_p65jim.png"
+          />
+        </div>
+        <p>
+          FundMylaptop has a system in place that verifies indivuals who wish to
+          get funded. Verification checks ranges from BVN, KYC checks of
+          fundees, also long-time reliable fundees vouch for new, incoming
+          fundees.
+        </p>
+      </div>
+      <div class="container-image">
+        <img
+          class="container-img"
+          src="https://res.cloudinary.com/wiamer/image/upload/v1592501823/Rectangle_597_p65jim.png"
+        />
+      </div>
+    </section>
 
-        <section class="container" id="middle-row">
-            <div class="container-text">
-                <h1 class="container-header">Helping <span class="text--secondary">You</span> achieve that goal</h1>
-                <p>We don’t just connect investors to interns. We are trying to build a community where absolutley no one is left behind in the tech community. Whether you are unable to pursue that tech dream of yours, bcause of lack of funds, MyFundLaptop is the best platform for you to get adequate funding.</p>
-            </div>   
-            <div class="container-image">
-                <img class="container-img" id="contain-img" src="https://res.cloudinary.com/wiamer/image/upload/v1592501823/Rectangle_593_dqe3fd.png">
-            </div>         
-        </section>
-
-        <section class="container">
-            <div class="container-text">
-                <h1 class="container-header">Setting <span class="text--secondary">Standard</span> Pace</h1>
-                <p>FundMylaptop has a system in place that verifies indivuals who wish to get funded. Verification checks ranges from BVN, KYC checks of fundees, also long-time reliable fundees vouch for new, incoming fundees.</p>
-            </div>  
-            <div class="container-image">
-                <img class="container-img" src="https://res.cloudinary.com/wiamer/image/upload/v1592501823/Rectangle_597_p65jim.png">
-            </div>
-        </section>
-        
-        <div>
-           <footer></footer>
-        </div>        
-</body>
+    <div>
+      <a
+        href="C:\Users\Administrator\Documents\GitHub\fundmylaptop-frontend\assets\src\footer.html"
+      ></a>
+    </div>
+  </body>
 </html>
