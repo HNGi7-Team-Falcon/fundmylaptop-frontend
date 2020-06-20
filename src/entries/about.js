@@ -9,5 +9,5 @@ const lapi = new FundMyLaptop({
   store,
   router
 })
-
+console.log(window.location.host)
 lapi.run()
