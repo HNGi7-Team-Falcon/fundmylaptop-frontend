@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>      
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="keywords" content="fundmylaptop, profile, funder">
+	<meta name="description" content="fundmylaptop - profile page for funders">
+	<meta name="author" content="Funder's name">
+	<title>Funder's Profile Page</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style> 
+		@import  url(https://fonts.gstatic.com/s/dmsans/v4/rP2Cp2ywxg089UriAWCrCBamC2QX.woff2);
+		@import  url(https://fonts.gstatic.com/s/dmsans/v4/rP2Hp2ywxg089UriCZOIHQ.woff2);
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		* {
+		  box-sizing: border-box;
+		  margin: 0;
+		  padding: 0;
+		}
+
+		body {
+		    font-family: DM sans;
+			font-style: normal;
+			color: #04172A;
+		}
+
+		header {
+			position: absolute;
+			height: 100px;
+			left: 0;
+			right: 0;
+			top: 0;
+			background: #C4C4C4; 
+		}
+		
+		nav {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 1em;
+			align-items: center;
+			flex: 0 0 auto;
+			max-width: 80%;
+			max-height: 50%;
+		}
+
+		nav:nth-child(1) {
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		 h1 {
+			font-family: inherit;
+			font-style: inherit;
+			font-weight: 500;
+			font-size: 40px;
+			line-height: 52px;
+			color: #04172A;
+		}
+
+		.logo {
+			text-decoration: none;
+			border-bottom: none;
+		}
+
+		.big-rec {
+			margin-top: 1em;
+			width: 130px;
+			height: 63px;
+			background: #E7E7E7;
+		}
+
+		.small-rec {
+			position: relative;
+			width: 100px;
+			height: 35px;
+			left: 16px;
+			top: 15px;
+			background: #C4C4C4;
+		}
+
+
+		.flex-container {
+			display: flex;
+			flex-direction: column;
+			margin-top: 7.6em !important;
+			max-width: 770px;
+			margin: auto;
+			padding: 1em;
+		}
+
+		.grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 2em;
+			grid-auto-rows: minmax(50px, auto);
+		}
+
+		h2 {
+			font-family: inherit;
+			font-style: inherit;
+			font-weight: bold;
+			font-size: 40px;
+			line-height: 52px;
+		}
+
+		h4 {
+			font-family: inherit;
+			font-style: inherit;
+			font-weight: 600;
+			font-size: 22px;
+			line-height: 26px;
+			margin-bottom: 0.8em;
+		}
+
+		.contact p {
+			font-family: inherit;
+			font-style: inherit;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 21px;
+		} 
+
+		.about p {
+			font-family: inherit;
+			font-style: inherit;
+			font-weight: normal;
+			font-size: 18px;
+			line-height: 28px;
+		}
+
+		.basic p {
+			font-family:inherit;
+			font-style: inherit;
+			font-weight: normal;
+			font-size: 18px;
+			line-height: 28px;
+			color: #17252A;
+		}
+
+		.color-text {
+			color: #FB3F5C;
+		}
+
+		.user-header {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+		}
+
+		.user-img {
+			margin-right: 1em;
+		}
+
+		.user-title {
+			align-self: center;
+		}
+
+		.user-role {
+			font-family: inherit;
+			font-style: inherit;
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 31px;
+			color: rgba(4, 23, 42, 0.75);
+		}
+
+		.text-info {
+			display: grid;
+			grid-template-columns: 25% 30%;
+			grid-row-gap: 1em;
+		}
+
+		.funding-count {
+			font-family: inherit;
+			font-style: inherit;
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 31px;
+			margin-top: 1em;
+		}
+
+		.edit-text {
+			font-family: inherit;
+			font-style: inherit;
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 31px;
+		}
+
+		.fa-edit:hover {
+			cursor: pointer;
+		}
+
+		button {
+			width: 300px;
+			height: 72px;
+			background: #FB3F5C;
+			box-shadow: 5px 5px 25px rgba(255, 29, 114, 0.2);
+			border-radius: 10px;
+			margin-top: 2.2em;
+		}
+
+		button:hover {
+			cursor: pointer;
+		}
+
+		.btn > h3 {
+			font-family: inherit;
+			font-style: inherit;
+			font-weight: 500;
+			font-size: 32px;
+			line-height: 42px;
+			color: #ffffff;
+		}
+
+		footer {
+			height: 100px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: #C4C4C4; 
+
+		}
+
+	</style>
+</head>
+<body>
+
+	<!--Header section goes in here-->
+	<header>
+		<nav>		
+		  <div class="brand-name">
+			<a href="#" class="logo"><h1>FundMy<span class="color-text">Laptop</span></h1></a>
+		  </div>
+		  <div class="big-rec">
+			<div class="small-rec"></div>
+		  </div>
+	   </nav>
+	</header>
+
+
+	<!--Main section goes in here-->      
+	<main id="main-section">
+		<div class="flex-container">
+			<div class="grid">
+				<div class="column">
+					<div class="user-header">
+						<img class="user-img" src="./Ellipse 10.png">
+						<div class="user-title">		
+							<h2>John Doe</h2>
+							<p class="user-role">Front End Developer</p>
+						</div>
+					</div>
+					<h3 class="funding-count"><strong>5 successful fundings</strong></h3>
+				</div>
+
+				<div class="column">
+					<button class="btn" href="#"><h3>Go to Dashboard</h3></button>
+				</div>	
+
+				<div class="column about">
+					<h4>ABOUT</h4>
+					<p>I am a proactive, diligent, honest, hardworker with passion for web development. I have</br> over 5 year cummulative experience working</br> in a fintech company in Lagos State, Nigeria.</br>I like to play football and sing.</p>
+				</div>	
+
+				<div class="column contact">
+					<h4>CONTACT INFORMATION</h4>
+					<div class="text-info">
+						<p>Phone:</p>  
+						<p><span class="color-text">+234(0)8029134912</span></p>
+						<p>Address:</p> 
+						<p> 16,Ajoba Close,Elewura,Challenge,Ibadan,Oyo State</p>
+						<p>E-mail:</p>  
+						<p><span class="color-text">johndoehng@gmail.com</span></p>
+						<p>Site:</p>   
+						<p><span class="color-text">johndoe.com</span></p>
+					</div>
+				</div>		  	 
+
+				<div class="column basic">
+					<h4>BASIC INFORMATION</h4>
+					<div  class="text-info">	
+						<p>Birthday: </p> 
+						<p>June 5, 1996</p>
+						<p>Gender: </p> 
+						<p>Male</p>
+					</div>
+				</div>		  	  
+				<div class="column">
+					<h3 class="color-text edit-text"><strong>Edit Profile </strong><span class="fa fa-edit" href="#"></span></h3>
+				</div>
+
+
+			</div>
+		</div>
+	</main>
+
+	<!--Footer section goes in here-->
+	<footer>
+		<!--no footer content-->
+	</footer>
+
+	<script type="text/javascript">
+		//no scripts
+	</script>
+</body>
+</html>
