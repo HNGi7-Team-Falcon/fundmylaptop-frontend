@@ -12,7 +12,7 @@ const WebpackNoModulePlugin = require('webpack-nomodule-plugin').WebpackNoModule
 
 const config = {
   entry: {
-    main: path.resolve(__dirname, '../src') + '/index.js',
+    main: path.resolve(__dirname, '../src/entries') + '/index.js',
     about: path.resolve(__dirname, '../src/entries') + '/about.js',
     login: path.resolve(__dirname, '../src/entries') + '/login.js',
     signup: path.resolve(__dirname, '../src/entries') + '/signup.js'
