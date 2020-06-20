@@ -1,6 +1,6 @@
 import FundMyLaptop from '~/libs/fundmylaptop'
-import store from './store'
-import router from './router'
+import store from '~/store'
+import router from '~/router'
 import './assets/css/styles.css'
 import './assets/scss/styles.scss'
 
