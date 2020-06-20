@@ -88,3 +88,7 @@ export async function loadHTML (url) {
       // document.querySelector('div').innerHTML = data
     })
 }
+
+export function nodeById (id) {
+  return document.getElementById(`${id}`)
+}
