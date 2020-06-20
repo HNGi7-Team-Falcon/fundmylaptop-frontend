@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="individual.css">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="bootstrap.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <title>individual funding page</title>
+</head>
+<body>
+    <div>
+        <h1 class="name">John Doe</h1>
+        <p class="purpose">Purpose: Laptop Purchase</p>
+        <p class="date">Created June 23, 2020</p>
+    </div>
+
+    <div class="video">
+        <img src="https://i.ibb.co/XWbGcwX/vd-logo.png" alt="" srcset="" class="vd-logo1">
+        <img src="https://i.ibb.co/LSxsPMd/vd-logo1.png" alt="" srcset="" class="vd-logo2">
+    </div>
+
+    <!-- right side -->
+    <div class="right-side">
+        <h3 class="bid">Place a bid</h3>
+    </div>
+    <div class="form">
+        <form action="#">
+            <div class="form1">
+                <label for="interest-rate">Interest Rate*</label>
+                <select class="loan" name="interest" aria-placeholder="Select an interest rate">
+                  <option value="select rate" placeholder="Select an interest rate">Select an interest rate</option>
+                  <option value="australia">5%</option>
+                  <option value="canada">7%</option>
+                  <option value="usa">10%</option>
+                </select>
+            </div>
+        <div class="form1">
+            <label for="loan-duration">Loan Duration*</label>
+            <select class="loan" name="loan">
+              <option value="australia">Select a loan durations</option>
+              <option value="canada">6 months</option>
+              <option value="usa">12 months</option>
+            </select>
+        </div>
+        <div class="form1">
+            <label for="loan-type">Loan type*</label>
+            <select class="loan" name="loan-type">
+              <option value="australia">Select a type</option>
+              <option value="canada">Medium term</option>
+              <option value="usa">Long term</option>
+            </select>
+          
+        </div>
+        <button type="submit" value="Submit">Place a bid</button>
+          <!-- <input type="submit" value="Submit"> -->
+        </form>
+      </div>
+
+      <div class="down-side">
+          <div class="need">
+              <p class="asset">Needs</p>
+              <h2 class="need-has">N 360,000</h2>
+          </div>
+          <div class="has">
+              <p class="asset">Has</p>
+              <h2 class="need-has">5 Bidders</h2>
+          </div>
+
+      </div>
+      <!-- vouchers  -->
+      <div>
+          <h3 class="voucher-title">Vouchers</h3>
+          <div class="voucher-line">
+              <img src="https://i.ibb.co/m4zFQCc/voucher.png" alt="" sizes="" class="voucher">
+              <img src="https://i.ibb.co/m4zFQCc/voucher.png" alt="" sizes="" class="voucher">
+              <img src="https://i.ibb.co/m4zFQCc/voucher.png" alt="" sizes="" class="voucher">
+              <img src="https://i.ibb.co/m4zFQCc/voucher.png" alt="" sizes="" class="voucher">
+              <i class="fas fa-chevron-right next" id="next"></i>
+              <!-- <i class="fas fa-chevron-right prev" ></i> -->
+          </div>
+      </div>
+      <div class="description">
+          <h3 class="description-title"> DESCRIPTION</h3>
+          <p class="description-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in nisi quis justo pharetra egestas. In hac habitasse platea dictumst. Integer ultrices est eu elit dignissim, sit amet semper tellus semper. Sed ultricies finibus tempor. Pellentesque ornare consequat risus, vitae pellentesque ipsum rhoncus placerat. Proin ultrices lacinia maximus. Donec luctus lorem nisi. Aliquam in urna vitae tellus elementum commodo. Proin tincidunt ante arcu, lacinia interdum felis accumsan id. Donec quis nibh nec justo bibendum porta eget nec tellus. Aliquam accumsan semper erat.</p>
+      </div>
+        <div>
+            <h1 class="sign-name">John Doe</h1>
+            <i class="fa fa-check-circle" id="cycle" aria-hidden="true"></i>
+        </div>
+        <button class="sign-button">Contact</button>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="individual.js"></script>
+</body>
+</html>
