@@ -1,9 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Login page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<style>
 /*style sheet for login page*/
 *{
   padding:0;
   margin: 0;
   box-sizing:border-box;
-  
+
 }
 
 body{
@@ -90,11 +100,11 @@ input{
 }
 
 .login-page{
-	display: flex;
+  display: flex;
 }
 .forgot{
   margin: 10px 0;
-	text-align: right;
+  text-align: right;
 }
 
 .forgot a{
@@ -104,17 +114,17 @@ input{
 }
 
 button[type="submit"]{
-	background-color: rgb(252,61,50); 
-	color: rgb(255,255,255);
+  background-color: rgb(252,61,50);
+  color: rgb(255,255,255);
   border-radius: 5px;
     font-size: 16px;
     padding:  10px;
   border: none;
   outline: none;
-	text-align: center;
+  text-align: center;
   align-items: center;
   justify-content: center;
-    display: inline-block; 
+    display: inline-block;
   width: 100%;
  }
 
@@ -124,7 +134,7 @@ button[type="submit"]{
   }
 
 .wrap{
-	color: rgb(252,61,50);
+  color: rgb(252,61,50);
 }
 
 .line-center{
@@ -191,10 +201,53 @@ h2:after{
     margin-left:25px;
 }
 .btn:hover{
-  opacity: 1;  
+  opacity: 1;
 }
 .fronty{
     display: flex;
     cursor: pointer;
 }
 
+
+</style>
+<body>
+    <div id ="form-container">
+<section class="forms-section">
+  <div class="title">
+     <h1><span class="wrap">
+    Welcome</span> <br>Sign in to FundMyLaptop</h1>
+  </div>
+<div class="login-page">
+<form>
+  <div class="form-items"><label for="email" id="email">Email</label><br/>
+	<input type="text" name="Email" placeholder="username@domain.com" required>
+
+  </div>
+
+  <div class="form-items">
+    <label class="label" for="password" id="password">Password</label>
+    <div class="input">
+      	<input type="password" name="Password" placeholder="Enter your Password" required> <i class="fas fa-eye"></i>
+    </div>
+  </div>
+	<h5 class="forgot"><a href="" >Forgot password?</a><h5>
+
+	<button type="submit" id="login">Login <span class="rarr"> ></span></button>
+
+	<p class="sign-up">Don't have an account?<a href="" style="color: rgb(252,61,50);">Sign up</a><br/></p>
+
+    <div>
+<h2><span  class="line-center">using or connect </span></h2>
+    </div>
+    </form>
+    </div>
+  </section>
+    <div class=fronty>
+        <a herf="#" class="btn facebook"><img src="https://res.cloudinary.com/mosesjayz/image/upload/v1592488770/Vector_1_difse0.png" width="10"></a>
+        <a herf="#" class="btn google"><img src="https://res.cloudinary.com/mosesjayz/image/upload/v1592588880/g_frm4e6.png" width="30"></a>
+        <a herf="#" class="btn link"><img src="https://res.cloudinary.com/mosesjayz/image/upload/v1592488739/Vector_3_cpcitg.png"></a>
+     </div>
+</form>
+</div>
+</div>
+</section>
