@@ -2,15 +2,17 @@
 coverage/
 dist/*
 !dist/index.html
-node_modules/
-*.log
-.vscode
+# dependencies
+node_modules
 
-# OS generated files
+# production
+build
+
+# misc
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+
+npm-debug.log
+yarn-error.log
+yarn.lock
+.yarnclean
+.vscode

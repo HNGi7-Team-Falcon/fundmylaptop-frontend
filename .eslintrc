@@ -1,5 +1,8 @@
 {
-    "rules": {},
+    "rules": {
+      "semi": 2,
+      "quotes": "off"
+    },
     "env": {
       "es6": true,
       "browser": true

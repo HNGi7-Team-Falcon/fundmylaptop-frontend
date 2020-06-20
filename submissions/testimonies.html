@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* ---- base styles ----- */
+
+        body {
+            font-size: 18px;
+            font-family: 'DM Sans', sans-serif;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .checked {
+            color: yellow;
+            font-size: 0.875em;
+        }
+
+        .testimonies {
+            display: flex;
+            flex-direction: column;
+            background: rgba(4, 23, 42, 0.05);
+        }
+
+        /*-----shapes styles ----*/
+        .top-circle {
+            position: absolute;
+            top: -12px;
+            left: -44px;
+            width: 109px;
+            height: 144px;
+            background-color: transparent;
+        }
+
+        .bottom-triangle {
+            position: absolute;
+            bottom: -18px;
+            left: -64px;
+            width: 171px;
+            height: 171px;
+            transform: rotate(120deg);
+            border-radius: 5.26904px;
+            margin: 0;
+            background-color: transparent;
+        }
+
+        .right-triangle {
+            position: absolute;
+            top: -59px;
+            right: -17px;
+            width: 171px;
+            height: 171px;
+            border-radius: 5.26904px;
+            transform: rotate(-3deg);
+            background-color: transparent;
+        }
+
+        .bottom-circle {
+            position: absolute;
+            bottom: -11px;
+            right: -32px;
+            width: 109px;
+            height: 144px;
+            background-color: transparent;
+            margin: 0;
+        }
+
+        /* ---- Top card styles ----- */
+
+        .top-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 70px auto;
+        }
+
+        .top-card h1 {
+            font-size: 2.5em;
+            line-height: 2.5em;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .red-bar {
+            background-color: #FB3F5C;
+            width: 8%;
+            padding-top: 8px;
+        }
+
+        .top-card p {
+            font-size: 1em;
+            line-height: 1.5em;
+            width: 41%;
+            text-align: center;
+            margin: 30px 0 auto 0;
+        }
+
+        /* ---- 3 big boxes styles ----- */
+        .middle-card {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0 114px;
+        }
+
+        img {
+            background-color: lightgray;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 23px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-flow: row wrap;
+            background: #FFFFFF;
+            box-shadow: 0px 3.5px 3.5px rgba(187, 178, 178, 0.25);
+            border-radius: 7px;
+            margin: 0px 17px;
+            padding: 18px;
+            align-items: last baseline;
+        }
+
+        .flex-container q {
+            font-family: 'Muli', sans-serif;
+            font-size: 0.61em;
+            line-height: 1.2em;
+            width: 71%;
+            margin: 0 auto;
+            font-weight: 300;
+            font-style: italic;
+            padding-left: 7px;
+        }
+
+        .stars {
+            align-self: center;
+            width: 60%;
+            padding-left: 30px;
+        }
+
+        span {
+            font-size: 13px;
+            line-break: 1.5em;
+            font-weight: 600;
+        }
+
+        .flex-container p {
+            font-size: 0.5em;
+            line-height: 1.5em;
+            font-family: 'Muli', sans-serif;
+        }
+
+        /* ---- Scroll bar styles ----- */
+        .bottom-card {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin: 90px 280px 90px 0;
+        }
+
+        .scroll-box {
+            display: flex;
+        }
+
+        .scroll-box p {
+            width: 37px;
+            height: 37px;
+            font-size: 1.5em;
+            background-color: rgba(29, 46, 63, 0.6);
+            margin-right: 15px;
+            text-align: center;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .scroll-box p:last-of-type {
+            background-color: #1D2E3F;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="testimonies">
+
+        <img class="top-circle" src="./assets/images/top-circle.png" alt="pink circle">
+        <img class="bottom-triangle" src="./assets/images/bottom-tri.png" alt="pink triangle">
+        <img class="right-triangle" src="./assets/images/right-tri.png" alt="purple triangle">
+        <img class="bottom-circle" src="./assets/images/bottom-circle.png" alt="bottom pink circle">
+        <div class="top-card">
+            <h1>Fundmylaptop loves Testimonies</h1>
+            <div class="red-bar"></div>
+            <p>Fundmy laptop loves feedbacks. Here is what our clients says about us and also their experiences
+                using this platform</p>
+        </div>
+        <div class="middle-card">
+            <div class="flex-container">
+                <img src="" alt="">
+                <q>Perfect. Very comfortable and pleasant environment. We sat in the pool area where it was
+                    very cool.I enjoyed my stay and I will love to visit again</q>
+                <p><span>Anita. M</span><br>October 7, 2019</p>
+                <div class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+            </div>
+
+            <div class="flex-container">
+                <img src="" alt="">
+                <q>Perfect. Very comfortable and pleasant environment. We sat in the pool area where it was
+                    very cool.I enjoyed my stay and I will love to visit again</q>
+                <p><span>Anita. M</span><br>October 7, 2019</p>
+                <div class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+            </div>
+            <div class="flex-container">
+                <img src="" alt="">
+                <q>Perfect. Very comfortable and pleasant environment. We sat in the pool area where it was
+                    very cool.I enjoyed my stay and I will love to visit again</q>
+                <p><span>Anita. M</span><br>October 7, 2019</p>
+                <div class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-card">
+            <div class="scroll-box">
+                <p>&lt;</p>
+                <p>&gt;</p>
+            </div>
+        </div>
+
+        <script src="" async defer></script>
+</body>
+
+</html>

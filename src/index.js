@@ -1,3 +1,9 @@
+import FundMyLaptop from '~/libs/fundmylaptop'
 import './assets/css/styles.css'
 import './assets/scss/styles.scss'
-console.log('hello world!')
+
+const lapi = new FundMyLaptop({
+  ele: 'fundmylaptopapp'
+})
+
+lapi.run()

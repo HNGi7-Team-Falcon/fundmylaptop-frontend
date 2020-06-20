@@ -1,27 +1,45 @@
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-// const CopyPlugin = require('copy-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
+const WebpackNoModulePlugin = require('webpack-nomodule-plugin').WebpackNoModulePlugin
 
 const config = {
-  entry: './src/index.js',
+  entry: {
+    main: path.resolve(__dirname, '../src') + '/index.js'
+  },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[contenthash].js'
+    path: path.resolve(__dirname, '../dist'),
+    filename: '[name].[hash].js'
+  },
+  resolve: {
+    alias: {
+      '~': path.resolve(__dirname, '../src')
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({
-      appMountId: 'app',
+      alwaysWriteToDisk: true,
+      appMountId: 'fundmylaptopapp',
       filename: 'index.html',
-      title: 'Fund My Laptop'
+      title: 'Fund My Laptop',
+      template: 'public/index.html',
+      outputPath: path.resolve(__dirname, '../dist')
     }),
-    // new CopyPlugin([{ from: 'public/index.html' }]),
-    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
+    new HtmlWebpackHarddiskPlugin(),
+    new WebpackNoModulePlugin({
+      filePatterns: ['polyfill.**.js']
+    }),
+    new CopyPlugin({
+      patterns: [{ from: 'public', to: 'dist' }]
+    }),
+    new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en/),
     new LodashModuleReplacementPlugin(),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
@@ -73,11 +91,6 @@ const config = {
         }
       }
     }
-  },
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 9000
   }
 }
 

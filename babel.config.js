@@ -3,11 +3,16 @@ module.exports = {
     [
       '@babel/preset-env',
       {
+        useBuiltIns: 'usage',
+        corejs: '3.6.5',
         targets: {
           node: 'current'
         }
       }
     ]
-    // ['es2015']
+  ],
+  plugins: [
+    '@babel/plugin-syntax-dynamic-import',
+    '@babel/plugin-proposal-class-properties'
   ]
 }
