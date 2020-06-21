@@ -1,21 +1,35 @@
-import { loadHTML } from '~/libs/fundmylaptop'
-const path = require('path')
+import { render } from '~/libs/fundmylaptop'
 
 const routes = {
   login: async () => {
-    await loadHTML(path.resolve(__dirname, '../pages') + '/login.html')
+    await render('/login.html')
   },
   signup: async () => {
-    await loadHTML(path.resolve(__dirname, '../pages') + '/signup.html')
+    await render('/signup.html')
   },
   about: async () => {
-    await loadHTML(path.resolve(__dirname, '../pages') + '/about.html')
+    await render('/about.html')
   },
   contact: async () => {
-    await loadHTML(path.resolve(__dirname, '../pages') + '/contact.html')
+    await render('/contact.html')
+  },
+  invest: async () => {
+    await render('/invest.html')
+  },
+  loan: async () => {
+    await render('/loan.html')
+  },
+  faq: async () => {
+    await render('/faq.html')
+  },
+  privacy: async () => {
+    await render('/privacy.html')
+  },
+  'terms-and-conditions': async () => {
+    await render('/terms-conditions.html')
   },
   '': async () => {
-    await loadHTML(path.resolve(__dirname, '../pages') + '/home.html')
+    await render('/home.html')
   }
 }
 

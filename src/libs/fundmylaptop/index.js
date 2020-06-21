@@ -1,4 +1,3 @@
-/* eslint-disable import/no-webpack-loader-syntax */
 /* eslint-disable no-prototype-builtins */
 import Component from './component'
 import Store from './Store'
@@ -22,12 +21,9 @@ export default class FundMyLaptop extends Component {
     }
     if (params.hasOwnProperty('router')) {
       this.$router = params.router // set the router
+      this.$router.resolve()
     }
     window.FundMyLaptop = this
-  }
-
-  render () {
-    this.$router.resolve()
   }
 
   async setMeta (head, payload) {
@@ -43,8 +39,6 @@ export default class FundMyLaptop extends Component {
       name: 'author',
       content: 'Samuel Onyijne'
     }) // for test only
-    if (!this.element) return
-    this.render()
   }
 
   async run () {
@@ -60,8 +54,6 @@ export default class FundMyLaptop extends Component {
   // asyncrhonously fetch the html template partial from the template directory,
   // then set its contents to the html of the parent element
   async loadHTML (url) {
-    /* eslint-disable quotes */
-    // this.element.innerHTML = require(`html-loader!${url}`)
     /* eslint-disable no-undef */
     fetch(url)
       .then(response => response.text())
@@ -71,15 +63,27 @@ export default class FundMyLaptop extends Component {
   }
 }
 
+const fml = new FundMyLaptop({
+  ele: 'fundmylaptopapp'
+})
+
+/** display the html code */
 export async function loadHTML (url) {
-  /* eslint-disable quotes */
-  fetch(url)
+  const html = await getHTML(url)
+  fml.element.innerHTML = html
+}
+
+/** returns the html code */
+export async function getHTML (url) {
+  return fetch(url)
     .then(response => response.text())
-    .then(data => {
-      window.FundMyLaptop.element.innerHTML = data
-    })
 }
 
 export function nodeById (id) {
   return document.getElementById(`${id}`)
+}
+
+export function render (page) {
+  if (!fml.element) return
+  loadHTML(`${path.resolve(__dirname, '../pages')}/${page}`)
 }
