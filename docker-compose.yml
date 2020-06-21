@@ -9,7 +9,7 @@ services:
     env_file: .env
     environment:
       # - MONGO_URI=$MONGO_URI
-      - PORT=$PORT
+      # - PORT=$PORT
     ports:
       - "2020:9000"
     # volumes:
