@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Muli:wght@300&display=swap" rel="stylesheet">    <title>Document</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <style>
+        .container{
+            margin: 0px auto;
+            height: 100%;
+        }
+
+        .container h1{
+            text-align: center;
+            font-family: 'DM Sans', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 2.8125rem;
+            line-height: 2.875rem;
+            margin-top: 10px;
+        }
+
+        .container h1:after{
+            content:' ';
+            display:block;
+            border:2px solid #FB3F5C;
+            width: 6.1306rem;
+            margin: 0 auto;
+        }
+
+        .card-deck{
+            margin-top: 4.2519rem;
+            padding-bottom: 1.25rem;
+            height: 100%;
+        }
+
+        .card{
+            height: 100%;
+            background: #FFFFFF;
+            box-shadow: 0px 18.42px 18.42px rgba(202, 198, 198, 0.08);
+            border-radius: 23.0243px;
+            border: none;
+        }
+
+        .text-muted{
+            font-family: 'DM Sans', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 1rem;
+            line-height: 26px;
+
+            color: #1D2E3F;
+        }
+
+        .card-title{
+            font-family: 'DM Sans', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 1.25rem;
+            line-height: 26px;
+
+            color: #1D2E3F;
+        }
+
+        .card-text{
+            font-family: 'Muli', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.8252rem;
+            line-height: 21px;
+        }
+
+        .btn{
+            background-color: #FB3F5C;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+
+            font-family: 'DM Sans', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.9375rem;
+        }
+
+        .btn-div{
+            display: flex !important;
+            text-align: center !important;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+
+        /* sponsors css */
+
+        .container-2{
+            margin-bottom: 103px;
+        }
+
+        .container h2{
+            text-align:center;
+            padding: 20px;
+            font-family: 'DM Sans', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 2.8125rem;
+            line-height: 46px;
+            color: #1D2E3F;
+            margin-bottom: 4.375rem;
+            }
+
+            .container h2:after{
+            content:' ';
+            display:block;
+            border:2px solid #FB3F5C;
+            width: 98.09px;
+            margin: 0 auto;
+        }
+
+
+            /* Slider */
+
+            .slick-slide {
+                margin: 0px 20px;
+            }
+
+            .slick-slide img {
+                width: 100%;
+            }
+
+            .slick-slider
+            {
+                /* position: relative; */
+                display: block;
+                box-sizing: border-box;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                        user-select: none;
+                -webkit-touch-callout: none;
+                -khtml-user-select: none;
+                -ms-touch-action: pan-y;
+                    touch-action: pan-y;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .slick-list
+            {
+                /* position: relative; */
+                display: block;
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+            }
+            .slick-list:focus
+            {
+                outline: none;
+            }
+            .slick-list.dragging
+            {
+                cursor: pointer;
+                cursor: hand;
+            }
+
+            .slick-slider .slick-track,
+            .slick-slider .slick-list
+            {
+                -webkit-transform: translate3d(0, 0, 0);
+                -moz-transform: translate3d(0, 0, 0);
+                    -ms-transform: translate3d(0, 0, 0);
+                    -o-transform: translate3d(0, 0, 0);
+                        transform: translate3d(0, 0, 0);
+            }
+
+            .slick-track
+            {
+                /* position: relative; */
+                top: 0;
+                left: 0;
+                display: block;
+            }
+            .slick-track:before,
+            .slick-track:after
+            {
+                display: table;
+                content: '';
+            }
+            .slick-track:after
+            {
+                clear: both;
+            }
+            .slick-loading .slick-track
+            {
+                visibility: hidden;
+            }
+
+            .slick-slide
+            {
+                display: none;
+                float: left;
+                height: 100%;
+                min-height: 1px;
+            }
+            [dir='rtl'] .slick-slide
+            {
+                float: right;
+            }
+            .slick-slide img
+            {
+                display: block;
+            }
+            .slick-slide.slick-loading img
+            {
+                display: none;
+            }
+            .slick-slide.dragging img
+            {
+                pointer-events: none;
+            }
+            .slick-initialized .slick-slide
+            {
+                display: block;
+            }
+            .slick-loading .slick-slide
+            {
+                visibility: hidden;
+            }
+            .slick-vertical .slick-slide
+            {
+                display: block;
+                height: auto;
+                border: 1px solid transparent;
+            }
+            .slick-arrow.slick-hidden {
+                display: none;
+            }
+
+    </style>
+    
+    <div class="container">
+            <h1>Our Blog</h1>  
+        <div class="  card-deck">
+            <div class="card">
+              <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text"><small class="text-muted">BY ADMIN AUGUST 20,2020.  DESIGNER</small></p>
+                <h5 class="card-title">HOW I GOT FUNDED TO GET A LAPTOP FROM THIS PLATFORM</h5>
+                <p class="card-text">Voluptatibus repudiandae mollitia eveniet provident consectetur adipisicing elit. Officia dolore, quo quos nihil recusandae delectus   repudiandae o.</p>
+                <div class="btn-div"><a href="#" class="btn ">View More</a></div>
+            </div>
+            </div>
+
+            <div class="card">
+              <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text"><small class="text-muted">BY ADMIN AUGUST 20,2020.  DESIGNER</small></p>
+                <h5 class="card-title">HOW I GOT FUNDED TO GET A LAPTOP FROM THIS PLATFORM</h5>
+                <p class="card-text">Voluptatibus repudiandae mollitia eveniet provident consectetur adipisicing elit. Officia dolore, quo quos nihil recusandae delectus   repudiandae o.</p>
+                <div class="btn-div"><a href="#" class="btn ">View More</a></div>
+            </div>
+            </div>
+
+
+            <div class="card">
+              <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text"><small class="text-muted">BY ADMIN AUGUST 20,2020.  DESIGNER</small></p>
+                <h5 class="card-title">HOW I GOT FUNDED TO GET A LAPTOP FROM THIS PLATFORM</h5>
+                <p class="card-text">Voluptatibus repudiandae mollitia eveniet provident consectetur adipisicing elit. Officia dolore, quo quos nihil recusandae delectus   repudiandae o.</p>
+                <div class="btn-div"><a href="#" class="btn">View More</a></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="container-2">
+            <h2> Our Sponsors </h2>
+
+             <section class="customer-logos slider">
+                <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+                <div class="slide"><img src="http://www.webcoderskull.com/img/logo.png"></div>
+                <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
+                <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
+                <div class="slide"><img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
+                <div class="slide"><img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
+                <div class="slide"><img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
+                <div class="slide"><img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
+                <div class="slide"><img src="https://image.freepik.com/free-vector/retro-label-on-rustic-background_82147503374.jpg"></div>
+             </section> 
+        </div>         
+   
+    </div>
+
+
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      <script>
+
+            $(document).ready(function(){
+                $('.customer-logos').slick({
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    arrows: false,
+                    dots: false,
+                    pauseOnHover: false,
+                    responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    }, {
+                        breakpoint: 520,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    }]
+                });
+            });
+
+        </script>
+
+</body>
+</html>

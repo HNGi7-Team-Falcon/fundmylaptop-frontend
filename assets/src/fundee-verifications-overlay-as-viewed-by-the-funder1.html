@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Title</title>
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        p span{
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        @media screen and (-webkit-min-device-pixel-ratio:0){
+
+            /*nav */
+            .fvoavbf-nav-container {
+                height: 125px;
+                width: auto;
+                padding: 0 124px;
+                display: flex;
+                justify-content: center;
+            }
+
+            #fvoavbf-logo {
+                width: 229px;
+                height: 32px;
+            }
+
+            .fvoavbf-dropdown button {
+                background: #FFFFFF;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+                border: none;
+                /*margin-left: 45px;*/
+                padding: 1px;
+            }
+
+            .dropdown-toggle::after {
+                display: inline-block;
+                margin-left: .255em;
+                vertical-align: .255em;
+                border-top: .3em solid;
+                border-right: .3em solid transparent;
+                border-bottom: 0;
+                content: normal;
+                border-left: .3em solid transparent;
+            }
+
+            .fvoavbf-text {
+                color: #FB3F5C !important;
+            }
+
+
+            .bg-light {
+                background-color: transparent !important;
+            }
+
+            .fvoavbf-active-nav {
+                /*-webkit-margin-start: 202px;*/
+                /*-webkit-margin-end:0;*/
+            }
+
+            .navbar-light .navbar-nav .active > .nav-link {
+                color: #FB3F5C;
+            }
+
+            .fvoavbf-link {
+                color: #222222 !important;
+            }
+
+            .navbar-light .navbar-nav .nav-link {
+                color: transparent;
+            }
+
+            /*    nav*/
+            /*    content*/
+            .fvoavbf-content-container {
+                display: flex;
+                padding: 72px 10% 0 10%;
+                height: auto;
+                /*width: 100px;*/
+                /*border: 1px saddlebrown solid;*/
+            }
+
+            .fvoavbf-content-left {
+                position: relative;
+                float: left;
+                /*border: 1px red solid;*/
+                /*padding: 10px;*/
+                width: 50%;
+                padding: 72px 50px 0 0;
+            }
+
+            .fvoavbf-content-right {
+                position: relative;
+                padding: 42px 30px 0 20px;
+                width: 50%;
+                float: right;
+                /*border: 1px solid black;*/
+            }
+
+            .fvoavbf-content-name {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 39px;
+            }
+
+            .fvoavbf-content-intro {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 26px;
+            }
+
+            .fvoavbf-content-thead {
+                /*font-family: DM Sans;*/
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 26px;
+                /* identical to box height */
+                text-transform: uppercase;
+                color: #04172A;
+            }
+
+            .fvoavbf-content-table td {
+                /*font-family: DM Sans;*/
+                font-style: normal;
+                /*font-weight: normal;*/
+                font-size: 18px;
+                line-height: 23px;
+                padding: 0 0 8px 0;
+            }
+
+            .fvoavbf-content-table td:first-child {
+                width: 115px;
+                vertical-align: top;
+            }
+
+            table {
+                margin-bottom: 20px;
+            }
+
+            .fvoavbf-content-bottom {
+                margin-bottom: 50px;
+                text-align: justify;
+            }
+
+            .fvoavbf-content-color {
+                color: #FB3F5C;
+            }
+
+            .fvoavbf-content-img-container {
+                background-image: url(https://res.cloudinary.com/raynasun0109/image/upload/v1592577023/fundmylaptop/gregory-hayes-2guarBycJJQ-unsplash_1_copy_x6gqe8.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                /*width: auto;*/
+                /*height: 353px;*/
+                min-height: 353px;
+                margin-bottom: 20px;
+                /*margin-top: 12px;*/
+            }
+
+            .fvoavbf-content-price {
+                position: relative;
+                display: block;
+                color: black;
+                background-color: #FB3F5C;
+                margin-left: 50%;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 21px;
+                width: 100px;
+                height: 30px;
+                padding: 5px 10px;
+                text-align: center;
+            }
+            /*    content*/
+
+
+        }
+
+
+        @media all and (min-device-width:961px) {
+            /*nav */
+            .fvoavbf-nav-container {
+                height: 125px;
+                width: auto;
+                padding: 0 124px;
+                display: flex;
+                justify-content: center;
+            }
+
+
+            .navbar-expand-lg .navbar-collapse {
+                position: relative;
+                left: 202px;
+            }
+
+            #fvoavbf-logo {
+                width: 229px;
+                height: 32px;
+                /*margin-right: 202px;*/
+            }
+
+            .fvoavbf-dropdown button {
+                background: #FFFFFF;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+                border: none;
+                /*margin-left: 45px;*/
+                padding: 1px;
+            }
+
+            .dropdown-toggle::after {
+                display: inline-block;
+                margin-left: .255em;
+                vertical-align: .255em;
+                border-top: .3em solid;
+                border-right: .3em solid transparent;
+                border-bottom: 0;
+                content: normal;
+                border-left: .3em solid transparent;
+            }
+
+            .fvoavbf-text {
+                color: #FB3F5C !important;
+            }
+
+            .fvoavbf-dropdown-invest button {
+                /*margin-left: 45px;*/
+            }
+
+            .fvoavbf-dropdown-loan button {
+                /*margin-left: 25px;*/
+            }
+
+            .bg-light {
+                background-color: transparent !important;
+            }
+
+            .fvoavbf-active-nav {
+                /*margin-left: 202px;*/
+                /*[margin-left:0];*/
+                /*[;margin-left:202px;]*/
+            }
+
+            .navbar-light .navbar-nav .active > .nav-link {
+                color: #FB3F5C;
+            }
+
+            .fvoavbf-link {
+                color: #222222 !important;
+            }
+
+            .navbar-light .navbar-nav .nav-link {
+                color: transparent;
+            }
+
+            .nav-item-margin{
+                margin-right: 45px;
+            }
+
+            /*    nav*/
+            /*    content*/
+            .fvoavbf-content-container {
+                display: flex;
+                padding: 72px 10% 0 10%;
+                height: auto;
+            }
+
+            .fvoavbf-content-left {
+                position: relative;
+                float: left;
+                width: 50%;
+                padding: 72px 50px 0 0;
+            }
+
+            .fvoavbf-content-right {
+                position: relative;
+                padding: 42px 30px 0 20px;
+                width: 50%;
+                float: right;
+            }
+
+            .fvoavbf-content-name {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 39px;
+            }
+
+            .fvoavbf-content-intro {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 26px;
+            }
+
+            .fvoavbf-content-thead {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 26px;
+                text-transform: uppercase;
+                color: #04172A;
+            }
+
+            .fvoavbf-content-table td {
+                font-style: normal;
+                font-size: 18px;
+                line-height: 23px;
+                padding: 0 0 8px 0;
+            }
+
+            .fvoavbf-content-table td:first-child {
+                width: 115px;
+                vertical-align: top;
+            }
+
+            table {
+                margin-bottom: 20px;
+            }
+
+            .fvoavbf-content-bottom {
+                margin-bottom: 50px;
+                text-align: justify;
+            }
+
+            .fvoavbf-content-color {
+                color: #FB3F5C;
+            }
+
+            .fvoavbf-content-img-container {
+                background-image: url(https://res.cloudinary.com/raynasun0109/image/upload/v1592577023/fundmylaptop/gregory-hayes-2guarBycJJQ-unsplash_1_copy_x6gqe8.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                min-height: 353px;
+                margin-bottom: 20px;
+            }
+
+            .fvoavbf-content-price {
+                position: relative;
+                display: block;
+                color: black;
+                background-color: #FB3F5C;
+                margin-left: 50%;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 21px;
+                width: 100px;
+                height: 30px;
+                padding: 5px 10px;
+                text-align: center;
+            }
+            /*    content*/
+        }
+
+
+
+        @media screen and (max-device-width:960px){
+            /*nav */
+            .fvoavbf-nav-container {
+                height: auto;
+                width: auto;
+                padding: 0 124px;
+                display: flex;
+                justify-content: center;
+                margin-top: 5%;
+            }
+
+            #fvoavbf-logo{
+                height: 100%;
+                width: 100%;
+            }
+
+            .fvoavbf-dropdown button {
+                background: #FFFFFF;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+                border: none;
+                /*margin-left: 45px;*/
+                padding: 1px;
+            }
+
+            .dropdown-toggle::after {
+                display: inline-block;
+                margin-left: .255em;
+                vertical-align: .255em;
+                border-top: .3em solid;
+                border-right: .3em solid transparent;
+                border-bottom: 0;
+                content: normal;
+                border-left: .3em solid transparent;
+            }
+
+            .fvoavbf-text {
+                color: #FB3F5C !important;
+            }
+
+            .bg-light {
+                background-color: transparent !important;
+            }
+
+            .navbar-light .navbar-nav .active > .nav-link {
+                color: #FB3F5C;
+            }
+
+            .fvoavbf-link {
+                color: #222222 !important;
+            }
+
+            .navbar-light .navbar-nav .nav-link {
+                color: transparent;
+            }
+
+            .navbar-toggler {
+                font-size: 1.25rem;
+                line-height: 1;
+                background-color: transparent;
+                border: 1px solid transparent;
+                border-radius: .25rem;
+                position: absolute;
+                left: 20px;
+                padding: 0;
+            }
+
+
+            /*    nav*/
+            /*    content*/
+            .fvoavbf-content-container {
+                /*position: relative;*/
+                display: block;
+                padding: 0 17px 0 17px;
+                height: auto;
+            }
+
+            .fvoavbf-content-left {
+                position: relative;
+                float: left;
+                width: 100%;
+                padding: 72px 2px 0 2px;
+            }
+
+            .fvoavbf-content-right {
+                position: relative;
+                width: 100%;
+                float: right;
+            }
+
+            .fvoavbf-content-name {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 30px;
+            }
+
+            .fvoavbf-content-intro {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 26px;
+            }
+
+            .fvoavbf-content-thead {
+                /*font-family: DM Sans;*/
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 26px;
+                /* identical to box height */
+                text-transform: uppercase;
+                color: #04172A;
+            }
+
+            .fvoavbf-content-table td {
+                /*font-family: DM Sans;*/
+                font-style: normal;
+                /*font-weight: normal;*/
+                font-size: 14px;
+                line-height: 23px;
+                padding: 0 0 8px 0;
+            }
+
+            .fvoavbf-content-table td:first-child {
+                width: 115px;
+                vertical-align: top;
+            }
+
+            table {
+                margin-bottom: 20px;
+            }
+
+            .fvoavbf-content-bottom {
+                margin-bottom: 50px;
+                text-align: justify;
+            }
+
+            .fvoavbf-content-color {
+                color: #FB3F5C;
+            }
+
+            .fvoavbf-content-img-container {
+                background-image: url(https://res.cloudinary.com/raynasun0109/image/upload/v1592577023/fundmylaptop/gregory-hayes-2guarBycJJQ-unsplash_1_copy_x6gqe8.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                /*width: 100%;*/
+                height: 250px;
+                margin-bottom: 20px;
+                /*margin-top: 12px;*/
+            }
+
+            .fvoavbf-content-price {
+                position: relative;
+                display: block;
+                color: black;
+                background-color: #FB3F5C;
+                /*margin-left: 50%;*/
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 21px;
+                width: 100px;
+                height: 30px;
+                padding: 5px 10px;
+                text-align: center;
+            }
+            /*    content*/
+        }
+
+
+
+    </style>
+</head>
+<body>
+<!--to whom may it concern, to create an unique classname or id, i use fvoavbf, as the initials of this page name-->
+<!--good luck and happy hacking-->
+<div>
+
+
+<!--nav-->
+<!--to do add information to dropdown list-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fvoavbf-nav-container">
+    <a class="navbar-brand" href="#">
+    <img id="fvoavbf-logo" src="https://res.cloudinary.com/raynasun0109/image/upload/v1592428480/fundmylaptop/logo_j3ivdp.png">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active fvoavbf-active-nav">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fvoavbf-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fvoavbf-link" href="#">FAQ</a>
+            </li>
+            <li class="nav-item nav-item-margin">
+                <a class="nav-link fvoavbf-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item dropdown fvoavbf-dropdown-invest fvoavbf-dropdown nav-item-margin">
+                <button><a class="nav-link dropdown-toggle fvoavbf-text" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Invest >
+                </a></button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">need to fill</a>
+                    <a class="dropdown-item" href="#">need to fill</a>
+                    <a class="dropdown-item" href="#">need to fill</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown fvoavbf-dropdown-loan fvoavbf-dropdown">
+                <button><a class="nav-link dropdown-toggle fvoavbf-text" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Get a loan >
+                </a></button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">need to fill</a>
+                    <a class="dropdown-item" href="#">need to fill</a>
+                    <a class="dropdown-item" href="#">need to fill</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--nav-->
+
+<!--content-->
+<div class="fvoavbf-content-container">
+    <div class="fvoavbf-content-left">
+        <div>
+            <p class="fvoavbf-content-name fvoavbf-name">
+                JOHN JAMES
+            </p>
+        </div>
+
+        <div class="fvoavbf-content-bottom">
+            <p class="fvoavbf-content-intro">
+                A second year CS student. Needs a Laptop for Practical Application of what is being taught in lecture rooms. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat pellentesque vitae, massa senectus. Commodo id tristique at amet at morbi natoque risus.
+            </p>
+        </div>
+        <div class="fvoavbf-content-table">
+            <table>
+                <thead >
+                <p class="fvoavbf-content-thead">BASIC INFORMATION</p>
+                </thead>
+                <tr>
+                    <td>
+                        Birthday:
+                    </td>
+                   <td>
+                       June 5, 1996
+                   </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gender:
+                    </td>
+                    <td>
+                        Male
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Profession:
+                    </td>
+                    <td>
+                        Student
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="fvoavbf-content-table">
+            <table>
+                <thead >
+                <p class="fvoavbf-content-thead">CONTACT INFORMATION</p>
+                </thead>
+                <tr>
+                    <td>
+                        Phone:
+                    </td>
+                    <td class="fvoavbf-content-color">
+                        +234 (0) 80 2913 4912
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Address:
+                    </td>
+                    <td>
+                        16, Ajobo Close, Elewura, Challenge, Ibadan, Oyo State.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email:
+                    </td>
+                    <td class="fvoavbf-content-color">
+                        johndoe.hng@gmail.com
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Site:
+                    </td>
+                    <td class="fvoavbf-content-color">
+                        johndoe.com
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="fvoavbf-content-right">
+        <div class="fvoavbf-content-price">
+            <p>$1500</p>
+        </div>
+        <div class="fvoavbf-content-img-container">
+        </div>
+        <div class="fvoavbf-content-table">
+            <table>
+                <thead >
+                <p class="fvoavbf-content-thead">VOUCHER</p>
+                </thead>
+                <tr>
+                    <td>
+                        Name:
+                    </td>
+                    <td>
+                        Matt James
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Relationship:
+                    </td>
+                    <td>
+                        Father
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Occupation:
+                    </td>
+                    <td>
+                        Farmer
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="fvoavbf-content-table">
+            <table>
+                <thead >
+                <p class="fvoavbf-content-thead">CONTACT INFORMATION</p>
+                </thead>
+                <tr>
+                    <td>
+                        Phone:
+                    </td>
+                    <td class="fvoavbf-content-color">
+                        +234 (0) 80 2913 4912
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Address:
+                    </td>
+                    <td>
+                        16, Ajobo Close, Elewura, Challenge, Ibadan, Oyo State.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email:
+                    </td>
+                    <td class="fvoavbf-content-color">
+                        johndoe.hng@gmail.com
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Site:
+                    </td>
+                    <td class="fvoavbf-content-color">
+                        johndoe.com
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!--content-->
+</div>
+</body>
+<script>
+
+    //for using js to render the page
+    // window.onload=function () {
+    //     const name=document.getElementsByClassName("fvoavbf-name");
+    //     console.dir(name[0].innerText);
+    //     // const a = name[0].innerText;
+    //     name[0].innerText="Jame";
+    // }
+
+</script>
+</html>

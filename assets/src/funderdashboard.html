@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <!--Font awesome cdn-->
+  <script src="https://use.fontawesome.com/c40733cf62.js"></script>
+  <style type="text/css">
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      padding: 0;
+      margin: 0;
+      background-color: #fff;
+      color: #04172A;
+    }
+
+    nav {
+      background: rgba(4, 23, 42, 0.03);
+      padding: 35px 30px;
+      font-weight: 500;
+      font-size: 1.7em;
+    }
+
+    img {
+      margin-left: -30px;
+    }
+
+    .container {
+      margin: 3% 9%;
+      max-width: 100%;
+
+    }
+
+    .logo {
+      margin-left: 7%;
+    }
+
+    .userhead,
+    .user p {
+      margin: 5px 0;
+    }
+
+    .color1 {
+      color: #FB3F5C;
+    }
+
+    .userdetails {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: -100px;
+    }
+
+    .userdet {
+      display: flex;
+      justify-content: space-between;
+      width: 40%
+    }
+
+    .userh {
+      position: relative;
+      display: inline-block;
+    }
+
+    .usertext {
+      position: absolute;
+      z-index: 9;
+      margin: 0 auto;
+      left: -18%;
+      right: 0;
+      text-align: center;
+      top: 8%;
+      color: white;
+    }
+
+    .usertext p {
+      font-size: 1.2em;
+    }
+
+    .btn_refresh {
+      background-color: white;
+      color: #FB3F5C;
+      border: none;
+      border-radius: 50%;
+      cursor: default;
+      font-size: 15px;
+      position: absolute;
+      left:
+        75%;
+      bottom: -45%;
+    }
+
+    .totloan {
+      padding: 50px 0;
+    }
+
+    .account__progress {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .progress-ring__circle {
+      transition: 0.35s stroke-dashoffset;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+
+    .progress__value {
+      position: relative;
+      margin: 0;
+      background-color: transparent;
+      top: -180px;
+    }
+
+    .progress__value h1,
+    .progress__value h6 {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-size: 3em;
+    }
+
+    .progress__value h6 {
+      font-size: 1em;
+      font-weight: lighter;
+    }
+
+    .p-nom,
+    .p-nom1 {
+      margin: 5px 0;
+    }
+
+    .stats {
+      display: flex;
+    }
+
+    .status {
+      border-radius: 13px;
+      background: #FB3F5C;
+      border: none;
+      font-size: 0.7em;
+      margin-left: 5px;
+    }
+
+    button:disabled {
+      color: white;
+      text-transform: capitalize;
+    }
+
+    .loan {
+      margin: 26px 0;
+    }
+
+    .p-nom1 {
+      font-size: 20px;
+    }
+
+    .account {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .account_details {
+      flex: 1 1 25%;
+      padding: 20px 40px;
+      padding-bottom: 0;
+      border-right: 10px solid white;
+      margin-bottom: 30px;
+      background-color: rgba(4, 23, 42, 0.05);
+    }
+
+    .account_details h2 {
+      margin-top: 7px;
+    }
+
+    .account_details span,
+    .totloan span {
+      font-size: 0.6em;
+      font-weight: lighter;
+    }
+
+    .right {
+      margin-right: 5px;
+    }
+
+    .left {
+      margin-left: 2px;
+    }
+
+    .table header {
+      font-size: 1.2em;
+    }
+
+    .table_container {
+      overflow: scroll;
+      margin-top: 12px;
+      margin-bottom: 50px;
+    }
+
+    .table_container::-webkit-scrollbar {
+      display: none;
+    }
+
+    table {
+      font-size: .8em;
+      width: 100%;
+      border-collapse: collapse;
+
+    }
+
+    tr {
+      border-bottom: 2px solid rgba(4, 23, 42, 0.1);
+      margin-left: 5px;
+    }
+
+    thead {
+      font-weight: bold;
+      background: #FB3F5C;
+      color: #fff;
+      border-bottom: 0px;
+    }
+
+    thead td {
+      padding: 20px;
+    }
+
+    td {
+      padding: 10px 10px;
+
+    }
+
+    tbody td {
+      padding: 20px;
+      font-size: 1.2em;
+    }
+
+    .date {
+      font-size: 2em;
+    }
+
+    .f-15 {
+      font-size: 0.9em;
+    }
+
+    @media screen and (max-width: 475px) {
+      .userdet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <!--Lo-->
+    <div class="logo">
+      FundMy<span class="color1">Laptop</span>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="user">
+      <h1 class="userhead">Welcome back, <span class="color1">Chandan</span></h1>
+      <p>Here is your account overview</p>
+    </div>
+
+    <!--Credit score, loan balance and progress bar-->
+    <div class="userdetails">
+      <div class="userdet">
+        <div class="userh">
+          <img src="https://res.cloudinary.com/babscode/image/upload/v1592485919/mask_iy8gaj.png">
+          <div class="usertext">
+            <p>CREDIT SCORE</p>
+            <h1>1573</h1>
+            <button class="btn_refresh" style=""><i class="fa fa-refresh"></i></button>
+          </div>
+        </div>
+        <!--Total Loan Balance-->
+        <div class="totloan">
+          <p>TOTAL LOAN BALANCE</p>
+          <h1><span class="right">INR</span>30,000</h1>
+        </div>
+      </div>
+      <!-- progress bar -->
+      <div>
+        <div class="account__progress">
+          <svg class="progress-ring" width="100%" height="280">
+            <circle class="progress-ring__circle" stroke="#FB3F5C" stroke-width="20" fill="transparent" r="90" cx="50%" cy="50%" />
+          </svg>
+          <div class="progress__value">
+            <h1 id="displayed_value"></h1>
+            <h6>PAID</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- loan summary -->
+    <div class="loan">
+      <p class="p-nom1">Loan Summary</p>
+      <div class="stats">
+        <p class="p-nom">#64687275</p>
+        <button class="status" disabled>active</button>
+      </div>
+    </div>
+    <!-- summary -->
+    <div class="account">
+      <div class="account_details">
+        <small>Pending Amount</small><br>
+        <h2><span class="right">INR</span>30,000</h2>
+      </div>
+      <div class="account_details">
+        <small>Loaned amount</small><br>
+        <h2><span class="right">INR</span>20,000</h2>
+      </div>
+      <div class="account_details">
+        <small>Paid amount</small><br>
+        <h2><span class="right">INR</span>20,000</h2>
+      </div>
+      <div class="account_details">
+        <small>Interest rate</small><br>
+        <h2>2.5<span class="left">%</span></h2>
+      </div>
+      <div class="account_details">
+        <small>Amount per month</small><br>
+        <h2><span class="right">INR</span>5,125</h2>
+      </div>
+      <div class="account_details">
+        <small>Interest per month</small><br>
+        <h2><span class="right">INR</span>125</h2>
+      </div>
+      <div class="account_details">
+        <small>Total Term</small><br>
+        <h2>10<span class="left">months</span></h2>
+      </div>
+      <div class="account_details">
+        <small>Remaining Term</small><br>
+        <h2>6<span class="left">months</span></h2>
+      </div>
+    </div>
+    <!-- history -->
+    <p class="p-nom1">Repayment History</p>
+    <div class="table_container">
+      <table>
+        <thead>
+          <td>DATE</td>
+          <td>AMOUNT PAID</td>
+          <td>AMOUNT REMAINING</td>
+          <td>PAYMENT METHOD</td>
+          <td>REFERENCE ID</td>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="date">25</div>
+              <div class="f-15">JULY</div>
+            </td>
+            <td>INR 5,000</td>
+            <td>INR 30,000</td>
+            <td>Bank Transfer</td>
+            <td>646872757669746861</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="date">27</div>
+              <div class="f-15">JUNE</div>
+            </td>
+            <td>INR 5,000</td>
+            <td>INR 35,000</td>
+            <td>Bank Transfer</td>
+            <td>646872757669746861</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="date">20</div>
+              <div class="f-15">MAY</div>
+            </td>
+            <td>INR 5,000</td>
+            <td>INR 4O,000</td>
+            <td>Bank Transfer</td>
+            <td>646872757669746861</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="date">25</div>
+              <div class="f-15">APRIL</div>
+            </td>
+            <td>INR 5,000</td>
+            <td>INR 45,000</td>
+            <td>Bank Transfer</td>
+            <td>646872757669746861</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    var circle = document.querySelector('circle');
+    var radius = circle.r.baseVal.value;
+    var circumference = radius * 2 * Math.PI;
+
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = `${circumference}`;
+
+    function setProgress(percent) {
+      const offset = circumference - percent / 100 * circumference;
+      circle.style.strokeDashoffset = offset;
+    }
+
+    const progress_value = 40;
+    const displayed_value = document.querySelector('#displayed_value')
+    displayed_value.innerHTML = `${progress_value}%`
+    setProgress(progress_value);
+  </script>
+
+</body>
+
+</html>
