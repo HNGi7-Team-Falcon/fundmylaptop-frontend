@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funding Campaign Page</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      color: #04172a;
+      font-family: 'DM Sans', sans-serif;
+      padding: 1rem 4rem;
+    }
+
+    header h1 {
+      color: #04172a;
+      font-family: DM Sans;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      padding: 1rem 0;
+    }
+
+    header .buttons {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      color: #ffffff;
+      background-color: #fb3f5c;
+      border-radius: 20px;
+      padding: 0.4rem 2rem;
+      cursor: pointer;
+      margin-right: 1rem;
+      margin-top: 0.5rem;
+      outline: none;
+      border: none;
+    }
+
+    .main {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      width: 100%;
+    }
+
+    main section.cards {
+      margin-right: 1.5rem;
+    }
+
+    .card-1 {
+      background: #ffffff;
+      border: 1px solid rgba(4, 23, 42, 0.25);
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      padding-bottom: 0.5rem;
+    }
+
+    .icon-img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .icon-img img {
+      width: 100%;
+      object-fit: fill;
+    }
+
+    .card-1 .icon {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .needs,
+    .purchase {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+    }
+
+    .filters {
+      background: #ffffff;
+      border: 1px solid rgba(4, 23, 42, 0.25);
+      box-sizing: content-box;
+      border-radius: 5px;
+      height: 75%;
+    }
+
+    .filters .filter-text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .filters .filter-text h3 {
+      font-weight: normal;
+    }
+
+    .filters .filter-text span {
+      font-size: 1.2rem;
+    }
+
+    .input {
+      padding: 1rem;
+    }
+
+    .input h2 {
+      padding-bottom: 1rem;
+    }
+
+    .input form input {
+      padding: 0.5rem 1.5rem;
+      width: 100%;
+      border: 1px solid #04172a;
+      box-sizing: border-box;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .buttons .btn {
+        margin-top: 1rem;
+      }
+
+      .main {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        width: 100%;
+      }
+
+      main section.cards {
+        margin-right: 0rem;
+      }
+
+      .filters {
+        background: #ffffff;
+        border: 1px solid rgba(4, 23, 42, 0.25);
+        box-sizing: content-box;
+        border-radius: 5px;
+        height: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Recommended Listing</h1>
+    <div class="buttons">
+      <button class="btn">between 50k and 100K &#128473;</button>
+      <button class="btn">Verified &#128473;</button>
+      <button class="btn"> > 2 sucessful repayments &#128473;</button>
+      <button class="btn">> 5 vouchers &#128473;</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="cards">
+      <div class="card-1">
+        <div class="icon">
+          <div class="icon-text">
+            <p>Salim Adekoya</p>
+            <small>Verified</small>
+          </div>
+          <div class="icon-img">
+            <img src="https://res.cloudinary.com/dwpwl6img/image/upload/v1592747252/Rectangle_397.png" alt="">
+          </div>
+        </div>
+        <div class="needs">
+          <span>Needs $900</span>
+          <span>5 bidders</span>
+        </div>
+
+        <div class="purchase">
+          <span>For Laptop Purchase</span>
+          <span>5 Vouchers</span>
+        </div>
+      </div>
+
+      <div class="card-1">
+        <div class="icon">
+          <div class="icon-text">
+            <p>Salim Adekoya</p>
+            <small>Verified</small>
+          </div>
+          <div class="icon-img">
+            <img src="https://res.cloudinary.com/dwpwl6img/image/upload/v1592747252/Rectangle_397.png" alt="">
+          </div>
+        </div>
+        <div class="needs">
+          <span>Needs $900</span>
+          <span>5 bidders</span>
+        </div>
+
+        <div class="purchase">
+          <span>For Laptop Purchase</span>
+          <span>5 Vouchers</span>
+        </div>
+      </div>
+
+      <div class="card-1">
+        <div class="icon">
+          <div class="icon-text">
+            <p>Salim Adekoya</p>
+            <small>Verified</small>
+          </div>
+          <div class="icon-img">
+            <img src="https://res.cloudinary.com/dwpwl6img/image/upload/v1592747252/Rectangle_397.png" alt="">
+          </div>
+        </div>
+        <div class="needs">
+          <span>Needs $900</span>
+          <span>5 bidders</span>
+        </div>
+
+        <div class="purchase">
+          <span>For Laptop Purchase</span>
+          <span>5 Vouchers</span>
+        </div>
+      </div>
+
+      <div class="card-1">
+        <div class="icon">
+          <div class="icon-text">
+            <p>Salim Adekoya</p>
+            <small>Verified</small>
+          </div>
+          <div class="icon-img">
+            <img src="https://res.cloudinary.com/dwpwl6img/image/upload/v1592747252/Rectangle_397.png" alt="">
+          </div>
+        </div>
+        <div class="needs">
+          <span>Needs $900</span>
+          <span>5 bidders</span>
+        </div>
+
+        <div class="purchase">
+          <span>For Laptop Purchase</span>
+          <span>5 Vouchers</span>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="cards">
+      <div class="card-1">
+        <div class="icon">
+          <div class="icon-text">
+            <p>Salim Adekoya</p>
+            <small>Verified</small>
+          </div>
+          <div class="icon-img">
+            <img src="https://res.cloudinary.com/dwpwl6img/image/upload/v1592747252/Rectangle_397.png" alt="">
+          </div>
+        </div>
+        <div class="needs">
+          <span>Needs $900</span>
+          <span>5 bidders</span>
+        </div>
+
+        <div class="purchase">
+          <span>For Laptop Purchase</span>
+          <span>5 Vouchers</span>
+        </div>
+      </div>
+
+      <div class="card-1">
+        <div class="icon">
+          <div class="icon-text">
+            <p>Salim Adekoya</p>
+            <small>Verified</small>
+          </div>
+          <div class="icon-img">
+            <img src="https://res.cloudinary.com/dwpwl6img/image/upload/v1592747252/Rectangle_397.png" alt="">
+          </div>
+        </div>
+        <div class="needs">
+          <span>Needs $900</span>
+          <span>5 bidders</span>
+        </div>
+
+        <div class="purchase">
+          <span>For Laptop Purchase</span>
+          <span>5 Vouchers</span>
+        </div>
+      </div>
+
+      <div class="card-1">
+        <div class="icon">
+          <div class="icon-text">
+            <p>Salim Adekoya</p>
+            <small>Verified</small>
+          </div>
+          <div class="icon-img">
+            <img src="https://res.cloudinary.com/dwpwl6img/image/upload/v1592747252/Rectangle_397.png" alt="">
+          </div>
+        </div>
+        <div class="needs">
+          <span>Needs $900</span>
+          <span>5 bidders</span>
+        </div>
+
+        <div class="purchase">
+          <span>For Laptop Purchase</span>
+          <span>5 Vouchers</span>
+        </div>
+      </div>
+
+      <div class="card-1">
+        <div class="icon">
+          <div class="icon-text">
+            <p>Salim Adekoya</p>
+            <small>Verified</small>
+          </div>
+          <div class="icon-img">
+            <img src="https://res.cloudinary.com/dwpwl6img/image/upload/v1592747252/Rectangle_397.png" alt="">
+          </div>
+        </div>
+        <div class="needs">
+          <span>Needs $900</span>
+          <span>5 bidders</span>
+        </div>
+
+        <div class="purchase">
+          <span>For Laptop Purchase</span>
+          <span>5 Vouchers</span>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="filters">
+      <div class="filter-item">
+        <div class="filter-text">
+          <h3>Filters</h3>
+          <span>&#128473;</span>
+        </div>
+
+        <div class="input">
+          <h2> Minimum Amount</h2>
+          <form class="form">
+            <input type="text" placeholder="minimum amount">
+          </form>
+        </div>
+
+        <div class="input">
+          <h2> Maximum Amount</h2>
+          <form class="form">
+            <input type="text" placeholder="minimum amount">
+          </form>
+        </div>
+
+        <div class="input">
+          <h2> Successful Repayments</h2>
+          <form class="form">
+            <input type="text" placeholder="at least">
+          </form>
+        </div>
+
+        <div class="input">
+          <h2> Voucher</h2>
+          <form class="form">
+            <input type="text" placeholder="at least">
+          </form>
+        </div>
+      </div>
+
+    </section>
+  </main>
+</body>
+
+</html>
