@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+    <title>Notifications</title>
+
+    <!-- Internal styling -->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .notification-container {
+            font-family: 'DM sans';
+            padding: 0 9% 0 9%;
+            width: 100%;
+        }
+        .notification-title {
+            margin-top: 3.8em;
+            margin-bottom: 2.2em;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid rgba(4, 23, 42, 0.1);
+        }
+        .notification-title div:first-of-type {
+            margin-right: auto;
+        }
+        .notification-title .fa-stack[data-count]{
+            width: auto;
+        }
+        .notification-title .fa-stack[data-count]:after{
+            position:absolute;
+            right:-11%;
+            top:18%;
+            content: attr(data-count);
+            font-size:28%;
+            padding:.5em;
+            border-radius:500px;
+            line-height:.75em;
+            color: white;
+            background: #f46;
+            text-align:center;
+            min-width:.5em;
+            font-weight:bold;
+        }
+        .notification-title a {
+            color: #f46;
+            text-decoration: none;
+        }
+        .notification-title .fa-stack {
+            width: auto;
+        }
+        .notification-title .bell span:first-of-type{
+            font-style: normal;
+            font-weight: 500;
+            font-size: 2em;
+            color: #04172A;
+            margin-right: .8em;
+        }
+        .notification-title .settings span:first-of-type {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.5em;
+            color: #04172A;
+            margin-right: .8em;
+        }
+
+        /* Notifications listing start here */
+        .notification-list {
+            display: flex;
+            margin-bottom: 1em;
+            padding: .4em 2em;
+        }
+        .notification-list .user {
+            display: flex;
+            align-items: center;
+            min-width: fit-content;
+        }
+        .notification-list .user img{
+            margin-right: 1em;
+        }
+        .notification-list .notification-msg {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 1em;
+            margin-top: .9em;
+            height:fit-content;
+            margin-left: 1em; 
+        }
+        .notification-container .notification-list:nth-child(2), .notification-container .notification-list:nth-child(4){
+            background: #ECEEEF;
+        }
+
+        /* responsiveness */
+        /* TABLET */
+        @media screen and (max-width: 768px) { 
+            .notification-title .bell span:first-of-type{
+                font-size: 1.7em;
+                color: #04172A;
+                margin-right: .4em;
+            }
+            .notification-title .settings span:first-of-type {    
+                font-size: 1.3em;
+                color: #04172A;
+                margin-right: .4em;
+            }
+            .notification-list {                    
+                padding: .2em 1em;
+            }
+        }
+        /* Mobile */
+        @media screen and (max-width: 425px) {
+            .notification-container {
+                font-family: 'DM sans';
+                padding: 0 9% 0 9%;
+                width: 100%;                
+            }
+            .notification-title .bell span:first-of-type{
+                display: none;
+            }
+            .notification-title .settings span:first-of-type {    
+                display: none;
+            }
+
+            /* Notifications listing start here */
+            .notification-list {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 1em;
+                padding: .4em 1em;
+            }
+            .notification-list .notification-msg {                
+                font-size: 24px;
+                line-height: 1em;
+                margin-top: .4em;
+                height:fit-content;
+                margin-left: 0; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="notification-container">
+        <div class="notification-title">
+            <div class="bell" style="display: flex; align-items: center;">
+                <span>Your Notifications</span><span class="fa-stack fa-3x has-badge" data-count="2"><a href="#"><i class=" far fa-bell badge"></i></a></span>
+            </div>
+            <div class="settings" style="display: flex; align-items: center;">
+                <span>Notification Settings</span><span><a href="#"><i class="fa-3x fas fa-cog fa-stack"></i></a></span>
+            </div>
+        </div>
+        <main>
+            <div class="notification-list">
+                <div class="user">
+                    <img src="https://res.cloudinary.com/dfrfmyx2v/image/upload/v1592644314/fundmylaptop-notification/img-1_nesfyt.png" alt="">
+                    <div>
+                        <h2>Bamiduro Olaoluwa</h2>
+                        <div>2 Hours ago</div>
+                    </div>                    
+                </div>                
+                <div class="notification-msg">Your loan will be due in 1 week</div>                
+            </div>
+            <div class="notification-list">
+                <div class="user">
+                    <img src="https://res.cloudinary.com/dfrfmyx2v/image/upload/v1592644313/fundmylaptop-notification/img-2_sg26kr.png" alt="">
+                    <div>
+                        <h2>Bamiduro Olaoluwa</h2>
+                        <div>2 Hours ago</div>
+                    </div>                    
+                </div>                
+                <div class="notification-msg">Your loan has been approved</div>                
+            </div>
+            <div class="notification-list">
+                <div class="user">
+                    <img src="https://res.cloudinary.com/dfrfmyx2v/image/upload/v1592644313/fundmylaptop-notification/img-3_r4pmrz.png" alt="">
+                    <div>
+                        <h2>Mark Essien</h2>
+                        <div>2 Hours ago</div>
+                    </div>                    
+                </div>                
+                <div class="notification-msg">HNG acted as a guarantor on your loan form</div>                
+            </div>
+            <div class="notification-list">
+                <div class="user">
+                    <img src="https://res.cloudinary.com/dfrfmyx2v/image/upload/v1592644314/fundmylaptop-notification/img-4_srbnvg.png" alt="">
+                    <div>
+                        <h2>Bamiduro Olaoluwa</h2>
+                        <div>2 Hours ago</div>
+                    </div>                    
+                </div>                
+                <div class="notification-msg">Invited you to act a guarantor for his loan #34562</div>                
+            </div>
+            <div class="notification-list">
+                <div class="user">
+                    <img src="https://res.cloudinary.com/dfrfmyx2v/image/upload/v1592644314/fundmylaptop-notification/img-5_ju8ilf.png" alt="">
+                    <div>
+                        <h2>Bamiduro Olaoluwa</h2>
+                        <div>2 Hours ago</div>
+                    </div>                    
+                </div>                
+                <div class="notification-msg">You deleted a pending request #23774</div>                
+            </div>
+            <div class="notification-list">
+                <div class="user">
+                    <img src="https://res.cloudinary.com/dfrfmyx2v/image/upload/v1592644314/fundmylaptop-notification/img-6_j9zu4n.png  " alt="">
+                    <div>
+                        <h2>Bamiduro Olaoluwa</h2>
+                        <div>2 Hours ago</div>
+                    </div>                    
+                </div>                
+                <div class="notification-msg">xxxx-xxxx-xxxx-1224 has been successfully added to your card list</div>                
+            </div>
+            <div class="notification-list">
+                <div class="user">
+                    <img src="https://res.cloudinary.com/dfrfmyx2v/image/upload/v1592644314/fundmylaptop-notification/img-6_j9zu4n.png" alt="">
+                    <div>
+                        <h2>Bamiduro Olaoluwa</h2>
+                        <div>2 Hours ago</div>
+                    </div>                    
+                </div>                
+                <div class="notification-msg"> Your application details is being reviewed</div>                
+            </div>          
+        </main>
+    </div>
+</body>
+</html>
