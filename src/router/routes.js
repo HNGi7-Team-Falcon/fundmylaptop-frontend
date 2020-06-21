@@ -14,23 +14,23 @@ const routes = {
     await render('/contact.html')
   },
   invest: async () => {
-    await loadHTML(path.resolve(__dirname, '../pages') + '/invest.html')
+    await render('/invest.html')
   },
   loan: async () => {
-    await loadHTML(path.resolve(__dirname, '../pages') + '/loan.html')
+    await render('/loan.html')
   },
   faq: async () => {
-    await loadHTML(path.resolve(__dirname, '../pages') + '/faq.html')
+    await render('/faq.html')
   },
   privacy: async () => {
-    await loadHTML(path.resolve(__dirname, '../pages') + '/privacy.html')
+    await render('/privacy.html')
   },
-  terms_conditions: async () => {
-    await loadHTML(path.resolve(__dirname, '../pages') + '/terms_conditions.html')
+  'terms-and-conditions': async () => {
+    await render('/terms-conditions.html')
   },
   '': async () => {
     await render('/home.html')
   }
 }
 
-export default routes;
+export default routes
