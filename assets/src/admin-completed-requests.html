@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin: Completed Requests</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/c5e8748bc2.js" crossorigin="anonymous"></script>
+  <style>
+    /* Inline CSS here */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+      background: #e5e5e5c7;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    #page-content-wrapper {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    #sidebar-wrapper {
+      height: inherit;
+      -webkit-transition: margin .25s ease-out;
+      -moz-transition: margin .25s ease-out;
+      -o-transition: margin .25s ease-out;
+      transition: margin .25s ease-out;
+      background: #2A3A64;
+      width: 26rem;
+      font-size: 1.2rem;
+    }
+
+    .sidebar-heading {
+      background: #FB3F5C;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.625rem;
+      color: #2A3A64;
+      padding: 1.6rem 1.25rem;
+    }
+    
+    .sidebar-heading i {
+      display: none;
+    }
+
+    .list-group ul {
+      list-style: none;
+    }
+
+    .list-item-heading {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: #ffffffb3;
+      padding: 2.3rem 2.5rem .05rem;
+    }
+
+    .list-item {
+      position: relative;
+      display: flex;
+      padding: .8rem 3rem;
+      background-color: #2A3A64;
+      color: #E1E1E1;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.375rem;
+      text-decoration: none;
+    }
+
+    .first-item {
+      margin-top: 3.65rem;
+    }
+
+    .list-item:hover, .list-item:active {
+      background: #282761b3;
+      text-decoration: none;
+      color: #e1e1e19c;
+    }
+
+    .navbar {
+      padding: .7rem 1rem;
+    }
+
+    .nav-item {
+      align-self: center;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: #2A3A64;
+    }
+
+    .nav-item i {
+      display: none;
+    }
+
+    .title-bar {
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: #2A3A64;
+      padding: 1.5rem 2rem;
+    }
+
+    .subtitle-bar {
+      position: relative;
+      display: flex;
+      margin-bottom: 4.5rem;
+    }
+
+    .subtitle-bar-heading {
+      align-self: center;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: #2A3A64;
+    }
+
+    .container-fluid {
+      padding: .75rem .75rem 0 .75rem;
+    }
+
+    .list-wrapper {
+      padding: 2rem 4rem;
+      background: #ffffff;
+    }
+
+    .list-box {
+      padding: 1.5rem 4rem 1.5rem 0;
+    }
+
+    .c-white {
+      color: #E1E1E1;
+    }
+
+    .c-black {
+      color: #000000;
+    }
+
+    .bg-white {
+      background: #ffffff;
+    }
+
+    .export-br {
+      box-sizing: border-box;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 1.125rem;
+      color: #A6A6A6;
+    }
+
+    .btn-outline-secondary:hover {
+      color: #A6A6A6;
+      background-color: transparent;
+      border-color: #A6A6A6;
+    }
+
+    .btn-outline-secondary:active {
+      color: #A6A6A6;
+      background-color: transparent;
+      border-color: #A6A6A6;
+    }
+
+    img {
+      border: 0px;
+      margin-right: 0.5rem;
+    }
+
+    .input-group-text {
+      background: #ffffff;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+
+    .form-control {
+      border-left: 0;
+    }
+
+    .table-borderless {
+      margin-bottom: 4rem;
+    }
+
+    .table-sort {
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: #CACACA;
+    }
+
+    .table-options {
+      font-weight: 500;
+      font-size: 1.375rem;
+      color: #2A3A64;
+    }
+
+    .table-values td, .page-num {
+      font-weight: 500;
+      font-size: 1.375rem;
+      color: #A6A6A6;
+    }
+
+    .table-footer {
+      display: flex;
+      align-items: center;
+    }
+
+    .page-sort {
+      display: flex;
+      align-items: center;
+      background: #F1F2F7;
+      font-weight: 500;
+      font-size: 1.125rem;
+      color: #A6A6A6;
+      padding: .35rem .65rem;
+    }
+
+    .page-sort span {
+      padding-right: 1rem;
+    }
+
+    .page-num {
+      padding-left: .5rem;
+    }
+
+    @media only screen and (max-width: 992px) {
+      .navbar-nav {
+        flex-direction: row;
+        margin-right: 0;
+      }
+
+      #sidebar-wrapper {
+        margin-left: 0;
+        width: 20rem;
+        font-size: .8rem;
+      }
+
+      .list-item {
+      font-size: 0.975rem;
+      padding: .4rem 1.5rem;
+      }
+
+      .sidebar-heading {
+        font-size: 1.125rem;
+        padding: 1rem;
+      }
+      .nav-item {
+        font-size: 1.1rem;
+      }
+      .title-bar {
+        font-size: 1.1rem;
+      }
+      .subtitle-bar-heading {
+        font-size: 1.1rem;
+      }
+      .export-br {
+        font-size: .725rem;
+      }
+      .table-sort {
+        font-size: 1.1rem;
+      }
+      .table-options {
+        font-size: .75rem;
+      }
+      .table-values td, .page-num {
+        font-size: .775rem;
+      }
+      .page-sort {
+        font-size: .725rem;
+      }
+
+      .list-wrapper {
+        padding: 1.6rem 3.2rem;
+        background: #ffffff;
+      }
+
+      .list-box {
+        padding: 1.1rem 3.2rem 1.1rem 0;
+      }
+
+      #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      .navbar-nav {
+        flex-direction: row;
+        margin-right: 0;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .show {
+        margin-left: 0;
+        font-size: .65rem;
+        display: block;
+        position: absolute;
+        z-index: 1;
+      }
+      #sidebar-wrapper {
+        width: 14rem;
+        height: inherit;
+      }
+      .sidebar-heading i {
+        display: inline;
+        font-size: 1.5rem;
+        margin-left: 12%;
+      }
+
+      .nav-item i {
+        display: inline;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+      }
+
+      .list-item {
+      font-size: 0.775rem;
+      }
+
+      .sidebar-heading {
+        font-size: .85rem;
+      }
+      .nav-item {
+        font-size: 1.1rem;
+      }
+      .title-bar {
+        font-size: 1.1rem;
+      }
+      .subtitle-bar-heading {
+        font-size: 1.1rem;
+      }
+      .export-br {
+        font-size: .725rem;
+      }
+      .exp {
+        display: none;
+      }
+      .table-sort {
+        font-size: 1.1rem;
+      }
+      .table-options {
+        font-size: .75rem;
+      }
+      .table-values td, .page-num {
+        font-size: .775rem;
+      }
+      .page-sort {
+        font-size: .725rem;
+      }
+
+      .list-wrapper {
+        padding: 1rem 1rem;
+        background: #ffffff;
+      }
+
+      .list-box {
+        padding: 1rem 2rem 1rem 0;
+      }
+      #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="border-right hide" id="sidebar-wrapper">
+      <div class="sidebar-heading">
+        FundMy<span class="c-white">Laptop </span><span>&nbsp;&nbsp;<<< </span>
+        <i class="far fa-times-circle" id="sidebar-close"></i>
+      </div>
+      <div class="list-group">
+        <ul>
+          <li><a href="#" class="list-item first-item"><img src='https://bit.ly/2V3zhpw' width=33px height=30px />Dashboard</a></li>
+          <li><a href="#" class="list-item"><img src='https://bit.ly/2V0YK33' width=33px height=30px />Manage Users</a></li>
+        </ul>
+        <ul>
+          <p class="list-item-heading">Requests</p>
+          <li><a href="#" class="list-item"><img src='https://bit.ly/3euko7i' width=33px height=30px />View Requests</a></li>
+          <li><a href="#" class="list-item"><img src='https://bit.ly/2zMqHEi' width=33px height=30px />Review Requests</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg bg-white border-bottom">
+        <div class="navbar-nav ml-auto div-nav">
+          <li class="nav-item" id="sidebar-show"><i class="fas fa-bars"></i></li>
+          <li class="nav-item"><img src='https://bit.ly/2Br6t3f' width=42px height=38px /></li>
+          <li class="nav-item"><img src='https://bit.ly/3ejvGLQ' width=28px height=24px /></li>
+          <li class="nav-item">
+            <span>Hi, Alabi Samuel Seun <span class="sr-only">(current)</span></span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><img src='https://bit.ly/2NeJ8od' width=58px height=50px /></a>
+          </li>
+        </div>
+      </nav>
+
+      <div class="title-bar navbar-expand-lg bg-white">
+        <span>Requests</span>
+      </div>
+
+      <div class="container-fluid">
+
+        <div class="list-wrapper">
+          <div class="subtitle-bar navbar-expand-lg bg-white">
+            <span class="subtitle-bar-heading">
+              <img src='https://bit.ly/3ejW3RA' width=48px height=43px />
+              Completed Requests
+            </span>
+            <button class="btn btn-outline-secondary ml-auto mt-2 mt-lg-0 export-br">
+              <img src='https://bit.ly/2zLTvwD' width=26px height=24px />
+              <span class="exp">Export</span>
+              <img src='https://bit.ly/2NcQJUl' width=26px height=24px class="exp" />
+            </button>
+            <hr color="#0000004d"/>
+          </div>
+          <div class="list-box">
+            <table class="table table-borderless bg-white">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><img src='https://bit.ly/30ZahUj' width=26px height=24px /></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                  </th>
+                  <th scope="col"><span class="table-sort">Status </span><span class="table-options">All </span></th>
+                  <th scope="col"><img src='https://bit.ly/2Nds0iD' width=26px height=24px /><span class="table-sort">Type </span><span class="table-options">All </span></th>
+                </tr>
+              </thead>
+            </table>
+            <table class="table bg-white table-responsive">
+              <thead>
+                <tr>
+                  <th scope="col">&nbsp;</th>
+                  <td scope="col"><span class="table-options"># </span><span class="c-black">*</span></td>
+                  <td scope="col"><span class="table-options">Request Name</span></td>
+                  <td scope="col"><span class="table-options">Request Type</span></td>
+                  <td scope="col"><span class="table-options">Amount</span></td>
+                  <td scope="col"><span class="table-options">Status</span></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-values">
+                  <th scope="row"><img src='https://bit.ly/3eiu6K7' width=26px height=24px /></th>
+                  <td>1</td>
+                  <td>John Doe</td>
+                  <td>Repair</td>
+                  <td>#2000</td>
+                  <td>Verified</td>
+                </tr>
+                <tr class="table-values">
+                  <th scope="row"><img src='https://bit.ly/3eiu6K7' width=26px height=24px /></th>
+                  <td>2</td>
+                  <td>John Doe</td>
+                  <td>Purchase</td>
+                  <td>#40000</td>
+                  <td>Unverified</td>
+                </tr>
+                <tr class="table-values">
+                  <th scope="row"><img src='https://bit.ly/3eiu6K7' width=26px height=24px /></th>
+                  <td>3</td>
+                  <td>John Doe</td>
+                  <td>Purchase</td>
+                  <td>#12000</td>
+                  <td>Unverified</td>
+                </tr>
+                <tr class="table-values">
+                  <th scope="row"><img src='https://bit.ly/3eiu6K7' width=26px height=24px /></th>
+                  <td>4</td>
+                  <td>John Doe</td>
+                  <td>Repair</td>
+                  <td>#2000</td>
+                  <td>Verified</td>
+                </tr>
+                <tr class="table-values">
+                  <th scope="row"><img src='https://bit.ly/3eiu6K7' width=26px height=24px /></th>
+                  <td>5</td>
+                  <td>John Doe</td>
+                  <td>Purchase</td>
+                  <td>#12000</td>
+                  <td>Unverified</td>
+                </tr>
+                <tr class="table-values">
+                  <th scope="row"><img src='https://bit.ly/3eiu6K7' width=26px height=24px /></th>
+                  <td>6</td>
+                  <td>John Doe</td>
+                  <td>Repair</td>
+                  <td>#2000</td>
+                  <td>Unverified</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="table-footer bg-white">
+              <span class="page-sort"><span>10 </span><img src='https://bit.ly/3djMyAA' width=16px height=14px /></span>
+              <span class="page-num">Showing 1-5 of 5</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Menu Toggle Script -->
+  <script>
+    let menu = document.getElementById('sidebar-show')
+    let side = document.getElementById('sidebar-wrapper')
+    let close = document.getElementById('sidebar-close')
+
+    menu.addEventListener('click', (e) => {
+      e.preventDefault();
+      side.classList.add('show')
+    })
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      side.classList.remove('show')
+    })
+
+  </script>
+
+</body>
+</html>

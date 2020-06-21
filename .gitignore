@@ -1,7 +1,6 @@
 .cache/
 coverage/
 dist/*
-!dist/index.html
 # dependencies
 node_modules
 
