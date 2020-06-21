@@ -1,3 +1,5 @@
+import 'bootstrap'
+import 'fontawesome'
 import FundMyLaptop from '~/libs/fundmylaptop'
 import store from '~/store'
 import router from '~/router'
