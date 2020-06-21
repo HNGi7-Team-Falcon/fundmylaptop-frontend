@@ -12,24 +12,31 @@
 <style>
     /* No boostrap, just css */
         /* 80 minu the tops */
-
+html, body {
+        max-width: 100%;
+}
  body{
+        padding: 0;
+        margin: 0;
+        border: 0; 
          font-family: 'DM Sans', sans-serif;
          }
-
+#left-side{
+        display: flex;
+        flex-wrap: wrap;
+}
 .name{
         position: absolute;
         width: 80%;
         height: 70px;
         left: 140px;
-        top: 80px;
+        top: 120px;
         /* 180 */
         font-family: DM Sans;
         font-style: normal;
         font-weight: bold;
-        font-size: 54px;
-        line-height: 70px;
-
+        font-size: 42px;
+        line-height: 45px;
         color: #04172A;
     }
 
@@ -40,26 +47,23 @@
         height: 31px;
         left: 140px;
         top: 186px;
-        /* 266 */
         font-style: normal;
         font-weight: normal;
-        font-size: 24px;
-        line-height: 31px;
-
+        font-size: 20px;
+        line-height: 28px;
         color: #04172A;
-
      }
 
 .date{
         position: absolute;
         width: 60%;
         height: 31px;
-        left: 551px;
+        left: 571px;
         top: 186px;
         font-style: normal;
         font-weight: 500;
-        font-size: 24px;
-        line-height: 31px;
+        font-size: 20px;
+        line-height: 28px;
         color: #04172A;
     }
 
@@ -86,8 +90,9 @@
         margin-left: 270px;
     }
 
-
 .right-side{
+        display: flex;
+        flex-wrap: wrap;
         position: absolute;
         width: 400px;
         height: 513px;
@@ -95,7 +100,6 @@
         top: 257px;
         right: 550px;
         bottom: 340px;
-        /* border: 2px dashed red; */
         background: #FFFFFF;
         border: 1px solid rgba(4, 23, 42, 0.25);
         box-sizing: border-box;
@@ -108,11 +112,10 @@
         height: 47px;
         left: 20px;
         top: 3px;
-        font-family: DM Sans;
         font-style: normal;
-        font-weight: 500;
-        font-size: 36px;
-        line-height: 47px;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 57px;
         color: #04172A;
     }
 
@@ -121,7 +124,7 @@
         width: 392px;
         height: 48px;
         left: 850px;
-        top: 350px;
+        top: 340px;
         box-sizing: border-box;
         border-radius: 5px;
     }
@@ -136,20 +139,21 @@ input[type=text], select {
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
+        font-size: 14px;
     }
   
   button {
         width: 100%;
-        background-color: #4CAF50;
         color: white;
         padding: 14px 20px;
-        margin: 8px 0;
+        margin: 25px 0;
         border: none;
         border-radius: 4px;
         cursor: pointer;
         font-weight: 500;
-        font-size: 32px;
-        line-height: 42px;
+        font-size: 25px;
+        line-height: 35px;
+        text-align: left;
     }
   
   button {
@@ -167,7 +171,6 @@ input[type=text], select {
 
   .form .form1{
          margin: -20px;
-      
     }
 
 .loan{
@@ -185,8 +188,7 @@ input[type=text], select {
         width: 376px;
         height: 120px;
         left: 140px;
-        top: 705px;
-
+        top: 685px;
         background: #FFFFFF;
         border: 1px solid rgba(4, 23, 42, 0.25);
         box-sizing: border-box;
@@ -198,7 +200,7 @@ input[type=text], select {
         width: 278px;
         height: 120px;
         left: 532px;
-        top: 705px;
+        top: 685px;
         background: #FFFFFF;
         border: 1px solid rgba(4, 23, 42, 0.25);
         box-sizing: border-box;
@@ -215,14 +217,12 @@ input[type=text], select {
         width: 108px;
         height: 31px;
         left: 140px;
-        top: 849px;
-
+        top: 819px;
         font-family: DM Sans;
         font-style: normal;
         font-weight: 500;
-        font-size: 24px;
-        line-height: 31px;
-
+        font-size: 20px;
+        line-height: 28px;
         color: #000000;
     }
 
@@ -231,7 +231,7 @@ input[type=text], select {
         width: 670px;
         height: 128px;
         left: 140px;
-        top: 913px;
+        top: 883px;
         overflow: hidden;
         background: #FFFFFF;
         border: 1px solid rgba(4, 23, 42, 0.5);
@@ -247,26 +247,26 @@ input[type=text], select {
         top: 27px;
         margin-right: 7px;
         margin-top:  -25px;
-        /* overflow: hidden; */
-
-        /* background: url(48m.jpg); */
    }
 
 #next{
-        margin-left: 230px;
+        margin-left: 240px;
+    }
+.next{
+        margin-left: 170px;
+        font-size: 13px;
     }
 .description-title{
     position: absolute;
     width: 128px;
     height: 26px;
     left: 141px;
-    top: 1080px;
+    top: 1030px;
     font-family: DM Sans;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 26px;
-    /* identical to box height */
     color: #04172A;
 }
 
@@ -275,13 +275,12 @@ input[type=text], select {
     width: 670px;
     height: 288px;
     left: 140px;
-    top: 1115px;
+    top: 1080px;
     font-family: DM Sans;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 36px;
-    /* or 180% */
+    font-size: 18px;
+    line-height: 30px;
     color: #000000;
 }
 
@@ -290,16 +289,12 @@ input[type=text], select {
     width: 163px;
     height: 47px;
     left: 140px;
-    top: 1450px;
-
+    top: 1350px;
     font-family: DM Sans;
     font-style: normal;
     font-weight: bold;
-    font-size: 36px;
-    line-height: 47px;
-    /* identical to box height */
-
-
+    font-size: 28px;
+    line-height: 38px;
     color: #04172A;
 }
 
@@ -309,24 +304,74 @@ input[type=text], select {
     width: 178px;
     height: 72px;
     left: 632px;
-    top: 1450px;
+    top: 1320px;
     border: 2px solid #FB3F5C;
+    background-color: white;
     box-sizing: border-box;
     border-radius: 10px;
+    color: #FB3F5C;
+    text-align: center;
+   
 }
 
 #cycle{
     position: absolute;
-    left: 330px;
+    left: 276px;
     right: 8.33%;
-    top: 1492px; 
+    top: 1382px; 
     bottom: 41.62%;
 }
-    </style>
+
+ /* Responsive-design */
+ /* @media (max-width: 1024px){
+        
+    #left-side{
+        padding-right: 50px;
+         margin-top: 0;
+       margin-left: 50px;
+      width: 80%;
+     text-align: center;
+    }
+.right{
+    padding-right: 50px;
+         margin-top: 0;
+       margin-left: 50px;
+      width: 80%;
+     text-align: center;
+}
+.bottom{
+    padding-right: 50px;
+         margin-top: 0;
+       margin-left: 50px;
+      width: 80%;
+     text-align: center;
+}
+
+.name{
+    display: flex;
+    justify-content: center;   
+}
+ .description-info{
+        margin-top: 190px;
+                    margin-bottom: 30px;
+                    text-align: center;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #FB3F5C;
+
+    }
+    
+    
+
+
+ } */
+
+
+</style>
 
 </head>
 
 <body>
+<div id="left-side">
     <div>
         <h1 class="name">John Doe</h1>
         <p class="purpose">Purpose: Laptop Purchase</p>
@@ -337,13 +382,16 @@ input[type=text], select {
         <img src="https://i.ibb.co/XWbGcwX/vd-logo.png" alt="" srcset="" class="vd-logo1">
         <img src="https://i.ibb.co/LSxsPMd/vd-logo1.png" alt="" srcset="" class="vd-logo2">
     </div>
+</div>
+   
 
     <!-- right side -->
+  <div class="right">
     <div class="right-side">
         <h3 class="bid">Place a bid</h3>
     </div>
     <div class="form">
-        <form action="#">
+    <form action="#">
             <div class="form1">
                 <label for="interest-rate">Interest Rate*</label>
                 <select class="loan" name="interest" aria-placeholder="Select an interest rate">
@@ -367,46 +415,54 @@ input[type=text], select {
               <option value="australia">Select a type</option>
               <option value="canada">Medium term</option>
               <option value="usa">Long term</option>
-            </select>
-          
+            </select> 
         </div>
-        <button type="submit" value="Submit">Place a bid</button>
+        <button type="submit" value="Submit">Place a bid
+            <i class="fas fa-chevron-right next" class="next"></i>
+        </button>
           <!-- <input type="submit" value="Submit"> -->
         </form>
       </div>
 
-      <div class="down-side">
-          <div class="need">
-              <p class="asset">Needs</p>
-              <h2 class="need-has">N 360,000</h2>
-          </div>
-          <div class="has">
-              <p class="asset">Has</p>
-              <h2 class="need-has">5 Bidders</h2>
-          </div>
+  </div>  
 
-      </div>
-      <!-- vouchers  -->
-      <div>
-          <h3 class="voucher-title">Vouchers</h3>
-          <div class="voucher-line">
-              <img src="https://i.ibb.co/m4zFQCc/voucher.png" alt="" sizes="" class="voucher">
-              <img src="https://i.ibb.co/m4zFQCc/voucher.png" alt="" sizes="" class="voucher">
-              <img src="https://i.ibb.co/m4zFQCc/voucher.png" alt="" sizes="" class="voucher">
-              <img src="https://i.ibb.co/m4zFQCc/voucher.png" alt="" sizes="" class="voucher">
-              <i class="fas fa-chevron-right next" id="next"></i>
-              <!-- <i class="fas fa-chevron-right prev" ></i> -->
-          </div>
-      </div>
-      <div class="description">
-          <h3 class="description-title"> DESCRIPTION</h3>
-          <p class="description-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in nisi quis justo pharetra egestas. In hac habitasse platea dictumst. Integer ultrices est eu elit dignissim, sit amet semper tellus semper. Sed ultricies finibus tempor. Pellentesque ornare consequat risus, vitae pellentesque ipsum rhoncus placerat. Proin ultrices lacinia maximus. Donec luctus lorem nisi. Aliquam in urna vitae tellus elementum commodo. Proin tincidunt ante arcu, lacinia interdum felis accumsan id. Donec quis nibh nec justo bibendum porta eget nec tellus. Aliquam accumsan semper erat.</p>
-      </div>
-        <div>
-            <h1 class="sign-name">John Doe</h1>
-            <i class="fa fa-check-circle" id="cycle" aria-hidden="true"></i>
+  <div class="bottom"> 
+    <div class="down-side">
+        <div class="need">
+            <p class="asset">Needs</p>
+            <h2 class="need-has">N 360,000</h2>
         </div>
-        <button class="sign-button">Contact</button>
+        <div class="has">
+            <p class="asset">Has</p>
+            <h2 class="need-has">5 Bidders</h2>
+        </div>
+    </div>
+    <!-- vouchers  -->
+    <div>
+        <h3 class="voucher-title">Vouchers</h3>
+        <div class="voucher-line">
+            <img src="https://i.ibb.co/m4zFQCc/voucher.png" alt="" sizes="" class="voucher">
+            <img src="https://i.ibb.co/m4zFQCc/voucher.png" alt="" sizes="" class="voucher">
+            <img src="https://i.ibb.co/m4zFQCc/voucher.png" alt="" sizes="" class="voucher">
+            <img src="https://i.ibb.co/m4zFQCc/voucher.png" alt="" sizes="" class="voucher">
+            <i class="fas fa-chevron-right next" id="next"></i>
+            <!-- <i class="fas fa-chevron-right prev" ></i> -->
+        </div>
+    </div>
+    <div class="description">
+        <h3 class="description-title"> DESCRIPTION</h3>
+        <p class="description-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in nisi quis justo pharetra egestas. In hac habitasse platea dictumst. Integer ultrices est eu elit dignissim, sit amet semper tellus semper. Sed ultricies finibus tempor. Pellentesque ornare consequat risus, vitae pellentesque ipsum rhoncus placerat. Proin ultrices lacinia maximus. Donec luctus lorem nisi. Aliquam in urna vitae tellus elementum commodo. Proin tincidunt ante arcu, lacinia interdum felis accumsan id. Donec quis nibh nec justo bibendum porta eget nec tellus. Aliquam accumsan semper erat.</p>
+    </div>
+      <div>
+          <h1 class="sign-name">John Doe</h1>
+          <i class="fa fa-check-circle" id="cycle" aria-hidden="true"></i>
+      </div>
+      <button class="sign-button">Contact</button>
+  </div>
+  
+     <script>
+
+     </script>
 
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
