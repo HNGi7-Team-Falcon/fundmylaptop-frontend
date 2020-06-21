@@ -26,8 +26,8 @@ export default class FundMyLaptop extends Component {
     window.FundMyLaptop = this
   }
 
-  async render () {
-    // const self = this
+  render () {
+    this.$router.resolve()
   }
 
   async setMeta (head, payload) {
@@ -44,11 +44,7 @@ export default class FundMyLaptop extends Component {
       content: 'Samuel Onyijne'
     }) // for test only
     if (!this.element) return
-    // set the 404 route
-    this.$router.notFound(async query => {
-      await this.loadHTML(path.resolve(__dirname, '../../pages') + '/404.html')
-    })
-    this.$router.resolve()
+    this.render()
   }
 
   async run () {
