@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/4f612514f7.js"></script>
+    <title> Profile Page&mdash; Fundee</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            padding: 0;
+            margin: 0;
+            background-color: #fff;
+            color: #04172A;
+        }
+
+
+        .row {
+            background-color: #C4C4C4;
+            padding: 1.2rem 3rem;
+            margin-bottom: 4rem;
+        }
+
+
+        .nav-items {
+           display: flex;
+           justify-content: space-between;
+        }
+
+
+        .grey-box {
+            width: 10%;
+            background-color: #E7E7E7;
+        }
+
+
+        .inner-grey-box {
+            width: 8%;
+            background-color:blue;
+        }
+
+
+        .laptop {
+            color: #FB3F5C;
+        }
+
+
+        .user-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+
+        .profile-section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+
+        .info-section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+
+        .basic-info-section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+
+        .to-dashboard {
+            width: 78%;
+            margin-top: 1rem;
+            background: #FB3F5C;
+            box-shadow: 5px 5px 25px rgba(255, 29, 114, 0.2);
+            border-radius: 10px;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 42px;
+            text-align: center;
+            margin: 0 auto;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 8px 10px;
+        }
+
+
+        .heading-primary {
+            text-align: center;
+            font-size: 10px;
+            padding: 0 13.5px;
+        }
+
+
+        .fa {
+            width: 3rem;
+            height: 3rem;
+            color: #FB3F5C;
+            font-size: 1.5rem;
+            margin-top: 20px;
+            padding: 0 8px;
+        }
+
+
+        .edit-profile {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+
+        .bottom-section {
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+
+        .heading-tertiary {
+            color: #FB3F5C;
+        }
+
+
+
+        @media only screen and (min-width: 560px) {
+            .top-section {
+                display: flex;
+                width: 72%;
+                margin: 0 auto;
+                text-align: center;
+            }
+            
+            .to-dashboard {
+                width: 57%;
+                height: 20%;
+                margin-top: 2rem;
+                margin-left: 2rem;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            
+            .user-profile {
+                display: flex;
+            }
+
+
+            .profile-section {
+                width: 100%;
+        }
+
+
+            .phone {
+                display: flex;
+            }
+
+
+            .address {
+                display: flex;
+            }
+
+
+            .email {
+                display: flex;
+            }
+
+
+            .site {
+                display: flex;
+            }
+
+
+            .one {
+                width: 30%;
+                text-align: left;
+                margin-left: 10rem;
+            }
+
+
+            .two {
+                width: 30%;
+                text-align: left;
+            }
+
+
+            .about {
+                margin-bottom: 4rem;
+            }
+
+
+            .contact {
+                text-align: center;
+            }
+
+
+            .bottom-section {
+                display: flex;
+            }
+
+
+            .heading-primary {
+                text-align: center;
+                font-size: 14px;
+                padding: 0 13.5px;
+            }
+        }
+        
+        @media only screen and (min-width: 1140px) {
+            .nav {
+                font-family: DM Sans;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 40px;
+                line-height: 52px;
+            }
+
+
+            .laptop {
+                font-family: DM Sans;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 40px;
+                line-height: 52px;
+            }
+            .profile-section {
+                padding: 2rem;
+                margin: 0 auto;
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+
+
+            .top-section {
+                display: flex;
+                width: 50%;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+
+            .info-section {
+                padding: 2rem;
+            }
+
+
+            .basic-info-section {
+                padding: 2rem;
+                margin-top: -6rem;
+            }
+
+
+            .user-profile {
+                display: flex;
+                width: 100%;
+            }
+
+
+            .to-dashboard {
+                width: 50%;
+                margin-top: 2.5rem;
+                background: #FB3F5C;
+                box-shadow: 5px 5px 25px rgba(255, 29, 114, 0.2);
+                border-radius: 10px;
+                color: #ffffff;
+                font-weight: 500;
+                font-size: 26px;
+                line-height: 42px;
+                padding: 1rem;
+                margin-right: 1.5rem;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+
+            .profile-details {
+                padding-left: 18px;
+            }
+
+
+            .about {
+                margin: 0 auto;
+                text-align: center;
+                width: 80%;
+                margin-left: 24rem;
+            }
+
+
+            .contact {
+                margin-right: 19rem;
+            } 
+
+
+            .about-text {
+                width: 75%;
+                margin-left: 5rem; 
+                text-align: left;
+            }
+
+
+            .info-container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+
+            .user-img {
+                width: 200px;
+                height: 200px;
+            }
+
+
+            .heading-primary {
+                margin-left: -33rem;
+                margin-bottom: 2rem;
+                font-size: 16px;
+            }
+            .phone {
+                display: flex;
+            }
+
+
+            .address {
+                display: flex;
+            }
+
+
+            .email {
+                display: flex;
+            }
+
+
+            .site {
+                display: flex;
+            }
+
+
+            .one {
+                width: 50%;
+                margin-left: 2ren;
+                margin-right: 2rem;
+            }
+
+
+            .two {
+                width: 50%;
+                margin-left: 2ren;
+                margin-right: 2rem;
+            }
+
+
+            .heading-secondary {
+                margin-left: -9.5rem;
+                font-size: 24px;
+                text-transform: uppercase;
+            }
+
+
+            .about-heading {
+                font-size: 24px;
+                text-transform: uppercase;
+                margin-right: 17.5rem;
+            }
+
+
+            .info {
+                width: 50%;
+                margin-left: 27.5rem;
+            }
+
+
+            .edit-profile {
+                width: 50%;
+                margin-right: 30rem;
+            }
+
+
+            .dob {
+                display: flex;
+
+
+            }
+            
+            .gender {
+                display: flex;
+            }
+
+
+            .mini-info {
+                width: 20%;
+                margin-left: 12.5px;
+            }
+
+
+            .sub-info {
+                width: 20%;
+                margin-left: 12.5px;
+            }
+
+
+            .contact-section {
+                margin-right: 12rem;
+            }
+
+
+            .basic {
+                margin-right: 41.8rem;
+                font-size: 24px;
+                text-transform: uppercase;
+            }
+
+
+            .basic-info {
+                display: flex;
+               
+            }
+
+
+            .bottom-section {
+                display: flex;
+            }
+
+
+            .username {
+                font-size: 32px;
+            }
+
+
+            .user-track {
+                font-size: 22px;
+                margin-left: 3px;
+            }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="nav-items">
+                <nav class="nav">FundMy<span class="laptop">Laptop</span></nav>
+                <div class="grey-box"><div class="inner-grey-box"></div></div>
+            </div>
+        </div>
+        <main>
+            <section class="profile-section">
+                <div class="top-section">
+                    <div class="user-profile">
+                        <img src="https://res.cloudinary.com/dppmnzbtx/image/upload/v1592571663/Ellipse_10.jpg" class="user-img" alt="user-image" />
+                        <div class="profile-details">
+                            <h2 class="username">John Doe</h2>
+                            <p class="user-track">Frontend Developer</p>
+                        </div>
+                    </div>
+                    <a href="fundee-dashboard.html" class="to-dashboard">Go to Dashboard</a>
+                </div>
+            </section>
+            <div class="heading-primary"><h1>5 successful repayments</h1></div>
+            <section class="info-section">
+                <div class="info-container">
+                    <div class="about">
+                        <h1 class="about-heading">About</h1>
+                        <p class="about-text">I am a proactive, diligent, honest, hardworker with passion for web development. I have over 5 year cummulative experience working in a fintech company in Lagos State, Nigeria.
+                            I like to play football and sing.</p>
+                    </div>
+                    <div class="contact-section">
+                        <h1 class="heading-secondary">Contact Information</h1>
+                        <div class="contact">
+                            <div class="phone">
+                                <p class="one">Phone:</p>
+                                <p class="two">+2340000987654</p>
+                            </div>
+                            <div class="address">
+                                <p class="one">Address:</p>
+                                <p class="two">16, Brimestone Street, Mile 2 road, Lagos State</p>
+                            </div>
+                            <div class="email">
+                                <p class="one">Email:</p>
+                                <p class="two">jaysreel345@gmail.com</p>
+                            </div>
+                            <div class="site">
+                                <p class="one">Site:</p>
+                                <p class="two">johndoe.com</p>
+                            </div>
+                        </div>
+                  </div>
+                </div>
+            </section>
+            <section class="basic-info-section">
+                <h1 class="basic">Basic Information</h1>
+                    <div class="basic-info">
+                        <div class="info">
+                            <div class="dob">
+                                <p class="mini-info">Birthday</p>
+                                <p class="sub-info">June 5, 1996</p>
+                            </div>
+                            <div class="gender">
+                                <p class="mini-info">Gender</p>
+                                <p class="sub-info">Male</p>
+                            </div>
+                        </div>
+                        <div class="edit-profile">
+                            <div class="bottom-section">
+                                <h3 class="heading-tertiary">Edit profile</h3>
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                     </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
