@@ -93,7 +93,7 @@
             margin: 0 5px;
         }
         .form{
-		    width:550px;
+		    width:540px;
             margin-top: 100px;
             padding-left: 10%;
         }
@@ -153,6 +153,12 @@
 		    margin:0 -20px 0 10px;
 		}
 		
+		#name .row{
+		   display:flex;
+		   justify-content:space-between;
+		   padding-right:75px;
+		}
+		
 		@media(max-width:1250px){
 		    .getLoan{
 			    margin:0 10px;
@@ -168,6 +174,10 @@
                margin-top: 100px;
                padding-left: 10%;
             }
+			
+			#name row div input{
+			    width:400px;
+			}
 		}
 		
 		@media(max-width:800px){
@@ -238,7 +248,7 @@
                        </p>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" id="name">
                     <div class="row form column">
                         <div class="col-md-3">
                             <h3>Name</h3>
@@ -248,17 +258,17 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <div class="col-md-1">
+                        <div class="col-md-3">
                             <h3>Email</h3>
                             <input class="name-input" type="text"/>
                         </div>
                     </div>
-                    <div class="form" style="margin-top:20px;">
+                    <div class="form" style="margin-top:20px">
                         <h3>Subject</h3>
                         <input class="subject-input"  type="text">
 
                     </div>
-                    <div class="form" style="margin-top:20px;">
+                    <div class="form" style="margin-top:20px">
                             <h3>Message</h3>
                             <input class="message-input" placeholder="Tell us about yourself" type="text">
                             <input class="btn" type="button" Value='Submit' />
