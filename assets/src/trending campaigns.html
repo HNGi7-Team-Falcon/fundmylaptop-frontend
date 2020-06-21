@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fund my laptop</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM Sans&display=swap" rel="stylesheet">
+    <style>
+        p{
+            font-family: 'DM Sans';
+            font-style: normal;
+        }
+        .nav-bar{
+            background: #2A3A64;
+            padding: 30px 70px;
+            display: flex;
+            flex-direction: row;
+        }
+        .nav-logo{
+            margin-left: 70px;
+        }
+        .fund{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 31px;
+            color: #000000;
+        }
+
+        .laptop{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 31px;
+            color: #FB3F5C;
+        }
+        .profile-name{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 31px;
+            color: #FFFFFF;
+            margin-right: 26px;
+        }
+        .profile-details{
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+        }
+        .trending-campaigns{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 31px;
+            color: #FFFFFF;
+            margin-right: 42px;
+            margin-left: 70px;
+        }
+        .input-search-bar{
+            box-shadow: 0px 4px 4px rgba(221, 221, 238, 0.25), inset 0px 4px 4px rgba(221, 221, 238, 0.25);
+            border-radius: 10px;
+            border: none;
+            width: 372px;
+            height: 40px;
+            padding: 10px 50px;
+        }
+        .search-bar {
+            position: relative;
+            align-self: center;
+        }
+
+        .search-bar .icon {
+            cursor: pointer;
+            position: absolute;
+            top: 47%;
+            left: 0;
+            transform: translateY(-50%);
+            padding: 13px 15px 13px 11px;
+        }
+        .input-select{
+            background: #FFFFFF;
+            border-radius: 10px;
+            width: 250px;
+            height: 60px;
+            padding: 5px 18px;
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: bold;
+            text-align: center;
+            color: #000000;
+            margin-left: 92px;
+            font-size: 18px;
+        }
+        ::placeholder{
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 31px;
+            color: rgba(0, 0, 0, 0.25);
+        }
+        .trend-search{
+            display: flex;
+            flex-direction: row;
+            background: #2A3A64;
+            padding: 30px 70px 124px;
+            align-items: center;
+        }
+        .trend-details{
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(221, 221, 238, 0.25), inset 0px 4px 4px rgba(221, 221, 238, 0.25);
+            border-radius: 10px;
+            padding: 30px 60px;
+            margin: -75px 75px;
+        }
+        .personal{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 31px;
+            margin-right: 67px;
+            border-bottom: 2px solid #6961F9;
+            color: #6961F9;
+        }
+        .commercial{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 31px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.72);
+        }
+        .tab-1{
+            display: flex;
+            flex-direction: row;
+        }
+        .tab-2{
+            display: flex;
+            flex-direction: row;
+            background: #FB3F5C;
+            border-radius: 10px;
+            padding: 30px 96px;
+        }
+        .owner1{
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 26px;
+            text-align: center;
+            color: #FFFFFF;
+            margin-right: 208px; 
+            margin-left: 150px;
+        }
+        .owner2{
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 26px;
+            text-align: center;
+            color: #FFFFFF;
+            margin-right: 50px; 
+            margin-left: 30px;
+        }
+        .owner3{
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 26px;
+            text-align: center;
+            color: #FFFFFF;
+            margin-right: 125px; 
+            margin-left: 10px;
+        }
+        .owner4{
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 26px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        .tab-3{
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(221, 221, 238, 0.25), inset 0px 4px 4px rgba(221, 221, 238, 0.25);
+            border-radius: 10px;
+            padding: 28px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 70px 0px;
+        }
+        .trend-name{
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 31px;
+            color: rgba(0, 0, 0, 0.72);
+            margin-left: 70px;
+        }
+        .trend-amount{
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 31px;
+            text-align: center;
+            color: #6C63FF;
+        }
+        .trend-amount-2{
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 31px;
+            text-align: center;
+            color: #6C63FF;
+        }
+        .trend-date{
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 31px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.72);
+        }
+        .div-date{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .invest{
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 31px;
+            color: #6C63FF;
+            text-align: right;
+            margin-top: auto;
+        }
+        .invest:hover{
+            cursor: pointer;
+            color: #FB3F5C;
+        }
+        .div-intro{
+            display: flex;
+            flex-direction: row;
+        }
+        .logo:hover, .input-select:hover{
+            cursor: pointer;
+        }
+        .personal:hover, .commercial:hover{
+            cursor: pointer;
+            border-bottom: 2px solid #6961F9;
+            color: #6961F9;
+        }
+        .btn-view-more{
+            background: #FB3F5C;
+            border-radius: 7.5px;
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 22.5px;
+            line-height: 29px;
+            color: #FFFFFF;
+            padding: 25px 50px;
+            border: none;
+        }
+        .btn-view-more:hover{
+            background: transparent;
+            color: #FB3F5C;
+            border: 2px solid #FB3F5C;
+            cursor: pointer;
+        }
+        .div-view-more{
+            text-align: right;
+        }  
+        @media (max-width: 575px) {
+            .nav-bar{
+                padding: 10px 20px;
+                flex-direction: column;
+            }
+            .nav-logo{
+                margin: 0px;
+            }
+            .profile-details{
+                flex-direction: column-reverse;
+                margin: 0;
+            }
+            .profile-dp{
+                width: 30%;
+                height: 30%;
+            }
+            .profile-name{
+                font-size: 13px;
+            }
+            .trend-search{
+                flex-direction: column;
+                padding: 20px;
+                align-items: initial;
+            }
+            .input-search-bar{
+                width: auto;
+                height: auto;
+                font-size: 12px;
+                border-radius: 3px;
+            }
+            ::placeholder{
+                font-size: 14px;
+            }
+            .trending-campaigns{
+                margin: 0;
+                font-size: 14px;
+            }
+            .input-select{
+                border-radius: 3px;
+                width: 50%;
+                height: auto;
+                padding: 5px 18px;
+                margin-left: 0px;
+                font-size: 12px;
+                margin-top: 2%;
+            }
+            .trend-details{
+                border-radius: 3px;
+                padding: 20px 20px;
+                margin: 10px 0px;
+            }
+            .search-bar {
+                align-self: initial;
+            }
+            .tab-2{
+                flex-direction: row;
+                border-radius: 3px;
+                padding: 0;
+                display: none;
+            }
+            .owner1{
+                font-weight: bold;
+                font-size: 12px;
+                margin-right: 0px; 
+                margin-left: 0px;
+            }
+            .owner2{
+                font-weight: bold;
+                font-size: 12px;
+                margin-right: 0px; 
+                margin-left: 0px;
+            }
+            .owner3{
+                font-weight: bold;
+                font-size: 12px;
+                margin-right: 0px; 
+                margin-left: 0px;
+            }
+            .owner4{
+                font-weight: bold;
+                font-size: 12px;
+                margin-right: 0px; 
+                margin-left: 0px;
+            }
+            .tab-3-img{
+                width: 30%;
+                height: 30%;
+            }
+            .tab-3{
+                padding: 20px;
+                margin: 5% 0;
+                flex-direction: column;
+                border-radius: 3px;
+            }
+            .trend-name{
+                margin: 0 0 0 5%;
+                font-size: 15px;
+            }
+            .trend-date{
+                display: none;
+            }
+            .trend-amount{
+                font-size: 14px;
+                text-align: left;
+                margin-bottom: 0;
+            }
+            .trend-amount-2{
+                display: none;
+            }
+            .invest{
+                margin: 0;
+                font-size: 15px;
+            }
+            .div-date{
+                justify-content: initial;
+            }
+            .tab-1{
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+            .personal{
+                margin: 0;
+                font-size: 20px;
+            }
+            .commercial{
+                font-size: 20px;
+                align-self: initial;
+                margin: 0;
+            }
+            .btn-view-more{
+                background: #FB3F5C;
+                border-radius: 3px;
+                font-weight: bold;
+                font-size: 14px;
+                padding: 5px 20px;
+            }
+        } 
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .nav-bar{
+                padding: 30px 50px;
+            }
+            .nav-logo{
+                margin: 0;
+            }
+            .profile-name{
+                font-size: 18px;
+            }
+            .trend-details{
+                margin: 3% 0;
+                padding: 20px;
+                border-radius: 3px;
+            }
+            .trending-campaigns{
+                margin-left: 0;
+            }
+            .trending-campaigns{
+                font-size: 15px;
+            }
+            .trend-search{
+                padding: 30px 50px;
+            }
+            .input-search-bar{
+                width: auto;
+                height: auto;
+                font-size: 12px;
+                border-radius: 3px;
+            }
+            ::placeholder{
+                font-size: 14px;
+            }
+            .input-select{
+                margin-left: 3%;
+                font-size: 14px;
+                height: auto;
+                width: auto;
+                padding: 6px 20px;
+                border-radius: 3px;
+            }
+            .tab-1{
+                justify-content: space-evenly;
+                border-radius: 3px;
+            }
+            .owner1{
+                margin: 0;
+                font-size: 14px;
+            }
+            .owner2{
+                margin: 0;
+                font-size: 14px;
+            }
+            .owner3{
+                margin: 0;
+                font-size: 14px;
+            }
+            .owner4{
+                margin: 0;
+                font-size: 14px;
+            }
+            .tab-2{
+                padding: 30px 45px;
+                justify-content: space-between;
+                border-radius: 3px;
+            }
+            .personal, .commercial{
+                margin: 24px 0;
+                font-size: 20px;
+            }
+            .div-intro{
+                flex-direction: column;
+            }
+            .tab-3-img{
+                width: 70%;
+                height: 60%;
+            }
+            .trend-name{
+                margin: 0 0 0 5%;
+            }
+            .tab-3{
+                justify-content: space-between;
+                border-radius: 3px;
+                height: 150px;
+            }
+            .trend-name{
+                font-size: 14px;
+            }
+            .div-date{
+                justify-content: initial;
+            }
+            .trend-amount, .trend-amount-2, .trend-date, .invest{
+                font-size: 15px;
+            }
+            .btn-view-more{
+                border-radius: 3px;
+                font-size: 16px;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="nav-bar">
+            <div class="nav-logo">
+                <p class="logo"><span class="fund">FundMy</span><span class="laptop">Laptop</span></p>
+            </div>
+            <div class="profile-details">
+                <p class="profile-name">Hi Jane Micheal</p>
+                <img src="https://res.cloudinary.com/splendid/image/upload/v1592693278/navbar-dp_vigpxx.png" alt="" class="profile-dp">
+            </div>
+        </div>
+        <div class="trend-search">
+            <p class="trending-campaigns">Trending Campaigns</p>
+            <div class="search-bar">
+                <i class="icon fa fa-search"></i>
+                <input type="text" placeholder="Search" class="input-search-bar">
+            </div>
+            <select id="otions" class="input-select">
+                <option value="default"><p>All Campaigns</p></option>
+            </select>
+        </div>
+        <div class="trend-details">
+            <div class="tab-1">
+                <p class="personal">PERSONAL</p>
+                <p class="commercial">COMMERCIAL</p>
+            </div>
+            <div class="tab-2">
+                <p class="owner1">OWNER</p>
+                <p class="owner2">AMOUNT RAISED SO FAR</p>
+                <p class="owner3">GOAL</p>
+                <p class="owner4">DURATION</p>
+            </div>
+            <div class="tab-3">
+                <div class="div-intro">
+                    <img src="https://res.cloudinary.com/splendid/image/upload/v1592693279/silver-fox_knmmbv.png" alt="" class="tab-3-img">
+                    <p class="trend-name">SILVER FOX <br>Web Developer</p>
+                </div>
+                <p class="trend-amount">$1,000</p>
+                <p class="trend-amount-2">$3,000</p>
+                <div class="div-date">
+                    <p class="trend-date">JAN 15 - 29</p>
+                    <p class="invest">Invest</p>
+                </div>
+            </div>
+            <div class="tab-3">
+                <div class="div-intro">
+                    <img src="https://res.cloudinary.com/splendid/image/upload/v1592693280/jane-michael_j5n7ey.png" alt="" class="tab-3-img">
+                    <p class="trend-name">JANE MICHEAL <br> UI/UX Designer <br> Singer</p>
+                </div>
+                <p class="trend-amount">$1,000</p>
+                <p class="trend-amount-2">$3,000</p>
+                <div class="div-date">
+                    <p class="trend-date">JAN 15 - 29</p>
+                    <p class="invest">Invest</p>
+                </div>
+            </div>
+            <div class="tab-3">
+                <div class="div-intro">
+                    <img src="https://res.cloudinary.com/splendid/image/upload/v1592693278/james-brown_ufrzpd.png" alt="" class="tab-3-img">
+                    <p class="trend-name">JAMES BROWN <br> Graphics Designer <br> Dancer <br> Singer</p>
+                </div>
+                <p class="trend-amount">$1,000</p>
+                <p class="trend-amount-2">$3,000</p>
+                <div class="div-date">
+                    <p class="trend-date">JAN 15 - 29</p>
+                    <p class="invest">Invest</p>
+                </div>
+            </div>
+            <div class="tab-3">
+                <div class="div-intro">
+                    <img src="https://res.cloudinary.com/splendid/image/upload/v1592693279/anita-harvey_sbdu7f.png" alt="" class="tab-3-img">
+                    <p class="trend-name">ANITA HARVEY <br> Backend Developer <br> Chef Artist</p>
+                </div>
+                <p class="trend-amount">$1,000</p>
+                <p class="trend-amount-2">$3,000</p>
+                <div class="div-date">
+                    <p class="trend-date">JAN 15 - 29</p>
+                    <p class="invest">Invest</p>
+                </div>
+            </div>
+            <div class="div-view-more">
+                <button class="btn-view-more">View more</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://kit.fontawesome.com/60e1caed46.js" crossorigin="anonymous"></script>
+</body>
+</html>
