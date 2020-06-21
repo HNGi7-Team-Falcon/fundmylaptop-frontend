@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>fundmylaptop| Admin</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+.navbar-nav{
+    font-size: 1.2rem !important;
+}
+.navbar-nav .nav-item{
+    margin-right: 3rem !important;
+}
+.active >.nav-link{
+    color: #FB3F5C !important;
+}
+.form-inline .btn-link{
+    font-size: 1.2rem !important;
+    color: #FB3F5C !important;
+}
+.wrapper{
+    background-color:  rgba(4, 23, 42, 0.05);
+    margin-top: 5vh;
+}
+.side-bar{
+    position: fixed;
+    height: 160vh !important;
+        /* top: 0; */
+        /* bottom: 0; */
+        /* left: 0; */
+    z-index: 100;
+    padding: 2rem 2rem 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1); 
+    background-color: #2A3A64;
+}
+.side-bar ul{
+    color: #E1E1E1;
+}
+.content{
+    /* margin-top: 1rem; */
+    margin-left: 18rem;
+    height: auto;
+    padding: 2rem;
+}
+.side-barNav {
+    flex-direction: column;
+}
+.nav-link{
+    padding: 0 !important;
+}
+.side-bar ul li a{
+    color: #E1E1E1;
+    font-size: 1rem ;
+    /* margin-top: 1rem; */
+}
+.side-bar ul li{
+   padding: 1rem 1rem;
+}
+.side-bar ul li:hover{
+    background-color: rgba(40, 39, 97, 0.7);
+}
+.btn-primary{
+    background-color: #2A3A64 !important;
+    border: none !important;
+}
+.dropdown-item{
+    color: #2A3A64 !important;
+}
+.grid-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-content2{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-box{
+    width: 240px;
+    height: 184px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+.text-grid{
+    margin-top: 1.5rem;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+}
+.today-overview{
+    margin-top: 3rem;
+}
+.today-grid{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.today-box{
+    width: 410px;
+    height: 100px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+.today-text{
+    text-align: center;
+    font-size: 32px;
+    line-height: 6rem;
+}
+.chart-bar{
+    margin-top: 5rem;
+}
+.chart-size{
+    width: 80%;
+    height: 60vh;
+}
+footer{
+    margin-left: 5rem !important;
+}
+.footer-down{
+    margin-top: 1rem;
+}
+footer ul li{
+    list-style-type: none;
+    cursor: pointer;
+}
+.icons{
+    letter-spacing: .5rem;
+}
+.footer-link ul li{
+    display: inline;
+    padding-right: 1rem;
+}
+.active{
+    display: block;
+}
+ @media only screen and (max-width: 587px){
+.navbar{
+    padding: 0px;
+}
+.btn{
+    padding: 0 !important;
+ }
+ .navbar-nav .nav-item {
+    margin-right: 3rem !important;
+    margin-top: 1rem;
+}
+#slideBar-toogle ~ .side-bar{
+left: 0;
+}
+.side-bar{
+    position: fixed;
+    height: 160vh !important;
+        /* top: 0; */
+        /* bottom: 0; */
+    left: -250px;
+    z-index: 100;
+    padding: 2rem 2rem 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1); 
+    background-color: #2A3A64;
+}
+
+.content{
+    /* margin-top: 1rem; */
+    margin-left: 0;
+    height: auto;
+    padding: 2rem;
+}
+.grid-content{
+    /* display: grid; */
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+.grid-content2{
+    /* display: grid; */
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+.today-grid{
+    margin-top: 1rem;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+.col-md-2{
+    max-width: 25%;
+}
+.grid-box{
+    width: 270px;
+    height: 184px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+.today-box{
+    width: 270px;
+    height: 100px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+.today-text{
+    text-align: center;
+    font-size: 32px;
+    line-height: 5rem;
+}
+.chart-bar{
+    margin-top: 5rem;
+}
+.chart-size{
+    width: 100%;
+    height: 80vh;
+}
+footer{
+    margin-left: 0 !important;
+}
+.footer-link ul li{
+    display: block;
+    padding-right: 0;
+}
+}
+ @media only screen and (min-width: 768px) {
+    .navbar{
+        padding: 0px;
+    }
+    #slideBar-toogle{
+        display: none;
+    }
+    .btn{
+        padding: 0 !important;
+    }
+    .navbar-nav .nav-item {
+        margin-right: 3rem !important;
+        margin-top: 1rem;
+    }
+    .side-bar{
+        position: fixed;
+        height: 300vh;
+        /* top: 0; */
+        /* bottom: 0; */
+        /* left: 0; */
+        z-index: 100;
+        padding:  0;
+        box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1); 
+        background-color: #2A3A64;
+    }
+    .content{
+        /* margin-top: 1rem; */
+        margin-left: 12rem;
+        height: auto;
+        padding: 2rem;
+    }
+    .grid-content{
+        /* display: grid; */
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+    .grid-content2{
+        /* display: grid; */
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+    .today-grid{
+        margin-top: 1rem;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+    .col-md-2{
+        max-width: 25%;
+    }
+    .grid-box{
+        width: 500px;
+        height: 184px;
+        background-color: #FFFFFF;
+        border-radius: 5px;
+    }
+    .today-box{
+        width: 500px;
+        height: 100px;
+        background-color: #FFFFFF;
+        border-radius: 5px;
+    }
+    .chart-bar{
+        margin-top: 5rem;
+    }
+    .chart-size{
+        width: 100%;
+        height: 80vh;
+    }
+    footer{
+        margin-left: 10rem !important;
+    }
+}
+@media only screen and (min-width: 1000px){
+    .navbar{
+        padding: 0px;
+    }
+    .btn{
+        padding: .335rem .584rem !important;
+    }
+    .navbar-nav .nav-item {
+        margin-right: 3rem !important;
+        margin-top: 0;
+    }
+    .side-bar{
+        position: fixed;
+        height: 140vh !important;
+        /* top: 0; */
+        /* bottom: 0; */
+        /* left: 0; */
+        z-index: 100;
+        padding:  0;
+        box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1); 
+        background-color: #2A3A64;
+    }
+    .content{
+        /* margin-top: 1rem; */
+        margin-left: 12rem;
+        height: auto;
+        padding: 2rem;
+    }
+    .grid-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+    .grid-content2{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+    .col-md-2{
+        max-width: 20%;
+    }
+    .today-grid{
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .grid-box{
+        width: 240px;
+        height: 184px;
+        background-color: #FFFFFF;
+        border-radius: 5px;
+    }
+    .today-box{
+        width: 350px;
+        height: 100px;
+        background-color: #FFFFFF;
+        border-radius: 5px;
+    } 
+    .chart-bar{
+        margin-top: 5rem;
+    }
+    .chart-size{
+        width: 100%;
+        height: 60vh;
+    }
+    footer{
+        margin-left: 11rem;
+    }
+}
+@media only screen and (min-width: 1204px){
+    .navbar{
+        padding: 0px;
+    }
+    .btn{
+        padding: .335rem .584rem !important;
+    }
+    .navbar-nav .nav-item {
+        margin-right: 3rem !important;
+        margin-top: 0;
+    }
+    .side-bar{
+        position: fixed;
+        height: 140vh !important;
+        /* top: 0; */
+        /* bottom: 0; */
+        /* left: 0; */
+        z-index: 100;
+        padding: 2rem 2rem 0;
+        box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1); 
+        background-color: #2A3A64;
+    }
+    .content{
+        /* margin-top: 1rem; */
+        margin-left: 18rem;
+        height: auto;
+        padding: 2rem;
+    }
+    .grid-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+    .grid-content2{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+    .col-md-2{
+        max-width: 16%;
+    }
+    .today-grid{
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .grid-box{
+        width: 240px;
+        height: 184px;
+        background-color: #FFFFFF;
+        border-radius: 5px;
+    }
+    .today-box{
+        width: 410px;
+        height: 100px;
+        background-color: #FFFFFF;
+        border-radius: 5px;
+    }
+    .chart-bar{
+        margin-top: 5rem;
+    }
+    .chart-size{
+        width: 80%;
+        height: 60vh;
+    }
+}
+@media only screen and (min-width: 2500px){
+    .col-md-2{
+        max-width: 12%;
+    }
+    .content{
+        /* margin-top: 1rem; */
+        margin-left: 20rem;
+        height: auto;
+        padding: 2rem;
+    }
+    .chart-size{
+        width: 100%;
+        height: 80vh;
+    }
+    .side-bar{
+        position: absolute;
+        height: 100vh !important;
+        /* top: 0; */
+        /* bottom: 0; */
+        /* left: 0; */
+        z-index: 100;
+        padding: 2rem 2rem 0;
+        box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1); 
+        background-color: #2A3A64;
+    }
+    
+}
+    </style>
+</head>
+<body>
+    <div class="container-fluid  fixed-top flex-md-nowrap p-0 shadow bg-white">
+        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- <button class="navbar-toggler" type="button" id="slideBar-toogle">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+          <!-- <i class="fa fa-bars" id="slideBar-toogle"></i> -->
+        <a class="navbar-brand" href="#"><img src="https://res.cloudinary.com/dtmt0vas4/image/upload/v1592761491/FundMyLaptop_pbyl1c.png" alt="" srcset=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">FAQ</a>
+              </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0 ml-auto">
+            <button class="btn btn-link my-2 my-sm-0" type="submit">Invest <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+            <button class="btn btn-link my-2 my-sm-0" type="submit">Get a Loan <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+          </form>
+        </div>
+      </nav>
+</div>
+    </div>
+<!--  d-none d-md-block -->
+<div class="container-fluid wrapper">
+    <div class="row">
+        <div class="col-md-2 d-none d-md-block side-bar">
+            <ul class="nav side-barNav"  id="ul">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                      <i class="fa fa-id-card" aria-hidden="true"></i>
+                Dashboard  
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        <div class="dropdown show">
+                            <a class="btn-link dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <i class="fa fa-user" aria-hidden="true"></i>
+                         Manage Request 
+                         </a>
+                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                          </div>
+                            </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        My Investment
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        Requests
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                               <i class="fa fa-eye" aria-hidden="true"></i>
+                            View Requests
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                               <i class="fa fa-eye" aria-hidden="true"></i>
+                            Review Requests
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                               <i class="fa fa-check" aria-hidden="true"></i>
+                            Accepted Requests
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                               <i class="fa fa-times" aria-hidden="true"></i>
+                            Suspended Request
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-9 content">
+           <h1>Dasboard</h1>
+           <p>Current Stats/updated 5 hours ago</p>
+           <div class="grid-content">
+            <div class="grid-box">
+                <div class="text-grid">
+                   Active <br>
+                Request <br>
+               <span style="color: #FB3F5C; font-size: 38px;">1500 </span> 
+                </div>
+            </div>
+            <div class="grid-box" style="background-color: #FB3F5C;" >
+                <div class="text-grid" style="color: white;">
+                   Pending <br>
+                Request <br>
+               <span style="font-size: 38px;">350 </span> 
+                </div>
+            </div>
+            <div class="grid-box">
+                <div class="text-grid">
+                   Total <br>
+                Approved<br>
+               <span style="color: #FB3F5C; font-size: 38px;">500 </span> 
+                </div>
+            </div>
+           </div>
+           <div class="grid-content2">
+            <div class="grid-box">
+                <div class="text-grid">
+                   Total No of <br>
+                Funders<br>
+               <span style="color: #FB3F5C; font-size: 38px;">750 </span> 
+                </div>
+            </div>
+            <div class="grid-box" >
+                <div class="text-grid">
+                   Total No of<br>
+                Fundees <br>
+               <span style="font-size: 38px; color: #FB3F5C;">2500 </span> 
+                </div>
+            </div>
+            <div class="grid-box">
+                <div class="text-grid">
+                   Total No of<br>
+                Lended<br>
+               <span style="color: #FB3F5C; font-size: 38px;">N 2.2 M</span> 
+                </div>
+            </div>
+           </div>
+           <h4 class="today-overview">Today’s Overview</h4>
+           <div class="today-grid">
+               <div class="today-box">
+                <div class="today-text">
+                    Data : Excellent
+                </div>
+               </div>
+               <div class="today-box">
+                <div class="today-text">
+                    Report : Average
+                </div>
+            </div>
+           </div>
+           
+           <div class="container chart-bar">
+               <div class="table-responsive">
+                    <div id="container" class="chart-size" style="color : red"></div>
+               </div>
+               
+           </div>
+          
+    </div>
+    
+    </div>
+    
+</div>
+<div class="container">
+    <footer>
+        <div class="row footer-down">
+            <div class="col-sm-8">
+             <h4>
+           <img src="https://res.cloudinary.com/dtmt0vas4/image/upload/v1592761491/FundMyLaptop_pbyl1c.png" alt="" srcset="">
+       </h4> 
+        <ul>
+            <li>info@fundmylaptop.com <br> 1234566
+            </li>
+            <li class="icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+            </li>
+        </ul>    
+            </div>
+            <div class="col-sm-2">
+                <h4>Links</h4>
+                <ul>
+                    <li>Link 1</li>
+                    <li>Link 2</li>
+                    <li>Link 3</li>
+                </ul>
+            </div>
+            <div class="col-sm-2 ml-auto">
+                <h4>Links</h4>
+                <ul>
+                    <li>Link 1</li>
+                    <li>Link 2</li>
+                    <li>Link 3</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-7">
+                2020 © Copyright All rights reserved
+            </div>
+            <div class="col-sm-5 footer-link">
+                <ul>
+                    <li>FAQ</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms & Condition</li>
+                </ul>
+            </div>
+        </div>
+      
+    </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ <script>
+     anychart.onDocumentReady(function() {
+ 
+ // set the data
+ var data = {
+     header: ["Name", "Number Approved"],
+     rows: [
+       ["Monday", 5000],
+       ["Tuesday", 87000],
+       ["Wednesday", 175000],
+       ["Thursday", 10000],
+       ["Friday", 242000],
+       ["Saturday", 25000],
+       ["Sunday", 50000],
+      
+ ]};
+ 
+
+ // create the chart
+ var chart = anychart.column();
+
+ // add the data
+ chart.data(data);
+
+ // set the chart title
+ chart.title("Total Number approved this week");
+
+ // draw
+ chart.container("container");
+ chart.draw();
+});
+ </script>   
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
