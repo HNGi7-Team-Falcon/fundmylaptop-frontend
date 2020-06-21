@@ -112,7 +112,10 @@ Once connected, every time you git push, ZEIT Now will create a new deployment a
 # local development
 To start development install dependencies with `yarn install` and use `yarn start:dev` to start a local server with hot reload enabled. For production build run `yarn start`
 
-HTML files are served from public/pages folder and build are lcated at dist directory.
+
+Contents are served from `public/pages` folder, this is where to compile the submitted sections of html files into. and builds are lcated at `dist` directory, this is where to point the webroot to when hosting.
+
+Add routes at `router/routes.js`
 
 
 originally Composed by @tominsinlalude edited by @seunbayo
