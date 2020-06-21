@@ -1,8 +1,8 @@
 import FundMyLaptop from '~/libs/fundmylaptop'
-import store from './store'
-import router from './router'
-import './assets/css/styles.css'
-import './assets/scss/styles.scss'
+import store from '~/store'
+import router from '~/router'
+import '../assets/css/about.css'
+import '../assets/scss/about.scss'
 
 const lapi = new FundMyLaptop({
   ele: 'fundmylaptopapp',
