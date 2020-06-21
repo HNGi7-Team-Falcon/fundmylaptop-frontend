@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <title>FundMyLaptop | Login Page</title>
@@ -22,260 +23,228 @@
       flex-direction: column;
       height: 160vh;
       font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
     }
 
-    .login-body {
-      margin: 50px 0 50px 400px;
-      padding: 30px 100px 30px 60px;
+    .welcome-section{
+      margin: auto;
+      width: 50%;
+      margin-top: 40px;
       background: #FFFFFF;
-      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
-      border-radius: 10px;
-      position: absolute;
+box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+border-radius: 10px;
+padding: 40px 60px 20px 40px;
     }
 
-    .welcome {
-      color: #FB3F5C;
+    .welcome-text{
       font-weight: 500;
-      font-size: 32px;
-      margin-bottom: 10px;
+font-size: 32px;
+color: #FB3F5C;
     }
 
-    .sign {
-      font-size: 32px;
+    .signup-text{
       color: #04172A;
-      margin-top: 0;
+      font-size: 32px;
+      margin-bottom: 40px;
     }
 
-    form input {
+    form input{
       width: 100%;
-      padding: 20px 10px;
-      border: 1px solid #04172A;
-      box-sizing: border-box;
-      border-radius: 5px;
-      font-size: 16px;
+      padding: 20px;
       outline: none;
+      font-size: 16px;
+      border: 1px solid #04172A;
+box-sizing: border-box;
+border-radius: 5px;
     }
 
-    .forget-password {
-      text-align: end;
-    }
-
-    .forget-password a {
+    .forget-password a{
       text-decoration: none;
-      color: #04172A;
+      color: #04172A
+
     }
 
-    p.btn {
+    .forget-password{
+      text-align: right;
+    }
+    p.btn-submit{
       text-align: center;
     }
-
-    button {
+    button{
       width: 100%;
-      padding: 10px 10px;
-      background: #FB3F5C;
-      box-shadow: 4px 4px 15px rgba(251, 63, 92, 0.25);
-      border-radius: 5px;
-      outline: none;
+      padding: 10px 0;
       border: none;
-      color: #FFFFFF;
-      font-size: 24px;
-      cursor: pointer;
-      font-family: 'DM Sans', sans-serif;
+      outline: none;
+      background: #FB3F5C;
+box-shadow: 4px 4px 15px rgba(251, 63, 92, 0.25);
+border-radius: 5px;
+color: #FFFFFF;
+font-size: 24px;
     }
 
     button i {
       margin-left: 7px;
     }
 
-    .sign-up {
-      text-align: center;
+    p.account{
       margin-top: 40px;
+      text-align: center;
     }
 
-    .sign-up a {
+    .account a {
       text-decoration: none;
       color: #FB3F5C;
     }
 
-    .connect {
-      text-align: center;
-      color: rgba(4, 23, 42, 0.3);
+    p.connect{
       margin-top: 40px;
+      color: rgba(4, 23, 42, 0.3);
+      text-align: center;
     }
 
-    .connect::before {
+    p.connect::before{
       content: '';
-      width: 20%;
-      margin-left: 55px;
-      border: 1px solid rgba(4, 23, 42, 0.3);
       position: absolute;
-      left: 2%;
-      bottom: 146px;
+      border: 1px solid rgba(4, 23, 42, 0.3);
+      width: 180px;
+      left: 29%;
+      bottom: 173px;
     }
-
-    .connect::after {
+    p.connect::after{
       content: '';
-      margin-left: 10px;
-      width: 20%;
-      border: 1px solid rgba(4, 23, 42, 0.3);
       position: absolute;
-      bottom: 146px;
+      border: 1px solid rgba(4, 23, 42, 0.3);
+      width: 180px;
+      left: 55%;
+      bottom: 173px;
     }
 
-    .socials {
-      display: flex;
+    .socials{
       justify-content: space-between;
-      margin-top: 30px;
+      margin-top: 40px;
+      margin-bottom: 40px;
     }
-
-    .socials p {
+    .socials p{
       padding: 10px 50px;
-      cursor: pointer;
-      box-sizing: border-box;
-      border-radius: 5px;
     }
-
-    .fb {
+    .fb, .linkedin{
       border: 1px solid #485A96;
+box-sizing: border-box;
+border-radius: 5px;
     }
-
-    .fb a,
-    .linked-in a {
-      color: #485A96;
-      font-size: 20px;
-    }
-
-    .google {
+    .google{
       border: 1px solid #DC4E41;
+box-sizing: border-box;
+border-radius: 5px;
     }
 
-    .google a {
+    .fb i, .linkedin i{
+      color: #485A96;
+
+    }
+
+    .google i {
       color: #DC4E41;
-      font-size: 20px;
-
     }
 
-    .linked-in {
-      border: 1px solid #006699;
-    }
+@media screen and (max-width: 1181px){
+  p.connect::before, p.connect::after{
+    width: 160px;
+  }
+}
 
-    @media screen and (max-width: 1178px) {
-      .login-body {
-        margin-left: 300px;
-      }
-    }
+@media screen and (max-width: 1083px){
+  .welcome-section{
+    width: 60%;
+  }
+  p.connect::after{
+    left: 58%;
+  }
+  p.connect::before{
+    left: 26%;
+  }
+}
 
-    @media screen and (max-width: 1042px) {
-      .login-body {
-        margin-left: 240px;
-      }
-    }
+@media screen and (max-width: 1083px){
+  p.connect::after{
+    left: 58%;
+  }
+  p.connect::before{
+    left: 24%;
+  }
+  .welcome-section{
+    width: 70%;
+  }
+}
 
-    @media screen and (max-width: 935px) {
-      .login-body {
-        margin-left: 200px;
-      }
-    }
+@media screen and (max-width: 853px){
+  p.connect::before, p.connect::after{
+    visibility: hidden;
+  }
+}
 
-    @media screen and (max-width: 879px) {
-      .login-body {
-        margin-left: 150px;
-      }
-    }
+@media screen and (max-width: 621px){
+  .welcome-section{
+    width: 80%;
+  }
+  .socials{
+    flex-direction: column;
+  }
+  .socials p {
+    text-align: center;
+  }
+}
 
-    @media screen and (max-width: 778px) {
-      .login-body {
-        margin-left: 120px;
-      }
-    }
+@media screen and (max-width: 416px){
+  .welcome-section{
+    padding: 20px 20px;
+  }
+}
 
-    @media screen and (max-width: 733px) {
-      .login-body {
-        margin-left: 140px;
-        padding: 0 50px;
-      }
-
-      .connect::before,
-      .connect::after {
-        bottom: 120px;
-      }
-    }
-
-    @media screen and (max-width: 698px) {
-      .login-body {
-        margin-left: 100px;
-      }
-    }
-
-    @media screen and (max-width: 653px) {
-      .login-body {
-        margin-left: 80px;
-      }
-    }
-
-    @media screen and (max-width: 623px) {
-      .login-body {
-        margin-left: 100px;
-        padding: 0 30px;
-      }
-    }
-
-    @media screen and (max-width: 598px) {
-      .login-body {
-        margin-left: 80px;
-      }
-    }
-
-    @media screen and (max-width: 564px) {
-      .login-body {
-        margin-left: 60px;
-      }
-    }
+@media screen and (max-width: 374px){
+  .welcome-section{
+    width: 90%;
+  }
+}
 
 
-    @media screen and (max-width: 523px) {
-      .login-body {
-        margin-left: 40px;
-      }
-    }
+
+
   </style>
 </head>
 
 <body>
-  <section class="login-body">
-    <div>
-      <p class="welcome">Welcome</p>
-      <p class="sign">Sign in to FundMyLaptop </p>
-      <form action="">
-        <label for="">Email</label>
-        <p> <input type="email" placeholder="username@domain.com"></p>
-        <label for="">Password</label>
-        <p><input type="password" placeholder="Enter your password" name="" id=""></p>
-      </form>
-      <p class="forget-password"><a href="#">Forget password?</a></p>
-      <p class="btn"><button type="submit">Login <i class="fa fa-angle-right"></i></button></p>
-      <p class="sign-up">Don't have an account? <a href="#">Sign Up</a></p>
-      <p class="connect">Or connect using</p>
-
+ <section>
+  <div class="row ">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <div class="welcome-section">
+        <p class="welcome-text">Welcome</p>
+        <p class="signup-text">Sign in to FundMyLaptop </p>
+        <form action="">
+          <label for="">Email</label>
+         <p><input type="email" name="" placeholder="username@domain.com" id=""></p> 
+         <label for="">Password</label>
+         <p><input type="password" name="" placeholder="Enter your password" id=""></p> 
+        </form>
+        <p class="forget-password"><a href="#">Forget password?</a></p>
+        <p class="btn-submit"><button type="submit">Login <i class="fa fa-angle-right"></i></button></p>
+        <p class="account">Don't have an account? <a href="#">Sign Up</a></p>
+        <p class="connect">Or connect using</p>
+        <div class="d-flex socials">
+          <div>
+            <p class="fb"><a href="#"><i class="fa fa-facebook"></i></a></p>
+          </div>
+          <div>
+            <p class="google"><a href="#"><i class="fa fa-google-plus"></i></a></p>
+          </div>
+          <div>
+            <p class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="socials">
-      <div>
-        <p class="fb"><a href="#"><i class="fa fa-facebook"></i></a></p>
-
-      </div>
-       <div>
-        <p class="google"><a href="#"><i class="fa fa-google-plus"></i></a></p>
-
-      </div>
-
-      </div>
-      <div>
-        <p class="linked-in"><a href="#"><i class="fa fa-linkedin"></i></a></p>
-
-      </div>
-
-    </div>
-  </section>
+  </div>
+ </section>
 </body>
 
 </html>
