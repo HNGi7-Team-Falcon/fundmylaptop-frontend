@@ -2,20 +2,21 @@ import { loadHTML } from '~/libs/fundmylaptop'
 const path = require('path')
 
 const routes = {
-  '/': () => {
-    loadHTML(path.resolve(__dirname, '../src') + '/pages/index.html')
+  login: async () => {
+    await loadHTML(path.resolve(__dirname, '../pages') + '/login.html')
   },
-  '/login': () => {
-    loadHTML('../pages/login.html')
+  signup: async () => {
+    await loadHTML(path.resolve(__dirname, '../pages') + '/signup.html')
   },
-  '/signup': () => {
-    loadHTML('../pages/signup.html')
+  about: async () => {
+    await loadHTML(path.resolve(__dirname, '../pages') + '/about.html')
   },
-  '/about': () => {
-    loadHTML('../pages/about.html')
+  contact: async () => {
+    await loadHTML(path.resolve(__dirname, '../pages') + '/contact.html')
   },
-  '/contact': () => {
-    loadHTML('../pages/contact.html')
+  '': async () => {
+    await loadHTML(path.resolve(__dirname, '../pages') + '/home.html')
   }
 }
+
 export default routes
