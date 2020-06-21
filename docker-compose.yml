@@ -6,7 +6,7 @@ services:
     #   - db
     container_name: FML-frontend
     restart: unless-stopped
-    env_file: .env
+    # env_file: .env
     # environment:
       # - MONGO_URI=$MONGO_URI
       # - PORT=$PORT
