@@ -68,8 +68,36 @@
         background: rgba(4, 23, 42, 0.03);
         padding: 15px 30px;
         font-weight: 500;
-        font-size: 1em;
+        font-size: 1em; 
+        /* position:fixed; */
+        overflow: hidden;
+        width:100%;
       }
+      ul {       
+        display: inline-flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        justify-items: center;
+      }
+      li a {
+        color:#04172a;
+        text-decoration: none;
+        list-style-type: none;
+        padding: 15px 30px;
+      }
+      li a:hover {
+        color:#fb3f5c;
+        font-weight: bold;
+      }
+      .active {
+        color: #fb3f5c;
+        text-decoration: underline; 
+        text-decoration-color: #fb3f5c;
+        font-weight: bold; 
+     }
+      
       #middle-row {
         display: flex;
         align-items: flex-start;
@@ -132,13 +160,27 @@
           max-width: 100%;
           height: auto;
         }
+        ul{
+          display: block;
+          float: none;
+        }
       }
     </style>
     <title>About US</title>
   </head>
 
   <body>
-    <nav>FundMy<span class="text--secondary">Laptop</span></nav>
+    <nav>
+      FundMy<span class="text--secondary">Laptop</span>
+      <ul>
+        <li class="nav-middle"><a href="/home">Home</a></li>
+        <li class="nav-middle"><a class="active" href="/about">About Us</a></li>
+        <li class="nav-middle" ><a href="/faq">FAQ</a></li>
+        <li class="nav-right"><a href=""><span class="text--secondary">Invest >></span></a></li>
+        <li class="nav-right"><a href=""><span class="text--secondary">Get a Loan >></span></a></li>
+      </ul>
+    
+    </nav>
 
     <section class="container">
       <div class="container-text">
