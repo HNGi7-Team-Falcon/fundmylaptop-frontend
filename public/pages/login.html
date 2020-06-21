@@ -1,241 +1,291 @@
-<div id ="form-container">
-    <section class="forms-section">
-      <div class="title">
-         <h1><span class="wrap">
-        Welcome</span> <br>Sign in to FundMyLaptop</h1>
-      </div>
-    <div class="login-page">
-    <form>
-      <div class="form-items"><label for="email" id="email">Email</label><br/>
-        <input type="text" name="Email" placeholder="username@domain.com" required>
-    
-      </div>
-    
-      <div class="form-items">
-        <label class="label" for="password" id="password">Password</label>
-        <div class="input">
-              <input type="password" name="Password" placeholder="Enter your Password" required> <i class="fas fa-eye"></i>
-        </div>
-      </div>
-        <h5 class="forgot"><a href="" >Forgot password?</a><h5>
-    
-        <button type="submit" id="login">Login <span class="rarr"> ></span></button>
-    
-        <p class="sign-up">Don't have an account?<a href="" style="color: rgb(252,61,50);">Sign up</a><br/></p>
-    
-        <div>
-    <h2><span  class="line-center">using or connect </span></h2>
-        </div>
-      </form>
-        </div>
-      </section>
-        <div class=fronty>
-            <a herf="#" class="btn facebook"><img src="https://res.cloudinary.com/mosesjayz/image/upload/v1592488770/Vector_1_difse0.png" width="10"></a>
-            <a herf="#" class="btn google"><img src="https://res.cloudinary.com/mosesjayz/image/upload/v1592588880/g_frm4e6.png" width="30"></a>
-            <a herf="#" class="btn link"><img src="https://res.cloudinary.com/mosesjayz/image/upload/v1592488739/Vector_3_cpcitg.png"></a>
-         </div>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
 
-    <style>
-        /*style sheet for login page*/
-        *{
-          padding:0;
-          margin: 0;
-          box-sizing:border-box;
-        
-        }
-        
-        body{
-           background-image: url('https://res.cloudinary.com/dwpwl6img/image/upload/v1592479832/Polygon_9.png'), url('https://res.cloudinary.com/dwpwl6img/image/upload/v1592479833/Ellipse_57.png'),
-            url('https://res.cloudinary.com/dwpwl6img/image/upload/v1592479833/Ellipse_56.png'), url('https://res.cloudinary.com/dwpwl6img/image/upload/v1592479833/Polygon_8.png');
-          background-size: 15%, 15%, 15%, 15%;
-          position: relative;
-          background-position: left -1% top 0%, right -7.5% top -1%,
-            left -5% bottom -1%, right -3% bottom -2%;
-          background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-          display:flex;
-          justify-content:center;
-          align-items: center;
-          flex-direction: column;
-          margin: 0;
-          height: 100vh;
-          overflow-y: hidden;
-        }
-        
-        .forms-section{
-          margin: 5vh 0;
-        }
-        
-        h1, .login-page{
-          padding: 5px 20px;
-        }
-        form{
-          display: flex;
-        /*   align-items: center; */
-          flex-wrap: wrap;
-          flex-direction: column;
-          max-width:600px;
-          width: 100%;
-          padding: 5px 10px;
-          margin: 0;
-         }
-         #form-container{
-            background-color:#ffffff;
-            margin: auto;
-            width:506px;
-            height:630px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-radius:10px;
-            box-shadow: 0px 0px 30px rgba(0,0,0,0.05);
-         }
-        .input{
-          position: relative;
-        }
-        .fas{
-          position: absolute;
-          top:50%;
-          right: 20px;
-          color: rgba(4, 23, 42, 0.3);
-          transform: matrix(1, 0, 0, -1, 0, 0);
-        }
-        
-        input{
-          position:relative;
-          padding: 12px;
-          border-radius: 4px;
-          outline: none;
-          width: 100%;
-          border: 1px solid #333;
-          margin-top:12px
-        }
-        
-        .input::focus{
-          outline: 1px solid #3e4565;
-        }
-        
-        .form-items{
-          margin-bottom: 1rem;
-        }
-        
-        .label{
-          margin: 16px 0;
-        }
-        .title{
-          padding: 0 1rem ;
-          width: 506px;
-          margin-top:30px;
-        }
-        
-        .login-page{
-          display: flex;
-        }
-        .forgot{
-          margin: 10px 0;
-          text-align: right;
-        }
-        
-        .forgot a{
-          text-decoration: none;
-          color: #000;
-          padding: 10px 0;
-        }
-        
-        button[type="submit"]{
-          background-color: rgb(252,61,50);
-          color: rgb(255,255,255);
-          border-radius: 5px;
-            font-size: 16px;
-            padding:  10px;
-          border: none;
-          outline: none;
-          text-align: center;
-          align-items: center;
-          justify-content: center;
-            display: inline-block;
-          width: 100%;
-         }
-        
-        .sign-up{
-          text-align: center;
-          padding: 14px;
-          }
-        
-        .wrap{
-          color: rgb(252,61,50);
-        }
-        
-        .line-center{
-            margin:0;padding:0 10px;
-            background:#fff;
-            display:inline-block;
-          align-items: center;
-          color: rgba(4, 23, 42, 0.3);
-        }
-        h2{
-        
-            text-align:center;
-            position:relative;
-            z-index:2;
-          font-size: 1.2rem;
-        
-        }
-        h2:after{
-            content:"";
-            position:absolute;
-            top:50%;
-            left:0;
-            right:0;
-            border-top:solid 1px  rgba(4, 23, 42, 0.3);
-            z-index:-1;
-        }
-        .btn{
-            padding: 12px 24px 24px 24px;
-            display:inline-block;
-            opacity: 0.8;
-            border-radius:5px;
-          }
-        .facebook{
-            width:120px;
-            height:42px;
-            background: transparent;
-            border:1px solid #4B5A96;
-            box-sizing: border-box;
-            line-height: 10px;
-        }
-        .facebook img{
-            margin-left:25px;
-        }
-        .google{
-            width: 120px;
-            height: 40px;
-            background:transparent;
-            border:1px solid #DC4E41;
-            box-sizing: border-box;
-           margin-left: 10px;
-        }
-        .google img{
-            margin-left:25px;
-        }
-        .link{
-            width: 120px;
-            height: 40px;
-            background:transparent;
-            border:1px solid #006699;
-            box-sizing: border-box;
-            margin-left:10px;
-        }
-        .link img{
-            margin-left:25px;
-        }
-        .btn:hover{
-          opacity: 1;
-        }
-        .fronty{
-            display: flex;
-            cursor: pointer;
-        }
-        
-        
-        </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>FundMyLaptop | Login Page</title>
+  <style>
+    body {
+      background-image: url('https://res.cloudinary.com/dwpwl6img/image/upload/v1592479832/Polygon_9.png'), url('https://res.cloudinary.com/dwpwl6img/image/upload/v1592479833/Ellipse_57.png'),
+        url('https://res.cloudinary.com/dwpwl6img/image/upload/v1592479833/Ellipse_56.png'), url('https://res.cloudinary.com/dwpwl6img/image/upload/v1592479833/Polygon_8.png');
+      background-size: 30%, 15%, 15%, 25%;
+      position: relative;
+      background-position: left -16% top 0%, right -7.5% top -1%,
+        left -5% bottom -1%, right -3% bottom -2%;
+      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 160vh;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .login-body {
+      margin: 50px 0 50px 400px;
+      padding: 30px 100px 30px 60px;
+      background: #FFFFFF;
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      position: absolute;
+    }
+
+    .welcome {
+      color: #FB3F5C;
+      font-weight: 500;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .sign {
+      font-size: 32px;
+      color: #04172A;
+      margin-top: 0;
+    }
+
+    form input {
+      width: 100%;
+      padding: 20px 10px;
+      border: 1px solid #04172A;
+      box-sizing: border-box;
+      border-radius: 5px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .forget-password {
+      text-align: end;
+    }
+
+    .forget-password a {
+      text-decoration: none;
+      color: #04172A;
+    }
+
+    p.btn {
+      text-align: center;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px 10px;
+      background: #FB3F5C;
+      box-shadow: 4px 4px 15px rgba(251, 63, 92, 0.25);
+      border-radius: 5px;
+      outline: none;
+      border: none;
+      color: #FFFFFF;
+      font-size: 24px;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    button i {
+      margin-left: 7px;
+    }
+
+    .sign-up {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .sign-up a {
+      text-decoration: none;
+      color: #FB3F5C;
+    }
+
+    .connect {
+      text-align: center;
+      color: rgba(4, 23, 42, 0.3);
+      margin-top: 40px;
+    }
+
+    .connect::before {
+      content: '';
+      width: 20%;
+      margin-left: 55px;
+      border: 1px solid rgba(4, 23, 42, 0.3);
+      position: absolute;
+      left: 2%;
+      bottom: 146px;
+    }
+
+    .connect::after {
+      content: '';
+      margin-left: 10px;
+      width: 20%;
+      border: 1px solid rgba(4, 23, 42, 0.3);
+      position: absolute;
+      bottom: 146px;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .socials p {
+      padding: 10px 50px;
+      cursor: pointer;
+      box-sizing: border-box;
+      border-radius: 5px;
+    }
+
+    .fb {
+      border: 1px solid #485A96;
+    }
+
+    .fb a,
+    .linked-in a {
+      color: #485A96;
+      font-size: 20px;
+    }
+
+    .google {
+      border: 1px solid #DC4E41;
+    }
+
+    .google a {
+      color: #DC4E41;
+      font-size: 20px;
+
+    }
+
+    .linked-in {
+      border: 1px solid #006699;
+    }
+
+    @media screen and (max-width: 1178px) {
+      .login-body {
+        margin-left: 300px;
+      }
+    }
+
+    @media screen and (max-width: 1042px) {
+      .login-body {
+        margin-left: 240px;
+      }
+    }
+
+    @media screen and (max-width: 935px) {
+      .login-body {
+        margin-left: 200px;
+      }
+    }
+
+    @media screen and (max-width: 879px) {
+      .login-body {
+        margin-left: 150px;
+      }
+      
+    }
+
+    @media screen and (max-width: 778px) {
+      .login-body {
+        margin-left: 120px;
+      }
+    }
+
+    @media screen and (max-width: 733px) {
+      .login-body {
+        margin-left: 140px;
+        padding: 0 50px;
+      }
+
+      .connect::before,
+      .connect::after {
+        bottom: 120px;
+      }
+    }
+
+    @media screen and (max-width: 698px) {
+      .login-body {
+        margin-left: 100px;
+      }
+    }
+
+    @media screen and (max-width: 653px) {
+      .login-body {
+        margin-left: 80px;
+      }
+      body{
+        height: 100vh;
+      }
+    }
+
+    @media screen and (max-width: 623px) {
+      .login-body {
+        margin-left: 100px;
+        padding: 0 30px;
+      }
+    }
+
+    @media screen and (max-width: 598px) {
+      .login-body {
+        margin-left: 80px;
+      }
+    }
+
+    @media screen and (max-width: 564px) {
+      .login-body {
+        margin-left: 60px;
+      }
+      body{
+        height: 120vh;
+      }
+    }
+
+
+    @media screen and (max-width: 523px) {
+      .login-body {
+        margin-left: 40px;
+      }
+
+      @media screen and (max-width: 462px) {
+      .login-body {
+        margin-left: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="login-body">
+    <div>
+      <p class="welcome">Welcome</p>
+      <p class="sign">Sign in to FundMyLaptop </p>
+      <form action="">
+        <label for="">Email</label>
+        <p> <input type="email" placeholder="username@domain.com"></p>
+        <label for="">Password</label>
+        <p><input type="password" placeholder="Enter your password" name="" id=""></p>
+      </form>
+      <p class="forget-password"><a href="#">Forget password?</a></p>
+      <p class="btn"><button type="submit">Login <i class="fa fa-angle-right"></i></button></p>
+      <p class="sign-up">Don't have an account? <a href="#">Sign Up</a></p>
+      <p class="connect">Or connect using</p>
+
+    </div>
+    <div class="socials">
+      <div>
+        <p class="fb"><a href="#"><i class="fa fa-facebook"></i></a></p>
+
+      </div>
+      <div>
+        <p class="google"><a href="#"><i class="fa fa-google-plus"></i></a></p>
+
+      </div>
+      <div>
+        <p class="linked-in"><a href="#"><i class="fa fa-linkedin"></i></a></p>
+
+      </div>
+
+    </div>
+  </section>
+</body>
+
+</html>
