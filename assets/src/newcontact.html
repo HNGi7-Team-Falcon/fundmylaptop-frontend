@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6f42b1cf6f.js" crossorigin="anonymous"></script>
+    <title>FML &mdash; Contact</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            padding: 0;
+            margin: 0;
+            background-color: #fff;
+            color: #2A3A64;
+        }
+
+        .container {
+            height: 100vh;
+        }
+
+        .row {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            background: rgba(4, 23, 42, 0.03);
+            padding: 15px 30px;
+            font-weight: 500;
+            font-size: 1em;
+        }
+
+        .text--secondary {
+            color: #FB3F5C;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 0;
+        }
+
+        .contact,
+        .form {
+            padding: 10px 30px;
+        }
+
+        .contact h1 {
+            font-size: 2.5em;
+        }
+
+        .contact__description {
+            font-size: 1rem;
+            border-left: 5px solid #FB3F5C;
+            padding-left: 20px;
+        }
+
+        .contact__description a {
+            color: #2A3A64;
+            text-decoration: none;
+            font-size: 1.3rem;
+            margin: 0 10px;
+        }
+
+        .form__group {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .form__group label {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .form__group input,
+        .form__group textarea {
+            padding: 15px;
+            border: 1px solid #374977;
+            border-radius: 5px;
+            outline: none;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        button {
+            background-color: #FB3F5C;
+            padding: 15px 50px;
+            color: #fff;
+            border: 0;
+            outline: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        @media screen and (min-width: 768px) {
+            nav {
+                padding: 25px 50px;
+                font-size: 1.5em;
+            }
+
+            main {
+                padding: 0 50px;
+                flex-direction: row;
+                margin-top: 70px;
+            }
+
+            .contact,
+            .form {
+                width: 100%;
+                padding: 0;
+                padding-right: 30px;
+            }
+
+            .form {
+                width: 100%;
+            }
+
+            .contact h1 {
+                font-size: 3em;
+            }
+
+        }
+
+        @media screen and (min-width: 992px) {
+            nav {
+                padding: 25px 9%;
+                font-size: 1.5em;
+            }
+
+            main {
+                padding: 0 9%;
+                margin-top: 100px;
+            }
+
+            .contact,
+            .form {
+                padding-right: 70px;
+            }
+
+            .contact__description {
+                padding-right: 120px;
+            }
+
+            .contact__description h4 {
+                font-size: 1.3rem;
+            }
+
+            .form__row {
+                display: flex;
+            }
+
+            .form__group {
+                width: 100%;
+            }
+
+            .mr {
+                margin-right: 10px;
+            }
+
+            .ml {
+                margin-left: 10px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <nav>FundMy<span class="text--secondary">Laptop</span></nav>
+            <main>
+                <section class="contact">
+                    <h1>Contact Us</h1>
+                    <div class="contact__description">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        </p>
+                        <h4>
+                            Plot 1415 Adetokunbo Ademola Street, <br>
+                            +234 81 225 6780
+                        </h4>
+                        <p>Follow us
+                            <a href="#"><i class="fab fa-facebook-square"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a></p>
+                    </div>
+
+                </section>
+                <section class="form">
+                    <form action="#">
+                        <div class="form__row">
+                            <div class="form__group mr">
+                                <label for="name">Name</label>
+                                <input type="text" id="Name" placeholder="Name">
+                            </div>
+                            <div class="form__group ml">
+                                <label for="name">Email</label>
+                                <input type="email" id="Email" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <label for="subject">Subject</label>
+                            <textarea id="subject" rows="3" placeholder="Details about me"></textarea>
+                        </div>
+                        <div class="form__group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="3" placeholder="Tell us a bt about yourself"></textarea>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </section>
+                </mai </div>
+        </div>
+</body>
+
+</html>
