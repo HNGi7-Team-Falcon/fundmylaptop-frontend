@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/2ea86b5838.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <link rel="stylesheet" href="adminRequestPage.css" /> -->
+    <title>Admin Request Page</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+
+      #ARP-mainContainer {
+        grid-template-columns: 220px 83%;
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        background-color: #f3f3f3;
+      }
+
+      #dashboardSpace {
+        background-color: #2a3a64;
+        height: 100%;
+        color: #e1e1e1;
+      }
+
+      #dashboardSpace .header {
+        background-color: #fb3f5c;
+        height: 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: DM Sans;
+      }
+
+      #dashboardSpace .header h3 {
+        color: #2a3a64;
+        font-size: 15px;
+      }
+
+      .fa-chevron-left {
+        font-size: 12px;
+      }
+
+      .fasChev1 {
+        margin-left: 10px;
+      }
+
+      #dashboardSpace .header span {
+        color: white;
+      }
+
+      .circle {
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        border: 1px #2a3a64 solid;
+        margin-right: 10px;
+      }
+
+      .circle2 img {
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        margin-left: 10px;
+      }
+
+      .content .dashboard {
+        margin-top: 50px;
+        color: #e1e1e1;
+      }
+      .content .dashboard,
+      .manageUsers {
+        color: white;
+        height: 40px;
+        width: 100%;
+        padding-left: 40px;
+        line-height: 38px;
+      }
+
+      .requestsCtn .requests {
+        padding-left: 15px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        color: #e1e1e1;
+        font-family: DM Sans;
+      }
+
+      .requestsCtn .viewRequests {
+        background: rgba(40, 39, 97, 0.7);
+      }
+
+      .requestsCtn .viewRequests,
+      .reviewRequests {
+        color: white;
+        height: 50px;
+        width: 100%;
+        padding-left: 40px;
+        line-height: 48px;
+      }
+
+      /* REQUESTS */
+      .aboutAdmin {
+        height: 8%;
+        display: flex;
+        justify-content: right !important;
+        align-items: center;
+        padding-right: 20px;
+        color: #2a3a64;
+        background-color: white;
+      }
+
+      .aboutAdmin img {
+        height: 20px;
+        width: 20px;
+        margin-right: 10px;
+      }
+
+      #requestSpace .requests {
+        height: 8%;
+        display: flex;
+        padding-left: 40px;
+        justify-content: left;
+        align-items: center;
+        padding-right: 20px;
+        color: #2a3a64;
+        border-top: 1px #a6a6a6 solid;
+        background-color: white;
+      }
+
+      .allRequestsCtn .box1 {
+        height: 8%;
+        display: flex;
+        padding-left: 60px;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 20px;
+        color: #2a3a64;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px #a6a6a6 solid;
+        margin-top: 5px;
+        background-color: white;
+      }
+
+      .box1 .exportBox {
+        height: 40px;
+        width: 140px;
+        border-radius: 6px;
+        border: 1px #a6a6a6 solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #a6a6a6;
+      }
+
+      .exportIcon {
+        margin-right: 10px;
+      }
+
+      .fa-angle-down {
+        margin-left: 10px;
+      }
+
+      .searchRow {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 70px;
+      }
+
+      .searchRow .search {
+        border: 1px #a6a6a6 solid;
+        border-radius: 6px;
+        height: 30px;
+        width: 200px;
+        line-height: 28px;
+        text-align: left;
+        padding-left: 20px;
+        color: #a6a6a6;
+      }
+
+      .searchRow .searchBox {
+        display: flex;
+        justify-content: space-between;
+        width: 290px;
+        margin-bottom: 40px;
+      }
+
+      .contentTable {
+        width: 800px;
+        /* background-color: #fb3f5c; */
+        /* display: none; */
+        padding-left: 100px;
+        color: #2a3a64;
+      }
+
+      .contentTable th,
+      .contentTable td {
+        padding: 12px 15px;
+      }
+
+      .contentTable thead tr {
+        text-align: left;
+        /* display: ; */
+      }
+
+      .contentTable thead tr td:nth-child(1) {
+        text-align: right;
+      }
+
+      .contentTable tbody td {
+        color: #a6a6a6;
+        border-bottom: #a6a6a6 1px solid;
+      }
+
+      .status {
+        color: #a6a6a6;
+        margin-top: 5px;
+      }
+
+      .status span {
+        color: #2a3a64;
+      }
+
+      .rotate {
+        margin-right: 10px;
+        font-size: 12px;
+        color: #2a3a64;
+      }
+
+      .displayDetails {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 200px;
+        color: #a6a6a6;
+        margin-top: 20px;
+        margin-left: 40px;
+      }
+
+      .type,
+      .optionType {
+        color: #2a3a64;
+      }
+
+      .optionType {
+        display: none;
+      }
+
+      .icon {
+        margin-right: 10px;
+      }
+
+      @media only screen and (max-width: 800px) {
+        #ARP-mainContainer {
+          grid-template-columns: 28% 72%;
+        }
+
+        .contentTable {
+          width: 400px;
+          padding-left: 10px;
+          color: #2a3a64;
+        }
+      }
+
+      @media only screen and (max-width: 400px) {
+        body {
+          overflow: hidden;
+        }
+        #ARP-mainContainer {
+          grid-template-columns: 32% 68%;
+        }
+
+        .contentTable {
+          width: 100px;
+          padding-left: 2px;
+        }
+
+        #dashboardSpace {
+          height: 40%;
+        }
+        #dashboardSpace .header {
+          height: 10%;
+        }
+
+        #dashboardSpace .header h3 {
+          font-size: 10px;
+        }
+
+        .fa-chevron-left {
+          font-size: 8px;
+        }
+
+        .fasChev1 {
+          margin-left: 5px;
+        }
+
+        #dashboardSpace .header span {
+          color: white;
+        }
+
+        .circle {
+          height: 20px;
+          width: 20px;
+          margin-right: 5px;
+        }
+
+        .circle2 img {
+          height: 30px !important;
+          width: 30px !important;
+          margin-left: 6px;
+        }
+
+        .content .dashboard {
+          margin-top: 20px;
+        }
+
+        .content .dashboard,
+        .manageUsers {
+          color: white;
+          height: 40px;
+          padding-left: 10px;
+          line-height: 38px;
+          font-size: 10px;
+        }
+
+        .requestsCtn .requests {
+          padding-left: 10px;
+          margin-bottom: 10px;
+          margin-top: 10px;
+          font-family: DM Sans;
+          font-size: 11px;
+          font-weight: bold;
+        }
+
+        .requestsCtn .viewRequests,
+        .reviewRequests {
+          height: 30px;
+          padding-left: 10px;
+          line-height: 28px;
+          font-size: 10px;
+        }
+
+        .icon {
+          margin-right: 5px;
+        }
+
+        /* REQUESTS */
+        .aboutAdmin {
+          height: 8%;
+          justify-content: center;
+          padding-right: 7px;
+          padding-left: 8px;
+          font-size: 13px;
+        }
+
+        .aboutAdmin img {
+          height: 10px;
+          width: 10px;
+          margin-right: 5px;
+        }
+
+        #requestSpace .requests {
+          height: 7%;
+          padding-left: 30px;
+        }
+
+        .allRequestsCtn .box1 {
+          height: 8%;
+          display: flex;
+          padding-left: 20px;
+          font-size: 13px;
+          padding-right: 10px;
+          width: 100%;
+        }
+
+        .box1 .exportBox {
+          height: 40px;
+          width: 100px;
+          margin-left: 10px;
+        }
+
+        .searchRow {
+          display: flex;
+          justify-content: space-around;
+          flex-direction: column;
+          margin-top: 50px;
+          width: 100%;
+        }
+
+        .searchRow .search {
+          height: 30px;
+          width: 120px;
+          line-height: 28px;
+          text-align: left;
+          padding-left: 20px;
+          margin-left: 20px;
+          font-size: 12px;
+        }
+
+        .searchRow .searchBox {
+          display: flex;
+          justify-content: space-between;
+          width: 270px;
+          margin-bottom: 40px;
+          /* display: ; */
+        }
+
+        .type {
+          margin-top: -25px;
+          margin-left: 18px;
+          font-size: 12px;
+        }
+        .contentTable {
+          width: 300px;
+          padding-left: 0px;
+          font-size: 12px;
+          position: absolute;
+          left: 5px;
+        }
+
+        .contentTable th,
+        .contentTable td {
+          padding: 12px 10px;
+        }
+
+        .contentTable thead th {
+          border-bottom: #2a3a64 2px solid;
+        }
+
+        .contentTable thead tr {
+          text-align: left;
+          font-size: 10px;
+          /* display: ; */
+        }
+
+        .contentTable thead tr td:nth-child(1) {
+          text-align: right;
+        }
+
+        .contentTable tbody td {
+          color: #a6a6a6;
+          border-bottom: #a6a6a6 1px solid;
+        }
+
+        .status {
+          color: #a6a6a6;
+          margin-top: 5px;
+          margin-right: 35px;
+          font-size: 13px;
+        }
+
+        .status span {
+          color: #2a3a64;
+        }
+
+        .rotate {
+          margin-right: 5px;
+          font-size: 8px;
+          color: #2a3a64;
+        }
+
+        .displayDetails {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 200px;
+          color: #a6a6a6;
+          margin-top: 20px;
+          margin-left: 40px;
+          position: absolute;
+          bottom: 7%;
+          left: -25px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ARP is short for Admin request page -->
+    <div id="ARP-mainContainer">
+      <div id="dashboardSpace">
+        <div class="header">
+          <h3>
+            FundMy<span>Laptop</span><i class="fas fa-chevron-left fasChev1"></i
+            ><i class="fas fa-chevron-left"></i
+            ><i class="fas fa-chevron-left"></i>
+          </h3>
+        </div>
+        <div class="content">
+          <div class="dashboard">
+            <i class="fas fa-calendar-alt icon"></i>Dashboard
+          </div>
+          <div class="manageUsers">
+            <i class="fas fa-user icon"></i>Manage Users
+          </div>
+          <div class="requestsCtn">
+            <div class="requests">Requests</div>
+            <div class="viewRequests">
+              <i class="fas fa-eye icon"></i>View Requests
+            </div>
+            <div class="reviewRequests">
+              <i class="fas fa-chalkboard-teacher icon"></i>Review Requests
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="requestSpace">
+        <div class="aboutAdmin">
+          <span class="circle"></span
+          ><img
+            src="https://res.cloudinary.com/duorykrsu/image/upload/v1592639854/Vector_3_ktfwjk.png"
+            alt=""
+          />
+          Hi, Alabi Samuel Seun
+          <span class="circle2"><img src="image4.png" alt="" /></span>
+        </div>
+        <div class="requests">Requests</div>
+        <div class="allRequestsCtn">
+          <div class="box1">
+            <div class="allRequests">
+              <i class="fas fa-signal icon"></i>All Requests
+            </div>
+            <div class="exportBox">
+              <div>
+                <i class="fas fa-download exportIcon"></i>export<i
+                  class="fas fa-angle-down"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div class="searchRow">
+            <div class="searchBox">
+              <div class="search">Search</div>
+              <div class="status">Status: <span>All</span></div>
+            </div>
+            <div class="type">
+              <select name="type" id="type">
+                <option value="type" class="optionType">Type</option>
+              </select>
+              <span>All</span>
+            </div>
+          </div>
+        </div>
+
+        <table class="contentTable">
+          <thead>
+            <tr>
+              <th>#*</th>
+              <th>Requester Name</th>
+              <th>Requester Type</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i class="fas fa-play rotate"></i>1</td>
+              <td>John Doe</td>
+              <td>Repair</td>
+              <td>#2000</td>
+              <td>Verified</td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-play rotate"></i>2</td>
+              <td>John Doe</td>
+              <td>Purchase</td>
+              <td>#40000</td>
+              <td>Unverified</td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-play rotate"></i>3</td>
+              <td>John Doe</td>
+              <td>Repair</td>
+              <td>#12000</td>
+              <td>Verified</td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-play rotate"></i>4</td>
+              <td>John Doe</td>
+              <td>Purchase</td>
+              <td>#50000</td>
+              <td>Verified</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="displayDetails">
+          <div class="selectionBox">
+            <select name="number" id="number">
+              <option value="10">10</option>
+            </select>
+          </div>
+          <div>Showing 1-5 of 5</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
