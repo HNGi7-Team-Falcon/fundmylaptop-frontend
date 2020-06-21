@@ -25,12 +25,42 @@ const routes = {
   privacy: async () => {
     await render('/privacy.html')
   },
-  'terms-and-conditions': async () => {
-    await render('/terms-conditions.html')
-  },
   '': async () => {
     await render('/home.html')
+  },
+  '*': async () => {
+    await render('/404.html')
   }
 }
+
+/* const routes = [
+  {
+    path: '', component: 'home.html', name: 'home'
+  },
+  {
+    path: '/about', component: 'about.html', name: 'about'
+  },
+  {
+    path: '/contact', component: 'contact.html', name: 'contact'
+  },
+  {
+    path: '/login', component: 'login.html', name: 'login'
+  },
+  {
+    path: '/signup', component: 'signup.html', name: 'signup'
+  },
+  {
+    path: '/signup', component: 'signup.html', name: 'signup'
+  },
+  {
+    path: '/faq', component: 'faq.html', name: 'faq'
+  },
+  {
+    path: '/privacy-policy', component: 'privacy-policy.html', name: 'privacy-policy'
+  },
+  {
+    path: '/tos', component: 'tos.html', name: 'tos'
+  }
+] */
 
 export default routes
