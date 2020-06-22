@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="individual.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="bootstrap.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <title>individual funding page</title>
+
+<style>
+    /* No boostrap, just css */
+        /* 80 minu the tops */
+html, body {
+        max-width: 100%;
+}
+ body{
+        padding: 0;
+        margin: 0;
+        border: 0; 
+         font-family: 'DM Sans', sans-serif;
+         }
+#left-side{
+        display: flex;
+        flex-wrap: wrap;
+}
+.name{
+        position: absolute;
+        width: 80%;
+        height: 70px;
+        left: 140px;
+        top: 120px;
+        /* 180 */
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 42px;
+        line-height: 45px;
+        color: #04172A;
+    }
+
+
+.purpose{
+         position: absolute;
+        width: 50%px;
+        height: 31px;
+        left: 140px;
+        top: 186px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        color: #04172A;
+     }
+
+.date{
+        position: absolute;
+        width: 60%;
+        height: 31px;
+        left: 571px;
+        top: 186px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        color: #04172A;
+    }
+
+/* can put as background */
+.video{
+        position: absolute;
+        width: 670px;
+        height: 416px;
+        left: 140px;
+        top: 257px;
+        background: url("https://i.ibb.co/mBjwP4r/photo.png");
+        background-repeat: no-repeat; 
+    }
+
+.video .vd-logo1{
+        position: absolute;
+        margin: 170px; 
+        margin-left: 310px;
+    }
+
+.video .vd-logo2{
+        position: absolute;
+        margin: 130px; 
+        margin-left: 270px;
+    }
+
+.right-side{
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        width: 400px;
+        height: 513px;
+        left: 850px;
+        top: 257px;
+        right: 550px;
+        bottom: 340px;
+        background: #FFFFFF;
+        border: 1px solid rgba(4, 23, 42, 0.25);
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+
+.bid {
+        position: absolute;
+        width: 186px;
+        height: 47px;
+        left: 20px;
+        top: 3px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 57px;
+        color: #04172A;
+    }
+
+.form{
+        position: absolute;
+        width: 392px;
+        height: 48px;
+        left: 850px;
+        top: 340px;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+
+/* form */
+
+input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+  
+  button {
+        width: 100%;
+        color: white;
+        padding: 14px 20px;
+        margin: 25px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 35px;
+        text-align: left;
+    }
+  
+  button {
+        background-color: #45a049;
+        background: #FB3F5C;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+  
+  div {
+        border-radius: 5px;
+        /* background-color: #f2f2f2; */
+        padding: 20px;
+    }
+
+  .form .form1{
+         margin: -20px;
+    }
+
+.loan{
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+/* downside */
+
+.need{
+        position: absolute;
+        width: 376px;
+        height: 120px;
+        left: 140px;
+        top: 685px;
+        background: #FFFFFF;
+        border: 1px solid rgba(4, 23, 42, 0.25);
+        box-sizing: border-box;
+        border-radius: 10px;
+}
+
+.has{
+        position: absolute;
+        width: 278px;
+        height: 120px;
+        left: 532px;
+        top: 685px;
+        background: #FFFFFF;
+        border: 1px solid rgba(4, 23, 42, 0.25);
+        box-sizing: border-box;
+        border-radius: 10px;
+     }
+
+.asset{
+        margin-top: 5px;
+    }
+
+
+.voucher-title{
+        position: absolute;
+        width: 108px;
+        height: 31px;
+        left: 140px;
+        top: 819px;
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        color: #000000;
+    }
+
+.voucher-line{
+        position: absolute;
+        width: 670px;
+        height: 128px;
+        left: 140px;
+        top: 883px;
+        overflow: hidden;
+        background: #FFFFFF;
+        border: 1px solid rgba(4, 23, 42, 0.5);
+        box-sizing: border-box;
+        border-radius: 10px;
+   }
+
+.voucher{
+        position: relative;
+        width: 80px;
+        height: 80px;
+        left: 5px;
+        top: 27px;
+        margin-right: 7px;
+        margin-top:  -25px;
+   }
+
+#next{
+        margin-left: 240px;
+    }
+.next{
+        margin-left: 170px;
+        font-size: 13px;
+    }
+.description-title{
+    position: absolute;
+    width: 128px;
+    height: 26px;
+    left: 141px;
+    top: 1030px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: #04172A;
+}
+
+.description-info{
+    position: absolute;
+    width: 670px;
+    height: 288px;
+    left: 140px;
+    top: 1080px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.sign-name{    
+    position: absolute;
+    width: 163px;
+    height: 47px;
+    left: 140px;
+    top: 1350px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 38px;
+    color: #04172A;
+}
+
+
+.sign-button{
+    position: absolute;
+    width: 178px;
+    height: 72px;
+    left: 632px;
+    top: 1320px;
+    border: 2px solid #FB3F5C;
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #FB3F5C;
+    text-align: center;
+   
+}
+
+#cycle{
+    position: absolute;
+    left: 276px;
+    right: 8.33%;
+    top: 1382px; 
+    bottom: 41.62%;
+}
+
+ /* Responsive-design */
+ /* @media (max-width: 1024px){
+        
+    #left-side{
+        padding-right: 50px;
+         margin-top: 0;
+       margin-left: 50px;
+      width: 80%;
+     text-align: center;
+    }
+.right{
+    padding-right: 50px;
+         margin-top: 0;
+       margin-left: 50px;
+      width: 80%;
+     text-align: center;
+}
+.bottom{
+    padding-right: 50px;
+         margin-top: 0;
+       margin-left: 50px;
+      width: 80%;
+     text-align: center;
+}
+
+.name{
+    display: flex;
+    justify-content: center;   
+}
+ .description-info{
+        margin-top: 190px;
+                    margin-bottom: 30px;
+                    text-align: center;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #FB3F5C;
+
+    }
+    
+    
+
+
+ } */
+
+
+</style>
+
+</head>
+
+<body>
+<div id="left-side">
+    <div>
+        <h1 class="name">John Doe</h1>
+        <p class="purpose">Purpose: Laptop Purchase</p>
+        <p class="date">Created June 23, 2020</p>
+    </div>
+
+    <div class="video">
+        <img src="https://i.ibb.co/XWbGcwX/vd-logo.png" alt="" srcset="" class="vd-logo1">
+        <img src="https://i.ibb.co/LSxsPMd/vd-logo1.png" alt="" srcset="" class="vd-logo2">
+    </div>
+</div>
+   
+
+    <!-- right side -->
+  <div class="right">
+    <div class="right-side">
+        <h3 class="bid">Place a bid</h3>
+    </div>
+    <div class="form">
+    <form action="#">
+            <div class="form1">
+                <label for="interest-rate">Interest Rate*</label>
+                <select class="loan" name="interest" aria-placeholder="Select an interest rate">
+                  <option value="select rate" placeholder="Select an interest rate">Select an interest rate</option>
+                  <option value="australia">5%</option>
+                  <option value="canada">7%</option>
+                  <option value="usa">10%</option>
+                </select>
+            </div>
+        <div class="form1">
+            <label for="loan-duration">Loan Duration*</label>
+            <select class="loan" name="loan">
+              <option value="australia">Select a loan durations</option>
+              <option value="canada">6 months</option>
+              <option value="usa">12 months</option>
+            </select>
+        </div>
+        <div class="form1">
+            <label for="loan-type">Loan type*</label>
+            <select class="loan" name="loan-type">
+              <option value="australia">Select a type</option>
+              <option value="canada">Medium term</option>
+              <option value="usa">Long term</option>
+            </select> 
+        </div>
+        <button type="submit" value="Submit">Place a bid
+            <i class="fas fa-chevron-right next" class="next"></i>
+        </button>
+          <!-- <input type="submit" value="Submit"> -->
+        </form>
+      </div>
+
+  </div>  
+
+  <div class="bottom"> 
+    <div class="down-side">
+        <div class="need">
+            <p class="asset">Needs</p>
+            <h2 class="need-has">N 360,000</h2>
+        </div>
+        <div class="has">
+            <p class="asset">Has</p>
+            <h2 class="need-has">5 Bidders</h2>
+        </div>
+    </div>
+    <!-- vouchers  -->
+    <div>
+        <h3 class="voucher-title">Vouchers</h3>
+        <div class="voucher-line">
+            <img src="https://i.ibb.co/m4zFQCc/voucher.png" alt="" sizes="" class="voucher">
+            <img src="https://i.ibb.co/m4zFQCc/voucher.png" alt="" sizes="" class="voucher">
+            <img src="https://i.ibb.co/m4zFQCc/voucher.png" alt="" sizes="" class="voucher">
+            <img src="https://i.ibb.co/m4zFQCc/voucher.png" alt="" sizes="" class="voucher">
+            <i class="fas fa-chevron-right next" id="next"></i>
+            <!-- <i class="fas fa-chevron-right prev" ></i> -->
+        </div>
+    </div>
+    <div class="description">
+        <h3 class="description-title"> DESCRIPTION</h3>
+        <p class="description-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in nisi quis justo pharetra egestas. In hac habitasse platea dictumst. Integer ultrices est eu elit dignissim, sit amet semper tellus semper. Sed ultricies finibus tempor. Pellentesque ornare consequat risus, vitae pellentesque ipsum rhoncus placerat. Proin ultrices lacinia maximus. Donec luctus lorem nisi. Aliquam in urna vitae tellus elementum commodo. Proin tincidunt ante arcu, lacinia interdum felis accumsan id. Donec quis nibh nec justo bibendum porta eget nec tellus. Aliquam accumsan semper erat.</p>
+    </div>
+      <div>
+          <h1 class="sign-name">John Doe</h1>
+          <i class="fa fa-check-circle" id="cycle" aria-hidden="true"></i>
+      </div>
+      <button class="sign-button">Contact</button>
+  </div>
+  
+     <script>
+
+     </script>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- <script src="individual.js"></script> -->
+</body>
+</html>
