@@ -11549,11 +11549,6 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vanilla-router@^1.2.8:
-  version "1.2.8"
-  resolved "https://registry.yarnpkg.com/vanilla-router/-/vanilla-router-1.2.8.tgz#fe4a4e4ce1c1b1e76fa072f3d8b200670310984d"
-  integrity sha512-jZYhHPTXVqsUr4nfSD776q2eWeKNphBgvh7ELyGgcgZPo2bjUgV4BdW0l0fHX+cNZHDpW8WabQ8ZdIHc73Cd7w==
-
 vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
