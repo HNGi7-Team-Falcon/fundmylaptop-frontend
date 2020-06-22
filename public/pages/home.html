@@ -1168,7 +1168,7 @@
 	}
 
 	.box .testimony p {
-		font-size: 16px;
+		font-size: 14px;
 	}
 
 	/* imapact/stat section */
@@ -1583,7 +1583,7 @@
 		margin: 0;
 		width: 100%;
 		display: -ms-grid;
-		display: grid;
+		display: flex;
 		-ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	}
@@ -1597,7 +1597,7 @@
 		display: flex;
 		-webkit-box-pack: end;
 		-ms-flex-pack: end;
-		justify-content: flex-end;
+		justify-content: center;
 	}
 
 	footer .footer-bottom p {
@@ -1610,6 +1610,7 @@
 			-webkit-box-direction: normal;
 			-ms-flex-direction: column;
 			flex-direction: column;
+			text-align: center;
 		}
 	}
 
@@ -1753,7 +1754,7 @@
 							Imterships Project #FundMyLaptop exists solely to make this
 							happen.
 						</p>
-						<a href="#" class="medium-buttons">Get a loan</a>
+						<a href="/loan" class="medium-buttons">Get a loan</a>
 
 
 					</div>
@@ -1771,7 +1772,7 @@
 							Imterships Project #FundMyLaptop exists solely to make this
 							happen.
 						</p>
-						<a href="#" class="medium-buttons">Get loan</a>
+						<a href="/invest" class="medium-buttons">Invest</a>
 					</div>
 				</div>
 			</div>
@@ -2134,10 +2135,10 @@
 					<li>
 						<h1>Take a loan</h1>
 					</li>
-					<li><a href="#">Take a loan</a></li>
-					<li><a href="#">Loan fee & interest rate</a></li>
-					<li><a href="#">Loan EMI Calculator</a></li>
-					<li><a href="#">How to apply for a loan</a></li>
+					<li><a href="/loan">Take a loan</a></li>
+					<li><a href="/loan">Loan fee & interest rate</a></li>
+					<li><a href="/loan">Loan EMI Calculator</a></li>
+					<li><a href="/loan">How to apply for a loan</a></li>
 				</ul>
 			</div>
 
@@ -2146,34 +2147,23 @@
 					<li>
 						<h1>Invest</h1>
 					</li>
-					<li><a href="#">Invest your money</a></li>
-					<li><a href="#">Invest fee & return rate</a></li>
-					<li><a href="#">How to invest</a></li>
+					<li><a href="/invest">Invest your money</a></li>
+					<li><a href="/invest">Invest fee & return rate</a></li>
+					<li><a href="/invest">How to invest</a></li>
 				</ul>
 			</div>
 
-			<div class="footer-top-4">
-				<ul>
-					<li>
-						<h1>About us</h1>
-					</li>
-					<li><a href="#">Why choose FundMyLaptop</a></li>
-					<li><a href="#">How P2P lending works</a></li>
-					<li><a href="/about">About FundMyLaptop</a></li>
-					<li><a href="/contact">Contact us</a></li>
-				</ul>
-			</div>
-		</div>
-		<!-- bottom section----- -->
-		<div class="footer-bottom">
-			<p class="copyright">
-				2020 &copy; Copyright All rights reserved>
-			</p>
-			<p><a href="/faq">FAQ</a></p>
-			<p><a href="/privacy-policy">Privacy Policy</a></p>
-			<p>
-				<a href="/terms-and-conditions">Terms & Conditions</a>
-			</p>
-		</div>
+	<hr />
+
+	<!-- bottom section----- -->
+	<div class="footer-bottom">
+		<p class="footer-bottom-left">
+			2020 © Copyright All rights reserved>
+		</p>
+		<p class="footer-bottom-right"><a href="/faq">FAQ</a></p>
+		<p class="footer-bottom-right"><a href="/privacy">Privacy Policy</a></p>
+		<p class="footer-bottom-right">
+			<a href="/terms-and-conditions">Terms & Conditions</a>
+		</p>
 	</div>
 </footer>
