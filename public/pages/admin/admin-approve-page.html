@@ -1,0 +1,410 @@
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+
+<section>
+    <aside>
+        <div class="app-title">
+            <div>
+                <span class="fund">FundMy</span><span class="laptop">Laptop</span> <span class="fund pl-3"><<<</span>
+            </div>
+        </div>
+        <div class="aside-bar-component">
+            <div>
+                <span class="icon dashboard"></span>
+                <span>Dashboard</span>
+            </div>
+            <div>
+                <span class="icon manager"></span>
+                <span>Manage users</span>
+            </div>
+
+            <div class="requests">
+                <div class="req">Requests</div>
+                <div>
+                    <div>
+                        <span class="icon vision"></span>
+                        <span>View Requests</span>
+                    </div>
+                    <div>
+                        <span class="icon review"></span>
+                        <span>Review Requests</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <nav class="main-navbar">
+            <div>
+                <span class="ellipse"></span>
+                <span class="radio"></span>
+                <span>Hi, Alabi Samuel Seun</span>
+                <span class="pic"></span>
+            </div>
+        </nav>
+        <div class="main-title">
+            <span>Requests</span>
+        </div>
+
+        <div class="main-content">
+            <div class="main-content-title">
+                <div>
+                    <span class="icon statistics"></span>
+                    <span>All Requests</span>
+                </div>
+                <div>
+                    <button class="export-button">
+                        <span class="icon download"></span>
+                        <span>Export</span>
+                        <span class="icon down"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="options-bar">
+                <div id="search-box">
+                    <input type="text" id="search" placeholder="Search">
+                </div>
+                <div id="status">
+                    <span>Status</span>
+                    <select>
+                        <option value="Verified">Verified</option>
+                        <option value="Unverified">Unverified</option>
+                    </select>
+                </div>
+                <div id="type">
+                    <span>Type</span>
+                    <select>
+                        <option value="Purchase">Purchase</option>
+                        <option value="Repairs">Repairs</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="list-content">
+                <div class="list-content-title">
+                    <div># *</div>
+                    <div>Requester Name</div>
+                    <div>Request Type</div>
+                    <div>Amount</div>
+                    <div>Status</div>
+                    <div>Review</div>
+                </div>
+                <div class="list-content-items">
+                    <div class="list-items">
+                        <div>
+                            <span class="triangle"></span>
+                            <span class="num">1</span>
+                        </div>
+                        <div>John Doe</div>
+                        <div>Repair</div>
+                        <div>#2000</div>
+                        <div>Verified</div>
+                        <div>
+                            <span class="accept">Accept</span>
+                            <span class="decline">Decline</span>
+                        </div>
+                    </div>
+                    <div class="list-items">
+                        <div>
+                            <span class="triangle"></span>
+                            <span class="num">2</span>
+                        </div>
+                        <div>John Doe</div>
+                        <div>Repair</div>
+                        <div>#2000</div>
+                        <div>Verified</div>
+                        <div>
+                            <span class="accept">Accept</span>
+                            <span class="decline">Decline</span>
+                        </div>
+                    </div>
+                    <div class="list-items">
+                        <div>
+                            <span class="triangle"></span>
+                            <span class="num">3</span>
+                        </div>
+                        <div>John Doe</div>
+                        <div>Repair</div>
+                        <div>#2000</div>
+                        <div>Verified</div>
+                        <div>
+                            <span class="accept">Accept</span>
+                            <span class="decline">Decline</span>
+                        </div>
+                    </div>
+                    <div class="list-items">
+                        <div>
+                            <span class="triangle"></span>
+                            <span class="num">4</span>
+                        </div>
+                        <div>John Doe</div>
+                        <div>Repair</div>
+                        <div>#2000</div>
+                        <div>Verified</div>
+                        <div>
+                            <span class="accept">Accept</span>
+                            <span class="decline">Decline</span>
+                        </div>
+                    </div>
+                    <div class="list-items">
+                        <div>
+                            <span class="triangle"></span>
+                            <span class="num">5</span>
+                        </div>
+                        <div>John Doe</div>
+                        <div>Repair</div>
+                        <div>#2000</div>
+                        <div>Verified</div>
+                        <div>
+                            <span class="accept">Accept</span>
+                            <span class="decline">Decline</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-footer">
+                    <div>10 <span class="down"></span></div>
+                    <div>Showing 1-5 of 5</div>
+                </div>
+            </div>
+        </div>
+    </main>
+</section>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .pl-3{
+        padding-left: 15px;
+    }
+    section{
+        font-family: "DM Sans";
+        display: flex;
+        /* flex-basis: 30 70; */
+    }
+    aside{
+        width: 25%;
+        min-height: 700px;
+        background-color: #2A3A64;
+        color: #e1e1e1;
+    }
+    .app-title{
+        height: 72px;
+        background-color: #fb3f5c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+    }
+    .app-title span.fund{
+        color: #2A3A64;
+    }
+    .app-title span.laptop{
+        color: #e0e0e0;
+    }
+    .aside-bar-component{
+        padding-left: 30px;
+        margin-top: 50px;
+    }
+    .aside-bar-component > div, .requests > div > div, .main-content-title > div:first-of-type{
+        display: flex;
+        align-items: center;
+    }
+    .aside-bar-component > div > span, .requests > div > div > span, .main-content-title > div > span{
+        padding: 10px 5px;
+    }
+    span.icon{
+        width: 30px;
+    }
+    span.icon.dashboard{
+        content: url("https://res.cloudinary.com/kyrioxlamda/image/upload/v1592814829/dashboard.svg");
+    }
+    span.icon.manager{
+        content: url("https://res.cloudinary.com/kyrioxlamda/image/upload/v1592814829/manager.svg ");
+    }
+    span.icon.vision{
+        content: url("https://res.cloudinary.com/kyrioxlamda/image/upload/v1592814829/vision.svg");
+    }
+    span.icon.review{
+        content: url("https://res.cloudinary.com/kyrioxlamda/image/upload/v1592814829/review.svg");
+    }
+    .requests{
+        display: block!important;
+        padding-top: 30px;
+    }
+    .req{
+        margin: 0 0 30px -15px;
+    }
+
+
+
+
+    main{
+        width: 75%;
+        min-height: 700px;
+        background-color: #e5e5e5;
+        color: #2a3a64;
+        font-weight: 600;
+    }
+    .main-navbar{
+        height: 72px;
+        font-size: 18px;
+        background-color: #fff;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .main-navbar > div{
+        display: flex;
+        align-items: center;
+    }
+    .main-navbar > div > *{
+        margin: 0 10px;
+    }
+    .main-title{
+        height: 50px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+    }
+    .main-title span{
+        padding: 0 0 0 50px;
+    }
+    .main-content{
+        margin: 15px;
+        background-color: #fff;
+    }
+    .main-content-title{
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 10px 50px;
+    }
+    
+    span.statistics{
+        content: url("https://res.cloudinary.com/kyrioxlamda/image/upload/v1592820645/statistics.svg");
+    }
+    span.download{
+        width: 24px;
+        content: url("https://res.cloudinary.com/kyrioxlamda/image/upload/v1592820645/download.svg");
+    }
+    span.down{
+        width: 18px;
+        content: url("https://res.cloudinary.com/kyrioxlamda/image/upload/v1592820645/down.svg");
+    }
+    span.ellipse{
+        content: url("https://res.cloudinary.com/kyrioxlamda/image/upload/v1592820646/ellipse.svg");
+    }
+    span.radio{
+        content: url("https://res.cloudinary.com/kyrioxlamda/image/upload/v1592820645/radio.svg");
+    }
+    span.pic{
+        content: "";
+        background-color: #2A3A64;
+        width: 48px;
+        height: 48px;
+        border: 2px solid #2a3a64;
+        border-radius: 50%;
+    }
+    .export-button{
+        display: flex;
+        align-items: center;
+        border: 1px solid #e2e2e2;
+        border-radius: 7px;
+        padding: 3px;
+        color: #a1a1a1;
+        background-color: #fff;
+    }
+    .export-button > span{
+        padding: 0 2px;
+    }
+    .options-bar{
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+    }
+    .options-bar > div{
+        width: 33%;
+    }
+    .options-bar input, .options-bar select{
+        height: 40px;
+        width: 70%;
+        border: none;
+        color: #2a3a64;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .options-bar input{
+        width: 90%;
+        border: 2px solid #a6a6a6;
+        border-radius: 10px;
+    }
+    #search-box{
+        margin-left: 50px;
+    }
+    #search-box > input::placeholder, #status > span, #type > span{
+        color: #a1a1a1;
+    }
+
+    .list-content-title, .list-items{
+        display: flex;
+        justify-content: center;
+    }
+    .list-content-title > div, .list-items > div{
+        width: 15%;
+    }
+    .list-content-title > div:first-of-type, .list-items > div:first-of-type{
+        text-align: center;
+    }
+
+    .list-items {
+        font-weight: 500;
+        color: #a0a0a0;
+        padding: 15px 0;
+        font-size: 20px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .list-items > div:first-of-type{
+        display: flex;
+        align-items: center;
+    }
+
+    span.triangle{
+        content: url("https://res.cloudinary.com/kyrioxlamda/image/upload/v1592820645/triangle.svg");
+        width: 24px;
+        padding: 0 10 0 0px;
+    }
+    span.num{
+        padding: 0 0 0 40px;
+        
+    }
+    span.accept, span.decline{
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        color: #f0f0f0;
+    }
+    span.accept{
+        background-color: #57B894;
+    }
+    span.decline{
+        background-color: #FB3F5C;
+    }
+    .content-footer{
+        display: flex;
+        padding: 20px 55px;
+        align-items: center;
+    }
+    .content-footer > div:first-of-type{
+        background-color: #e5e5e5;
+        padding: 8px 12px;
+        text-align: center;
+        margin: 0 10px 0 0;
+    }
+</style>
+
+
