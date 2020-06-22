@@ -20,4 +20,9 @@ body {
     font-family: DM Sans;
     color: var(--p-textgrey-color);
     background-color: var(--primary-white);
+    a {
+        &:hover {
+            text-decoration: none !important;
+        }
+    }
 }
