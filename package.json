@@ -9,7 +9,7 @@
   "author": "Samuel Onyijne <samuelonyijne@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": "12.13"
+    "node": ">=12.13"
   },
   "scripts": {
     "start:test": "jest",
