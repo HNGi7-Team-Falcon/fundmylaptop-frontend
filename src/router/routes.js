@@ -27,9 +27,6 @@ const routes = {
   },
   '': async () => {
     await render('/home.html')
-  },
-  '*': async () => {
-    await render('/404.html')
   }
 }
 
@@ -60,7 +57,7 @@ const routes = {
   },
   {
     path: '/tos', component: 'tos.html', name: 'tos'
-  }
+  } WILL REIMPLEMENT THE ROUTER
 ] */
 
 export default routes
