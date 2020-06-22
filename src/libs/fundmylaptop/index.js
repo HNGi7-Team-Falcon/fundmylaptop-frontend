@@ -1,6 +1,7 @@
 /* eslint-disable no-prototype-builtins */
 import Component from './component'
 import Store from './Store'
+import FmlRouter from './FmlRouter'
 const path = require('path')
 
 export default class FundMyLaptop extends Component {
@@ -20,10 +21,11 @@ export default class FundMyLaptop extends Component {
       this.element = this.nodeById(params.ele) || this.element
     }
     if (params.hasOwnProperty('router')) {
-      this.$router = params.router // set the router
-      this.$router.resolve()
+      if (params.router instanceof FmlRouter) {
+        this.$router = params.router // set the router
+        this.$router.start()
+      }
     }
-    window.FundMyLaptop = this
   }
 
   async setMeta (head, payload) {
@@ -39,6 +41,7 @@ export default class FundMyLaptop extends Component {
       name: 'author',
       content: 'Samuel Onyijne'
     }) // for test only
+    window.FundMyLaptop = this
   }
 
   async run () {
@@ -75,15 +78,15 @@ export async function loadHTML (url) {
 
 /** returns the html code */
 export async function getHTML (url) {
-  return fetch(url)
-    .then(response => response.text())
+  return fetch(url).then(response => response.text())
 }
 
 export function nodeById (id) {
   return document.getElementById(`${id}`)
 }
 
-export function render (page) {
+export async function render (page) {
   if (!fml.element) return
-  loadHTML(`${path.resolve(__dirname, '../pages')}/${page}`)
+  await loadHTML(`${path.resolve(__dirname, '../pages')}/${page}`)
+  await window.FundMyLaptop.$router.bindNavigo()
 }
