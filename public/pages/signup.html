@@ -824,7 +824,7 @@
             }
 
             .signup-dropdown-field input {
-                min-width: 20em;
+                min-width: 100%;
                 margin-top: -1em;
                 margin-bottom: .5em;
                 padding: 1em 3em 1em 1em;
@@ -843,7 +843,7 @@
             }
         }
     </style>
-
+	
 <header class="toolbar">
     <nav class="toolbar_navigation">
         <div></div>
@@ -884,16 +884,20 @@
                 </div>
                 <div class="signup-dropdown-field">
                     <p>Email</p>
-                    <input class="col-md-12" type="text" name="email" placeholder="Username@domain.com">
-
+                    <input id="email" type="text" name="email" placeholder="Username@domain.com" required>
                 </div>
                 <div class="signup-dropdown-field" id="password-field">
                     <p>Password</p>
-                    <input class="col-md-12" type="password" name="password" placeholder="Enter your password">
+                    <input id="password" type="password" name="password" placeholder="Enter your password" required>
+                </div>
+				<div class="signup-dropdown-field" id="password-field">
+                    <p>Confirm Password</p>
+                    <input id="confirmPassword" type="password" name="password" placeholder="Enter your password" required>
+
                 </div>
 
                 <a href="#">
-                    <button class="signup-continue-btn">Create account ></button>
+                    <button id="create-account-btn" class="signup-continue-btn" required>Create account ></button>
                 </a>
 
                 <p class="have-account">Already have an account? 

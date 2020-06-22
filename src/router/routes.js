@@ -10,6 +10,54 @@ const routes = {
   signup: async () => {
     await render('/signup.html')
     home.display()
+	const validateEmail = (email) => {
+		/*email validation regex. add this*/
+	}
+	const submit = {
+		validate:form => {
+			let status = true
+			const email = form.querySelector('input[type="email"]')
+			if(!validateEmail(email.value)){
+				email.classList.add('has-error')
+				status = false
+			}
+			const password = form.getElementById('password')
+			if(!password.length > 5){
+				password.classList.add('has-error')
+				status = false
+			}
+			const confirmPassword = form.getElementById('confirmPassword')
+			if(password.value !== confirmPassword.value){
+				status = false
+			}
+			return status
+		}
+		send:form => {
+			if(!submit.validate(form))
+				return fetch('api/users/login',{
+					method: 'POST',
+					headers: {
+						'Accept':'application/json',
+						'Content-Type':'application/json'
+					},
+					body:JSON.stringify({
+						email:email.value, 
+						password: password.value
+					})
+						.then(res => res.json())
+						.then(data => {
+							/* check if data.success is true*/
+						})
+						.catch(err => /* show err.message */)
+				})
+		}
+	}
+	document.querySelector('button[type="submit"]')
+		.addEventListener('click', e => {
+			e.preventDefault()
+			const form = e.target.parentNode.parentNodesubmit(form)
+		})
+	
   },
   about: async () => {
     await render('/about.html')
