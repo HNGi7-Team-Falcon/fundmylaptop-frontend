@@ -1,5 +1,4 @@
 <style>
-
 	#text_container {
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -488,6 +487,7 @@
 		/* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
 	}
 
+	/*
 	footer {
 		background-color: rgba(4, 23, 42, 0.03);
 		font-size: 0.75em;
@@ -540,7 +540,16 @@
 		width: 80%;
 		margin: 1em 12em !important;
 	}
+	*/
 
+	.footer{
+        height:100%;
+        margin-top: 140px;
+        width: 100%;
+        background: #2A3A64;
+        padding: 70px 0 30px 0;
+        color: #FFFFFF;
+    }
 	/*
   * Putting together the landing page.
   * Corrective css styles
@@ -1168,7 +1177,7 @@
 	}
 
 	.box .testimony p {
-		font-size: 16px;
+		font-size: 14px;
 	}
 
 	/* imapact/stat section */
@@ -1583,7 +1592,7 @@
 		margin: 0;
 		width: 100%;
 		display: -ms-grid;
-		display: grid;
+		display: flex;
 		-ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	}
@@ -1597,7 +1606,7 @@
 		display: flex;
 		-webkit-box-pack: end;
 		-ms-flex-pack: end;
-		justify-content: flex-end;
+		justify-content: center;
 	}
 
 	footer .footer-bottom p {
@@ -1610,6 +1619,7 @@
 			-webkit-box-direction: normal;
 			-ms-flex-direction: column;
 			flex-direction: column;
+			text-align: center;
 		}
 	}
 
@@ -1643,7 +1653,7 @@
 		<header id="header">
 			<ul class="logo">
 				<li>
-					<a href="/home">FundMy<span class="lap">Laptop</span></a>
+					<a href="/">FundMy<span class="lap">Laptop</span></a>
 				</li>
 			</ul>
 			<ul class="navs">
@@ -1686,7 +1696,15 @@
 						A <span class="platform">Platform</span> For Fundees And Funders
 					</h1>
 				</div>
-				<div id="plaintext">
+			</div>
+			<div class="helpinvest">
+				<div class="helpinvest-box">
+					<img
+						src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592444349/hng%20fundmylaptop/helploan-icon_xlfel3.svg"
+						alt="helploan-icon" />
+					<h2>
+						Want to <span style="color: var(--primary-pink);">invest</span>?
+					</h2>
 					<p>
 						Becoming a dev definitely means you have to have a laptop. As a
 						dev your laptop is your most essential work tool. HNG
@@ -1700,7 +1718,9 @@
 				</div>
 			</div>
 			<div class="laptop-hero-image">
-				<img src="https://res.cloudinary.com/udemic/image/upload/v1592653334/sample/fundmylaptop/fundmylaptop/fundmylaptop-macbook_mebt7v.png" alt="macbook" />
+				<img
+					src="https://res.cloudinary.com/udemic/image/upload/v1592653334/sample/fundmylaptop/fundmylaptop/fundmylaptop-macbook_mebt7v.png"
+					alt="macbook" />
 			</div>
 		</div>
 	</div>
@@ -1709,7 +1729,9 @@
 	<div id="bottom_hero">
 		<div class="wide-container">
 			<div class="welcome-image">
-				<img src="https://res.cloudinary.com/udemic/image/upload/v1592652954/sample/fundmylaptop/fundmylaptop/fundmylaptop-workspace_tziqr4.jpg" alt="workspace" />
+				<img
+					src="https://res.cloudinary.com/udemic/image/upload/v1592652954/sample/fundmylaptop/fundmylaptop/fundmylaptop-workspace_tziqr4.jpg"
+					alt="workspace" />
 			</div>
 			<div class="bottomhero_text">
 				<h2>
@@ -1728,7 +1750,7 @@
 					investing in them and getting back there money with interest
 					fundaraising.
 				</p>
-				<a href="/aboutus"><button class="fml-btn">Learn More</button></a>
+				<a href="/about"><button class="fml-btn">Learn More</button></a>
 			</div>
 		</div>
 	</div>
@@ -1743,7 +1765,9 @@
 			<div class="helpflex">
 				<div class="helploan">
 					<div class="helploan-box">
-						<img src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592444349/hng%20fundmylaptop/helploan-icon_xlfel3.svg" alt="helploan-icon" />
+						<img
+							src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592444349/hng%20fundmylaptop/helploan-icon_xlfel3.svg"
+							alt="helploan-icon" />
 						<h2>
 							Need a <span style="color: var(--primary-pink);">loan</span>?
 						</h2>
@@ -1753,14 +1777,15 @@
 							Imterships Project #FundMyLaptop exists solely to make this
 							happen.
 						</p>
-						<a href="#" class="medium-buttons">Get a loan</a>
+						<a href="/loan" class="medium-buttons">Get a loan</a>
 
 
 					</div>
 				</div>
 				<div class="helpinvest">
 					<div class="helpinvest-box">
-						<img src="https://res.cloudinary.com/udemic/image/upload/v1592652952/sample/fundmylaptop/fundmylaptop/fundmylaptop-grow-money-icon_hzvgob.svg" />
+						<img
+							src="https://res.cloudinary.com/udemic/image/upload/v1592652952/sample/fundmylaptop/fundmylaptop/fundmylaptop-grow-money-icon_hzvgob.svg" />
 						<h2>
 							Want to
 							<span style="color: var(--primary-pink);">invest</span>?
@@ -1771,83 +1796,77 @@
 							Imterships Project #FundMyLaptop exists solely to make this
 							happen.
 						</p>
-						<a href="#" class="medium-buttons">Get loan</a>
+						<a href="/invest" class="medium-buttons">Invest</a>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div id="faq" class="faqdiv">
-			<div class="faq">
-				<h1>Frequently Asked Questions</h1>
-				<hr />
-				<p class="accordion">How do I get a laptop</p>
-				<div class="panel">
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry Lorem Ipsum has been the industry's standard dummy text
-					ever since the 1500s when an unknown printer took a galley of type
-					and scrambled it to make a type specimen book it has.
-				</div>
 
-				<p class="accordion">How do I get a loan</p>
-				<div class="panel">
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry Lorem Ipsum has been the industry's standard dummy text
-					ever since the 1500s when an unknown printer took a galley of type
-					and scrambled it to make a type specimen book it has.
-				</div>
+			<p class="accordion">How do I get a loan</p>
+			<div class="panel">
+				Lorem Ipsum is simply dummy text of the printing and typesetting
+				industry Lorem Ipsum has been the industry's standard dummy text
+				ever since the 1500s when an unknown printer took a galley of type
+				and scrambled it to make a type specimen book it has.
+			</div>
 
-				<p class="accordion">How do I invest in this platform</p>
-				<div class="panel">
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry Lorem Ipsum has been the industry's standard dummy text
-					ever since the 1500s when an unknown printer took a galley of type
-					and scrambled it to make a type specimen book it has.
-				</div>
+			<p class="accordion">How do I invest in this platform</p>
+			<div class="panel">
+				Lorem Ipsum is simply dummy text of the printing and typesetting
+				industry Lorem Ipsum has been the industry's standard dummy text
+				ever since the 1500s when an unknown printer took a galley of type
+				and scrambled it to make a type specimen book it has.
+			</div>
 
-				<p class="accordion">
-					How do I get a laptop
-				</p>
-				<div class="panel">
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry Lorem Ipsum has been the industry's standard dummy text
-					ever since the 1500s when an unknown printer took a galley of type
-					and scrambled it to make a type specimen book it has.
-				</div>
+			<p class="accordion">
+				How do I get a laptop
+			</p>
+			<div class="panel">
+				Lorem Ipsum is simply dummy text of the printing and typesetting
+				industry Lorem Ipsum has been the industry's standard dummy text
+				ever since the 1500s when an unknown printer took a galley of type
+				and scrambled it to make a type specimen book it has.
+			</div>
 
-				<p class="accordion">
-					How do I get a loan
-				</p>
-				<div class="panel">
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry Lorem Ipsum has been the industry's standard dummy text
-					ever since the 1500s when an unknown printer took a galley of type
-					and scrambled it to make a type specimen book it has.
-				</div>
+			<p class="accordion">
+				How do I get a loan
+			</p>
+			<div class="panel">
+				Lorem Ipsum is simply dummy text of the printing and typesetting
+				industry Lorem Ipsum has been the industry's standard dummy text
+				ever since the 1500s when an unknown printer took a galley of type
+				and scrambled it to make a type specimen book it has.
+			</div>
 
-				<p class="accordion">
-					How do I invest in this platform
-				</p>
-				<div class="panel">
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry Lorem Ipsum has been the industry's standard dummy text
-					ever since the 1500s when an unknown printer took a galley of type
-					and scrambled it to make a type specimen book it has.
-				</div>
+			<p class="accordion">
+				How do I invest in this platform
+			</p>
+			<div class="panel">
+				Lorem Ipsum is simply dummy text of the printing and typesetting
+				industry Lorem Ipsum has been the industry's standard dummy text
+				ever since the 1500s when an unknown printer took a galley of type
+				and scrambled it to make a type specimen book it has.
 			</div>
 		</div>
 	</div>
 	<div class="testimoniesdiv">
-		<svg class="circle-top-left" width="76" height="144" viewBox="0 0 76 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<svg class="circle-top-left" width="76" height="144" viewBox="0 0 76 144" fill="none"
+			xmlns="http://www.w3.org/2000/svg">
 			<circle cx="4" cy="72" r="72" fill="#F88295" />
 		</svg>
-		<svg class="circle-bottom-right" width="79" height="144" viewBox="0 0 79 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<svg class="circle-bottom-right" width="79" height="144" viewBox="0 0 79 144" fill="none"
+			xmlns="http://www.w3.org/2000/svg">
 			<circle cx="71.9998" cy="71.9998" r="71.9998" fill="#F88295" />
 		</svg>
-		<svg class="poly-top-right" width="93" height="134" viewBox="0 0 93 134" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M1.29224 30.3801C-1.27065 27.2362 0.530833 22.4969 4.53491 21.8493L133.412 1.00476C137.416 0.35714 140.62 4.28693 139.179 8.07837L92.792 130.112C91.3508 133.903 86.3457 134.713 83.7829 131.569L1.29224 30.3801Z" fill="#F88295" />
+		<svg class="poly-top-right" width="93" height="134" viewBox="0 0 93 134" fill="none"
+			xmlns="http://www.w3.org/2000/svg">
+			<path
+				d="M1.29224 30.3801C-1.27065 27.2362 0.530833 22.4969 4.53491 21.8493L133.412 1.00476C137.416 0.35714 140.62 4.28693 139.179 8.07837L92.792 130.112C91.3508 133.903 86.3457 134.713 83.7829 131.569L1.29224 30.3801Z"
+				fill="#F88295" />
 		</svg>
-		<svg class="poly-bottom-left" width="89" height="134" viewBox="0 0 89 134" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M-50.3543 7.11294C-51.7215 3.29419 -48.442 -0.572535 -44.4513 0.152848L83.9963 23.5004C87.987 24.2257 89.6959 28.9992 87.0724 32.0926L2.62907 131.658C0.00550541 134.751 -4.98289 133.844 -6.35006 130.026L-50.3543 7.11294Z"
+		<svg class="poly-bottom-left" width="89" height="134" viewBox="0 0 89 134" fill="none"
+			xmlns="http://www.w3.org/2000/svg">
+			<path
+				d="M-50.3543 7.11294C-51.7215 3.29419 -48.442 -0.572535 -44.4513 0.152848L83.9963 23.5004C87.987 24.2257 89.6959 28.9992 87.0724 32.0926L2.62907 131.658C0.00550541 134.751 -4.98289 133.844 -6.35006 130.026L-50.3543 7.11294Z"
 				fill="#F88295" />
 		</svg>
 
@@ -1863,7 +1882,9 @@
 				<div class="testimonials-slider">
 					<div class="box">
 						<div class="profile">
-							<img src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592469191/hng%20fundmylaptop/portrait-attracive-young-businesswoman-wearing-260nw-1036909795_1_ufdf4y.png" alt="" />
+							<img
+								src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592469191/hng%20fundmylaptop/portrait-attracive-young-businesswoman-wearing-260nw-1036909795_1_ufdf4y.png"
+								alt="" />
 							<div>
 								<p class="name">Anita M.</p>
 								<small>
@@ -1886,115 +1907,165 @@
 							</span>
 						</div>
 					</div>
-
-					<div class="box">
-						<div class="profile">
-							<img src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592469191/hng%20fundmylaptop/portrait-attracive-young-businesswoman-wearing-260nw-1036909795_1_ufdf4y.png" alt="" />
-							<div>
-								<p class="name">Anita M.</p>
-								<small>
-									<p class="date">October 7, 2019</p>
-								</small>
-							</div>
-						</div>
-						<div class="testimony">
-							<p>
-								Perfect.Very confortable and pleasant enviroment. we sat in
-								the pool area where it was very cool. i enjoyed my stay and
-								i will love to visit again.
-							</p>
-							<span class="ratings">
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-							</span>
-						</div>
-					</div>
-
-					<div class="box">
-						<div class="profile">
-							<img src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592469191/hng%20fundmylaptop/portrait-attracive-young-businesswoman-wearing-260nw-1036909795_1_ufdf4y.png" alt="" />
-							<div>
-								<p class="name">Anita M.</p>
-								<small>
-									<p class="date">October 7, 2019</p>
-								</small>
-							</div>
-						</div>
-						<div class="testimony">
-							<p>
-								Perfect.Very confortable and pleasant enviroment. we sat in
-								the pool area where it was very cool. i enjoyed my stay and
-								i will love to visit again.
-							</p>
-							<span class="ratings">
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-							</span>
-						</div>
-					</div>
-
-					<div class="box">
-						<div class="profile">
-							<img src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592469191/hng%20fundmylaptop/portrait-attracive-young-businesswoman-wearing-260nw-1036909795_1_ufdf4y.png" alt="" />
-							<div>
-								<p class="name">Anita M.</p>
-								<small>
-									<p class="date">October 7, 2019</p>
-								</small>
-							</div>
-						</div>
-						<div class="testimony">
-							<p>
-								Perfect.Very confortable and pleasant enviroment. we sat in
-								the pool area where it was very cool. i enjoyed my stay and
-								i will love to visit again.
-							</p>
-							<span class="ratings">
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-							</span>
-						</div>
+					<div class="testimony">
+						<p>
+							Perfect.Very confortable and pleasant enviroment. we sat in
+							the pool area where it was very cool. i enjoyed my stay and i
+							will love to visit again.
+						</p>
+						<span class="ratings">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+						</span>
 					</div>
 				</div>
-				<div class="slider-arrows">
-					<span class="slider-btn left">&#10094;</span>
-					<span class="slider-btn right">&#10095;</span>
+
+				<div class="box">
+					<div class="profile">
+						<img
+							src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592469191/hng%20fundmylaptop/portrait-attracive-young-businesswoman-wearing-260nw-1036909795_1_ufdf4y.png"
+							alt="" />
+						<div>
+							<p class="name">Anita M.</p>
+							<small>
+								<p class="date">October 7, 2019</p>
+							</small>
+						</div>
+					</div>
+					<div class="testimony">
+						<p>
+							Perfect.Very confortable and pleasant enviroment. we sat in
+							the pool area where it was very cool. i enjoyed my stay and
+							i will love to visit again.
+						</p>
+						<span class="ratings">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+						</span>
+					</div>
 				</div>
+				<div class="testimony">
+					<p>
+						Perfect.Very confortable and pleasant enviroment. we sat in
+						the pool area where it was very cool. i enjoyed my stay and i
+						will love to visit again.
+					</p>
+					<span class="ratings">
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+					</span>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="profile">
+					<img
+						src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592469191/hng%20fundmylaptop/portrait-attracive-young-businesswoman-wearing-260nw-1036909795_1_ufdf4y.png"
+						alt="" />
+					<div>
+						<p class="name">Anita M.</p>
+						<small>
+							<p class="date">October 7, 2019</p>
+						</small>
+					</div>
+				</div>
+				<div class="testimony">
+					<p>
+						Perfect.Very confortable and pleasant enviroment. we sat in
+						the pool area where it was very cool. i enjoyed my stay and
+						i will love to visit again.
+					</p>
+					<span class="ratings">
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+					</span>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="profile">
+					<img
+						src="https://res.cloudinary.com/dcjxlbq4z/image/upload/v1592469191/hng%20fundmylaptop/portrait-attracive-young-businesswoman-wearing-260nw-1036909795_1_ufdf4y.png"
+						alt="" />
+					<div>
+						<p class="name">Anita M.</p>
+						<small>
+							<p class="date">October 7, 2019</p>
+						</small>
+					</div>
+				</div>
+				<div class="testimony">
+					<p>
+						Perfect.Very confortable and pleasant enviroment. we sat in
+						the pool area where it was very cool. i enjoyed my stay and
+						i will love to visit again.
+					</p>
+					<span class="ratings">
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+					</span>
+				</div>
+			</div>
+			<div class="testimony">
+				<p>
+					Perfect.Very confortable and pleasant enviroment. we sat in
+					the pool area where it was very cool. i enjoyed my stay and i
+					will love to visit again.
+				</p>
+				<span class="ratings">
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+				</span>
+			</div>
+		</div>
+		<div class="slider-arrows">
+			<span class="slider-btn left">&#10094;</span>
+			<span class="slider-btn right">&#10095;</span>
+		</div>
+	</div>
+</div>
+</div>
+<div class="impactdiv">
+	<div class="impact">
+		<h1>
+			Successfully provided 1500+ laptops to interns in over 20countries.
+		</h1>
+		<div>
+			<div class="each">
+				<h1 class="counter">1500+</h1>
+				<h3>laptops</h3>
+			</div>
+			<div class="each">
+				<h1 class="counter">30+</h1>
+				<h3>countries</h3>
 			</div>
 		</div>
 	</div>
-	<div class="impactdiv">
-		<div class="impact">
-			<h1>
-				Successfully provided 1500+ laptops to interns in over 20countries.
-			</h1>
-			<div>
-				<div class="each">
-					<h1 class="counter">1500+</h1>
-					<h3>laptops</h3>
-				</div>
-				<div class="each">
-					<h1 class="counter">30+</h1>
-					<h3>countries</h3>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="subscribe">
-		<form action="#">
-			<input type="text" placeholder="Your email address" />
-			<button class="fml-btn">SUBSCRIBE</button>
-		</form>
-	</div>
+</div>
+<div class="subscribe">
+	<form action="#">
+		<input type="text" placeholder="Your email address" />
+		<button class="fml-btn">SUBSCRIBE</button>
+	</form>
+</div>
 </div>
 <!-- Blog section-->
 <div class="blog">
@@ -2004,7 +2075,9 @@
 			<a href="#">
 				<div class="card">
 					<div class="card-img">
-						<img src="https://res.cloudinary.com/udemic/image/upload/v1592652954/sample/fundmylaptop/fundmylaptop/fundmylaptop-blog-img-1_scmlpi.jpg" alt="girl with laptop" />
+						<img
+							src="https://res.cloudinary.com/udemic/image/upload/v1592652954/sample/fundmylaptop/fundmylaptop/fundmylaptop-blog-img-1_scmlpi.jpg"
+							alt="girl with laptop" />
 					</div>
 					<div class="card-content">
 						<pre>BY ADMIN AUGUST 20, 2020.  DESIGNER</pre>
@@ -2022,7 +2095,9 @@
 			<a href="#">
 				<div class="card">
 					<div class="card-img">
-						<img src="https://res.cloudinary.com/udemic/image/upload/v1592652955/sample/fundmylaptop/fundmylaptop/fundmylaptop-blog-img-3_aod4wb.jpg" alt="apple ipad pro" />
+						<img
+							src="https://res.cloudinary.com/udemic/image/upload/v1592652955/sample/fundmylaptop/fundmylaptop/fundmylaptop-blog-img-3_aod4wb.jpg"
+							alt="apple ipad pro" />
 					</div>
 					<div class="card-content">
 						<pre>BY ADMIN AUGUST 20, 2020.  DESIGNER</pre>
@@ -2040,7 +2115,9 @@
 			<a href="#">
 				<div class="card">
 					<div class="card-img">
-						<img src="https://res.cloudinary.com/udemic/image/upload/v1592652954/sample/fundmylaptop/fundmylaptop/fundmylaptop-blog-img-2_knyidn.jpg" alt=" outdoor using laptop" />
+						<img
+							src="https://res.cloudinary.com/udemic/image/upload/v1592652954/sample/fundmylaptop/fundmylaptop/fundmylaptop-blog-img-2_knyidn.jpg"
+							alt=" outdoor using laptop" />
 					</div>
 					<div class="card-content">
 						<pre>BY ADMIN AUGUST 20, 2020.  DESIGNER</pre>
@@ -2101,79 +2178,36 @@
 	</div>
 </div>
 
+<footer class="footer">
+    <div class="wide-container" >
+        <div class="row">
+            <div class="col-md-4 d-flex justify-content-center align-items-center mx-auto">
+                    Our Address</br></br>
+                    Plot 1415 Adetokunbo Ademola Street,</br>
+                    PMB 12724, Victoria Island, Lagos Nigeria 
+                </br></br></br>
+                &copy; 2020, Fundmylaptop chief Marlian. All Rights Reserved.
+                </div>
+                <div class="col-md-4 d-flex justify-content-center align-items-center mx-auto">
+                        Our Contact 
+                    </br></br>
+                    +234 81 555-0120</br>
+                    +234 81 555-0129</br>
+                    +234 81 555-0129</br></br>
+                    
+                    hello.fundmylaptop@OfficialMarlians.com</br>
 
-<!-- footer----------->
-<footer>
-	<!-- top section----- -->
-	<div class="wide-container">
-		<div class="footer-top">
-			<div class="footer-top-1">
-				<ul>
-					<li>
-						<h1>FundMy<span class="footer-top-color">Laptop</span></h1>
-					</li>
-					<li>
-						<p>info@fundmylaptop.com</p>
-					</li>
-					<li>
-						<p>12345 67890</p>
-					</li>
-					<div class="footer-icons">
-						<a href="#">
-							<img src="https://res.cloudinary.com/dytnzt4jf/image/upload/v1592431707/Facebook_epztwm.png" alt="facebook icon" /></a>
-						<a href="#">
-							<img src="https://res.cloudinary.com/dytnzt4jf/image/upload/v1592430002/Instagram_rts1mp.png" alt="instagram icon" /></a>
-						<a href="#">
-							<img src="https://res.cloudinary.com/dytnzt4jf/image/upload/v1592431827/twitter_y2z4io.png" alt="twitter icon" /></a>
-					</div>
-				</ul>
-			</div>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center align-items-center mx-auto">
+                        Legal
+                    </br></br>
+                    Terms & Conditions</br></br>
+                    Privacy Policy</br>
+                    
+                </div>
 
-			<div class="footer-top-2">
-				<ul>
-					<li>
-						<h1>Take a loan</h1>
-					</li>
-					<li><a href="#">Take a loan</a></li>
-					<li><a href="#">Loan fee & interest rate</a></li>
-					<li><a href="#">Loan EMI Calculator</a></li>
-					<li><a href="#">How to apply for a loan</a></li>
-				</ul>
-			</div>
+        </div>
 
-			<div class="footer-top-3">
-				<ul>
-					<li>
-						<h1>Invest</h1>
-					</li>
-					<li><a href="#">Invest your money</a></li>
-					<li><a href="#">Invest fee & return rate</a></li>
-					<li><a href="#">How to invest</a></li>
-				</ul>
-			</div>
-
-			<div class="footer-top-4">
-				<ul>
-					<li>
-						<h1>About us</h1>
-					</li>
-					<li><a href="#">Why choose FundMyLaptop</a></li>
-					<li><a href="#">How P2P lending works</a></li>
-					<li><a href="/about">About FundMyLaptop</a></li>
-					<li><a href="/contact">Contact us</a></li>
-				</ul>
-			</div>
-		</div>
-		<!-- bottom section----- -->
-		<div class="footer-bottom">
-			<p class="copyright">
-				2020 &copy; Copyright All rights reserved>
-			</p>
-			<p><a href="/faq">FAQ</a></p>
-			<p><a href="/privacy-policy">Privacy Policy</a></p>
-			<p>
-				<a href="/terms-and-conditions">Terms & Conditions</a>
-			</p>
-		</div>
-	</div>
+    </div>
+    
 </footer>
