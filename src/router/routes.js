@@ -1,14 +1,19 @@
 import { render } from '~/libs/fundmylaptop'
+/** will work on the folowing later */
+import home from '~/pages/home'
 
 const routes = {
   login: async () => {
     await render('/login.html')
+    home.display()
   },
   signup: async () => {
     await render('/signup.html')
+    home.display()
   },
   about: async () => {
     await render('/about.html')
+    home.display()
   },
   contact: async () => {
     await render('/contact.html')
@@ -25,8 +30,13 @@ const routes = {
   privacy: async () => {
     await render('/privacy.html')
   },
+  home: async () => {
+    await render('/home.html')
+    home.display()
+  },
   '': async () => {
     await render('/home.html')
+    home.display()
   }
 }
 
