@@ -23,7 +23,7 @@
 		}
 
 		body {
-		    font-family: DM sans;
+		    font-family: 'DM sans', sans-serif;
 			font-style: normal;
 			color: #04172A;
 		}
@@ -44,11 +44,11 @@
 			align-items: center;
 			flex: 0 0 auto;
 			max-width: 80%;
-			max-height: 50%;
+			max-height: 65%;
 		}
 
 		nav:nth-child(1) {
-			margin-right: auto; /*applied only to the right*/
+			margin-right: auto; 
 			margin-left: auto;
 		}
 
@@ -64,20 +64,20 @@
 		.logo {
 			text-decoration: none;
 			border-bottom: none;
+			display: flex;
 		}
 
 		.big-rec {
-			margin-top: 1em;
-			width: 130px;
-			height: 63px;
+			width: 140px;
+			height: 73px;
 			background: #E7E7E7;
 		}
 
 		.small-rec {
 			position: relative;
 			width: 100px;
-			height: 35px;
-			left: 16px;
+			height: 45px;
+			left: 20px;
 			top: 15px;
 			background: #C4C4C4;
 		}
@@ -87,7 +87,7 @@
 			display: flex;
 			flex-direction: column;
 			margin-top: 7.6em !important;
-			max-width: 770px;
+			max-width: 790px;
 			margin: auto;
 			padding: 1em;
 		}
@@ -110,17 +110,18 @@
 		h4 {
 			font-family: inherit;
 			font-style: inherit;
-			font-weight: 600;
-			font-size: 22px;
+			font-weight: 550;
+			font-size: 20px;
 			line-height: 26px;
 			margin-bottom: 0.8em;
 		}
+
 
 		.contact p {
 			font-family: inherit;
 			font-style: inherit;
 			font-weight: normal;
-			font-size: 16px;
+			font-size: 15px;
 			line-height: 21px;
 		} 
 
@@ -128,7 +129,7 @@
 			font-family: inherit;
 			font-style: inherit;
 			font-weight: normal;
-			font-size: 18px;
+			font-size: 17.9px;
 			line-height: 28px;
 		}
 
@@ -196,7 +197,10 @@
 		}
 
 		button {
-			width: 300px;
+			display: flex;
+			flex: 1 1 100%;
+			justify-content: center;
+			max-width: 300px;
 			height: 72px;
 			background: #FB3F5C;
 			box-shadow: 5px 5px 25px rgba(255, 29, 114, 0.2);
@@ -206,7 +210,6 @@
 
 		button:hover {
 			cursor: pointer;
-			box-shadow: 5px 15px 25px rgba(255, 29, 114, 0.74);
 			border-radius: 30px;
 		}
 
@@ -216,98 +219,238 @@
 			font-weight: 500;
 			font-size: 32px;
 			line-height: 42px;
+			padding: 12px;
 			color: #ffffff;
 		}
 
 		footer {
-			height: 100px;
+			height: 80px;
 			left: 0;
 			right: 0;
 			bottom: 0;
 			background: #C4C4C4; 
 
 		}
+@media (max-width: 822px){
+		
+		.big-rec {
+			display: flex;
+			flex: 1 1 60%;
+			max-width: 120px;
+			height: 58px;
+		}
+
+		.small-rec {
+			max-width: 80px;
+			height: 37px;
+			left: 20px;
+			top: 10px;
+		}
+
+		.btn > h3 {
+			font-size: 28px;
+			margin: auto;
+			padding: 12px;
+		}
+
+		.flex-container {
+			display: flex;
+			flex-direction: column;
+			margin-top: 6.6em !important;
+			flex: 90%;
+			max-width: 90%;
+		}
+
+		.grid {
+			display: grid;
+			grid-template-columns: 100%;
+			grid-template-rows: auto;
+			justify-content: center;
+			flex: 0 auto;
+			margin-left: 2em;
+		}
+
+		.text-info {
+			display: grid;
+			grid-template-columns: 20% 30%;
+			grid-row-gap: 1em;
+		}
+
+		h4 {
+			font-size: 18px;
+		}
+		.about p, .contact p, .basic p, .edit-text {
+			font-size: 20px;
+		} 
+
+	}	
+
+	@media (max-width: 518px){
+		h1 {
+			font-size: 30px;
+			justify-content: flex-start;
+		}
+
+		h2 {
+			font-size: 30px;
+		}
+		h4 {
+			margin-top: 2em;
+		}
+
+		.flex-container {
+			flex: 100%;
+			max-width: 100%;
+			overflow-x: hidden;
+		}
+
+		.grid {
+			display: block;
+		}
+
+		.user-img, .user-title {
+			margin: auto;
+		}
+
+		.user-role, .funding-count {
+			font-size: 20px;
+		}
+
+		.text-info {
+			display: block;
+		}
+
+		.text-info p {
+			margin-bottom: 1em;
+		}
+
+
+		.big-rec {
+			flex: 100%;
+			position: relative;
+			margin-right: 1em;
+			max-width: 50px;
+			height: 30px;
+		}
+
+		.small-rec {
+			max-width: 35px;
+			height: 19px;
+			left: 8px;
+			top: 5px;
+		}
+
+		.btn > h3 span{
+			display: none;
+		}
+		.btn > h3:after {
+			content: 'Dashboard';
+			font-size: 22px;
+			margin: auto;
+			padding: 7px;
+		}
+
+		.about p, .contact p, .basic p {
+			font-size: 18px;
+		} 
+	
+	}
+
+
+	@media (max-width: 381px){
+		nav { 
+			max-width: 100%;
+		 }
+		h4 {
+			font-size: 17px;
+		}
+
+		.about p, .contact p, .basic p {
+			font-size: 16px;
+		} 
+
+	}
 
 	</style>
 </head>
 <body>
+ <div class="big-wrapper">
+		<!--Header section goes in here-->
+				<header>
+					<nav>		
+					  <div class="brand-name">
+						<a href="#" class="logo"><h1>FundMy<span class="color-text">Laptop</span></h1></a>
+					  </div>
+					  <div class="big-rec">
+						<div class="small-rec"></div>
+					  </div>
+				   </nav>
+				</header>
 
-	<!--Header section goes in here-->
-	<header>
-		<nav>		
-		  <div class="brand-name">
-			<a href="#" class="logo"><h1>FundMy<span class="color-text">Laptop</span></h1></a>
-		  </div>
-		  <div class="big-rec">
-			<div class="small-rec"></div>
-		  </div>
-	   </nav>
-	</header>
+
+		<!--Main section goes in here-->      
+				<main id="main-section">
+					<div class="flex-container">
+						<div class="grid">
+							<div class="column">
+								<div class="user-header">
+									<img class="user-img" src="user-profile-img.png" alt="user-profile-img">
+									<div class="user-title">		
+										<h2>John Doe</h2>
+										<p class="user-role">Front End Developer</p>
+									</div>
+								</div>
+								<h3 class="funding-count"><strong>5 successful fundings</strong></h3>
+							</div>
+
+							<div class="column">
+								<button class="btn" href="#"><h3><span>Go to Dashboard</span></h3></button>
+							</div>	
+
+							<div class="column about">
+								<h4>ABOUT</h4>
+								<p>I am a proactive, diligent, honest, hardworker with passion for web development. I have over 5 year cummulative experience working in a fintech company in Lagos State, Nigeria. I like to play football and sing.</p>
+							</div>	
+
+							<div class="column contact">
+								<h4>CONTACT INFORMATION</h4>
+								<div class="text-info">
+									<p>Phone:</p>  
+									<p><span class="color-text">+234(0)8029134912</span></p>
+									<p>Address:</p> 
+									<p> 16, Ajoba close, Challenge, Ibadan, Oyo state</p>
+									<p>E-mail:</p>  
+									<p><span class="color-text">johndoehng@gmail.com</span></p>
+									<p>Site:</p>   
+									<p><span class="color-text">johndoe.com</span></p>
+								</div>
+							</div>		  	 
+
+							<div class="column basic">
+								<h4>BASIC INFORMATION</h4>
+								<div  class="text-info">	
+									<p>Birthday: </p> 
+									<p>June 5, 1996</p>
+									<p>Gender: </p> 
+									<p>Male</p>
+								</div>
+							</div>		  	  
+							<div class="column">
+								<h3 class="color-text edit-text"><strong>Edit Profile </strong><span class="fa fa-edit" href="#"></span></h3>
+							</div>
 
 
-	<!--Main section goes in here-->      
-	<main id="main-section">
-		<div class="flex-container">
-			<div class="grid">
-				<div class="column">
-					<div class="user-header">
-						<img class="user-img" src="user-profile-img.png">
-						<div class="user-title">		
-							<h2>John Doe</h2>
-							<p class="user-role">Front End Developer</p>
 						</div>
 					</div>
-					<h3 class="funding-count"><strong>5 successful fundings</strong></h3>
-				</div>
-
-				<div class="column">
-					<button class="btn" href="#"><h3>Go to Dashboard</h3></button>
-				</div>	
-
-				<div class="column about">
-					<h4>ABOUT</h4>
-					<p>I am a proactive, diligent, honest, hardworker with passion for web development. I have</br> over 5 year cummulative experience working</br> in a fintech company in Lagos State, Nigeria.</br>I like to play football and sing.</p>
-				</div>	
-
-				<div class="column contact">
-					<h4>CONTACT INFORMATION</h4>
-					<div class="text-info">
-						<p>Phone:</p>  
-						<p><span class="color-text">+234(0)8029134912</span></p>
-						<p>Address:</p> 
-						<p> 16,Ajoba Close,Elewura,Challenge,Ibadan,Oyo State</p>
-						<p>E-mail:</p>  
-						<p><span class="color-text">johndoehng@gmail.com</span></p>
-						<p>Site:</p>   
-						<p><span class="color-text">johndoe.com</span></p>
-					</div>
-				</div>		  	 
-
-				<div class="column basic">
-					<h4>BASIC INFORMATION</h4>
-					<div  class="text-info">	
-						<p>Birthday: </p> 
-						<p>June 5, 1996</p>
-						<p>Gender: </p> 
-						<p>Male</p>
-					</div>
-				</div>		  	  
-				<div class="column">
-					<h3 class="color-text edit-text"><strong>Edit Profile </strong><span class="fa fa-edit" href="#"></span></h3>
-				</div>
-
-
-			</div>
-		</div>
-	</main>
-
+				</main>
+	  </div>
 	<!--Footer section goes in here-->
 	<footer>
 		<!--no footer content-->
 	</footer>
 
-	<script type="text/javascript">
+<script type="text/javascript">
 		//no scripts
-	</script>
+</script>
 </body>
 </html>
