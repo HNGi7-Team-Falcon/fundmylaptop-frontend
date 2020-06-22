@@ -9,7 +9,7 @@
       }
       body {
         font-family: "DM Sans", sans-serif;
-        padding: 20px;
+        /* padding: 20px; */
         background-color: #fff;
         color: #04172a;
       }
@@ -18,12 +18,12 @@
         font-family: "DM Sans", sans-serif;
       }
 
-      .container {
+      /* .container {
         display: flex;
         justify-content: space-around;
         max-width: 900px;
         margin: 100px auto;
-      }
+      } */
 
       .container-text {
         max-width: 45%;
@@ -49,14 +49,14 @@
         height: auto;
         display: block;
       }
-      .footer {
+      /* .footer {
         position: absolute;
         width: 1444px;
         height: 381px;
         left: 0px;
         top: 1791px;
         background: #c4c4c4;
-      }
+      } */
       .text--secondary {
         color: #fb3f5c;
       }
@@ -161,6 +161,14 @@
           float: none;
         }
       }
+      
+      @media (max-width: 768px) {
+        .container-header {
+            margin-top: 1.6rem;
+            margin-bottom: 1.2rem;
+        }
+      }
+
        /* #################################################################### */
   /* FOOTER CSS */
   /* #################################################################### */
@@ -190,6 +198,16 @@
         font-size: 1.8rem;
     }
 
+    .footer{
+        height:100%;
+        margin-top: 140px;
+        width: 100%;
+        background: #2A3A64;
+        padding: 70px 0 30px 0;
+        color: #FFFFFF;
+    }
+
+    /*
     .footer-top{
         display: flex;
         flex-wrap: wrap;
@@ -211,20 +229,23 @@
     .footer-icons > a > img{
     margin-right: 1em;
     }
+    */
 
     hr{
         border: 2px solid rgba(4, 23, 42, 0.05);
         margin: 1em 12em;
     }
 
+    /*
     .footer-bottom{
         display: flex;
         flex-flow: row;
         margin: 1.5em 10em;
         color: #000000;
         font-size: .9rem;
-        /* margin-bottom: -5em; */
+        margin-bottom: -5em; 
     }
+    
     .footer-bottom p a{
         color: #04172A;
     }
@@ -237,16 +258,16 @@
     .footer-bottom > .footer-bottom-left{
     margin-right: auto;
     }
-
+    */
 
     @media (max-width: 760px) {
-        .footer-top{
+        /* .footer-top{
             flex-direction: column;
             align-items: center;
             text-align: center;
             font-size: .6rem;
             margin: auto 0;
-        } 
+        }  */
 
         h1{
             font-size: .8rem;
@@ -257,16 +278,16 @@
             margin: 2em 0;
         }
 
-        .footer-bottom, .footer-bottom-left, .footer-bottom-right{
+        /* .footer-bottom, .footer-bottom-left, .footer-bottom-right{
             margin: 0 .5em;
             font-size: .6rem;
-        }
+        } */
     }
 
     @media (max-width: 1024px) {
-        .footer-top{
+        /* .footer-top{
             font-size: .8rem;
-        }
+        } */
     h1{
         font-size: 1rem;
     }
@@ -276,10 +297,10 @@
     }
 
 
-    .footer-bottom,  .footer-bottom-left, .footer-bottom-right{
+    /* .footer-bottom,  .footer-bottom-left, .footer-bottom-right{
         margin: 0 2.3em;
         font-size: .6rem;
-    }
+    } */
 
     }      
  
@@ -424,6 +445,10 @@
     .signup_button:hover {
         transform: scale(1.1);
         transition: all 2s;
+    }
+
+    .connect-investors {
+        margin-top: 8rem;
     }
 
     /* MEDIA QUERIES */
@@ -763,161 +788,126 @@
       </nav>
   </header>
 
-    <section class="container">
-      <div class="container-text">
-        <h1 class="container-header">
-          We connect <span class="text--secondary">investors</span> and interns
-        </h1>
-        <div class="mobile">
+    <section class="container connect-investors mb-">
+      <div class="row">
+        <div class="col-md-6">
+            <h1 class="container-header">
+                We connect <span class="text--secondary">investors</span> and interns
+            </h1>
+            <p>
+                FundMylaptop is a platform where people who are willing to invest in
+                tech talent get connected to individuals who are in need of funds for
+                a laptop purchase or repair. This platform is not just connecting
+                individuals, it is also breaking barriers and constraints of the tech
+                industry.
+            </p>
+        </div>
+    
+        <div class="col-md-6">
           <img
             class="container-img"
             src="https://res.cloudinary.com/wiamer/image/upload/v1592501823/Rectangle_594_ydlfvy.png"
           />
         </div>
-        <p>
-          FundMylaptop is a platform where people who are willing to invest in
-          tech talent get connected to individuals who are in need of funds for
-          a laptop purchase or repair. This platform is not just connecting
-          individuals, it is also breaking barriers and constraints of the tech
-          industry.
-        </p>
       </div>
-      <div class="container-image">
+      <!-- <div class="container-image">
         <img
           class="container-img"
           src="https://res.cloudinary.com/wiamer/image/upload/v1592501823/Rectangle_594_ydlfvy.png"
         />
-      </div>
+      </div> -->
     </section>
 
-    <section class="container" id="middle-row">
-      <div class="container-text">
-        <h1 class="container-header">
-          Helping <span class="text--secondary">You</span> achieve that goal
-        </h1>
-        <div class="mobile">
-          <img
-            class="container-img"
-            src="https://res.cloudinary.com/wiamer/image/upload/v1592501823/Rectangle_593_dqe3fd.png"
-          />
+    <section class="container my-5" id="middl-row">
+      <div class="row">
+        <div class="col-md-6">
+            <img
+                class="container-img"
+                src="https://res.cloudinary.com/wiamer/image/upload/v1592501823/Rectangle_593_dqe3fd.png"
+            />
         </div>
-        <p>
-          We don’t just connect investors to interns. We are trying to build a
-          community where absolutley no one is left behind in the tech
-          community. Whether you are unable to pursue that tech dream of yours,
-          bcause of lack of funds, MyFundLaptop is the best platform for you to
-          get adequate funding.
-        </p>
+
+        <div class="col-md-6">
+            <h1 class="container-header">
+                Helping <span class="text--secondary">You</span> achieve that goal
+            </h1>
+            <p>
+                We don’t just connect investors to interns. We are trying to build a
+                community where absolutley no one is left behind in the tech
+                community. Whether you are unable to pursue that tech dream of yours,
+                bcause of lack of funds, MyFundLaptop is the best platform for you to
+                get adequate funding.
+            </p>
+        </div>
       </div>
-      <div class="container-image">
+      <!-- <div class="container-image">
         <img
           class="container-img"
           id="contain-img"
           src="https://res.cloudinary.com/wiamer/image/upload/v1592501823/Rectangle_593_dqe3fd.png"
         />
-      </div>
+      </div> -->
     </section>
 
-    <section class="container">
-      <div class="container-text">
-        <h1 class="container-header">
-          Setting <span class="text--secondary">Standard</span> Pace
-        </h1>
-        <div class="mobile">
+    <section class="container my-5">
+      <div class="row">
+        <div class="col-md-6">
+            <h1 class="container-header">
+                Setting <span class="text--secondary">Standard</span> Pace
+            </h1>
+            <p>
+                FundMylaptop has a system in place that verifies indivuals who wish to
+                get funded. Verification checks ranges from BVN, KYC checks of
+                fundees, also long-time reliable fundees vouch for new, incoming
+                fundees.
+            </p>
+        </div>
+        
+        <div class="col-md-6">
           <img
             class="container-img"
             src="https://res.cloudinary.com/wiamer/image/upload/v1592501823/Rectangle_597_p65jim.png"
           />
         </div>
-        <p>
-          FundMylaptop has a system in place that verifies indivuals who wish to
-          get funded. Verification checks ranges from BVN, KYC checks of
-          fundees, also long-time reliable fundees vouch for new, incoming
-          fundees.
-        </p>
       </div>
-      <div class="container-image">
+      <!-- <div class="container-image">
         <img
           class="container-img"
           src="https://res.cloudinary.com/wiamer/image/upload/v1592501823/Rectangle_597_p65jim.png"
         />
-      </div>
+      </div> -->
     </section>
 <!-- footer----------->
-<footer>
-  <!-- top section----- -->
-  <div class="footer-top">
-      <div class="footer-top-1">
-          <ul>
-              <li>
-                  <h1>FundMy<span class="footer-top-color">Laptop</span></h1>
-              </li>
-              <li>
-                  <p> <a href="mailto:info@fundmylaptop.com">info@fundmylaptop.com</a> </p>
-              </li>
-              <li>
-                  <p>12345 67890</p>
-              </li>
-              <div class="footer-icons">
-                  <a href="#"> <img
-                          src="https://res.cloudinary.com/dytnzt4jf/image/upload/v1592431707/Facebook_epztwm.png"
-                          alt="facebook icon"></a>
-                  <a href="#"> <img
-                          src="https://res.cloudinary.com/dytnzt4jf/image/upload/v1592430002/Instagram_rts1mp.png"
-                          alt="instagram icon"></a>
-                  <a href="#"> <img
-                          src="https://res.cloudinary.com/dytnzt4jf/image/upload/v1592431827/twitter_y2z4io.png"
-                          alt="twitter icon"></a>
-              </div>
+<div class="footer">
+    <div class="container" >
+        <div class="row">
+            <div class="col-md-5">
+                    Our Address</br></br>
+                    Plot 1415 Adetokunbo Ademola Street,</br>
+                    PMB 12724, Victoria Island, Lagos Nigeria 
+                </br></br></br>
+                &copy; 2020, Fundmylaptop chief Marlian. All Rights Reserved.
+                </div>
+                <div class="col-md-4">
+                        Our Contact 
+                    </br></br>
+                    +234 81 555-0120</br>
+                    +234 81 555-0129</br>
+                    +234 81 555-0129</br></br>
+                    
+                    hello.fundmylaptop@OfficialMarlians.com</br>
 
-          </ul>
-      </div>
+                </div>
+                <div class="col-md-3">
+                        Legal
+                    </br></br>
+                    Terms & Conditions</br></br>
+                    Privacy Policy</br>
+                    
+                </div>
 
+        </div>
 
-      <div class="footer-top-2">
-          <ul>
-              <li>
-                  <h1>Take a loan</h1>
-              </li>
-              <li><a href="#">Take a loan</a></li>
-              <li><a href="#">Loan fee & interest rate</a></li>
-              <li><a href="#">Loan EMI Calculator</a></li>
-              <li><a href="#">How to apply for a loan</a></li>
-          </ul>
-      </div>
-
-      <div class="footer-top-3">
-          <ul>
-              <li>
-                  <h1>Invest</h1>
-              </li>
-              <li><a href="#">Invest your money</a></li>
-              <li><a href="#">Invest fee & return rate</a></li>
-              <li><a href="#">How to invest</a></li>
-          </ul>
-      </div>
-
-      <div class="footer-top-4">
-          <ul>
-              <li>
-                  <h1>About us</h1>
-              </li>
-              <li><a href="#">Why choose FundMyLaptop</a></li>
-              <li><a href="#">How P2P lending works</a></li>
-              <li><a href="/About-us">About FundMyLaptop</a></li>
-              <li><a href="/Contact Page">Contact us</a></li>
-          </ul>
-      </div>
-  </div>
-
-  <hr>
-
-  <!-- bottom section----- -->
-  <div class="footer-bottom">
-      <p class="footer-bottom-left">2020 © Copyright All rights reserved</p>
-      <p class="footer-bottom-right"><a href="/faq">FAQ</a> </p>
-      <P class="footer-bottom-right"><a href="/privacy-policy">Privacy Policy</a></P>
-      <p class="footer-bottom-right"><a href="/terms-and-conditions">Terms & Conditions</a></p>
-      </ul>
-  </div>
-</footer>
+    </div>
+    
+</div>

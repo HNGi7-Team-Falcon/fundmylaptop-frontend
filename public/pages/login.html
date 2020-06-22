@@ -1,4 +1,3 @@
-<<<<<<< HEAD=======>>>>>>> 25ae81246a208c7b428f864f945bed215e986903
   <style>
     body {
       background-image: url('https://res.cloudinary.com/dwpwl6img/image/upload/v1592479832/Polygon_9.png'), url('https://res.cloudinary.com/dwpwl6img/image/upload/v1592479833/Ellipse_57.png'),
@@ -144,23 +143,74 @@
       color: #DC4E41;
     }
 
-    @media screen and (max-width: 1181px) {
+  .footer{
+      /* height:100%; */
+      margin-top: 140px;
+      width: 100%;
+      background: #2A3A64;
+      padding: 70px 0 30px 0;
+      color: #FFFFFF;
+  } 
 
-      p.connect::before,
-      p.connect::after {
-        width: 160px;
-      }
-    }
+@media screen and (max-width: 1181px){
+  p.connect::before, p.connect::after{
+    width: 160px;
+  }
+}
 
-    @media screen and (max-width: 1083px) {
-      .welcome-section {
-        width: 60%;
-      }
+@media screen and (max-width: 1083px){
+  .welcome-section{
+    width: 60%;
+  }
+  p.connect::after{
+    left: 58%;
+  }
+  p.connect::before{
+    left: 26%;
+  }
+}
 
-      p.connect::after {
-        left: 58%;
-      }
+@media screen and (max-width: 1083px){
+  p.connect::after{
+    left: 58%;
+  }
+  p.connect::before{
+    left: 24%;
+  }
+  .welcome-section{
+    width: 70%;
+  }
+}
 
+@media screen and (max-width: 853px){
+  p.connect::before, p.connect::after{
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 621px){
+  .welcome-section{
+    width: 80%;
+  }
+  .socials{
+    flex-direction: column;
+  }
+  .socials p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 416px){
+  .welcome-section{
+    padding: 20px 20px;
+  }
+}
+
+@media screen and (max-width: 374px){
+  .welcome-section{
+    width: 90%;
+  }
+}
       p.connect::before {
         left: 26%;
       }
@@ -222,7 +272,7 @@
         <header id="header">
           <ul class="logo">
             <li>
-              <a href="/home">FundMy<span class="lap">Laptop</span></a>
+              <a href="/">FundMy<span class="lap">Laptop</span></a>
             </li>
           </ul>
           <ul class="navs">
@@ -262,7 +312,7 @@
         <div class="welcome-section">
           <p class="welcome-text">Welcome</p>
           <p class="signup-text">Sign in to FundMyLaptop </p>
-          <form action="">
+          <form action="" role="form>
             <label for="">Email</label>
             <p><input type="email" name="" placeholder="username@domain.com" id=""></p>
             <label for="">Password</label>
@@ -286,4 +336,39 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
+ </section>
+
+<footer class="footer">
+  <div class="container" >
+      <div class="row">
+          <div class="col-md-5">
+                  Our Address</br></br>
+                  Plot 1415 Adetokunbo Ademola Street,</br>
+                  PMB 12724, Victoria Island, Lagos Nigeria 
+              </br></br></br>
+              &copy; 2020, Fundmylaptop chief Marlian. All Rights Reserved.
+              </div>
+              <div class="col-md-4">
+                      Our Contact 
+                  </br></br>
+                  +234 81 555-0120</br>
+                  +234 81 555-0129</br>
+                  +234 81 555-0129</br></br>
+                  
+                  hello.fundmylaptop@OfficialMarlians.com</br>
+
+              </div>
+              <div class="col-md-3">
+                      Legal
+                  </br></br>
+                  Terms & Conditions</br></br>
+                  Privacy Policy</br>
+                  
+              </div>
+
+      </div>
+
+  </div>
+  
+</footer>
