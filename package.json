@@ -57,7 +57,6 @@
     "sass-loader": "^8.0.2",
     "standard": "^14.3.4",
     "style-loader": "^1.2.1",
-    "vanilla-router": "^1.2.8",
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^3.8.0",
     "webpack-cli": "^3.3.12",
