@@ -1,0 +1,74 @@
+*{
+    font-family: 'DM Sans';
+    font-style: normal;
+}
+
+/*css */
+h5{
+  line-height: 23px;
+  letter-spacing: -0.3px;
+  font-size: 18px;
+  width: 80%;
+  font-weight: 500;
+}
+p{
+  text-align: justify;
+}
+.newabout3{
+  margin-top: 2rem;
+}
+.margin-container{
+  margin-top: 7rem;
+}
+@media only screen and (max-width : 600px){
+  h5{
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.3px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .margin-container{
+    margin-top: 4rem;
+  }
+  .newabout3{
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width : 768px){
+  h5{
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.3px;
+    width: 100%;
+    font-weight: 500;
+  }
+  .margin-container{
+    margin-top: 4rem;
+  }
+  .newabout3{
+    margin-top: 0;
+  }
+  img{
+    margin-top: 10rem;
+  }
+}
+@media only screen and (min-width : 1024px){
+  h5{
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.3px;
+    width: 100%;
+    font-weight: 500;
+  }
+  .margin-container{
+    margin-top: 4rem;
+  }
+  .newabout3{
+    margin-top: 0;
+  }
+  img{
+    margin-top: 0;
+  }
+}
