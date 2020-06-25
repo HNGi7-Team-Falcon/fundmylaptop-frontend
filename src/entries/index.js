@@ -3,8 +3,8 @@ import 'fontawesome'
 import FundMyLaptop from '~/libs/fundmylaptop'
 import store from '~/store'
 import router from '~/router'
-import '../assets/css/index.css'
-import '../assets/scss/index.scss'
+import '../assets/css/home.css'
+import '../assets/scss/home.scss'
 
 const lapi = new FundMyLaptop({
   ele: 'fundmylaptopapp',

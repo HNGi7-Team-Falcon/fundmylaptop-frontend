@@ -1,6 +1,7 @@
 const webpack = require('webpack')
-const path = require('path')
 const merge = require('webpack-merge')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin
 const common = require('./webpack.common.js')
 
 module.exports = merge(common, {
@@ -17,6 +18,10 @@ module.exports = merge(common, {
     hot: true
   },
   plugins: [
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'server',
+      openAnalyzer: false
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     })

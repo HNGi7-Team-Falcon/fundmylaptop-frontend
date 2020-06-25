@@ -1,0 +1,379 @@
+<template id="header">
+  <div>
+    <!--Header navigation bar-->
+    <!--Header navigation bar-->
+    <header id="header">
+      <ul class="logo">
+        <li>
+          <a href="/home" data-navigo="">FundMy<span class="lap is-active">Laptop</span></a>
+        </li>
+      </ul>
+      <ul class="navs">
+        <li>
+          <span class="home"><a href="#hero_section" data-navigo="">Home</a></span>
+        </li>
+        <li><a href="#bottom_hero" data-navigo="">About Us</a></li>
+        <li><a href="#faq" data-navigo="">FAQ</a></li>
+        <li><a href="/contact" data-navigo="">Contact</a></li>
+      </ul>
+      <ul class="login">
+        <li>
+          <span class="log"><a href="/login" data-navigo="">Login</a></span>
+        </li>
+        <li>
+          <span class="sign"><a href="/signup" data-navigo="">Sign Up</a></span>
+        </li>
+      </ul>
+      <div class="side-menu-trigger">
+        <span></span>
+      </div>
+    </header>
+    <div class="side-menu">
+      <ul class="auth-links">
+        <li style="animation-delay: .5s"><a href="/login" data-navigo="">Login</a></li>
+        <li style="animation-delay: .7s"><a href="/signup" data-navigo="">Sign up</a></li>
+      </ul>
+      <ul class="site-links" style="animation-delay: 1.1s">
+        <li><a href="/home" data-navigo="">Home</a></li>
+        <li><a href="/about" data-navigo="">About</a></li>
+        <li><a href="#faq" data-navigo="">FAQ</a></li>
+        <li><a href="/contact" data-navigo="">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    const menuToggle = () => {
+      // Hamburger menu
+      const trigger = document.querySelector('.side-menu-trigger')
+      if (!trigger) return
+      const hamburgerIcon = document.querySelector('span')
+      const sideMenu = document.querySelector('.side-menu')
+      let isActive = false
+      trigger.addEventListener('click', () => {
+        isActive = !isActive
+        if (isActive) {
+          sideMenu.classList.add('is-active')
+          hamburgerIcon.classList.add('is-active')
+        } else {
+          sideMenu.classList.remove('is-active')
+          hamburgerIcon.classList.remove('is-active')
+        }
+      })
+    }
+  </script>
+  <style>
+   
+  @media (max-width: 900px) {
+
+    .navs,
+    .login {
+      display: none;
+    }
+  }
+
+  a, a:hover {
+    text-decoration: none;
+  }
+
+  .login a, .navs a {color: #fff;}
+  .navs a:active{color: #fd0a2f !important;}
+
+  .auth-links {
+    padding: 10vh 40px 0 40px;
+    margin-bottom: 40px;
+  }
+
+  .auth-links li {
+    position: relative;
+    list-style-type: none;
+    margin-bottom: 15px;
+  }
+
+  .auth-links li a {
+    color: white;
+    font-size: 2.5rem;
+  }
+
+  .site-links {
+    padding: 0 40px 0 40px;
+    position: relative;
+  }
+
+  .site-links li {
+    list-style-type: none;
+    margin-bottom: 15px;
+  }
+
+  .site-links li a {
+    color: white;
+    font-size: 1.3rem;
+  }
+
+
+ul {
+    list-style-type: none;
+}
+
+@media (min-width: 1200px){
+.login {
+    padding-left: 4.375rem;
+}
+}
+
+@media (min-width: 1200px){
+.login {
+    padding-left: 4.375rem;
+}
+}
+/*******
+for header
+**********/
+#top_hero {
+    background-image: url(https://res.cloudinary.com/dt9pwfpi5/image/upload/v1592504757/firsthero_-_Copy_gt1cdi.png);
+    background-repeat: no-repeat;
+    background-attachment: fix;
+    background-position: right;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.logo {
+    font-size: 25px;
+    margin-right: 13%;
+    margin-top: 21px;
+    padding-left: 50px;
+}
+
+span.lap {
+    color: #fb3f5c;
+}
+
+.navs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 21px;
+    margin-right: 0;
+    color: white;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.navs>li {
+    margin-right: 40px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.navs>li:hover {
+    padding-bottom: 5px;
+    border-bottom: 3px solid #fb3f5c;
+}
+
+span.home {
+    color: #fb3f5c;
+}
+
+.login {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 20px;
+    padding-left: 0;
+}
+
+.login>li {
+    margin-right: 30px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+span.log {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 40px;
+    padding-left: 40px;
+    border: 2px solid #fb3f5c;
+    border-radius: 10px;
+    color: white;
+}
+
+span.log:hover {
+    background-color: #fb3f5c;
+    color: white;
+}
+
+span.sign {
+    background-color: #fb3f5c;
+    color: white;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 40px;
+    padding-left: 40px;
+    border-radius: 10px;
+}
+
+span.sign:hover {
+    background-color: #fd0a2f;
+    border: 0.5px solid #fb3f5c;
+}
+
+/* side menu trigger/hamburger */
+.side-menu-trigger {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+}
+
+@media (max-width: 900px) {
+    .side-menu-trigger {
+        display: inline-block;
+    }
+}
+
+.side-menu-trigger span {
+    background-color: #1d2e3f;
+    display: block;
+    position: absolute;
+    top: 3px;
+    border-radius: 2px;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    width: 25px;
+    height: 3px;
+}
+
+.side-menu-trigger span:before,
+.side-menu-trigger span:after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    border-radius: 2px;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    background-color: #1d2e3f;
+}
+
+.side-menu-trigger span:before {
+    top: 9px;
+}
+
+.side-menu-trigger span:after {
+    top: 18px;
+}
+
+.side-menu-trigger span.is-active {
+    background: white;
+    -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+    
+}
+
+.side-menu-trigger span.is-active:before,
+.side-menu-trigger span.is-active:after {
+    background-color: white;
+}
+
+.side-menu-trigger span.is-active:before {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate3d(-5.71429px, -6px, 0);
+    transform: rotate(45deg) translate3d(-5.71429px, -6px, 0);
+}
+
+.side-menu-trigger span.is-active:after {
+    -webkit-transform: translate3d(0, -18px, 0) rotate(90deg);
+    transform: translate3d(0, -18px, 0) rotate(90deg);
+}
+
+.side-menu-trigger.is-active .side-menu-trigger:before,
+.side-menu-trigger:after {
+    background-color: white;
+}
+
+/* side menu styles */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #04172a;
+    -webkit-transform: translate(100%);
+    transform: translate(100%);
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+    z-index: 9000 !important;
+}
+
+.side-menu.is-active {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    -webkit-transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+    opacity: 1;
+}
+.logo {
+    margin-right: auto;
+    padding-left: 0;
+}
+
+.login {
+    padding-left: 0;
+    padding-left: calc(1.5625rem + 3.75vw);
+    min-width: 0vw;
+}
+
+@media (min-width: 1200px) {
+    .login {
+        padding-left: 4.375rem;
+    }
+}
+@media (max-width: 900px){
+.navs, .login {
+    display: none;
+}
+}
+/*****
+header ends
+****/
+  </style>
+</template>

@@ -1,21 +1,26 @@
 const webpack = require('webpack')
 const path = require('path')
+const fs = require('fs')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-  .BundleAnalyzerPlugin
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
-const WebpackNoModulePlugin = require('webpack-nomodule-plugin').WebpackNoModulePlugin
+const WebpackNoModulePlugin = require('webpack-nomodule-plugin')
+  .WebpackNoModulePlugin
+
+const pages = fs
+  .readdirSync(path.resolve(__dirname, '../public'))
+  .filter(fileName => fileName.endsWith('.html'))
 
 const config = {
   entry: {
-    main: path.resolve(__dirname, '../src/entries') + '/index.js'
+    main: path.resolve(__dirname, '../src/entries') + '/index.js',
     // about: path.resolve(__dirname, '../src/entries') + '/about.js',
-    // login: path.resolve(__dirname, '../src/entries') + '/login.js',
-    // signup: path.resolve(__dirname, '../src/entries') + '/signup.js'
+    login: path.resolve(__dirname, '../src/entries') + '/login.js',
+    signup: path.resolve(__dirname, '../src/entries') + '/signup.js'
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -27,14 +32,14 @@ const config = {
     }
   },
   plugins: [
-    new HtmlWebpackPlugin({
+    ...pages.map(page => new HtmlWebpackPlugin({
       alwaysWriteToDisk: true,
-      appMountId: 'fundmylaptopapp',
-      filename: 'index.html',
       title: 'Fund My Laptop',
-      template: 'public/index.html',
+      appMountId: 'fundmylaptopapp',
+      template: `./public/${page}`,
+      filename: page,
       outputPath: path.resolve(__dirname, '../dist')
-    }),
+    })),
     new HtmlWebpackHarddiskPlugin(),
     new WebpackNoModulePlugin({
       filePatterns: ['polyfill.**.js']
@@ -44,10 +49,6 @@ const config = {
     }),
     new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en/),
     new LodashModuleReplacementPlugin(),
-    new BundleAnalyzerPlugin({
-      analyzerMode: 'static',
-      openAnalyzer: false
-    }),
     new MiniCssExtractPlugin(),
     new CleanWebpackPlugin()
   ],
@@ -55,7 +56,8 @@ const config = {
     rules: [
       {
         test: /\.html$/i,
-        use: 'html-loader'
+        use: 'html-loader',
+        exclude: /node_modules/
       },
       {
         test: /\.(png|jpe?g|gif)$/i,

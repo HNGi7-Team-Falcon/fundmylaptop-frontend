@@ -25,7 +25,7 @@ module.exports = merge(common, {
       cache: true,
       favicons: {
         appName: 'fundmylaptop',
-        appDescription: 'Meet investors who fund laptops but and repairs',
+        appDescription: 'Meet investors who fund laptop buys and repairs',
         developerName: 'Samuel Onyijne',
         developerURL: null, // prevent retrieving from the nearest package.json
         background: '#ddd',
@@ -38,7 +38,7 @@ module.exports = merge(common, {
       }
     }),
     new MiniCssExtractPlugin({
-      filename: 'bundle.css'
+      filename: 'css/[name].[chunkhash:8].chunk.css'
     })
   ]
 })
