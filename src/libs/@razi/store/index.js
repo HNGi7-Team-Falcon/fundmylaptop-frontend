@@ -1,5 +1,5 @@
 /* eslint-disable no-prototype-builtins */
-import PubSub from '../pubsub'
+import PubSub from '../core/pubsub'
 
 export default class Store {
   constructor (params) {
