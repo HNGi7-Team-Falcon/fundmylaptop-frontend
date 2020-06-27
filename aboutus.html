@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Oluwaferanmi Adedokun" />
+    <title>FundMyLaptop - HOW IT WORKS</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-size: 16px;
+        }
+        
+        .container {
+            height: 100vh;
+            width: 100%;
+        }
+        
+        .wrap {
+            width: 375px;
+            position: relative;
+            left: 30px;
+        }
+        
+        .fml-introwords>h1 {
+            font-size: 38px;
+            font-weight: 700;
+            line-height: 50px;
+        }
+        
+        .fml-heading-left p {
+            margin-top: -25px;
+            line-height: 135.62%;
+            font-size: 20px;
+            width: 90%;
+        }
+        
+        .fml-hiw-img {
+            width: 90%;
+        }
+        
+        .fml-hiw-btn {
+            width: 125px;
+            height: 38px;
+            background: #FB3F5C;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 400;
+            font-style: normal;
+            border: 3px solid #FB3F5C;
+            box-shadow: 5px 5px 25px rgba(255, 29, 114, 0.2);
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        
+        .fml-hiw-btn:hover,
+        .fml-hiw-btn-ii:hover {
+            background-color: #fff;
+            border: 2px solid#FB3F5C;
+            color: #FB3F5C;
+        }
+        
+        .fml-hiw-btn:focus,
+        .fml-hiw-btn-ii:focus {
+            border: 2px solid #000;
+            background-color: #FB3F5C;
+            color: #fff;
+        }
+        
+        .fml-hiw-btn-ii {
+            width: 235px;
+            height: 38px;
+            background: #FB3F5C;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 400;
+            font-style: normal;
+            border: 3px solid #FB3F5C;
+            box-shadow: 5px 5px 25px rgba(255, 29, 114, 0.2);
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        
+        .fml-body {
+            display: flex;
+            width: 70%;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        
+        .fml-body>h3 {
+            font-style: normal;
+            color: #000;
+            text-align: center;
+            padding-left: 28%;
+            font-size: 25px;
+            font-weight: 700;
+        }
+        
+        .fml-how-it-works {
+            position: absolute;
+            display: flex;
+            left: -40px;
+            flex-grow: 3;
+            flex-basis: 60%;
+        }
+        
+        .fml-how-it-works li {
+            list-style-type: none;
+            display: flex;
+            flex-flow: column nowrap;
+            margin-top: 45px;
+        }
+        
+        .fml-li>h3:nth-child(5) {
+            padding-left: 12px;
+        }
+        
+        .fml-how-it-works li h3 {
+            padding-left: 50px;
+            /*margin-right: 80%;*/
+            vertical-align: center;
+            margin-top: 8px;
+        }
+        
+        .fml-how-it-works li p {
+            margin-top: 1px;
+            padding-left: 15px;
+            font-size: 16px;
+            line-height: 120%;
+            width: 80%;
+        }
+        
+        .fml-how-it-works .fml-hiw-img {
+            margin-top: -20px;
+            height: 280px;
+            width: 88%;
+        }
+        
+        .fml-numbering {
+            position: absolute;
+            color: #ffffff;
+            background-color: #FB3F5C;
+            width: 39px;
+            height: 30px;
+            line-height: 18px;
+            border-radius: 50%;
+            font-style: normal;
+            font-size: 25px;
+            font-weight: 700;
+            text-align: center;
+            padding-top: 10px;
+            z-index: 999;
+        }
+        
+        .hiw-footer {
+            position: absolute;
+            top: 296%;
+            left: 0;
+            width: inherit;
+            align-self: flex-start;
+        }
+        
+        .hiw-primary-footer {
+            background: rgba(251, 63, 92, 0.07);
+            background-size: cover;
+            position: absolute;
+            left: 0;
+            display: flex;
+            flex-flow: column wrap;
+            width: 113.7%;
+            text-align: center;
+        }
+        
+        .hiw-primary-footer h4 {
+            margin-top: -5px;
+        }
+        
+        .hiw-primary-footer btns {
+            float: right;
+        }
+        
+        .get-started {
+            width: 125px;
+            height: 38px;
+            background: #FB3F5C;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 400;
+            font-style: normal;
+            border: 3px solid #FB3F5C;
+            box-shadow: 5px 5px 25px rgba(255, 29, 114, 0.2);
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        
+        .get-started:hover {
+            border: 2px solid#FB3F5C;
+            background-color: #fff;
+            color: #FB3F5C;
+        }
+        
+        .contact-us {
+            margin-left: 5px;
+            width: 125px;
+            height: 38px;
+            background: inherit;
+            color: #000;
+            font-size: 15px;
+            font-weight: 400;
+            font-style: normal;
+            border: 1px solid #000;
+            box-shadow: 5px 5px 25px rgba(255, 29, 114, 0.2);
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        
+        .contact-us:hover {
+            border: 2px solid#FB3F5C;
+        }
+        
+        .spacing {
+            padding-bottom: -10px;
+            padding-left: 10px;
+            font-size: 18px;
+        }
+        
+        .secondary-footer {
+            margin-top: 120px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            text-align: center;
+            padding: 25px 10px 10px 40px;
+        }
+        
+        .secondary-footer-area-two {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: space-around;
+        }
+        
+        .secondary-footer-area-two h3 {
+            text-align: center;
+            padding-left: 29px;
+        }
+        
+        .secondary-footer-area-three {
+            order: 3;
+        }
+        
+        .secondary-footer-area-four {
+            order: 2;
+        }
+        
+        .secondary-footer li {
+            list-style-type: none;
+        }
+        /*Begin Responsiveness for screen size above 400px*/
+        
+        @media screen and (min-width: 420px) and (max-width: 680px) {
+            .hiw-footer {
+                width: 100%;
+            }
+        }
+        /*end of repsonsiveness for screen size above 400px*/
+        /*Beginning of responsiveness for tablet sizes*/
+        
+        @media screen and (min-width: 735px) {
+            .wrap {
+                width: 960px;
+            }
+        }
+        /*End of responsiveness for tablet size*/
+        /*Beginning of responsiveness for laptop screen*/
+        
+        @media (min-width: 980px) {
+            body {
+                font-size: 16px;
+                max-width: 1440px
+            }
+            .container {
+                width: 98%;
+            }
+            .wrap {
+                width: 95%;
+                margin-left: 70px;
+            }
+            .fml-header {
+                display: flex;
+                margin-top: 95px;
+                justify-content: space-between;
+            }
+            .fml-heading-left {
+                width: 35%;
+            }
+            .fml-introwords>h1 {
+                width: 310px;
+                line-height: 143%;
+            }
+            .fml-heading-left p {
+                padding-top: 17px;
+                width: 400px;
+            }
+            .fml-hiw-btn {
+                margin-top: 8px;
+            }
+            .fml-catchy-image {
+                margin-right: 305px;
+            }
+            .fml-body h3 {
+                font-size: 32px;
+                width: 550px;
+            }
+            .fml-how-it-works {
+                margin-top: 95px;
+                width: 100%;
+            }
+            .fml-how-it-works ol {
+                width: 80%;
+            }
+            .fml-how-it-works li {
+                display: inline-flex;
+                flex-flow: row nowrap;
+                width: 100%;
+            }
+            .fml-how-it-works li:nth-child(even) {
+                display: inline-flex;
+                flex-flow: row-reverse;
+            }
+            .fml-hiw-group1 {
+                width: 29.33%;
+            }
+            .fml-how-it-works li:nth-child(even)>.fml-hiw-group1 {
+                margin-right: 200px;
+            }
+            .fml-how-it-works li p {
+                margin-top: 20px;
+                width: 500px;
+                font-size: 20px;
+            }
+            .fml-how-it-works .fml-hiw-img {
+                width: 400px;
+                height: 450px;
+                margin-left: 290px;
+            }
+            .fml-how-it-works li:nth-child(even) .fml-hiw-img {
+                width: 400px;
+                margin-right: 110px;
+            }
+            .fml-hiw-btn-ii {
+                position: relative;
+                align-self: flex-end;
+                height: 45px;
+                bottom: 160px;
+                right: 350px;
+                left: -290px;
+            }
+            .hiw-primary-footer {
+                width: 113.7%;
+                background-size: contain;
+            }
+        }
+        
+        @media screen and (min-width:1000px)and (max-width: 1024px) {
+            .hiw-footer {
+                width: 140%;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .hiw-footer {
+                width: 89.1%;
+                position: absolute;
+                top: 367%;
+                margin-left: -18px;
+            }
+            .hiw-primary-footer {
+                height: 190px;
+            }
+            .hiw-primary-footer h3,
+            h4 {
+                float: left;
+            }
+            .hiw-primary-footer h3 {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 29px;
+            }
+            .hiw-primary-footer h4 {
+                font-size: 24px;
+            }
+            .btns {
+                margin-top: 60px;
+                margin-right: 49px;
+            }
+        }
+        /*End of responsiveness for laptop screen*/
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrap">
+            <header class="fml-header">
+                <section class="fml-heading-left">
+                    <span class="fml-introwords">
+						<h1>Raise money for your laptop purchase or fix</h1>
+					</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit placeat sapiente exercitationem voluptas necessitatibus modi aliquam dolor pariatur iusto quasi, ad ea rerum commodi iste. Quos impedit rerum dicta inventore!</p>
+                    <button class="fml-hiw-btn">Get Started</button>
+                </section>
+                <section class="fml-catchy-image">
+                    <img src="https://res.cloudinary.com/techiefer/image/upload/v1592853598/Image1_eajqoz.svg" alt="Fund my laptop, how it works page" class="fml-hiw-img" />
+                </section>
+            </header>
+            <main class="fml-body">
+                <h3>How It Works</h3>
+                <div class="fml-how-it-works">
+                    <ol>
+                        <li>
+                            <div class="fml-hiw-group1">
+                                <span class="fml-numbering">1</span>
+                                <h3>Register</h3>
+                                <p>Complete an Submit an Online Application.</p>
+                            </div>
+                            <img src="https://res.cloudinary.com/techiefer/image/upload/v1592853658/Register_sjyvsw.svg" class="fml-hiw-img" />
+                        </li>
+
+                        <li>
+                            <div class="fml-hiw-group1">
+                                <span class="fml-numbering">2</span>
+                                <h3>Make a Request</h3>
+                                <p>Make a request to gather funds for laptop purchase or repair.</p>
+                            </div>
+                            <img src="https://res.cloudinary.com/techiefer/image/upload/v1592853709/Request_bskqft.svg" class="fml-hiw-img" />
+                        </li>
+
+                        <li>
+                            <div class="fml-hiw-group1">
+                                <span class="fml-numbering">3</span>
+                                <h3>Funders review your loan request</h3>
+                                <p>Include details of how you plan to spend the money or why loaning money to you is a good risk.</p>
+                            </div>
+                            <img src="https://res.cloudinary.com/techiefer/image/upload/v1592853732/Review_mwszvw.svg" class="fml-hiw-img" />
+                        </li>
+
+                        <li>
+                            <div class="fml-hiw-group1">
+                                <span class="fml-numbering">4</span>
+                                <h3>Accept the loan</h3>
+                                <p>Review the terms and accept the loan.</p>
+                            </div>
+                            <img src="https://res.cloudinary.com/techiefer/image/upload/v1592853777/Accept_dozusc.svg" class="fml-hiw-img" />
+                        </li>
+                        <li>
+                            <div class="fml-hiw-group1">
+                                <span class="fml-numbering">5</span>
+                                <h3>Set Up Your Payment Plan</h3>
+                                <p>Make payment according to your selected payment plan.</p>
+                            </div>
+                            <button class="fml-hiw-btn-ii">View Payment Plans<span class="spacing">></span> </button class="fml-hww-btn">
+															<img src="https://res.cloudinary.com/techiefer/image/upload/v1592853806/Setup_gzffku.svg" class="fml-hiw-img"/>
+													</li>
+											</ol>
+									</div>
+						</main>
+				</div>
+				<section class="hiw-footer">
+					<div class="hiw-primary-footer">
+						<h3>Ready to get started?</h3>
+						<h4>Sign up or Contact us</h4>
+						<div class="btns">
+							<button class="get-started">Get started</button>
+                            <button class="contact-us">Contact Us</button>
+                </div>
+        </div>
+        <div class="secondary-footer">
+            <div class="secondary-footer-area-one">
+                <img src="" / alt="" class="">
+                <p class="email-area">info@fundmylaptop.com</p>
+                <p class="phone-number">12345 67890</p>
+                <div class="social-links">
+                    <img src="" />
+                    <img src="" />
+                    <img src="" />
+                </div>
+            </div>
+            <div class="secondary-footer-area-two">
+                <div class="area-one">
+                    <h3>Links</h3>
+                    <ul>
+                        <li>Link 1</li>
+                        <li>Link 2</li>
+                        <li>Link 3</li>
+                    </ul>
+                </div>
+                <div class="area-two">
+                    <h3>Links</h3>
+                    <ul>
+                        <li>Link 1</li>
+                        <li>Link 2</li>
+                        <li>Link 3</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="secondary-footer-area-three">
+                <p>2020 Copyright All rights Limited</p>
+            </div>
+            <div class="secondary-footer-area-four">
+                <ul>
+                    <li>
+                        <a href=#>FAQ</a>
+                    </li>
+                    <li>
+                        <a href=#>Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        </section>
+    </div>
+</body>
+
+</html>
+
+</html>
